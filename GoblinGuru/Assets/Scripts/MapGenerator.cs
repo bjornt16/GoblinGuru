@@ -60,15 +60,16 @@ public class MapGenerator : MonoBehaviour {
 
         RiverReturn river = RiverGenerator.generateRivers(noiseMap);
 
-        noiseMap = river.noiseMap;
+        //noiseMap = river.noiseMap;
 
-
-        for (int i = 0; i < river.riverPoints.Length; i++)
+        int t;
+        for (t = 0; t < river.riverPoints.Length; t++)
         {
-            int x = (int)river.riverPoints[i].x;
-            int y = (int)river.riverPoints[i].y;
+            int x = (int)river.riverPoints[t].x;
+            int y = (int)river.riverPoints[t].y;
             colorMap[y * mapChunkSize + x] = new Color(34 / 255f, 51 / 255f, 219 / 255f);
         }
+        Debug.Log("points: " + t);
 
         MapDisplay mapDisplay = FindObjectOfType<MapDisplay>();
 

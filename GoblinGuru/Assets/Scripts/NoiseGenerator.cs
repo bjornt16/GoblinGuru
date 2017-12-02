@@ -58,7 +58,7 @@ public static class NoiseGenerator {
 
         }
 
-        
+        /*
         float prevX;
         float prevY;
         //normalize
@@ -75,7 +75,7 @@ public static class NoiseGenerator {
                 noise[x + 1, y + 1] = noise[x, y];
             }
         }
-        
+        */
         
 
         for (x = 0; x < width; x++){

@@ -16,11 +16,13 @@ public static class RiverGenerator{
         int width = heightMap.GetLength(0);
         int height = heightMap.GetLength(1);
 
-        for (int x = 0; x < width; x++)
+        for (int y = 0; y < height; y++)
         {
-            for (int y = 0; y < height; y++)
+            for (int x = 0; x < width; x++)
             {
-                if(evaluateRiverStartPosition(riverStartList,  new Vector2(x, y)) && heightMap[x,y] > .7f)
+                int sampleX = x;
+                int sampleY = y;
+                if (evaluateRiverStartPosition(riverStartList,  new Vector2(sampleX, sampleY)) && heightMap[x,y] > .7f)
                 {
                     riverStartList.Add(new Vector2(x, y));
 
@@ -30,9 +32,6 @@ public static class RiverGenerator{
 
                     float lastVal = heightMap[x, y];
                     float minLastVal = lastVal;
-
-                    int sampleX = x;
-                    int sampleY = y;
 
                     int loop = 0;
 
@@ -67,17 +66,17 @@ public static class RiverGenerator{
                         sampleY += (int)lowestNeighbour.y;
   
 
-                        if (!evaluateRiverPointPosition(riverPoints, new Vector2(sampleX, sampleY)) || heightMap[sampleX, sampleY] <= .10f || (sampleX < 0 || sampleX > width) || (height < 0 || sampleY > height))
+                        if (!evaluateRiverPointPosition(riverPoints, new Vector2(sampleX, sampleY)) || heightMap[sampleX, sampleY] <= .30f || (sampleX < 0 || sampleX > width) || (height < 0 || sampleY > height))
                         {
-                            string th = " "+riverPointsVect.Count + " ";
-                            for (int i = 0; i < riverPointsVect.Count; i++)
-                            {
-                                th +=  riverPointsVect[i].x + "," + riverPointsVect[i].y + "  ";
-                            }
-                            Debug.Log(th);
                             break;
                         }
                     }
+                    string th = " " + riverPointsVect.Count + " ";
+                    for (int i = 0; i < riverPointsVect.Count; i++)
+                    {
+                        th += riverPointsVect[i].x + "," + riverPointsVect[i].y + "  ";
+                    }
+                    Debug.Log(th);
 
                     int xDir;
                     int yDir;
@@ -118,7 +117,9 @@ public static class RiverGenerator{
                             }
                         }
 
-                        Debug.Log(xDir + " - " + yDir);
+                        riverPoints.Add(new Vector2(x, y));
+
+                        //Debug.Log(xDir + " - " + yDir);
 
                         if (oldHorizontal != horizontal)
                         {
