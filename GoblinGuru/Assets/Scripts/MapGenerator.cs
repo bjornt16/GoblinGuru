@@ -41,15 +41,6 @@ public class MapGenerator : MonoBehaviour {
 
     public void generateMap(){
 
-        for (int i = 0; i < gameTiles.Length; i++)
-        {
-            if(gameTiles[i] != null)
-            {
-                gameTiles[i].Destroy();
-            }
-        }
-        
-        gameTiles = new GameTile[mapChunkSize * mapChunkSize];
         float[,] noiseMap = NoiseGenerator.generateNoise(mapChunkSize, mapChunkSize, seed,  noiseScale, octaves, persistance, lacunarity, offset);
         Color[] colorMap = new Color[mapChunkSize * mapChunkSize];
 
@@ -96,7 +87,7 @@ public class MapGenerator : MonoBehaviour {
         else if (drawmode == DrawMode.Mesh){
             MeshData meshData = MeshGenerator.GenerateTerrainMesh(noiseMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail);
             mapDisplay.DrawMesh(meshData, TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
-            gameTiles = generateGameTiles(meshData, mapChunkSize, mapChunkSize );
+            generateGameTiles(meshData, mapChunkSize, mapChunkSize );
         }
         else if (drawmode == DrawMode.FallOffMap)
         {
@@ -106,27 +97,44 @@ public class MapGenerator : MonoBehaviour {
 
     public GameTile[] generateGameTiles(MeshData meshData, int width, int height )
     {
-        GameTile[] gameTile = new GameTile[width * height];
-        for (int x = 0; x < width - 1; x++)
+        clearGameTiles();
+
+        if (Application.isPlaying)
         {
-            for (int y = 0; y < height - 1; y++)
+            for (int x = 0; x < width - 1; x++)
             {
-                GameTile tile = Instantiate(tilePrefab, meshData.tilePosition[x * mapChunkSize + y], Quaternion.identity);
-                gameTile[x * mapChunkSize + y] = tile;
-                tile.transform.parent = transform.gameObject.transform;
-                tile.name = x + ", " + y;
-
-                Ray ray = new Ray(gameTile[x * mapChunkSize + y].transform.position, new Vector3(0, -1, 0));
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
+                for (int y = 0; y < height - 1; y++)
                 {
-                    gameTile[x * mapChunkSize + y].transform.position = hit.point;
-                }
+                    GameTile tile = Instantiate(tilePrefab, meshData.tilePosition[x * mapChunkSize + y], Quaternion.identity);
+                    gameTiles[x * mapChunkSize + y] = tile;
+                    tile.transform.parent = transform.gameObject.transform;
+                    tile.name = x + ", " + y;
 
+                    Ray ray = new Ray(gameTiles[x * mapChunkSize + y].transform.position, new Vector3(0, -1, 0));
+                    RaycastHit hit;
+                    if (Physics.Raycast(ray, out hit))
+                    {
+                        gameTiles[x * mapChunkSize + y].transform.position = hit.point;
+                    }
+
+                }
             }
         }
 
-        return gameTile;
+        return gameTiles;
+    }
+
+    public void clearGameTiles()
+    {
+        for (int i = 0; i < gameTiles.Length; i++)
+        {
+            if (gameTiles[i] != null)
+            {
+                gameTiles[i].Destroy();
+            }
+        }
+
+        gameTiles = new GameTile[mapChunkSize * mapChunkSize];
     }
 
     private void OnValidate(){
