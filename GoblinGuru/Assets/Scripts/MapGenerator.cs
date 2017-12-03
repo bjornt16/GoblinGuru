@@ -30,6 +30,10 @@ public class MapGenerator : MonoBehaviour {
 
     float[,] fallOffMap;
 
+    public GameTile tilePrefab;
+
+    private GameTile[] gameTiles = new GameTile[mapChunkSize * mapChunkSize];
+
     private void Awake()
     {
         fallOffMap = FallOffGenerator.generateFallOffMap(mapChunkSize);
@@ -37,11 +41,20 @@ public class MapGenerator : MonoBehaviour {
 
     public void generateMap(){
 
+        for (int i = 0; i < gameTiles.Length; i++)
+        {
+            if(gameTiles[i] != null)
+            {
+                gameTiles[i].Destroy();
+            }
+        }
+        
+        gameTiles = new GameTile[mapChunkSize * mapChunkSize];
         float[,] noiseMap = NoiseGenerator.generateNoise(mapChunkSize, mapChunkSize, seed,  noiseScale, octaves, persistance, lacunarity, offset);
         Color[] colorMap = new Color[mapChunkSize * mapChunkSize];
 
-        for (int y = 0; y < mapChunkSize; y++){
-            for (int x = 0; x < mapChunkSize; x++){
+        for (int x = 0; x < mapChunkSize; x++){
+            for (int y = 0; y < mapChunkSize; y++){
 
                 if (useFallOff)
                 {
@@ -67,6 +80,7 @@ public class MapGenerator : MonoBehaviour {
         {
             int x = (int)river.riverPoints[t].x;
             int y = (int)river.riverPoints[t].y;
+            //Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube), new Vector3(y,5,x), Quaternion.identity);
             colorMap[y * mapChunkSize + x] = new Color(34 / 255f, 51 / 255f, 219 / 255f);
         }
         Debug.Log("points: " + t);
@@ -80,12 +94,39 @@ public class MapGenerator : MonoBehaviour {
             mapDisplay.DrawTexture(TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
         }
         else if (drawmode == DrawMode.Mesh){
-            mapDisplay.DrawMesh(MeshGenerator.GenerateTerrainMesh(noiseMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail), TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
+            MeshData meshData = MeshGenerator.GenerateTerrainMesh(noiseMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail);
+            mapDisplay.DrawMesh(meshData, TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
+            gameTiles = generateGameTiles(meshData, mapChunkSize, mapChunkSize );
         }
         else if (drawmode == DrawMode.FallOffMap)
         {
             mapDisplay.DrawTexture(TextureGenerator.TextureFromHeightMap(FallOffGenerator.generateFallOffMap(mapChunkSize)));
         }
+    }
+
+    public GameTile[] generateGameTiles(MeshData meshData, int width, int height )
+    {
+        GameTile[] gameTile = new GameTile[width * height];
+        for (int x = 0; x < width - 1; x++)
+        {
+            for (int y = 0; y < height - 1; y++)
+            {
+                GameTile tile = Instantiate(tilePrefab, meshData.tilePosition[x * mapChunkSize + y], Quaternion.identity);
+                gameTile[x * mapChunkSize + y] = tile;
+                tile.transform.parent = transform.gameObject.transform;
+                tile.name = x + ", " + y;
+
+                Ray ray = new Ray(gameTile[x * mapChunkSize + y].transform.position, new Vector3(0, -1, 0));
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    gameTile[x * mapChunkSize + y].transform.position = hit.point;
+                }
+
+            }
+        }
+
+        return gameTile;
     }
 
     private void OnValidate(){

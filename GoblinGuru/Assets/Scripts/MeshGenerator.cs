@@ -17,8 +17,8 @@ public static class MeshGenerator {
         MeshData meshData = new MeshData(verticesPerLine, verticesPerLine);
         int vertexIndex = 0;
 
-        for (int y = 0; y < height; y+= meshSimplificationIncrement){
-            for (int x = 0; x < width; x+= meshSimplificationIncrement){
+        for (int y = 0; y < width; y+= meshSimplificationIncrement){
+            for (int x = 0; x < height; x+= meshSimplificationIncrement){
                 meshData.vertices[vertexIndex] = new Vector3(topLeftX + x, heightCurve.Evaluate(heightMap[x, y]) * heightMultiplier, topLeftZ - y);
                 meshData.uvs[vertexIndex] = new Vector2(x / (float)width, y / (float)height);
 
@@ -26,6 +26,8 @@ public static class MeshGenerator {
                     meshData.addTriangle(vertexIndex, vertexIndex + verticesPerLine + 1, vertexIndex + verticesPerLine);
                     meshData.addTriangle(vertexIndex + verticesPerLine + 1, vertexIndex, vertexIndex + 1);
                 }
+
+                meshData.tilePosition[x * width + y] = new Vector3(x+ .5f, 10, y + .5f);
 
                 vertexIndex++;
             }
@@ -40,11 +42,13 @@ public class MeshData
     public Vector3[] vertices;
     public int[] triangles;
     public Vector2[] uvs;
+    public Vector3[] tilePosition;
 
     int triangleIndex;
 
     public MeshData(int meshWidth, int meshHeight){
         vertices = new Vector3[meshWidth * meshHeight];
+        tilePosition = new Vector3[meshWidth * meshHeight];
         uvs = new Vector2[meshWidth * meshHeight];
         triangles = new int[((meshWidth - 1) * (meshHeight - 1))*6];
     }

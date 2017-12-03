@@ -7,6 +7,7 @@ public class MapDisplay : MonoBehaviour {
     public Renderer textureRender;
     public MeshFilter meshFilter;
     public MeshRenderer meshRenderer;
+    public MeshCollider meshCollider;
 
     public void DrawTexture(Texture2D texture){
         textureRender.sharedMaterial.mainTexture = texture;
@@ -17,5 +18,7 @@ public class MapDisplay : MonoBehaviour {
     {
         meshFilter.sharedMesh = meshData.createMesh();
         meshRenderer.sharedMaterial.mainTexture = texture;
+        meshCollider.sharedMesh = null;
+        meshCollider.sharedMesh = meshFilter.sharedMesh;
     }
 }

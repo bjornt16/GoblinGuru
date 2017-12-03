@@ -26,7 +26,7 @@ public static class RiverGenerator{
                 {
                     riverStartList.Add(new Vector2(x, y));
 
-                    Vector2 lowestNeighbour = getLowestNeighbour(heightMap, x , y, width, height);
+                    Vector2 lowestNeighbour = getLowestNeighbour(heightMap, riverPointsVect, x , y, width, height);
 
                     bool horizontal = lowestNeighbour.x != 0 ? false : true;
 
@@ -59,24 +59,28 @@ public static class RiverGenerator{
                         riverPointsVect.Add(new Vector2(sampleX, sampleY));
 
 
-                        lowestNeighbour = getLowestNeighbour(heightMap, sampleX, sampleY, width, height);
+                        lowestNeighbour = getLowestNeighbour(heightMap, riverPointsVect, sampleX, sampleY, width, height);
                         horizontal = lowestNeighbour.x != 0 ? false : true;
 
                         sampleX += (int)lowestNeighbour.x;
                         sampleY += (int)lowestNeighbour.y;
   
 
-                        if (!evaluateRiverPointPosition(riverPoints, new Vector2(sampleX, sampleY)) || heightMap[sampleX, sampleY] <= .30f || (sampleX < 0 || sampleX > width) || (height < 0 || sampleY > height))
+                        if (!evaluateRiverPointPosition(riverPointsVect, new Vector2(sampleX, sampleY)) || heightMap[sampleX, sampleY] <= .30f || (sampleX < 0 || sampleX > width) || (height < 0 || sampleY > height))
                         {
+                            string th = " " + riverPointsVect.Count + " ";
+                            th += " " + !evaluateRiverPointPosition(riverPointsVect, new Vector2(sampleX, sampleY)) + " " +
+                                 (heightMap[sampleX, sampleY] <= .30f) + " " + (sampleX < 0 || sampleX > width) + " " + (height < 0 || sampleY > height);
+                            for (int i = 0; i < riverPointsVect.Count; i++)
+                            {
+                                th += riverPointsVect[i].x + "," + riverPointsVect[i].y + "  ";
+                            }
+                            Debug.Log(th);
+
                             break;
                         }
                     }
-                    string th = " " + riverPointsVect.Count + " ";
-                    for (int i = 0; i < riverPointsVect.Count; i++)
-                    {
-                        th += riverPointsVect[i].x + "," + riverPointsVect[i].y + "  ";
-                    }
-                    Debug.Log(th);
+
 
                     int xDir;
                     int yDir;
@@ -101,23 +105,13 @@ public static class RiverGenerator{
 
                         if (i % 1 == 0)
                         {
-                            lowestNeighbour = getLowestNeighbour(heightMap, x, y, width, height);
+                            lowestNeighbour = getLowestNeighbour(heightMap, riverPointsVect, x, y, width, height);
                             oldHorizontal = horizontal;
                             horizontal = lowestNeighbour.x != 0 ? false : true;
                         }
-                        else
-                        {
-                            if (horizontal)
-                            {
-                                x = (int)riverPointsVect[i-1].x;
-                            }
-                            else
-                            {
-                                y = (int)riverPointsVect[i - 1].y;
-                            }
-                        }
+                        
 
-                        riverPoints.Add(new Vector2(x, y));
+                        
 
                         //Debug.Log(xDir + " - " + yDir);
 
@@ -152,8 +146,6 @@ public static class RiverGenerator{
                     }
                     riverPointsVect.Clear();
                     tempRiverPoints.Clear();
-
-
                 }
             }
         }
@@ -177,7 +169,7 @@ public static class RiverGenerator{
     {
         for (int i = 0; i < riverPoints.Count; i++)
         {
-            if (riverPoints[i] == location)
+            if (riverPoints[i].x == location.x && riverPoints[i].y == location.y)
             {
                 return false;
             }
@@ -186,21 +178,30 @@ public static class RiverGenerator{
         return true;
     }
 
-    private static Vector2 getLowestNeighbour(float[,] heightMap, int x, int y, int width, int height)
+    private static Vector2 getLowestNeighbour(float[,] heightMap, List<Vector2> riverPoints, int x, int y, int width, int height)
     {
         Dictionary<int, float> neighBoursHor = new Dictionary<int, float>();
         Dictionary<int, float> neighBoursVert = new Dictionary<int, float>();
+
+        Vector2 origin = new Vector2(x, y);
+        Vector2 pos;
+
+        float xDir = 0;
+        float yDir = 0;
+
+        neighBoursHor.Clear();
+        neighBoursVert.Clear();
 
         neighBoursHor.Add((x > 0) ? -1 : 0, (x > 0) ? heightMap[x - 1, y] : float.MaxValue);
         neighBoursHor.Add((x < width) ? 1 : 0, (x < width) ? heightMap[x + 1, y] : float.MaxValue);
 
         neighBoursVert.Add((x > 0) ? -1 : 0, (x > 0) ? heightMap[x, y - 1] : float.MaxValue);
-        neighBoursVert.Add((y < height) ? 1 : 0 , (y < height) ? heightMap[x, y + 1] : float.MaxValue);
+        neighBoursVert.Add((y < height) ? 1 : 0, (y < height) ? heightMap[x, y + 1] : float.MaxValue);
 
-        float xDir = neighBoursHor.Aggregate((l, r) => l.Value > r.Value ? r : l).Value;
-        float yDir = neighBoursVert.Aggregate((l, r) => l.Value > r.Value ? r : l).Value;
+        xDir = neighBoursHor.Aggregate((l, r) => l.Value > r.Value ? r : l).Value;
+        yDir = neighBoursVert.Aggregate((l, r) => l.Value > r.Value ? r : l).Value;
 
-        if(xDir < yDir)
+        if (xDir < yDir)
         {
             xDir = neighBoursHor.Aggregate((l, r) => l.Value > r.Value ? r : l).Key;
             yDir = 0;
@@ -211,7 +212,9 @@ public static class RiverGenerator{
             yDir = neighBoursVert.Aggregate((l, r) => l.Value > r.Value ? r : l).Key;
         }
 
-        return new Vector2(xDir,yDir);
+        Vector2 tempPos = new Vector2(origin.x + xDir, origin.y + yDir);
+
+        return new Vector2(xDir, yDir);
     }
 
 }
