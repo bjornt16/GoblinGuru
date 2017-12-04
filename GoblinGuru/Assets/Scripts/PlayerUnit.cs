@@ -16,16 +16,31 @@ public class PlayerUnit : MonoBehaviour {
 
     public GameTile destination;
 
+    [SerializeField]
+    private int maxMovePoints = 3;
+    private int currentMovePoints;
+
     public GameTile Tile
     {
         get
         {
             return tile;
         }
-        set
-        {
-            transform.position = tile.transform.position;
-        }
+    }
+
+    private void Start()
+    {
+        currentMovePoints = maxMovePoints;
+    }
+
+    private void OnEnable()
+    {
+        GameTurnManager.OnNewTurn += ResetTurn;
+    }
+
+    private void ResetTurn()
+    {
+        currentMovePoints = maxMovePoints;
     }
 
     public void Instantiate(GameTile gameTile)
@@ -36,12 +51,12 @@ public class PlayerUnit : MonoBehaviour {
 
     public void Move()
     {
-        if(destination != null && moving == false)
+        if(destination != null && moving == false && currentMovePoints > 0)
         {
+            currentMovePoints--;
             moving = true;
             StartCoroutine(MoveOverSeconds(destination.Position, travelSpeedinSeconds));
         }
-        
     }
 
     IEnumerator LookAt(Vector3 point)
