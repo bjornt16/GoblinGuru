@@ -7,7 +7,7 @@ public class MapGenerator : MonoBehaviour {
     public enum DrawMode {noiseMap, ColorMap, Mesh, FallOffMap};
     public DrawMode drawmode;
 
-    const int mapChunkSize = 120;
+    const int mapChunkSize = 121;
     [Range(0,6)]
     public int levelOfDetail;
     public float noiseScale;
@@ -81,7 +81,6 @@ public class MapGenerator : MonoBehaviour {
             //Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube), new Vector3(y,5,x), Quaternion.identity);
             colorMap[y * mapChunkSize + x] = new Color(34 / 255f, 51 / 255f, 219 / 255f);
         }
-        Debug.Log("points: " + t);
 
         MapDisplay mapDisplay = FindObjectOfType<MapDisplay>();
 
@@ -108,14 +107,13 @@ public class MapGenerator : MonoBehaviour {
 
         if (Application.isPlaying)
         {
-            for (int x = 0; x < width; x++)
+            for (int x = 0; x < width-1; x++)
             {
-                for (int y = 0; y < height; y++)
+                for (int y = 0; y < height-1; y++)
                 {
                     GameTile tile = Instantiate(tilePrefab, meshData.tilePosition[x * mapChunkSize + y], Quaternion.identity);
                     gameTiles[x * mapChunkSize + y] = tile;
                     tile.Initialize(gameTileBucket.transform, x, y);
-                    if (y != 0) { Debug.Log(gameTiles[x * mapChunkSize + y - 1].name + " " + (x * mapChunkSize + (y - 1))); } else { Debug.Log("fail " + gameTiles.Length ); }
                     tile.SetNeighbours(null, (y != 0) ? gameTiles[x * mapChunkSize + y - 1 ] : null,
                         (x != 0) ? gameTiles[(x - 1) * mapChunkSize + y] : null, null);
                 }

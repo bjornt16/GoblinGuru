@@ -75,7 +75,7 @@ public static class RiverGenerator{
                             {
                                 th += riverPointsVect[i].x + "," + riverPointsVect[i].y + "  ";
                             }
-                            Debug.Log(th);
+                            //Debug.Log(th);
 
                             break;
                         }
