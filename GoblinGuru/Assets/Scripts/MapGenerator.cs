@@ -7,7 +7,7 @@ public class MapGenerator : MonoBehaviour {
     public enum DrawMode {noiseMap, ColorMap, Mesh, FallOffMap};
     public DrawMode drawmode;
 
-    const int mapChunkSize = 121;
+    const int mapChunkSize = 120;
     [Range(0,6)]
     public int levelOfDetail;
     public float noiseScale;
@@ -30,18 +30,25 @@ public class MapGenerator : MonoBehaviour {
 
     float[,] fallOffMap;
 
+    public GameObject gameTileBucket;
+
     public GameTile tilePrefab;
 
     private GameTile[] gameTiles = new GameTile[mapChunkSize * mapChunkSize];
 
     private void Awake()
     {
-        fallOffMap = FallOffGenerator.generateFallOffMap(mapChunkSize);
+        fallOffMap = FallOffGenerator.GenerateFallOffMap(mapChunkSize);
     }
 
-    public void generateMap(){
+    private void Start()
+    {
+        gameTiles = new GameTile[mapChunkSize * mapChunkSize];
+    }
 
-        float[,] noiseMap = NoiseGenerator.generateNoise(mapChunkSize, mapChunkSize, seed,  noiseScale, octaves, persistance, lacunarity, offset);
+    public void GenerateMap(){
+
+        float[,] noiseMap = NoiseGenerator.GenerateNoise(mapChunkSize, mapChunkSize, seed,  noiseScale, octaves, persistance, lacunarity, offset);
         Color[] colorMap = new Color[mapChunkSize * mapChunkSize];
 
         for (int x = 0; x < mapChunkSize; x++){
@@ -62,7 +69,7 @@ public class MapGenerator : MonoBehaviour {
             }
         }
 
-        RiverReturn river = RiverGenerator.generateRivers(noiseMap);
+        RiverReturn river = RiverGenerator.GenerateRivers(noiseMap);
 
         //noiseMap = river.noiseMap;
 
@@ -87,36 +94,30 @@ public class MapGenerator : MonoBehaviour {
         else if (drawmode == DrawMode.Mesh){
             MeshData meshData = MeshGenerator.GenerateTerrainMesh(noiseMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail);
             mapDisplay.DrawMesh(meshData, TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
-            generateGameTiles(meshData, mapChunkSize, mapChunkSize );
+            GenerateGameTiles(meshData, mapChunkSize, mapChunkSize );
         }
         else if (drawmode == DrawMode.FallOffMap)
         {
-            mapDisplay.DrawTexture(TextureGenerator.TextureFromHeightMap(FallOffGenerator.generateFallOffMap(mapChunkSize)));
+            mapDisplay.DrawTexture(TextureGenerator.TextureFromHeightMap(FallOffGenerator.GenerateFallOffMap(mapChunkSize)));
         }
     }
 
-    public GameTile[] generateGameTiles(MeshData meshData, int width, int height )
+    public GameTile[] GenerateGameTiles(MeshData meshData, int width, int height )
     {
-        clearGameTiles();
+        ClearGameTiles();
 
         if (Application.isPlaying)
         {
-            for (int x = 0; x < width - 1; x++)
+            for (int x = 0; x < width; x++)
             {
-                for (int y = 0; y < height - 1; y++)
+                for (int y = 0; y < height; y++)
                 {
                     GameTile tile = Instantiate(tilePrefab, meshData.tilePosition[x * mapChunkSize + y], Quaternion.identity);
                     gameTiles[x * mapChunkSize + y] = tile;
-                    tile.transform.parent = transform.gameObject.transform;
-                    tile.name = x + ", " + y;
-
-                    Ray ray = new Ray(gameTiles[x * mapChunkSize + y].transform.position, new Vector3(0, -1, 0));
-                    RaycastHit hit;
-                    if (Physics.Raycast(ray, out hit))
-                    {
-                        gameTiles[x * mapChunkSize + y].transform.position = hit.point;
-                    }
-
+                    tile.Initialize(gameTileBucket.transform, x, y);
+                    if (y != 0) { Debug.Log(gameTiles[x * mapChunkSize + y - 1].name + " " + (x * mapChunkSize + (y - 1))); } else { Debug.Log("fail " + gameTiles.Length ); }
+                    tile.SetNeighbours(null, (y != 0) ? gameTiles[x * mapChunkSize + y - 1 ] : null,
+                        (x != 0) ? gameTiles[(x - 1) * mapChunkSize + y] : null, null);
                 }
             }
         }
@@ -124,7 +125,7 @@ public class MapGenerator : MonoBehaviour {
         return gameTiles;
     }
 
-    public void clearGameTiles()
+    public void ClearGameTiles()
     {
         for (int i = 0; i < gameTiles.Length; i++)
         {
@@ -147,7 +148,7 @@ public class MapGenerator : MonoBehaviour {
             octaves = 0;
         }
 
-        fallOffMap = FallOffGenerator.generateFallOffMap(mapChunkSize);
+        fallOffMap = FallOffGenerator.GenerateFallOffMap(mapChunkSize);
 
     }
 }

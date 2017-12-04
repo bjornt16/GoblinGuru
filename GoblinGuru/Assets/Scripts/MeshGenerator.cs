@@ -23,8 +23,8 @@ public static class MeshGenerator {
                 meshData.uvs[vertexIndex] = new Vector2(x / (float)width, y / (float)height);
 
                 if (x < width - 1 && y < height - 1){
-                    meshData.addTriangle(vertexIndex, vertexIndex + verticesPerLine + 1, vertexIndex + verticesPerLine);
-                    meshData.addTriangle(vertexIndex + verticesPerLine + 1, vertexIndex, vertexIndex + 1);
+                    meshData.AddTriangle(vertexIndex, vertexIndex + verticesPerLine + 1, vertexIndex + verticesPerLine);
+                    meshData.AddTriangle(vertexIndex + verticesPerLine + 1, vertexIndex, vertexIndex + 1);
                 }
 
                 meshData.tilePosition[x * width + y] = new Vector3(x+ .5f, 10, y + .5f);
@@ -53,19 +53,21 @@ public class MeshData
         triangles = new int[((meshWidth - 1) * (meshHeight - 1))*6];
     }
 
-    public void addTriangle(int a, int b, int c){
+    public void AddTriangle(int a, int b, int c){
         triangles[triangleIndex] = a;
         triangles[triangleIndex+1] = b;
         triangles[triangleIndex+2] = c;
         triangleIndex += 3;
     }
 
-    public Mesh createMesh(){
+    public Mesh CreateMesh(){
 
-        Mesh mesh = new Mesh();
-        mesh.vertices = vertices;
-        mesh.triangles = triangles;
-        mesh.uv = uvs;
+        Mesh mesh = new Mesh()
+        {
+            vertices = vertices,
+            triangles = triangles,
+            uv = uvs
+        };
         mesh.RecalculateNormals();
         return mesh;
     }

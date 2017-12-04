@@ -7,7 +7,7 @@ public static class RiverGenerator{
 
     //private static System.Random rng = new System.Random(123);
 
-    public static RiverReturn generateRivers(float[,] heightMap) {
+    public static RiverReturn GenerateRivers(float[,] heightMap) {
 
         List<Vector2> riverStartList = new List<Vector2>();
         List<Vector2> riverPoints = new List<Vector2>();
@@ -22,11 +22,11 @@ public static class RiverGenerator{
             {
                 int sampleX = x;
                 int sampleY = y;
-                if (evaluateRiverStartPosition(riverStartList,  new Vector2(sampleX, sampleY)) && heightMap[x,y] > .7f)
+                if (EvaluateRiverStartPosition(riverStartList,  new Vector2(sampleX, sampleY)) && heightMap[x,y] > .7f)
                 {
                     riverStartList.Add(new Vector2(x, y));
 
-                    Vector2 lowestNeighbour = getLowestNeighbour(heightMap, riverPointsVect, x , y, width, height);
+                    Vector2 lowestNeighbour = GetLowestNeighbour(heightMap, riverPointsVect, x , y, width, height);
 
                     bool horizontal = lowestNeighbour.x != 0 ? false : true;
 
@@ -59,17 +59,17 @@ public static class RiverGenerator{
                         riverPointsVect.Add(new Vector2(sampleX, sampleY));
 
 
-                        lowestNeighbour = getLowestNeighbour(heightMap, riverPointsVect, sampleX, sampleY, width, height);
+                        lowestNeighbour = GetLowestNeighbour(heightMap, riverPointsVect, sampleX, sampleY, width, height);
                         horizontal = lowestNeighbour.x != 0 ? false : true;
 
                         sampleX += (int)lowestNeighbour.x;
                         sampleY += (int)lowestNeighbour.y;
   
 
-                        if (!evaluateRiverPointPosition(riverPointsVect, new Vector2(sampleX, sampleY)) || heightMap[sampleX, sampleY] <= .30f || (sampleX < 0 || sampleX > width) || (height < 0 || sampleY > height))
+                        if (!EvaluateRiverPointPosition(riverPointsVect, new Vector2(sampleX, sampleY)) || heightMap[sampleX, sampleY] <= .30f || (sampleX < 0 || sampleX > width) || (height < 0 || sampleY > height))
                         {
                             string th = " " + riverPointsVect.Count + " ";
-                            th += " " + !evaluateRiverPointPosition(riverPointsVect, new Vector2(sampleX, sampleY)) + " " +
+                            th += " " + !EvaluateRiverPointPosition(riverPointsVect, new Vector2(sampleX, sampleY)) + " " +
                                  (heightMap[sampleX, sampleY] <= .30f) + " " + (sampleX < 0 || sampleX > width) + " " + (height < 0 || sampleY > height);
                             for (int i = 0; i < riverPointsVect.Count; i++)
                             {
@@ -105,7 +105,7 @@ public static class RiverGenerator{
 
                         if (i % 1 == 0)
                         {
-                            lowestNeighbour = getLowestNeighbour(heightMap, riverPointsVect, x, y, width, height);
+                            lowestNeighbour = GetLowestNeighbour(heightMap, riverPointsVect, x, y, width, height);
                             oldHorizontal = horizontal;
                             horizontal = lowestNeighbour.x != 0 ? false : true;
                         }
@@ -152,7 +152,7 @@ public static class RiverGenerator{
         return new RiverReturn(riverPoints.ToArray(), heightMap);
     }
 
-    public static bool evaluateRiverStartPosition(List<Vector2> riverStartLocations, Vector2 location)
+    public static bool EvaluateRiverStartPosition(List<Vector2> riverStartLocations, Vector2 location)
     {
         for (int i = 0; i < riverStartLocations.Count; i++)
         {
@@ -165,7 +165,7 @@ public static class RiverGenerator{
         return true;
     }
 
-    public static bool evaluateRiverPointPosition(List<Vector2> riverPoints, Vector2 location)
+    public static bool EvaluateRiverPointPosition(List<Vector2> riverPoints, Vector2 location)
     {
         for (int i = 0; i < riverPoints.Count; i++)
         {
@@ -178,13 +178,12 @@ public static class RiverGenerator{
         return true;
     }
 
-    private static Vector2 getLowestNeighbour(float[,] heightMap, List<Vector2> riverPoints, int x, int y, int width, int height)
+    private static Vector2 GetLowestNeighbour(float[,] heightMap, List<Vector2> riverPoints, int x, int y, int width, int height)
     {
         Dictionary<int, float> neighBoursHor = new Dictionary<int, float>();
         Dictionary<int, float> neighBoursVert = new Dictionary<int, float>();
 
         Vector2 origin = new Vector2(x, y);
-        Vector2 pos;
 
         float xDir = 0;
         float yDir = 0;
