@@ -18,6 +18,4 @@ public class MapEditor : Editor {
             mapGenerator.GenerateMap();
         }
     }
-
-
 }

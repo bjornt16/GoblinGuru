@@ -44,6 +44,7 @@ public class MapGenerator : MonoBehaviour {
     private void Start()
     {
         gameTiles = new GameTile[mapChunkSize * mapChunkSize];
+        GenerateMap();
     }
 
     public void GenerateMap(){

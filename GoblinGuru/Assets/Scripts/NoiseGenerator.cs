@@ -83,7 +83,7 @@ public static class NoiseGenerator {
                 noise[x, y] = Mathf.InverseLerp(minNoiseHeight, maxNoiseHeight, noise[x, y]);
             }
         }
-
+        
         return noise;
     }
 }

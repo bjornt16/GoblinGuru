@@ -12,6 +12,14 @@ public class GameTile : MonoBehaviour {
     public GameTile tileLeft;
     public GameTile tileRight;
 
+    public Vector3 Position
+    {
+        get
+        {
+            return position;
+        }
+    }
+
     public void Destroy()
     {
         DestroyImmediate(gameObject);
