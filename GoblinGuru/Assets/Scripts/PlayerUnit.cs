@@ -21,6 +21,15 @@ public class PlayerUnit : MonoBehaviour {
     [SerializeField]
     private int currentMovePoints;
 
+    public PlayerUnitUI ui;
+
+
+    int maxStamina;
+    int stamina;
+    int maxHealth;
+    int health;
+    
+
     public GameTile Tile
     {
         get
@@ -45,19 +54,26 @@ public class PlayerUnit : MonoBehaviour {
         }
     }
 
-    private void Start()
-    {
-        currentMovePoints = maxMovePoints;
-    }
-
     private void OnEnable()
     {
         GameTurnManager.OnNewTurn += ResetTurn;
     }
 
+    void UpdateUI()
+    {
+        ui.movesText.text = currentMovePoints.ToString();
+        ui.healthText.text = health + " / " + maxHealth;
+        ui.healthSlider.maxValue = maxHealth;
+        ui.healthSlider.value = health;
+        ui.staminaText.text = stamina + " / " + maxStamina;
+        ui.staminaSlider.maxValue = maxStamina;
+        ui.staminaSlider.value = stamina;
+    }
+
     private void ResetTurn()
     {
         currentMovePoints = maxMovePoints;
+        UpdateUI();
     }
 
     public void Instantiate(GameTile gameTile)
@@ -65,6 +81,16 @@ public class PlayerUnit : MonoBehaviour {
         tile = gameTile;
         position = tile.Position;
         transform.position = position;
+
+        maxHealth = 20;
+        health = 20;
+
+        maxStamina = 20;
+        stamina = 20;
+
+        currentMovePoints = maxMovePoints;
+
+        UpdateUI();
     }
 
     public void goLeft()
@@ -105,6 +131,7 @@ public class PlayerUnit : MonoBehaviour {
         if(destination != null && moving == false && currentMovePoints > 0)
         {
             currentMovePoints--;
+            UpdateUI();
             moving = true;
             StartCoroutine(MoveOverSeconds(destination.Position, travelSpeedinSeconds));
         }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class KeyboardInputManager : MonoBehaviour {
 
-    [SerializeField]
-    PlayerUnit player;
+    public PlayerUnit player;
+    public GameTurnUI gameTurnUi;
     bool buttonDown = false;
 
 	// Use this for initialization
@@ -15,6 +15,7 @@ public class KeyboardInputManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         if (!buttonDown)
         {
             if (Input.GetKeyDown("up") || Input.GetAxis("Vertical") < 0 )
@@ -39,6 +40,12 @@ public class KeyboardInputManager : MonoBehaviour {
             if (Input.GetKeyDown("right") || Input.GetAxis("Horizontal") > 0)
             {
                 player.goRight();
+                buttonDown = true;
+            }
+
+            if (Input.GetKeyDown("space"))
+            {
+                gameTurnUi.EncounterButton.onClick.Invoke();
                 buttonDown = true;
             }
         }
