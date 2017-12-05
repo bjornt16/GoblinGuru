@@ -23,6 +23,21 @@ public class Encounter {
         name = newName;
         hp = newHp;
     }
+
+    public State CurrentState()
+    {
+        return currentState;
+    }
+
+    public string CurrentText()
+    {
+        return currentState.text;
+    }
+
+    public List<EncounterChoice> AvailableChoices()
+    {
+        return currentState.choices;
+    }
     
     public void PrintStates()
     {
