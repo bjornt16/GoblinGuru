@@ -36,6 +36,8 @@ public class MapGenerator : MonoBehaviour {
 
     private GameTile[] gameTiles = new GameTile[mapChunkSize * mapChunkSize];
 
+    public PlayerUnit player;
+
     private void Awake()
     {
         fallOffMap = FallOffGenerator.GenerateFallOffMap(mapChunkSize);
@@ -100,6 +102,8 @@ public class MapGenerator : MonoBehaviour {
         {
             mapDisplay.DrawTexture(TextureGenerator.TextureFromHeightMap(FallOffGenerator.GenerateFallOffMap(mapChunkSize)));
         }
+
+        player.Instantiate(gameTiles[(mapChunkSize * mapChunkSize) / 2]);
     }
 
     public GameTile[] GenerateGameTiles(MeshData meshData, int width, int height )

@@ -18,6 +18,7 @@ public class PlayerUnit : MonoBehaviour {
 
     [SerializeField]
     private int maxMovePoints = 3;
+    [SerializeField]
     private int currentMovePoints;
 
     public GameTile Tile
@@ -25,6 +26,22 @@ public class PlayerUnit : MonoBehaviour {
         get
         {
             return tile;
+        }
+    }
+
+    public bool CanMove
+    {
+        get
+        {
+            return (currentMovePoints != 0);
+        }
+    }
+
+    public bool Moving
+    {
+        get
+        {
+            return moving;
         }
     }
 
@@ -47,6 +64,40 @@ public class PlayerUnit : MonoBehaviour {
     {
         tile = gameTile;
         position = tile.Position;
+        transform.position = position;
+    }
+
+    public void goLeft()
+    {
+        if (tile.tileUp != null && !moving && currentMovePoints != 0)
+        {
+            destination = tile.tileLeft;
+            Move();
+        }
+    }
+    public void goRight()
+    {
+        if (tile.tileUp != null && !moving && currentMovePoints != 0)
+        {
+            destination = tile.tileRight;
+            Move();
+        }
+    }
+    public void goUp()
+    {
+        if (tile.tileUp != null && !moving && currentMovePoints != 0)
+        {
+            destination = tile.tileUp;
+            Move();
+        }
+    }
+    public void goDown()
+    {
+        if (tile.tileUp != null && !moving && currentMovePoints != 0)
+        {
+            destination = tile.tileDown;
+            Move();
+        }
     }
 
     public void Move()
