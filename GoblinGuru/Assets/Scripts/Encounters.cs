@@ -87,6 +87,8 @@ public class Encounters : MonoBehaviour {
         e.states[2].AddChoice(c2);
         AddEncounter(e);
 
+
+        Initialize();
         //e.PlayEncounter();
     }
 }
