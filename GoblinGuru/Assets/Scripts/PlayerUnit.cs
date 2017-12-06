@@ -28,7 +28,9 @@ public class PlayerUnit : MonoBehaviour {
     int stamina;
     int maxHealth;
     int health;
-    
+
+    float shakeIntensity = 0.06f;
+    float tempShakeIntensity = 0.06f;
 
     public GameTile Tile
     {
@@ -70,9 +72,18 @@ public class PlayerUnit : MonoBehaviour {
         ui.staminaSlider.value = stamina;
     }
 
+    void Shake()
+    {
+        moving = true;
+        transform.DetachChildren();
+        StartCoroutine(ShakeOverSeconds(.5f));
+    }
+
     private void ResetTurn()
     {
         currentMovePoints = maxMovePoints;
+        health -= 5;
+        stamina -= 10;
         UpdateUI();
     }
 
@@ -95,7 +106,7 @@ public class PlayerUnit : MonoBehaviour {
 
     public void goLeft()
     {
-        if (tile.tileUp != null && !moving && currentMovePoints != 0)
+        if (!moving)
         {
             destination = tile.tileLeft;
             Move();
@@ -103,7 +114,7 @@ public class PlayerUnit : MonoBehaviour {
     }
     public void goRight()
     {
-        if (tile.tileUp != null && !moving && currentMovePoints != 0)
+        if (!moving)
         {
             destination = tile.tileRight;
             Move();
@@ -111,7 +122,7 @@ public class PlayerUnit : MonoBehaviour {
     }
     public void goUp()
     {
-        if (tile.tileUp != null && !moving && currentMovePoints != 0)
+        if (!moving)
         {
             destination = tile.tileUp;
             Move();
@@ -119,7 +130,7 @@ public class PlayerUnit : MonoBehaviour {
     }
     public void goDown()
     {
-        if (tile.tileUp != null && !moving && currentMovePoints != 0)
+        if (!moving)
         {
             destination = tile.tileDown;
             Move();
@@ -134,6 +145,10 @@ public class PlayerUnit : MonoBehaviour {
             UpdateUI();
             moving = true;
             StartCoroutine(MoveOverSeconds(destination.Position, travelSpeedinSeconds));
+        }
+        else if(currentMovePoints == 0)
+        {
+            Shake();
         }
     }
 
@@ -177,10 +192,34 @@ public class PlayerUnit : MonoBehaviour {
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        transform.position = end;
+        position = end;
+        transform.position = position;
         tile = destination;
         destination = null;
         moving = false;
+    }
+
+    IEnumerator ShakeOverSeconds(float seconds)
+    {
+        float elapsedTime = 0;
+        Vector3 startingPos = position;
+        while (elapsedTime < seconds)
+        {
+            transform.position = position + Random.insideUnitSphere * tempShakeIntensity;
+            transform.rotation = new Quaternion(
+                Quaternion.identity.x + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f,
+                Quaternion.identity.y + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f,
+                Quaternion.identity.z + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f,
+                Quaternion.identity.w + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f);
+            tempShakeIntensity -= 0.002f;
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        
+        transform.position = position;
+        moving = false;
+        Camera.main.transform.parent = transform;
+        tempShakeIntensity = shakeIntensity;
     }
 
 

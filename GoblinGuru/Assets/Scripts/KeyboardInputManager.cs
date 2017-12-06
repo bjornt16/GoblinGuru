@@ -26,7 +26,6 @@ public class KeyboardInputManager : MonoBehaviour {
 
             if (Input.GetKeyDown("down") || Input.GetAxis("Vertical") > 0 )
             {
-                Debug.Log(Input.GetAxis("Vertical"));
                 player.goDown();
                 buttonDown = true;
             }
