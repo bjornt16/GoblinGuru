@@ -177,9 +177,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  travelSpeedinSeconds: 0
+  travelSpeedinSeconds: 0.1
   destination: {fileID: 0}
   maxMovePoints: 10
+  currentMovePoints: 0
+  ui: {fileID: 0}
 --- !u!124 &124312966081653080
 Behaviour:
   m_ObjectHideFlags: 1

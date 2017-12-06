@@ -21,8 +21,7 @@ public class PlayerUnitEditor : Editor
         {
             if(playerUnit.Tile.tileUp != null)
             {
-                playerUnit.destination = playerUnit.Tile.tileUp;
-                playerUnit.Move();
+                playerUnit.goUp();
             }
 
         }
@@ -30,24 +29,21 @@ public class PlayerUnitEditor : Editor
         {
             if (playerUnit.Tile.tileDown != null)
             {
-                playerUnit.destination = playerUnit.Tile.tileDown;
-                playerUnit.Move();
+                playerUnit.goDown();
             }
         }
         if (GUILayout.Button("Move Left"))
         {
             if (playerUnit.Tile.tileLeft != null)
             {
-                playerUnit.destination = playerUnit.Tile.tileLeft;
-                playerUnit.Move();
+                playerUnit.goLeft();
             }
         }
         if (GUILayout.Button("Move Right"))
         {
             if (playerUnit.Tile.tileRight != null)
             {
-                playerUnit.destination = playerUnit.Tile.tileRight;
-                playerUnit.Move();
+                playerUnit.goRight();
             }
         }
     }

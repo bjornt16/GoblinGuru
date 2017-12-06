@@ -18,7 +18,19 @@ public class PlayerUnit : MonoBehaviour {
 
     [SerializeField]
     private int maxMovePoints = 3;
+    [SerializeField]
     private int currentMovePoints;
+
+    public PlayerUnitUI ui;
+
+
+    int maxStamina;
+    int stamina;
+    int maxHealth;
+    int health;
+
+    float shakeIntensity = 0.06f;
+    float tempShakeIntensity = 0.06f;
 
     public GameTile Tile
     {
@@ -28,9 +40,20 @@ public class PlayerUnit : MonoBehaviour {
         }
     }
 
-    private void Start()
+    public bool CanMove
     {
-        currentMovePoints = maxMovePoints;
+        get
+        {
+            return (currentMovePoints != 0);
+        }
+    }
+
+    public bool Moving
+    {
+        get
+        {
+            return moving;
+        }
     }
 
     private void OnEnable()
@@ -38,15 +61,80 @@ public class PlayerUnit : MonoBehaviour {
         GameTurnManager.OnNewTurn += ResetTurn;
     }
 
+    void UpdateUI()
+    {
+        ui.movesText.text = currentMovePoints.ToString();
+        ui.healthText.text = health + " / " + maxHealth;
+        ui.healthSlider.maxValue = maxHealth;
+        ui.healthSlider.value = health;
+        ui.staminaText.text = stamina + " / " + maxStamina;
+        ui.staminaSlider.maxValue = maxStamina;
+        ui.staminaSlider.value = stamina;
+    }
+
+    void Shake()
+    {
+        moving = true;
+        transform.DetachChildren();
+        StartCoroutine(ShakeOverSeconds(.5f));
+    }
+
     private void ResetTurn()
     {
         currentMovePoints = maxMovePoints;
+        health -= 5;
+        stamina -= 10;
+        UpdateUI();
     }
 
     public void Instantiate(GameTile gameTile)
     {
         tile = gameTile;
         position = tile.Position;
+        transform.position = position;
+
+        maxHealth = 20;
+        health = 20;
+
+        maxStamina = 20;
+        stamina = 20;
+
+        currentMovePoints = maxMovePoints;
+
+        UpdateUI();
+    }
+
+    public void goLeft()
+    {
+        if (!moving)
+        {
+            destination = tile.tileLeft;
+            Move();
+        }
+    }
+    public void goRight()
+    {
+        if (!moving)
+        {
+            destination = tile.tileRight;
+            Move();
+        }
+    }
+    public void goUp()
+    {
+        if (!moving)
+        {
+            destination = tile.tileUp;
+            Move();
+        }
+    }
+    public void goDown()
+    {
+        if (!moving)
+        {
+            destination = tile.tileDown;
+            Move();
+        }
     }
 
     public void Move()
@@ -54,8 +142,13 @@ public class PlayerUnit : MonoBehaviour {
         if(destination != null && moving == false && currentMovePoints > 0)
         {
             currentMovePoints--;
+            UpdateUI();
             moving = true;
             StartCoroutine(MoveOverSeconds(destination.Position, travelSpeedinSeconds));
+        }
+        else if(currentMovePoints == 0)
+        {
+            Shake();
         }
     }
 
@@ -99,10 +192,34 @@ public class PlayerUnit : MonoBehaviour {
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        transform.position = end;
+        position = end;
+        transform.position = position;
         tile = destination;
         destination = null;
         moving = false;
+    }
+
+    IEnumerator ShakeOverSeconds(float seconds)
+    {
+        float elapsedTime = 0;
+        Vector3 startingPos = position;
+        while (elapsedTime < seconds)
+        {
+            transform.position = position + Random.insideUnitSphere * tempShakeIntensity;
+            transform.rotation = new Quaternion(
+                Quaternion.identity.x + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f,
+                Quaternion.identity.y + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f,
+                Quaternion.identity.z + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f,
+                Quaternion.identity.w + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f);
+            tempShakeIntensity -= 0.002f;
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        
+        transform.position = position;
+        moving = false;
+        Camera.main.transform.parent = transform;
+        tempShakeIntensity = shakeIntensity;
     }
 
 
