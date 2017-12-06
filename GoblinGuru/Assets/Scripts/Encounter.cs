@@ -7,13 +7,17 @@ public class Encounter {
     public string name;
     public List<State> states;
     public State currentState;
-    public int hp;
+    public int HP;
+    public int maxHP;
+    
 
     public Encounter(string newName)
     {
         states = new List<State>();
         currentState = null;
         name = newName;
+        HP = int.MaxValue;
+        maxHP = int.MaxValue;
     }
     
     public Encounter(string newName, int newHp)
@@ -21,13 +25,14 @@ public class Encounter {
         states = new List<State>();
         currentState = null;
         name = newName;
-        hp = newHp;
+        HP = newHp;
+        maxHP = newHp;
     }
 
-    public State CurrentState()
+    /*public State CurrentState()
     {
         return currentState;
-    }
+    }*/
 
     public string CurrentText()
     {
@@ -67,6 +72,13 @@ public class Encounter {
             PlayTurn();
         }
         Debug.Log(currentState.text);
+    }
+
+    public void PlayTurn(int choice)
+    {
+        Debug.Log(currentState.choices[choice].cText);
+
+        currentState = currentState.choices[choice].AttemptChoice();
     }
 
     public void PlayTurn()

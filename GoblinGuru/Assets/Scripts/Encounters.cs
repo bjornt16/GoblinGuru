@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Encounters : MonoBehaviour {
 
+    public EncounterUI ui;
+
     List<Encounter> encounters;
+    List<OptionButton> buttons;
 
     public Encounters()
     {
@@ -14,6 +17,50 @@ public class Encounters : MonoBehaviour {
     public void AddEncounter(Encounter enc)
     {
         encounters.Add(enc);
+    }
+
+    public void Initialize()
+    {
+        buttons = new List<OptionButton>();
+        ui.stateText.text = encounters[0].currentState.text;
+
+        if(encounters[0].currentState.choices.Count == 0)
+        {
+            UnityEngine.UI.Button tempButton = Instantiate(ui.buttonPrefab, ui.options.transform).GetComponent<UnityEngine.UI.Button>();
+            UnityEngine.UI.Text tempText = tempButton.gameObject.transform.GetComponentInChildren<UnityEngine.UI.Text>();
+            tempText.text = "Continue";
+            tempButton.onClick.AddListener(() => CloseDialogue());
+        }
+        
+        for (int i = 0; i < encounters[0].currentState.choices.Count; i++)
+        {
+            OptionButton tempButton = Instantiate(ui.buttonPrefab, ui.options.transform);
+            tempButton.Initialize(i, encounters[0].currentState.choices[i].cText);
+            buttons.Add(tempButton);
+            tempButton.option.onClick.AddListener(() => OnClickTask(tempButton.parameter));
+            /*UnityEngine.UI.Text tempText = tempButton.gameObject.transform.GetComponentInChildren<UnityEngine.UI.Text>();
+            tempText.text = encounters[0].currentState.choices[i].cText;
+            Debug.Log("i is: " + i);
+            tempButton.onClick.AddListener(() => OnClickTask(counter));
+            */
+        }
+
+    }
+
+    public void OnClickTask(int number)
+    {
+        Debug.Log(number);
+        encounters[0].PlayTurn(number);
+        foreach(OptionButton button in buttons)
+        {
+            button.Destroy();
+        }
+        Initialize();
+    }
+
+    public void CloseDialogue()
+    {
+        //todo functionality
     }
 
     // Use this for initialization
@@ -38,7 +85,8 @@ public class Encounters : MonoBehaviour {
         e.states[0].AddChoice(c1);
         e.states[0].AddChoice(c2);
         e.states[2].AddChoice(c2);
+        AddEncounter(e);
 
-        e.PlayEncounter();
+        //e.PlayEncounter();
     }
 }
