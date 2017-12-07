@@ -32,6 +32,11 @@ public class PlayerUnit : MonoBehaviour {
     float shakeIntensity = 0.06f;
     float tempShakeIntensity = 0.06f;
 
+
+    public bool canCrossRiver;
+    public bool canCrossSS;
+    public bool canCrossDS;
+
     public GameTile Tile
     {
         get
@@ -61,6 +66,29 @@ public class PlayerUnit : MonoBehaviour {
         GameTurnManager.OnNewTurn += ResetTurn;
     }
 
+    public bool ValidateMove(GameTile dest)
+    {
+        TileTerrain type = dest.tileTerrain;
+        if (type == TileTerrain.ShallowSea && canCrossSS)
+        {
+            return true;
+        }
+        else if (type == TileTerrain.DeepSea && canCrossDS)
+        {
+            return true;
+        }
+        else if (type == TileTerrain.River && canCrossRiver)
+        {
+            return true;
+        }
+        else if(type != TileTerrain.ShallowSea && type != TileTerrain.DeepSea && type != TileTerrain.River)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     void UpdateUI()
     {
         ui.movesText.text = currentMovePoints.ToString();
@@ -76,7 +104,7 @@ public class PlayerUnit : MonoBehaviour {
     {
         moving = true;
         transform.DetachChildren();
-        StartCoroutine(ShakeOverSeconds(.5f));
+        StartCoroutine(ShakeOverSeconds(.25f));
     }
 
     private void ResetTurn()
@@ -104,7 +132,7 @@ public class PlayerUnit : MonoBehaviour {
         UpdateUI();
     }
 
-    public void goLeft()
+    public void GoLeft()
     {
         if (!moving)
         {
@@ -112,7 +140,7 @@ public class PlayerUnit : MonoBehaviour {
             Move();
         }
     }
-    public void goRight()
+    public void GoRight()
     {
         if (!moving)
         {
@@ -120,7 +148,7 @@ public class PlayerUnit : MonoBehaviour {
             Move();
         }
     }
-    public void goUp()
+    public void GoUp()
     {
         if (!moving)
         {
@@ -128,7 +156,7 @@ public class PlayerUnit : MonoBehaviour {
             Move();
         }
     }
-    public void goDown()
+    public void GoDown()
     {
         if (!moving)
         {
@@ -139,14 +167,14 @@ public class PlayerUnit : MonoBehaviour {
 
     public void Move()
     {
-        if(destination != null && moving == false && currentMovePoints > 0)
+        if(destination != null && moving == false && currentMovePoints > 0 && ValidateMove(destination))
         {
             currentMovePoints--;
             UpdateUI();
             moving = true;
             StartCoroutine(MoveOverSeconds(destination.Position, travelSpeedinSeconds));
         }
-        else if(currentMovePoints == 0)
+        else if(!moving)
         {
             Shake();
         }
@@ -202,7 +230,6 @@ public class PlayerUnit : MonoBehaviour {
     IEnumerator ShakeOverSeconds(float seconds)
     {
         float elapsedTime = 0;
-        Vector3 startingPos = position;
         while (elapsedTime < seconds)
         {
             transform.position = position + Random.insideUnitSphere * tempShakeIntensity;

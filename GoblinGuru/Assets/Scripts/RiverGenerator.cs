@@ -81,17 +81,13 @@ public static class RiverGenerator{
                         }
                     }
 
-
-                    int xDir;
-                    int yDir;
-
                     bool oldHorizontal = horizontal;
                     for (int i = 0; i < tempRiverPoints.Count; i++)
                     {
                         // Debug.Log(riverPointsVect[i].x + " " + riverPointsVect[i].y);
 
-                        xDir = Mathf.Abs(x - (int)riverPointsVect[i].x);
-                        yDir = Mathf.Abs(y - (int)riverPointsVect[i].y);
+                        //int xDir = Mathf.Abs(x - (int)riverPointsVect[i].x);
+                        //int yDir = Mathf.Abs(y - (int)riverPointsVect[i].y);
 
                         x = (int)riverPointsVect[i].x;
                         y = (int)riverPointsVect[i].y;
@@ -149,6 +145,7 @@ public static class RiverGenerator{
                 }
             }
         }
+
         return new RiverReturn(riverPoints.ToArray(), heightMap);
     }
 
@@ -183,8 +180,6 @@ public static class RiverGenerator{
         Dictionary<int, float> neighBoursHor = new Dictionary<int, float>();
         Dictionary<int, float> neighBoursVert = new Dictionary<int, float>();
 
-        Vector2 origin = new Vector2(x, y);
-
         float xDir = 0;
         float yDir = 0;
 
@@ -210,8 +205,6 @@ public static class RiverGenerator{
             xDir = 0;
             yDir = neighBoursVert.Aggregate((l, r) => l.Value > r.Value ? r : l).Key;
         }
-
-        Vector2 tempPos = new Vector2(origin.x + xDir, origin.y + yDir);
 
         return new Vector2(xDir, yDir);
     }

@@ -19,32 +19,19 @@ public class PlayerUnitEditor : Editor
 
         if (GUILayout.Button("Move Up"))
         {
-            if(playerUnit.Tile.tileUp != null)
-            {
-                playerUnit.goUp();
-            }
-
+            playerUnit.GoUp();
         }
         if (GUILayout.Button("Move Down"))
         {
-            if (playerUnit.Tile.tileDown != null)
-            {
-                playerUnit.goDown();
-            }
+            playerUnit.GoDown();
         }
         if (GUILayout.Button("Move Left"))
         {
-            if (playerUnit.Tile.tileLeft != null)
-            {
-                playerUnit.goLeft();
-            }
+            playerUnit.GoLeft();
         }
         if (GUILayout.Button("Move Right"))
         {
-            if (playerUnit.Tile.tileRight != null)
-            {
-                playerUnit.goRight();
-            }
+             playerUnit.GoRight();  
         }
     }
 }
