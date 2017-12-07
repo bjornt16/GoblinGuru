@@ -50,6 +50,7 @@ public class Encounters : MonoBehaviour {
     public void OnClickTask(int number)
     {
         Debug.Log(number);
+        FindObjectOfType<AudioManager>().Play("buttonClick");
         encounters[0].PlayTurn(number);
         foreach(OptionButton button in buttons)
         {
