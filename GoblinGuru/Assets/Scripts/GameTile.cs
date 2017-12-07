@@ -12,6 +12,11 @@ public class GameTile : MonoBehaviour {
     public GameTile tileLeft;
     public GameTile tileRight;
 
+    public int tileVerticeFrom;
+    public int tileVerticeTo;
+
+    public TileTerrain tileTerrain;
+
     public Vector3 Position
     {
         get
@@ -25,10 +30,11 @@ public class GameTile : MonoBehaviour {
         DestroyImmediate(gameObject);
     }
 
-    public void Initialize(Transform parent, int x, int y)
+    public void Initialize(Transform parent, int x, int y, TileTerrain tT)
     {
         name = "x: " + x + ", y:" + y;
         coordinates = new Vector2(x, y);
+        tileTerrain = tT;
         SetPositionRaycast(transform.position, Vector3.down);
         if(parent != null)
         {
