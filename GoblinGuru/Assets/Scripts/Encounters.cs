@@ -61,6 +61,7 @@ public class Encounters : MonoBehaviour {
 
     public void CloseDialogue()
     {
+        FindObjectOfType<AudioManager>().Play("buttonClick");
         //todo functionality
     }
 
