@@ -29,10 +29,10 @@ public class Encounter {
         maxHP = newHp;
     }
 
-    /*public State CurrentState()
+    public State CurrentState()
     {
         return currentState;
-    }*/
+    }
 
     public string CurrentText()
     {
@@ -63,6 +63,11 @@ public class Encounter {
         {
             currentState = states[0];
         }
+    }
+
+    public void SetCurrState(State s)
+    {
+        currentState = s;
     }
 
     public void PlayEncounter()

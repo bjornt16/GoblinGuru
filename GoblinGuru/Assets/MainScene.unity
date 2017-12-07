@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -412,7 +412,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 599907503}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &392774161
 MonoBehaviour:
@@ -436,6 +436,18 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 13118eabe5062bb41ae265b25a348d3d, type: 3}
     volume: 0.4
     pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: errorSound
+    clip: {fileID: 8300000, guid: 8b12fcfde81f76e46b558b8b4058f29f, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: fantasyTheme
+    clip: {fileID: 8300000, guid: 26e719cedd8eaa04ea5fd1a260742af8, type: 3}
+    volume: 0.4
+    pitch: 1.03
     loop: 1
     source: {fileID: 0}
 --- !u!1 &459819853
@@ -706,8 +718,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 540046114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 512, y: 384, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 429.5, y: 268.5, z: 0}
+  m_LocalScale: {x: 0.8388672, y: 0.8388672, z: 0.8388672}
   m_Children:
   - {fileID: 580950784}
   - {fileID: 1183621610}
@@ -858,8 +870,9 @@ Transform:
   - {fileID: 1193823372}
   - {fileID: 1968304382}
   - {fileID: 1654814632}
-  - {fileID: 392774160}
   - {fileID: 675598874}
+  - {fileID: 1417043349}
+  - {fileID: 392774160}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1005,7 +1018,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 599907503}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &675598875
 MonoBehaviour:
@@ -1868,7 +1881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnNumber: {fileID: 645608451}
   RestButton: {fileID: 1942873138}
-  EncounterButton: {fileID: 1241305630}
+  EncounterButton: {fileID: 0}
 --- !u!1 &1193823371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,12 +1999,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1417043350}
+        m_MethodName: startEncounter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2459,6 +2472,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!1 &1417043348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1417043349}
+  - component: {fileID: 1417043350}
+  m_Layer: 0
+  m_Name: GameStateManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1417043349
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1417043348}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 599907503}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1417043350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1417043348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aea450e35cfd124cba1160a1a298a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  e: {fileID: 1654814631}
 --- !u!1001 &1442795636
 Prefab:
   m_ObjectHideFlags: 0
