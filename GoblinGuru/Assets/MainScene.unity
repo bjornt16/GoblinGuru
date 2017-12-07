@@ -385,6 +385,59 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
+--- !u!1 &392774159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 392774160}
+  - component: {fileID: 392774161}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &392774160
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392774159}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 599907503}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392774161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392774159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bdcdfe6c551a354897f80cf9a498574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: buttonClick
+    clip: {fileID: 8300000, guid: c57fc20c93a737345afb745dfdf81418, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: theme
+    clip: {fileID: 8300000, guid: 13118eabe5062bb41ae265b25a348d3d, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!1 &459819853
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +836,7 @@ Transform:
   - {fileID: 1193823372}
   - {fileID: 1968304382}
   - {fileID: 1654814632}
+  - {fileID: 392774160}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1432,9 +1486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textureRender: {fileID: 23492839}
-  meshFilter: {fileID: 520224716}
-  meshRenderer: {fileID: 520224715}
-  meshCollider: {fileID: 520224718}
 --- !u!114 &971513593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1529,38 +1580,8 @@ MonoBehaviour:
     m_RotationOrder: 0
   useFallOff: 1
   autoUpdate: 1
-  regions:
-  - name: Deep Water
-    height: 0.25
-    color: {r: 0.10218428, g: 0.15235342, b: 0.66176474, a: 0}
-  - name: Shallow Water
-    height: 0.35
-    color: {r: 0.13283956, g: 0.19805944, b: 0.8602941, a: 0}
-  - name: Sand
-    height: 0.45
-    color: {r: 0.8442907, g: 0.89705884, b: 0.51448965, a: 0}
-  - name: Grass
-    height: 0.55
-    color: {r: 0.17398734, g: 0.77205884, b: 0.124891855, a: 0}
-  - name: Grass 2
-    height: 0.6
-    color: {r: 0.13528521, g: 0.5661765, b: 0.09991349, a: 0}
-  - name: Rock
-    height: 0.7
-    color: {r: 0.42647058, g: 0.2597751, b: 0.13170415, a: 0}
-  - name: Rock 2
-    height: 0.8
-    color: {r: 0.25735295, g: 0.15890111, b: 0.08326125, a: 0}
-  - name: Snow
-    height: 0.85
-    color: {r: 0.74264705, g: 0.7302947, b: 0.7208045, a: 0}
-  - name: Snow
-    height: 1
-    color: {r: 0.90556914, g: 0.9117647, b: 0.9050605, a: 0}
-  gameTileBucket: {fileID: 1741592826}
-  tilePrefab: {fileID: 114952461548196760, guid: 158f418a079efe54ab88559ce424c308,
-    type: 2}
   player: {fileID: 1994930425}
+  map: {fileID: 0}
 --- !u!4 &971513594
 Transform:
   m_ObjectHideFlags: 0

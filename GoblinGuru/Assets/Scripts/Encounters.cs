@@ -50,6 +50,7 @@ public class Encounters : MonoBehaviour {
     public void OnClickTask(int number)
     {
         Debug.Log(number);
+        FindObjectOfType<AudioManager>().Play("buttonClick");
         encounters[0].PlayTurn(number);
         foreach(OptionButton button in buttons)
         {
@@ -60,6 +61,7 @@ public class Encounters : MonoBehaviour {
 
     public void CloseDialogue()
     {
+        FindObjectOfType<AudioManager>().Play("buttonClick");
         //todo functionality
         ui.gameObject.SetActive(false);
         GameStateManager.Instance.startMovement();
