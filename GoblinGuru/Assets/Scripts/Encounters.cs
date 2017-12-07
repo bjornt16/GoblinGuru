@@ -61,6 +61,8 @@ public class Encounters : MonoBehaviour {
     public void CloseDialogue()
     {
         //todo functionality
+        ui.gameObject.SetActive(false);
+        GameStateManager.Instance.startMovement();
     }
 
     // Use this for initialization
