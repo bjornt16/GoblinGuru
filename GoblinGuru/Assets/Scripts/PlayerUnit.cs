@@ -110,8 +110,8 @@ public class PlayerUnit : MonoBehaviour {
     private void ResetTurn()
     {
         currentMovePoints = maxMovePoints;
-        health -= 5;
-        stamina -= 10;
+        //health -= 5;
+        //stamina -= 10;
         UpdateUI();
     }
 
