@@ -26,7 +26,7 @@ public class GameTurnManager : MonoBehaviour {
 
     public GameTurnUI gameTurnUi;
 
-    public void Insantiate(int currentTurn)
+    public void Instantiate(int currentTurn)
     {
         turn = currentTurn;
     }

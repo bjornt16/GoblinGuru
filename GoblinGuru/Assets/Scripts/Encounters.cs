@@ -6,9 +6,24 @@ using XNode;
 
 public class Encounters : MonoBehaviour {
 
+    private static Encounters instance = null;
+    public static Encounters Instance { get { return instance; } }
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
     public EncounterUI ui;
 
-
+    List<Enc> randEncList;
     List<Enc> encList;
     List<Encounter> encounters;
     List<OptionButton> buttons;
@@ -16,6 +31,7 @@ public class Encounters : MonoBehaviour {
     int encIndex = 0;
 
     Enc currentEnc;
+    Enc currentRandEnc;
 
     List<Encounter> randomEncounters;
 
@@ -36,7 +52,7 @@ public class Encounters : MonoBehaviour {
     public void pickRandom()
     {
         int randomNum = 0;
-        currOriginalState = curr.currentState;
+        currentEnc = randEncList[0];
         Initialize();
     }
 
@@ -181,12 +197,16 @@ public class Encounters : MonoBehaviour {
 
 
 
-        buildEncList();
+        encList = buildEncList("StoryEncounters");
         if(encList.Count > 0)
         {
             encIndex = 0;
             currentEnc = encList[0];
         }
+
+        randEncList = buildEncList("RandomStoryEncounters");
+        currentRandEnc = randEncList[0];
+
         Initialize();
 
         //Initialize();
@@ -194,19 +214,20 @@ public class Encounters : MonoBehaviour {
     }
 
 
-    private void buildEncList()
+    private List<Enc> buildEncList(string folder)
     {
-        encList = new List<Enc>();
-        ExampleNodeGraph[] node = Resources.LoadAll<ExampleNodeGraph>("StoryEncounters");
+        List<Enc> list = new List<Enc>();
+        ExampleNodeGraph[] node = Resources.LoadAll<ExampleNodeGraph>(folder);
         Enc tempEnc = null;
         for (int n = 0; n < node.Length; n++)
         {
             tempEnc = (Enc)node[n].nodes[0].GetOutputPort("encOutput").GetOutputValue();
             recursiveBuildEnc(tempEnc, node, n, 0);
-            encList.Add(tempEnc);
+            list.Add(tempEnc);
         }
 
-        Debug.Log(encList);
+        Debug.Log(list);
+        return list;
     }
 
     private void recursiveBuildEnc(Enc currEnc, ExampleNodeGraph[] node, int nodeFileIndex, int nodeIndex)

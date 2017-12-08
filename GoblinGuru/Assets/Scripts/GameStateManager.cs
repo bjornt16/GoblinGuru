@@ -46,6 +46,7 @@ public class GameStateManager : MonoBehaviour {
 
     public void startEncounter()
     {
+        GameTurnManager.Instance.NextTurn();
         gameState = GameState.Encounter;
         e.pickRandom();
     }

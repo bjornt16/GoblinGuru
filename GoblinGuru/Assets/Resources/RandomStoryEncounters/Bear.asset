@@ -9,18 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: ExampleNodeGraph
+  m_Name: Bear
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 114995978139095234}
-  - {fileID: 114310836139479500}
-  - {fileID: 114797190990095798}
-  - {fileID: 114130247363337784}
-  - {fileID: 114889228997868320}
-  - {fileID: 114904193352346968}
-  - {fileID: 114252213434664478}
-  - {fileID: 114054130503567626}
---- !u!114 &114054130503567626
+  - {fileID: 114343300622370668}
+  - {fileID: 114606569166132820}
+  - {fileID: 114512643148715440}
+  - {fileID: 114006504580663464}
+  - {fileID: 114914556987674162}
+  - {fileID: 114807805122936774}
+--- !u!114 &114006504580663464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -29,29 +27,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
+  m_Name: Encounter Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 680, y: -200}
+  position: {x: -472, y: 248}
   ports:
     keys:
     - encOutput
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114054130503567626}
+      _node: {fileID: 114006504580663464}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: instanceInput_1
-        node: {fileID: 114130247363337784}
+      - fieldName: instanceInput_4
+        node: {fileID: 114343300622370668}
       _direction: 1
       _dynamic: 0
   encOutput:
     text: 
     choices: []
-  text: w2l1
+  text: "You\u2019re not staying here a moment longer, deciding to leg it you manage
+    to stay ahead of the bear long enough to get into a tree. The bear wanders around
+    at the base of the tree for a bit before leaving.\r\n"
   choices: []
---- !u!114 &114130247363337784
+--- !u!114 &114343300622370668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -60,179 +60,70 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
+  m_Name: Encounter Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 152, y: -344}
+  position: {x: -632, y: -328}
   ports:
     keys:
     - encOutput
     - instanceInput_0
     - instanceInput_1
+    - instanceInput_2
+    - instanceInput_3
+    - instanceInput_4
+    - instanceInput_5
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114130247363337784}
+      _node: {fileID: 114343300622370668}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_0
-        node: {fileID: 114797190990095798}
+      connections: []
       _direction: 1
       _dynamic: 0
     - _fieldName: instanceInput_0
-      _node: {fileID: 114130247363337784}
+      _node: {fileID: 114343300622370668}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114252213434664478}
+        node: {fileID: 114606569166132820}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_1
-      _node: {fileID: 114130247363337784}
+      _node: {fileID: 114343300622370668}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114343300622370668}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114054130503567626}
+        node: {fileID: 114512643148715440}
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-  text: w2
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: 
-    rollType: basic
-    chance: 50
---- !u!114 &114252213434664478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 680, y: -376}
-  ports:
-    keys:
-    - encOutput
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114252213434664478}
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114343300622370668}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_0
-        node: {fileID: 114130247363337784}
-      _direction: 1
-      _dynamic: 0
-  encOutput:
-    text: 
-    choices: []
-  text: w3
-  choices: []
---- !u!114 &114310836139479500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -296, y: 72}
-  ports:
-    keys:
-    - encOutput
-    - instanceInput_0
-    - instanceInput_1
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114310836139479500}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_1
-        node: {fileID: 114995978139095234}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: instanceInput_0
-      _node: {fileID: 114310836139479500}
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_4
+      _node: {fileID: 114343300622370668}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114904193352346968}
+        node: {fileID: 114006504580663464}
       _direction: 0
       _dynamic: 1
-    - _fieldName: instanceInput_1
-      _node: {fileID: 114310836139479500}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114889228997868320}
-      _direction: 0
-      _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-  text: l1
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Test Loss
-    rollType: basic
-    chance: 50
---- !u!114 &114797190990095798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -312, y: -296}
-  ports:
-    keys:
-    - encOutput
-    - instanceInput_0
-    - instanceInput_1
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114797190990095798}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_0
-        node: {fileID: 114995978139095234}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: instanceInput_0
-      _node: {fileID: 114797190990095798}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114130247363337784}
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_1
-      _node: {fileID: 114797190990095798}
+    - _fieldName: instanceInput_5
+      _node: {fileID: 114343300622370668}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
@@ -241,14 +132,26 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
-  text: w1
+  text: "As you are wandering the world, you suddenly hear a rustling in the grass
+    nearby. Emerging from the bushes is a large ursine face covered in a shaggy brown
+    coat. There is a brief silence as the two of you spot each other.\r"
   choices:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
-    cText: Test Won
+    cText: "Don\u2019t move."
     rollType: basic
-    chance: 50
---- !u!114 &114889228997868320
+    chance: 100
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: " \u201CHelp me Arizta!\u201D"
+    rollType: basic
+    chance: 100
+  - winPort: instanceInput_4
+    lossPort: instanceInput_5
+    cText: Run!
+    rollType: basic
+    chance: 100
+--- !u!114 &114512643148715440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -257,110 +160,178 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
+  m_Name: Encounter Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 168, y: 168}
-  ports:
-    keys:
-    - encOutput
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114889228997868320}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_1
-        node: {fileID: 114310836139479500}
-      _direction: 1
-      _dynamic: 0
-  encOutput:
-    text: 
-    choices: []
-  text: l2
-  choices: []
---- !u!114 &114904193352346968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 168, y: -24}
-  ports:
-    keys:
-    - encOutput
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114904193352346968}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_0
-        node: {fileID: 114310836139479500}
-      _direction: 1
-      _dynamic: 0
-  encOutput:
-    text: 
-    choices: []
-  text: l1w1
-  choices: []
---- !u!114 &114995978139095234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -728, y: -184}
+  position: {x: 56, y: -40}
   ports:
     keys:
     - encOutput
     - instanceInput_0
     - instanceInput_1
+    - instanceInput_2
+    - instanceInput_3
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114995978139095234}
+      _node: {fileID: 114512643148715440}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114343300622370668}
       _direction: 1
       _dynamic: 0
     - _fieldName: instanceInput_0
-      _node: {fileID: 114995978139095234}
+      _node: {fileID: 114512643148715440}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114797190990095798}
+        node: {fileID: 114914556987674162}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_1
-      _node: {fileID: 114995978139095234}
+      _node: {fileID: 114512643148715440}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114512643148715440}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114310836139479500}
+        node: {fileID: 114807805122936774}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114512643148715440}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
       _direction: 0
       _dynamic: 1
   encOutput:
     text: 
     choices: []
-  text: s
+  text: "Your courage leaves you as the huge and hungry beast approaches you.\r\n\r\n\u201CH-help
+    me Arizta!\u201D you cry out and run.\r\n\r\nShe heard you, and soon she dashes
+    past you to deck the bear in the nose. You hear the sound of combat and a terrible
+    crunch before you\u2019re no longer in the bears sight.\r\n\r\nYou lose track
+    of how long it has been, but the bear didn\u2019t come for you. Cautiously you
+    retrace your steps, your gut sinking more and more in the silence. Your fears
+    are confirmed when you reach the bears former spot, Arizta\u2019s body lies half-eaten
+    on the ground.\r\n\r\nThe bear is nowhere to be seen.\r"
   choices:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
-    cText: Test
+    cText: Bury Arizta.
     rollType: basic
-    chance: 50
+    chance: 100
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: 'Keep moving. '
+    rollType: basic
+    chance: 100
+--- !u!114 &114606569166132820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -56, y: -264}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114606569166132820}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114343300622370668}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+  text: "The bear comes painfully close and regards you for a while, before turning
+    around and leaving. When it\u2019s no longer in sight you exhale a sigh of relief.\r\n"
+  choices: []
+--- !u!114 &114807805122936774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 581.3039, y: 262.45697}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114807805122936774}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114512643148715440}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+  text: "There is nothing you can do now, you resolve to not make her sacrifice be
+    in vain. You continue, you need to succeed or else her death would have been for
+    nothing.\r\n"
+  choices: []
+--- !u!114 &114914556987674162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 616, y: 24}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114914556987674162}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114512643148715440}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+  text: "You cry over her body, she\u2019d been ripped away from life by some stupid
+    animal. You felt even worse because it was your fault for calling on her like
+    that, the least you could do to make up for it was to bury her.\r\n\r\nIt was
+    hard work, but after a while you managed to bury her in a crude grave with a crude
+    stone.\r\n"
+  choices: []
