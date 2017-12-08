@@ -51,7 +51,7 @@ public class KeyboardInputManager : MonoBehaviour {
             }
             else if (!player.Moving && Input.GetKeyDown("space"))
             {
-                gameTurnUi.EncounterButton.onClick.Invoke();
+                //gameTurnUi.EncounterButton.onClick.Invoke();
                 buttonDown = true;
             }
         }
