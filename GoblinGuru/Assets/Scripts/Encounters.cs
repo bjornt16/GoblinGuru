@@ -8,7 +8,7 @@ public class Encounters : MonoBehaviour {
 
     public EncounterUI ui;
 
-<<<<<<< HEAD
+
     List<Enc> encList;
     List<Encounter> encounters;
     List<OptionButton> buttons;
@@ -16,13 +16,12 @@ public class Encounters : MonoBehaviour {
     int encIndex = 0;
 
     Enc currentEnc;
-=======
+
     List<Encounter> randomEncounters;
-    List<OptionButton> buttons;
 
     Encounter curr;
     State currOriginalState;
->>>>>>> f51b8ab26174d9664d6dc79a9051cb0921ab2376
+
 
     public Encounters()
     {
@@ -45,15 +44,10 @@ public class Encounters : MonoBehaviour {
     public void Initialize()
     {
         buttons = new List<OptionButton>();
-<<<<<<< HEAD
+
         ui.stateText.text = currentEnc.text;
 
-        if (currentEnc.choices.Count == 0)
-=======
-        ui.stateText.text = curr.currentState.text;
-
         if(curr.currentState.choices.Count == 0)
->>>>>>> f51b8ab26174d9664d6dc79a9051cb0921ab2376
         {
             OptionButton tempButton = Instantiate(ui.buttonPrefab, ui.options.transform);
             tempButton.Initialize(0, "Continue");
@@ -94,25 +88,22 @@ public class Encounters : MonoBehaviour {
             tempButton.onClick.AddListener(() => OnClickTask(counter));
             
         }
-<<<<<<< HEAD
+
         */
 
-=======
+
         ui.gameObject.SetActive(true);
->>>>>>> f51b8ab26174d9664d6dc79a9051cb0921ab2376
+
     }
 
     public void OnClickTask(int number)
     {
-<<<<<<< HEAD
+
         Debug.Log("numb " + number);
-        //FindObjectOfType<AudioManager>().Play("buttonClick");
         currentEnc = currentEnc.PlayTurn(number);
-=======
-        Debug.Log(number);
-        FindObjectOfType<AudioManager>().Play("buttonClick");
-        curr.PlayTurn(number);
->>>>>>> f51b8ab26174d9664d6dc79a9051cb0921ab2376
+
+        //FindObjectOfType<AudioManager>().Play("buttonClick");
+
         foreach(OptionButton button in buttons)
         {
             button.Destroy();
@@ -129,7 +120,6 @@ public class Encounters : MonoBehaviour {
         {
             button.Destroy();
         }
-        curr.currentState = currOriginalState;
         GameStateManager.Instance.startMovement();
     }
 
@@ -162,16 +152,15 @@ public class Encounters : MonoBehaviour {
 
 
 
-<<<<<<< HEAD
+
         buildEncList();
         if(encList.Count > 0)
         {
             currentEnc = encList[0];
         }
         Initialize();
-=======
+
         //Initialize();
->>>>>>> f51b8ab26174d9664d6dc79a9051cb0921ab2376
         //e.PlayEncounter();
     }
 
