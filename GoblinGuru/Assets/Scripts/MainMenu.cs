@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour {
 
     IEnumerator LoadScene(string sceneName)
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync("Bjossi");
+        AsyncOperation operation = SceneManager.LoadSceneAsync("MainScene");
 
         loadingScreen.SetActive(true);
 

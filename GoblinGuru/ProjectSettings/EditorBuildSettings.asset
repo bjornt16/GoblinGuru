@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MainMenuScene.unity
     guid: 5920b4906c6ecb340b88665cf9c509a0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Bjossi.unity
     guid: 060ee2df756d0cf4387c836ab232df0b
+  - enabled: 1
+    path: Assets/MainScene.unity
+    guid: 17d07f2c0385db540a7530873c53b80e

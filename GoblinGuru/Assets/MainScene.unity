@@ -786,7 +786,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 540046114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 536, y: 319.5, z: 0}
+  m_LocalPosition: {x: 536, y: 255, z: 0}
   m_LocalScale: {x: 1.046875, y: 1.046875, z: 1.046875}
   m_Children:
   - {fileID: 580950784}
@@ -2535,7 +2535,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1389987817}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -1200242548, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -4044,8 +4044,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1193823373}
-        m_MethodName: NextTurn
+      - m_Target: {fileID: 1417043350}
+        m_MethodName: startEncounter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
