@@ -49,7 +49,7 @@ public class EncounterNodeEditor : NodeEditor
             NodePort winport = target.AddInstanceInput(typeof(Enc));
             NodePort lossport = target.AddInstanceInput(typeof(Enc));
             Debug.Log(winport.fieldName);
-            encounter.choices.Add(new EncChoice("", winport.fieldName, lossport.fieldName, "basic", 50.0, null, null));
+            encounter.choices.Add(new EncChoice("", winport.fieldName, lossport.fieldName, "basic", 100.0, null, null));
         }
         GUILayout.EndHorizontal();
 

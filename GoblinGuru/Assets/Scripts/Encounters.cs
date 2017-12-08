@@ -98,28 +98,57 @@ public class Encounters : MonoBehaviour {
     public void OnClickTask(int number)
     {
 
-        Debug.Log("numb " + number);
-        currentEnc = currentEnc.PlayTurn(number);
-
-        //FindObjectOfType<AudioManager>().Play("buttonClick");
-
-        foreach(OptionButton button in buttons)
+        if(currentEnc.choices[number].cText == "Try Again?")
         {
-            button.Destroy();
+            currentEnc = encList[2];
+            FindObjectOfType<AudioManager>().Play("buttonClick");
+
+            foreach (OptionButton button in buttons)
+            {
+                button.Destroy();
+            }
+            Initialize();
         }
-        Initialize();
+        else
+        {
+            Debug.Log("numb " + number);
+            currentEnc = currentEnc.PlayTurn(number);
+
+            FindObjectOfType<AudioManager>().Play("buttonClick");
+
+            foreach (OptionButton button in buttons)
+            {
+                button.Destroy();
+            }
+            Initialize();
+        }
+
     }
 
     public void CloseDialogue()
     {
-        //FindObjectOfType<AudioManager>().Play("buttonClick");
+        FindObjectOfType<AudioManager>().Play("buttonClick");
         //todo functionality
-        ui.gameObject.SetActive(false);
-        foreach (OptionButton button in buttons)
+        encIndex++;
+        if (encIndex < 4)
         {
-            button.Destroy();
+            currentEnc = encList[encIndex];
+            foreach (OptionButton button in buttons)
+            {
+                button.Destroy();
+            }
+            Initialize();
         }
-        GameStateManager.Instance.startMovement();
+        else
+        {
+            ui.gameObject.SetActive(false);
+            foreach (OptionButton button in buttons)
+            {
+                button.Destroy();
+            }
+            GameStateManager.Instance.startMovement();
+        }
+
     }
 
     // Use this for initialization
@@ -155,6 +184,7 @@ public class Encounters : MonoBehaviour {
         buildEncList();
         if(encList.Count > 0)
         {
+            encIndex = 0;
             currentEnc = encList[0];
         }
         Initialize();

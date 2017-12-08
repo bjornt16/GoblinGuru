@@ -1,0 +1,307 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
+  m_Name: MainStory3
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 114319232066171724}
+  - {fileID: 114307956561845988}
+  - {fileID: 114059757718121628}
+  - {fileID: 114912705839574784}
+  - {fileID: 114373877340738308}
+--- !u!114 &114059757718121628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 152, y: -328}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114059757718121628}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114307956561845988}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114059757718121628}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114059757718121628}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  encOutput:
+    text: 
+    choices: []
+  text: Game Over
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Try Again?
+    rollType: basic
+    chance: 100
+--- !u!114 &114307956561845988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -424, y: -312}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114307956561845988}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114319232066171724}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114307956561845988}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114059757718121628}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114307956561845988}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  encOutput:
+    text: 
+    choices: []
+  text: "Deciding that this had to end now, you vault over the rock and rush towards
+    the warlock. Ignoring the cry of alarm from your friend, you charge towards the
+    warlock. The warlock turns towards and your courage deserts you immediately as
+    his great shining orbs look right into your soul.\r\n\r\nFaster than you can scrabble
+    out of the way, a bolt of pale light races out from the figure, striking you in
+    the chest. You feel numbness and a creeping cold spread throughout your body for
+    a few moments before you black out.\r\n\r\nYou never wake up.\r\n"
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Game Over!
+    rollType: basic
+    chance: 100
+--- !u!114 &114319232066171724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -968, y: -328}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    - instanceInput_2
+    - instanceInput_3
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114319232066171724}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114319232066171724}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114307956561845988}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114319232066171724}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114319232066171724}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114912705839574784}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114319232066171724}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  encOutput:
+    text: 
+    choices: []
+  text: "The sludge recoils from the incredible presence in the air. Without thinking
+    you and your friend run and hide behind the nearest rock. Soon enough a shrouded
+    figure enters your field of vision, it feels deeply wrong and is somehow managing
+    to glow black.\r\n\r\nYour heartbeat thunders in your ears as you try not to even
+    breathe too loudly, there is an unearthly wail from the sludge itself as the Warlock
+    approaches.\r\n"
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: 'If the warlock is not stopped, everything will go wrong, confront the
+      warlock. '
+    rollType: basic
+    chance: 100
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: 'The warlock is far beyond you, remain hidden. '
+    rollType: basic
+    chance: 100
+--- !u!114 &114373877340738308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 152, y: 8}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114373877340738308}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114912705839574784}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+  text: "It didn\u2019t take a genius to know that you shouldn\u2019t let it reach
+    you, so the two of you run as fast as your legs can carry you. It feels like your
+    lungs would burst at any moment as time passes. In the end you two make it out,
+    though not all the creatures of the swamp were so lucky.\r\n\r\nLooking back the
+    wave stops around the edges of the swamp, and only withered husks of reeds and
+    rotting wood remains. The swamp is dead, murdered by this figure.\r\n"
+  choices: []
+--- !u!114 &114912705839574784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -392, y: 24}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114912705839574784}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114319232066171724}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114912705839574784}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114373877340738308}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114912705839574784}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  encOutput:
+    text: 
+    choices: []
+  text: "You huddle behind the rock with your friend and close your eyes. You shake
+    and shiver as an unnatural wail echoes throughout the area, the whole place shaking
+    as it\u2019s corrupted. Then with a loud crack, the shaking subsides and the gut-churning
+    presence of the warlock departs.\r\n\r\nThe muck is dead, you can feel it in your
+    bones. The two of you emerge from hiding to see that the swamp is being drained
+    of colour in a slow creeping wave that withers the reeds as it passes.\r\n"
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: continue
+    rollType: basic
+    chance: 100
