@@ -36,7 +36,6 @@ public class Encounters : MonoBehaviour {
     public void pickRandom()
     {
         int randomNum = 0;
-        curr = randomEncounters[0];
         currOriginalState = curr.currentState;
         Initialize();
     }
@@ -47,7 +46,7 @@ public class Encounters : MonoBehaviour {
 
         ui.stateText.text = currentEnc.text;
 
-        if(curr.currentState.choices.Count == 0)
+        if(currentEnc.choices.Count == 0)
         {
             OptionButton tempButton = Instantiate(ui.buttonPrefab, ui.options.transform);
             tempButton.Initialize(0, "Continue");
