@@ -9,6 +9,7 @@ public class GameStateManager : MonoBehaviour {
 
     private static GameStateManager instance = null;
     public static GameStateManager Instance { get { return instance; } }
+    public Encounters e = new Encounters();
 
     public GameState GameState
     {
@@ -41,6 +42,7 @@ public class GameStateManager : MonoBehaviour {
     public void startEncounter()
     {
         gameState = GameState.Encounter;
+        e.pickRandom();
     }
 
     public void startCombat()

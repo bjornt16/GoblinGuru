@@ -177,6 +177,7 @@ public class PlayerUnit : MonoBehaviour {
         else if(!moving)
         {
             Shake();
+            FindObjectOfType<AudioManager>().Play("errorSound");
         }
     }
 
