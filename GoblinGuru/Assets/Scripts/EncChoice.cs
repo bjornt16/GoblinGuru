@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using XNode;
-using UnityEditor;
 
 [System.Serializable]
 public class EncChoice
