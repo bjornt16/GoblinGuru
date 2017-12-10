@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EncounterChoice {
+
     public string portName;
     public string cText;
     public string rollType;

@@ -27,8 +27,19 @@ public class Map : MonoBehaviour
     public GameObject gameTileParent;
     public GameTile tilePrefab;
 
+    public UnityEngine.Canvas mapCanvas;
+    GameTileLabel[] labels;
+
     TileTerrain[] tileTerrain;
 
+    public GameTile GetTile(int x, int y)
+    {
+        if(gameTiles != null)
+        {
+            return gameTiles[x * mapMeshWidth + y];
+        }
+        return null;
+    }
 
     private void CalculateMeshFromHeightMap()
     {
@@ -91,9 +102,14 @@ public class Map : MonoBehaviour
                 {
                     gameTiles[i].Destroy();
                 }
+                if (labels[i] != null)
+                {
+                    labels[i].Destroy();
+                }
             }
         }
 
+        labels = new GameTileLabel[mapMeshWidth * mapMeshHeight];
         gameTiles = new GameTile[mapMeshWidth* mapMeshHeight];
     }
 

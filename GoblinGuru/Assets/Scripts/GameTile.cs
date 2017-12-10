@@ -17,6 +17,9 @@ public class GameTile : MonoBehaviour {
 
     public TileTerrain tileTerrain;
 
+    public GameTileLabel labelPrefab;
+    public GameTileLabel label;
+
     public Vector3 Position
     {
         get
@@ -40,6 +43,8 @@ public class GameTile : MonoBehaviour {
         {
             transform.parent = parent;
         }
+
+        label.Initialize(x, y);
     }
 
     public void SetNeighbours(GameTile up, GameTile down, GameTile left, GameTile right)
@@ -68,6 +73,11 @@ public class GameTile : MonoBehaviour {
             transform.position = hit.point;
             position = transform.position;
         }
+    }
+
+    public void Highlight(bool highlight)
+    {
+        label.gameObject.SetActive(highlight);
     }
 
 }

@@ -9,7 +9,11 @@ public class MouseInputManager : MonoBehaviour
     private static MouseInputManager instance = null;
     public static MouseInputManager Instance { get { return instance; } }
 
+    public Map map;
+
+    public Vector2 temp;
     public Vector2 current;
+    public GameTile currentTile;
 
     private void Awake()
     {
@@ -25,8 +29,8 @@ public class MouseInputManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+         
+        if (!EventSystem.current.IsPointerOverGameObject()) //Input.GetMouseButtonDown(0) 
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -35,7 +39,17 @@ public class MouseInputManager : MonoBehaviour
                 //draw invisible ray cast/vector
                 Debug.DrawLine(ray.origin, hit.point);
                 //log hit area to the console
-                current = RoundCoordinates(hit.point);
+                temp = RoundCoordinates(hit.point);
+                if(temp != current)
+                {
+                    current = temp;
+                    if(currentTile != null)
+                    {
+                        currentTile.Highlight(false);
+                    }
+                    currentTile = map.GetTile((int)current.x, (int)current.y);
+                    currentTile.Highlight(true);
+                }
                 Debug.Log(current);
                 //Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube), new Vector3(current.x + .5f, 2, current.y + .5f), Quaternion.identity);
             }
