@@ -32,12 +32,47 @@ public class Map : MonoBehaviour
 
     TileTerrain[] tileTerrain;
 
+    public Vector3[] Vertices
+    {
+        get
+        {
+            return vertices;
+        }
+    }
+
+    public int[] Triangles
+    {
+        get
+        {
+            return triangles;
+        }
+
+    }
+
+    public Vector2[] Uvs
+    {
+        get
+        {
+            return uvs;
+        }
+
+    }
+
+    public GameTile[] GameTiles
+    {
+        get
+        {
+            return gameTiles;
+        }
+    }
+
     public GameTile GetTile(int x, int y)
     {
-        if(gameTiles != null)
+        if(GameTiles != null)
         {
-            return gameTiles[x * mapMeshWidth + y];
+            return GameTiles[x * mapMeshWidth + y];
         }
+        Debug.Log("null!!");
         return null;
     }
 
@@ -56,8 +91,8 @@ public class Map : MonoBehaviour
         {
             for (int x = 0; x < mapMeshHeight; x += 1)
             {
-                vertices[vertexIndex] = new Vector3(topLeftX + x, heightCurve.Evaluate(heightMap[x, y]) * heightMultiplier, topLeftZ - y);
-                uvs[vertexIndex] = new Vector2(x / (float)mapMeshWidth, y / (float)mapMeshHeight);
+                Vertices[vertexIndex] = new Vector3(topLeftX + x, heightCurve.Evaluate(heightMap[x, y]) * heightMultiplier, topLeftZ - y);
+                Uvs[vertexIndex] = new Vector2(x / (float)mapMeshWidth, y / (float)mapMeshHeight);
 
                 if (x < mapMeshWidth - 1 && y < mapMeshHeight - 1)
                 {
@@ -81,26 +116,26 @@ public class Map : MonoBehaviour
                 for (int y = 0; y < mapMeshHeight -1; y++)
                 {
                     GameTile tile = Instantiate(tilePrefab, new Vector3(x + .5f, 10, y + .5f), Quaternion.identity);
-                    gameTiles[x * mapMeshWidth + y] = tile;
+                    GameTiles[x * mapMeshWidth + y] = tile;
                     tile.Initialize(gameTileParent.transform, x, y, tileTerrain[(x * (mapMeshWidth-1)) + y]);
-                    tile.SetNeighbours(null, (y != 0) ? gameTiles[x * mapMeshWidth + y - 1] : null,
-                        (x != 0) ? gameTiles[(x - 1) * mapMeshWidth + y] : null, null);
+                    tile.SetNeighbours(null, (y != 0) ? GameTiles[x * mapMeshWidth + y - 1] : null,
+                        (x != 0) ? GameTiles[(x - 1) * mapMeshWidth + y] : null, null);
                 }
             }
         }
 
-        return gameTiles;
+        return GameTiles;
     }
 
     public void ClearGameTiles()
     {
-        if(gameTiles != null)
+        if(GameTiles != null)
         {
-            for (int i = 0; i < gameTiles.Length; i++)
+            for (int i = 0; i < GameTiles.Length; i++)
             {
-                if (gameTiles[i] != null)
+                if (GameTiles[i] != null)
                 {
-                    gameTiles[i].Destroy();
+                    GameTiles[i].Destroy();
                 }
                 if (labels[i] != null)
                 {
@@ -155,9 +190,9 @@ public class Map : MonoBehaviour
         CalculateMeshFromHeightMap();
         GetComponent<MeshFilter>().sharedMesh = mapMesh = new Mesh()
         {
-            vertices = vertices,
-            triangles = triangles,
-            uv = uvs
+            vertices = Vertices,
+            triangles = Triangles,
+            uv = Uvs
         };
         GetComponent<MeshCollider>().sharedMesh = null;
         GetComponent<MeshCollider>().sharedMesh = mapMesh;

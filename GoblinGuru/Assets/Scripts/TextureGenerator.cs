@@ -13,6 +13,15 @@ public static class TextureGenerator {
         return texture;
     }
 
+    public static Texture2D TextureFromColorMap(Texture2D textureMap, Color[] colorMap)
+    {
+        textureMap.filterMode = FilterMode.Point;
+        textureMap.wrapMode = TextureWrapMode.Clamp;
+        textureMap.SetPixels(colorMap);
+        textureMap.Apply();
+        return textureMap;
+    }
+
     public static Texture2D NoiseTextureFromHeightMap(float[,] heightMap){
         int width = heightMap.GetLength(0);
         int height = heightMap.GetLength(1);

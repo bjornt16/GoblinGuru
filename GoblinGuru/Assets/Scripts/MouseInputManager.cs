@@ -47,10 +47,11 @@ public class MouseInputManager : MonoBehaviour
                     {
                         currentTile.Highlight(false);
                     }
+                    Debug.Log(current);
                     currentTile = map.GetTile((int)current.x, (int)current.y);
                     currentTile.Highlight(true);
                 }
-                Debug.Log(current);
+                //Debug.Log(current);
                 //Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube), new Vector3(current.x + .5f, 2, current.y + .5f), Quaternion.identity);
             }
         }

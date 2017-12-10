@@ -226,6 +226,7 @@ public class PlayerUnit : MonoBehaviour {
         tile = destination;
         destination = null;
         moving = false;
+        FogOfWar.Instance.ClearFog(tile, 3);
     }
 
     IEnumerator ShakeOverSeconds(float seconds)

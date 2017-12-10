@@ -31,6 +31,7 @@ public class MapGenerator : MonoBehaviour {
     public PlayerUnit player;
 
     public Map map;
+    public FogOfWar fogofwar;
 
     private void Awake()
     {
@@ -95,6 +96,8 @@ public class MapGenerator : MonoBehaviour {
             map.GenerateGameTiles();
             map.ApplyTexture(TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
             player.Instantiate(map.GenerateGameTiles()[((mapChunkSize-1) * (mapChunkSize-1)) / 2]);
+            fogofwar.Initialize(map.Vertices, map.Triangles, map.Uvs, noiseMap.GetLength(0), noiseMap.GetLength(1));
+            fogofwar.ClearFog(map.GameTiles[((mapChunkSize - 1) * (mapChunkSize - 1)) / 2], 3);
         }
         else if (drawmode == DrawMode.FallOffMap)
         {
