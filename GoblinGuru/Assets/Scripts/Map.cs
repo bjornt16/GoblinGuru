@@ -72,7 +72,6 @@ public class Map : MonoBehaviour
         {
             return GameTiles[x * mapMeshWidth + y];
         }
-        Debug.Log("null!!");
         return null;
     }
 

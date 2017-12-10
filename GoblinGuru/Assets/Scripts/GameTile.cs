@@ -20,11 +20,26 @@ public class GameTile : MonoBehaviour {
     public GameTileLabel labelPrefab;
     public GameTileLabel label;
 
+    PathTile pathTile;
+
     public Vector3 Position
     {
         get
         {
             return position;
+        }
+    }
+
+    public PathTile PathTile
+    {
+        get
+        {
+            return pathTile;
+        }
+
+        set
+        {
+            pathTile = value;
         }
     }
 
@@ -35,6 +50,7 @@ public class GameTile : MonoBehaviour {
 
     public void Initialize(Transform parent, int x, int y, TileTerrain tT)
     {
+        pathTile = new PathTile(this);
         name = "x: " + x + ", y:" + y;
         coordinates = new Vector2(x, y);
         tileTerrain = tT;
@@ -84,9 +100,35 @@ public class GameTile : MonoBehaviour {
     {
         label.gameObject.SetActive(highlight);
         label.GetComponentInChildren<UnityEngine.UI.RawImage>().color = color;
-        
     }
 
+    public void Highlight(bool highlight, Color color, string text)
+    {
+        label.gameObject.SetActive(highlight);
+        label.GetComponentInChildren<UnityEngine.UI.RawImage>().color = color;
+    }
+
+    public GameTile GetNeighbour(int d)
+    {
+        switch (d)
+        {
+            case 0:
+                return tileUp;
+            case 1:
+                return tileRight;
+            case 2:
+                return tileDown;
+            case 3:
+                return tileLeft;
+            default:
+                return null;
+        }
+    }
+
+    public int DistanceTo(Vector2 distTo)
+    {
+        return (int)Mathf.Abs((coordinates.x - distTo.x)) + (int)Mathf.Abs(coordinates.y - distTo.y);
+    }
 
 
 }

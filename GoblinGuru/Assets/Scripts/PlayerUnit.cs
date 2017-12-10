@@ -23,6 +23,8 @@ public class PlayerUnit : MonoBehaviour {
 
     public PlayerUnitUI ui;
 
+    private PathTrail pathTrail;
+
 
     int maxStamina;
     int stamina;
@@ -49,7 +51,7 @@ public class PlayerUnit : MonoBehaviour {
     {
         get
         {
-            return (currentMovePoints != 0);
+            return (CurrentMovePoints != 0);
         }
     }
 
@@ -61,6 +63,43 @@ public class PlayerUnit : MonoBehaviour {
         }
     }
 
+    public int MaxMovePoints
+    {
+        get
+        {
+            return maxMovePoints;
+        }
+    }
+
+    public int CurrentMovePoints
+    {
+        get
+        {
+            return currentMovePoints;
+        }
+    }
+
+    public PathTrail PathTrail
+    {
+        get
+        {
+            return pathTrail;
+        }
+
+        set
+        {
+            pathTrail = value;
+        }
+    }
+
+    public int CurrentMovePoints1
+    {
+        get
+        {
+            return currentMovePoints;
+        }
+    }
+
     private void OnEnable()
     {
         GameTurnManager.OnNewTurn += ResetTurn;
@@ -68,6 +107,7 @@ public class PlayerUnit : MonoBehaviour {
 
     public bool ValidateMove(GameTile dest)
     {
+        return true;
         TileTerrain type = dest.tileTerrain;
         if (type == TileTerrain.ShallowSea && canCrossSS)
         {
@@ -91,7 +131,7 @@ public class PlayerUnit : MonoBehaviour {
 
     void UpdateUI()
     {
-        ui.movesText.text = currentMovePoints.ToString();
+        ui.movesText.text = CurrentMovePoints.ToString();
         ui.healthText.text = health + " / " + maxHealth;
         ui.healthSlider.maxValue = maxHealth;
         ui.healthSlider.value = health;
@@ -109,7 +149,7 @@ public class PlayerUnit : MonoBehaviour {
 
     private void ResetTurn()
     {
-        currentMovePoints = maxMovePoints;
+        currentMovePoints = MaxMovePoints;
         //health -= 5;
         //stamina -= 10;
         UpdateUI();
@@ -127,7 +167,7 @@ public class PlayerUnit : MonoBehaviour {
         maxStamina = 20;
         stamina = 20;
 
-        currentMovePoints = maxMovePoints;
+        currentMovePoints = MaxMovePoints;
 
         UpdateUI();
     }
@@ -167,12 +207,12 @@ public class PlayerUnit : MonoBehaviour {
 
     public void Move()
     {
-        if(destination != null && moving == false && currentMovePoints > 0 && ValidateMove(destination))
+        if (pathTrail != null && moving == false && CurrentMovePoints > 0 && ValidateMove(destination))
         {
-            currentMovePoints--;
+            currentMovePoints -= pathTrail.getBreakIndex(pathTrail.getNextPathBreak());
             UpdateUI();
             moving = true;
-            StartCoroutine(MoveOverSeconds(destination.Position, travelSpeedinSeconds));
+            StartCoroutine(TravelPath());
         }
         else if(!moving)
         {
@@ -249,6 +289,87 @@ public class PlayerUnit : MonoBehaviour {
         moving = false;
         Camera.main.transform.parent = transform;
         tempShakeIntensity = shakeIntensity;
+    }
+
+    protected const float travelSpeed = 4f;
+
+    IEnumerator TravelPath()
+    {
+        Vector3 a, b, c = pathTrail.PathFromTo[0].Tile.Position;
+        transform.localPosition = c;
+        yield return LookAt(pathTrail.PathFromTo[1].Tile.Position);
+
+        float t = Time.deltaTime * travelSpeed;
+        bool last = false;
+        bool hasBreak = pathTrail.PathBreak.Count != 0;
+        int moveCost = 0;
+
+        PathTile pathBreak;
+        if (hasBreak)
+        {
+            pathBreak = pathTrail.PathBreak.First.Value;
+            pathTrail.PathBreak.RemoveFirst();
+        }
+        else
+        {
+            pathBreak = pathTrail.PathTo;
+        }
+
+        pathBreak.Tile.Highlight(true, Color.green);
+        int stopIndex = pathTrail.getBreakIndex(pathBreak);
+
+        for (int i = 1; i <= stopIndex; i++)
+        {
+            if (!last)
+            {
+                a = c;
+                b = pathTrail.PathFromTo[i - 1].Tile.Position;
+                c = (b + pathTrail.PathFromTo[i].Tile.Position) * 0.5f;
+
+                moveCost += pathTrail.PathFromTo[i].MoveCost;
+            }
+            else
+            {
+                a = c;
+                b = (c + pathBreak.Tile.Position) * 0.5f;
+                c = pathBreak.Tile.Position;
+            }
+
+            if (stopIndex == i && !last)
+            {
+                i--;
+                last = true;
+            }
+
+            for (; t < 1f; t += Time.deltaTime * travelSpeed)
+            {
+                transform.localPosition = Bezier.GetPoint(a, b, c, t);
+                Vector3 d = Bezier.GetDerivative(a, b, c, t);
+                d.y = 0f;
+                if (d != Vector3.zero)
+                {
+                    transform.localRotation = Quaternion.LookRotation(d);
+                }
+                yield return null;
+            }
+            t -= 1f;
+        }
+
+
+        position = pathBreak.Tile.Position;
+        transform.position = position;
+        tile = pathBreak.Tile;
+        destination = null;
+        moving = false;
+        FogOfWar.Instance.ClearFog(tile, 3);
+
+        pathTrail.ClearUsedTiles(this);
+        PathTrail.CalculateTurns(this);
+
+        if(pathTrail.PathFromTo.Count <= 1)
+        {
+            pathTrail = null;
+        }
     }
 
 
