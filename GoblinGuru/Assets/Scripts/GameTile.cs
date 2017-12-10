@@ -80,4 +80,13 @@ public class GameTile : MonoBehaviour {
         label.gameObject.SetActive(highlight);
     }
 
+    public void Highlight(bool highlight, Color color)
+    {
+        label.gameObject.SetActive(highlight);
+        label.GetComponentInChildren<UnityEngine.UI.RawImage>().color = color;
+        
+    }
+
+
+
 }

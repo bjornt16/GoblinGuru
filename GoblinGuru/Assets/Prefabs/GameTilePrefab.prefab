@@ -243,6 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a0c82f717205242a9db8a6c361f733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedColor: {r: 0, g: 0.52231234, b: 0.7352941, a: 1}
+  hoverColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114783224896369772
 MonoBehaviour:
   m_ObjectHideFlags: 1

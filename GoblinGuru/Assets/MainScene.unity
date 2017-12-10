@@ -1083,6 +1083,7 @@ MonoBehaviour:
   temp: {x: 0, y: 0}
   current: {x: 0, y: 0}
   currentTile: {fileID: 0}
+  selectedTile: {fileID: 0}
 --- !u!1 &645608449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,7 +2133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1298453901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3239,7 +3240,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1571590549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0000073700253, y: -0.07102453, z: 0}
+  m_LocalPosition: {x: 0, y: -0.071014404, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1389987818}

@@ -14,6 +14,9 @@ public class MouseInputManager : MonoBehaviour
     public Vector2 temp;
     public Vector2 current;
     public GameTile currentTile;
+    public GameTile selectedTile;
+
+    bool processing = false;
 
     private void Awake()
     {
@@ -29,7 +32,7 @@ public class MouseInputManager : MonoBehaviour
 
     void FixedUpdate()
     {
-         
+
         if (!EventSystem.current.IsPointerOverGameObject()) //Input.GetMouseButtonDown(0) 
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -43,15 +46,27 @@ public class MouseInputManager : MonoBehaviour
                 if(temp != current)
                 {
                     current = temp;
-                    if(currentTile != null)
+                    if(currentTile != null && currentTile != selectedTile)
                     {
                         currentTile.Highlight(false);
                     }
 
                     currentTile = map.GetTile((int)current.x, (int)current.y);
-                    currentTile.Highlight(true);
+                    if (selectedTile != currentTile)
+                    {
+                        currentTile.Highlight(true, currentTile.label.hoverColor);
+                    }
                 }
-
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Debug.Log("click " + temp);
+                    if(selectedTile != null)
+                    {
+                        selectedTile.Highlight(false);
+                    }
+                    selectedTile = currentTile;
+                    selectedTile.Highlight(true, currentTile.label.selectedColor);
+                }
                 //Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube), new Vector3(current.x + .5f, 2, current.y + .5f), Quaternion.identity);
             }
         }

@@ -5,11 +5,13 @@ using TMPro;
 
 public class GameTileLabel : MonoBehaviour {
 
+    public Color selectedColor;
+    public Color hoverColor;
+
     public void Destroy()
     {
         DestroyImmediate(gameObject);
     }
-
 
     public void Initialize(int x, int y)
     {
