@@ -37,7 +37,7 @@ public class MouseInputManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 50f))
             {
                 //draw invisible ray cast/vector
-                Debug.DrawLine(ray.origin, hit.point);
+                //Debug.DrawLine(ray.origin, hit.point);
                 //log hit area to the console
                 temp = RoundCoordinates(hit.point);
                 if(temp != current)
@@ -47,11 +47,11 @@ public class MouseInputManager : MonoBehaviour
                     {
                         currentTile.Highlight(false);
                     }
-                    Debug.Log(current);
+
                     currentTile = map.GetTile((int)current.x, (int)current.y);
                     currentTile.Highlight(true);
                 }
-                //Debug.Log(current);
+
                 //Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube), new Vector3(current.x + .5f, 2, current.y + .5f), Quaternion.identity);
             }
         }

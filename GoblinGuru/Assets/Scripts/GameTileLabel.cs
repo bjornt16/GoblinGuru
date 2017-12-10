@@ -13,7 +13,7 @@ public class GameTileLabel : MonoBehaviour {
 
     public void Initialize(int x, int y)
     {
-        name = x + ",\n " + y;
-        GetComponent<TextMeshProUGUI>().text = name;
+        name = x + "," + y;
+        GetComponent<TextMeshProUGUI>().text = "x:"+ x + "\n" + "y:" + y;
     }
 }
