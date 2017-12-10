@@ -45,6 +45,18 @@ public class PathTrail
         }
     }
 
+    public bool ContainsTile(GameTile findTile)
+    {
+        for (int i = 0; i < PathFromTo.Count; i++)
+        {
+            if(PathFromTo[i].Tile == findTile)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public PathTile getNextPathBreak()
     {
         return PathBreak.First != null ? PathBreak.First.Value : PathTo;
