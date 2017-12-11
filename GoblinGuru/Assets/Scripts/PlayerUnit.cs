@@ -31,6 +31,8 @@ public class PlayerUnit : MonoBehaviour {
     int maxHealth;
     int health;
 
+    public CharStats statistics;
+
     float shakeIntensity = 0.06f;
     float tempShakeIntensity = 0.06f;
 
@@ -157,17 +159,18 @@ public class PlayerUnit : MonoBehaviour {
 
     public void Instantiate(GameTile gameTile)
     {
+        statistics = new CharStats();
         tile = gameTile;
         position = tile.Position;
         transform.position = position;
 
-        maxHealth = 20;
-        health = 20;
+        maxHealth = statistics.maxHP;
+        health = statistics.HP;
 
-        maxStamina = 20;
-        stamina = 20;
+        maxStamina = statistics.maxStamina;
+        stamina = statistics.stamina;
 
-        currentMovePoints = MaxMovePoints;
+        currentMovePoints = statistics.speed;
 
         UpdateUI();
     }
