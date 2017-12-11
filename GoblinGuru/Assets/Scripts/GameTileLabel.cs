@@ -5,6 +5,7 @@ using TMPro;
 
 public class GameTileLabel : MonoBehaviour {
 
+    public TextMeshProUGUI textMesh;
     public Color selectedColor;
     public Color hoverColor;
 

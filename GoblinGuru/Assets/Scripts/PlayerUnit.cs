@@ -209,7 +209,7 @@ public class PlayerUnit : MonoBehaviour {
     {
         if (pathTrail != null && moving == false && CurrentMovePoints > 0 && ValidateMove(destination))
         {
-            currentMovePoints -= pathTrail.getBreakIndex(pathTrail.getNextPathBreak());
+            currentMovePoints -= pathTrail.GetMovementCost();
             UpdateUI();
             moving = true;
             StartCoroutine(TravelPath());

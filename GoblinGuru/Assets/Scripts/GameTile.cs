@@ -106,6 +106,7 @@ public class GameTile : MonoBehaviour {
     {
         label.gameObject.SetActive(highlight);
         label.GetComponentInChildren<UnityEngine.UI.RawImage>().color = color;
+        label.textMesh.text = text;
     }
 
     public GameTile GetNeighbour(int d)

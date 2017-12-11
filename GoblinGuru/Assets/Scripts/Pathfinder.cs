@@ -81,6 +81,19 @@ public static class Pathfinder
                     continue;
                 }
 
+                if (neighbor.Tile.tileTerrain == TileTerrain.ShallowSea && !player.canCrossSS)
+                {
+                    continue;
+                }
+                if (neighbor.Tile.tileTerrain == TileTerrain.DeepSea && !player.canCrossDS)
+                {
+                    continue;
+                }
+                if (neighbor.Tile.tileTerrain == TileTerrain.River && !player.canCrossRiver)
+                {
+                    continue;
+                }
+
                 /*
                 if (neighbor.Tile.IsUnderwater || neighbor.Tile.Unit)
                 {
@@ -94,6 +107,15 @@ public static class Pathfinder
                 */
 
                 int moveCost = 1;
+
+                if (neighbor.Tile.tileTerrain >= TileTerrain.Mountain)
+                {
+                    moveCost++;
+                }
+                if (neighbor.Tile.tileTerrain >= TileTerrain.Snow)
+                {
+                    moveCost++;
+                }
 
                 /*
                 

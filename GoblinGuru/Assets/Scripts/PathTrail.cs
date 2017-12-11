@@ -57,6 +57,23 @@ public class PathTrail
         return false;
     }
 
+    public int GetMovementCost()
+    {
+        int cost = 0;
+        PathTile pathbreak = getNextPathBreak();
+        int length = getBreakIndex(pathbreak);
+        for (int i = 0; i < length; i++)
+        {
+            cost += PathFromTo[i].MoveCost;
+        }
+        if(length > 1)
+        {
+            cost -= pathbreak.MoveCost;
+        }
+
+        return cost;
+    }
+
     public PathTile getNextPathBreak()
     {
         return PathBreak.First != null ? PathBreak.First.Value : PathTo;
