@@ -297,7 +297,7 @@ public class PlayerUnit : MonoBehaviour {
     {
         Vector3 a, b, c = pathTrail.PathFromTo[0].Tile.Position;
         transform.localPosition = c;
-        yield return LookAt(pathTrail.PathFromTo[1].Tile.Position);
+        //yield return LookAt(pathTrail.PathFromTo[1].Tile.Position);
 
         float t = Time.deltaTime * travelSpeed;
         bool last = false;
@@ -348,7 +348,7 @@ public class PlayerUnit : MonoBehaviour {
                 d.y = 0f;
                 if (d != Vector3.zero)
                 {
-                    transform.localRotation = Quaternion.LookRotation(d);
+                //   transform.localRotation = Quaternion.LookRotation(d);
                 }
                 yield return null;
             }
