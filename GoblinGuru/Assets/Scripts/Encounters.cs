@@ -217,7 +217,7 @@ public class Encounters : MonoBehaviour {
     private List<Enc> buildEncList(string folder)
     {
         List<Enc> list = new List<Enc>();
-        ExampleNodeGraph[] node = Resources.LoadAll<ExampleNodeGraph>(folder);
+        EncounterNodeGraph[] node = Resources.LoadAll<EncounterNodeGraph>(folder);
         Enc tempEnc = null;
         for (int n = 0; n < node.Length; n++)
         {
@@ -230,7 +230,7 @@ public class Encounters : MonoBehaviour {
         return list;
     }
 
-    private void recursiveBuildEnc(Enc currEnc, ExampleNodeGraph[] node, int nodeFileIndex, int nodeIndex)
+    private void recursiveBuildEnc(Enc currEnc, EncounterNodeGraph[] node, int nodeFileIndex, int nodeIndex)
     {
         int winNode = nodeIndex;
         int lossNode = nodeIndex;
