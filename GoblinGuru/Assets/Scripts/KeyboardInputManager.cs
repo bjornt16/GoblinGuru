@@ -6,6 +6,7 @@ public class KeyboardInputManager : MonoBehaviour {
 
     public PlayerUnit player;
     public GameTurnUI gameTurnUi;
+    public GameObject mapUI;
     bool buttonDown = false;
 
 	// Use this for initialization
@@ -53,6 +54,11 @@ public class KeyboardInputManager : MonoBehaviour {
             {
                 //gameTurnUi.EncounterButton.onClick.Invoke();
                 buttonDown = true;
+
+            }
+            else if (Input.GetButtonDown("Map"))
+            {
+                mapUI.SetActive(!mapUI.activeInHierarchy);
             }
         }
     }
