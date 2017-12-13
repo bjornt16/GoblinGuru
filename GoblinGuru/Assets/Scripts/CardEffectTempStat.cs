@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[CreateAssetMenu (menuName = "CardEffect/Temp Stat")]
+[CreateAssetMenu (menuName = "Card/StatBoostEffect")]
 public class CardEffectTempStat : CardEffect
 {
     public string name = "New Card Effect";

@@ -25,6 +25,8 @@ public class PlayerUnit : MonoBehaviour {
 
     private PathTrail pathTrail;
 
+    public List<Card> cardList;
+    public List<CardObject> cardObjectList;
 
     int maxStamina;
     int stamina;
@@ -40,6 +42,13 @@ public class PlayerUnit : MonoBehaviour {
     public bool canCrossRiver;
     public bool canCrossSS;
     public bool canCrossDS;
+
+    public CombatEnemy target;
+
+    private void Awake()
+    {
+        ConvertCardObjects();
+    }
 
     public GameTile Tile
     {
@@ -375,5 +384,16 @@ public class PlayerUnit : MonoBehaviour {
         }
     }
 
+
+    private void ConvertCardObjects()
+    {
+        for (int i = 0; i < cardObjectList.Count; i++)
+        {
+            Card tempCard = new Card();
+            tempCard.CloneValueFrom(cardObjectList[i]);
+            cardList.Add(tempCard);
+        }
+        //cardObjectList.Clear();
+    }
 
 }

@@ -11,6 +11,8 @@ public class GameStateManager : MonoBehaviour {
     public static GameStateManager Instance { get { return instance; } }
     public Encounters e = new Encounters();
 
+    public PlayerUnit player;
+
     private void Start()
     {
         gameState = GameState.Encounter;

@@ -45,7 +45,7 @@ public class CharStats {
 
     public void ModifyHealth(int damage)
     {
-        HP -= damage;
+        HP += damage;
         if(HP <= 0)
         {
             HP = 0;
@@ -56,4 +56,52 @@ public class CharStats {
             HP = maxHP;
         }
     }
+
+    System.Random rnd = new System.Random(123);
+
+    public bool Roll(CharacterStats roll, int dc)
+    {
+        int d20 = rnd.Next(1, 21);
+        switch (roll)
+        {
+            case CharacterStats.Dexterity:
+                return (d20 + dexterity) > dc;
+            case CharacterStats.Strength:
+                return (d20 + dexterity) > dc;
+            case CharacterStats.Wits:
+                return (d20 + dexterity) > dc;
+            case CharacterStats.Charisma:
+                return (d20 + dexterity) > dc;
+            case CharacterStats.Speed:
+                return (d20 + dexterity) > dc;
+            default:
+                return d20 > dc;
+        }
+    }
+
+    public bool Roll(CharacterStats roll, CharStats targetStats)
+    {
+        int d20 = rnd.Next(1, 21);
+        int tD20 = rnd.Next(1, 21);
+        switch (roll)
+        {
+            case CharacterStats.Dexterity:
+                return (d20 + dexterity) > (tD20 + targetStats.dexterity);
+            case CharacterStats.Strength:
+                return (d20 + strength) > (tD20 + targetStats.strength);
+            case CharacterStats.Wits:
+                return (d20 + wits) > (tD20 + targetStats.wits);
+            case CharacterStats.Charisma:
+                return (d20 + charisma) > (tD20 + targetStats.charisma);
+            case CharacterStats.Speed:
+                return (d20 + speed) > (tD20 + targetStats.speed);
+            default:
+                return d20 > tD20;
+        }
+    }
+}
+
+public enum CharacterStats
+{
+    D20, Dexterity, Strength, Wits, Charisma, Speed
 }

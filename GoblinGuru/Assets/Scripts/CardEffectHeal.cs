@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[CreateAssetMenu (menuName = "CardEffect/Potion")]
+[CreateAssetMenu (menuName = "Card/HealEffect")]
 public class CardEffectHeal : CardEffect
 {
     public string name = "New Card Effect";
@@ -14,7 +14,9 @@ public class CardEffectHeal : CardEffect
     public override void Use()
     {
         System.Random rnd = new System.Random();
-        Debug.Log("player heals for " + rnd.Next(healMin, healMax + 1));
+        int heal = healMin < 0 ? rnd.Next(healMax, healMin - 1) : rnd.Next(healMin, healMax + 1);
+        player.statistics.ModifyHealth(heal);   
+        Debug.Log("player heals for " + heal);
         cardObject.charges--;
         if(cardObject.charges == 0)
         {

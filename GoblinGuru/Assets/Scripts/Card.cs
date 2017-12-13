@@ -9,13 +9,41 @@ public class Card : MonoBehaviour {
     public string description;
     public int charges;
 
+    public CardUsable[] UsableIn;
+    public CombatRange[] UsableRange;
+    public CardType type;
+
     public CardEffect effect;
     private CardEffect effectInstance;
 
-    int staminaCost;
+    public void CloneValueFrom(Card cloneFrom)
+    {
+        cardName = cloneFrom.cardName;
+        image = cloneFrom.image;
+        description = cloneFrom.description;
+        charges = cloneFrom.charges;
+        effect = cloneFrom.effect;
 
-	// Use this for initialization
-	void Start () {
+        UsableIn = cloneFrom.UsableIn;
+        UsableRange = cloneFrom.UsableRange;
+        type = cloneFrom.type;
+    }
+
+    public void CloneValueFrom(CardObject cloneFrom)
+    {
+        cardName = cloneFrom.cardName;
+        image = cloneFrom.image;
+        description = cloneFrom.description;
+        charges = cloneFrom.charges;
+        effect = cloneFrom.effect;
+
+        UsableIn = cloneFrom.UsableIn;
+        UsableRange = cloneFrom.UsableRange;
+        type = cloneFrom.type;
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -30,7 +58,10 @@ public class Card : MonoBehaviour {
         {
             effectInstance = Instantiate(effect);
         }
-        effectInstance.Init(this);
+        if(effectInstance.cardObject == null)
+        {
+            effectInstance.Init(this);
+        }
         effectInstance.Use();
     }
 
@@ -38,4 +69,15 @@ public class Card : MonoBehaviour {
     {
         Destroy(gameObject);
     }
+}
+
+
+public enum CardUsable
+{
+    Movement, Encounter, Combat
+}
+
+public enum CardType
+{
+    Consumable, Equipment, Spell, Attack, Special
 }
