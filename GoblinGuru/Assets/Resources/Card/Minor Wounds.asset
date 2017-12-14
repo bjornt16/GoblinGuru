@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47326842235d0f4baf28e2b7b30a4b5, type: 3}
   m_Name: Minor Wounds
   m_EditorClassIdentifier: 
-  cardName: Attack
+  cardName: Attack Self
   image: {fileID: 0}
   description: 
   charges: 10

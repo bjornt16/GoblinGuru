@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Card : MonoBehaviour {
 
@@ -18,6 +19,11 @@ public class Card : MonoBehaviour {
 
     public UnityEngine.UI.Button cardClicker;
 
+    public TextMeshProUGUI cardNameText;
+    public TextMeshProUGUI cardDescriptionText;
+    public TextMeshProUGUI cardStaminaCostText;
+    public TextMeshProUGUI cardStat;
+
     public void CloneValueFrom(Card cloneFrom)
     {
         cardName = cloneFrom.cardName;
@@ -29,6 +35,8 @@ public class Card : MonoBehaviour {
         UsableIn = cloneFrom.UsableIn;
         UsableRange = cloneFrom.UsableRange;
         type = cloneFrom.type;
+
+        SetUI();
     }
 
     public void CloneValueFrom(CardObject cloneFrom)
@@ -42,6 +50,17 @@ public class Card : MonoBehaviour {
         UsableIn = cloneFrom.UsableIn;
         UsableRange = cloneFrom.UsableRange;
         type = cloneFrom.type;
+    }
+
+    private void SetUI()
+    {
+        if(gameObject != null)
+        {
+            cardNameText.text = cardName;
+            cardDescriptionText.text = description;
+            cardStaminaCostText.text = "0";
+            cardStat.text = "0";
+        }
     }
 
     // Use this for initialization

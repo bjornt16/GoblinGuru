@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c47326842235d0f4baf28e2b7b30a4b5, type: 3}
-  m_Name: Heal Spell
+  m_Name: Melee Attack
   m_EditorClassIdentifier: 
-  cardName: Heal Spell
+  cardName: Sword Attack
   image: {fileID: 0}
-  description: 
-  charges: 10
-  UsableIn: 000000000100000002000000
-  UsableRange: 000000000100000002000000
-  type: 2
-  effect: {fileID: 11400000, guid: bb53484aaf4ccf949b56860f3ffe6a57, type: 2}
+  description: Sword Attack
+  charges: 0
+  UsableIn: 02000000
+  UsableRange: 00000000
+  type: 3
+  effect: {fileID: 11400000, guid: 7970f7e1b1aa257479abd9a6d8ee6127, type: 2}

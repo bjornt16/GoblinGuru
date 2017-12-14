@@ -14,8 +14,14 @@ public class CombatEnemy : ScriptableObject {
 
     public CharStats Stats;
 
+    private PlayerUnit player;
+
     public void DoCombatAction()
     {
+        if(player == null)
+        {
+            player = GameStateManager.Instance.player;
+        }
         Debug.Log("Enemy Does Nothing");
     }
 

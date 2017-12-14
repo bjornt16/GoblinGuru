@@ -28,6 +28,11 @@ public class PlayerUnit : MonoBehaviour {
     public List<Card> cardList;
     public List<CardObject> cardObjectList;
 
+    private Card head;
+    private Card torso;
+    private Card legs;
+    private Card feet;
+
     int maxStamina;
     int stamina;
     int maxHealth;
@@ -37,7 +42,6 @@ public class PlayerUnit : MonoBehaviour {
 
     float shakeIntensity = 0.06f;
     float tempShakeIntensity = 0.06f;
-
 
     public bool canCrossRiver;
     public bool canCrossSS;
@@ -108,6 +112,62 @@ public class PlayerUnit : MonoBehaviour {
         get
         {
             return currentMovePoints;
+        }
+    }
+
+    public Card Head
+    {
+        get
+        {
+            return head;
+        }
+
+        set
+        {
+            //todo remove staboost, set new statboost
+            head = value;
+        }
+    }
+
+    public Card Torso
+    {
+        get
+        {
+            return torso;
+        }
+
+        set
+        {
+            //todo remove staboost, set new statboost
+            torso = value;
+        }
+    }
+
+    public Card Legs
+    {
+        get
+        {
+            return legs;
+        }
+
+        set
+        {
+            //todo remove staboost, set new statboost
+            legs = value;
+        }
+    }
+
+    public Card Feet
+    {
+        get
+        {
+            return feet;
+        }
+
+        set
+        {
+            //todo remove staboost, set new statboost
+            feet = value;
         }
     }
 
@@ -398,8 +458,11 @@ public class PlayerUnit : MonoBehaviour {
         moving = false;
         FogOfWar.Instance.ClearFog(tile, 3);
 
-        pathTrail.ClearUsedTiles(this);
-        PathTrail.CalculateTurns(this);
+        if(pathTrail != null)
+        {
+            pathTrail.ClearUsedTiles(this);
+            PathTrail.CalculateTurns(this);
+        }
 
         if(pathTrail.PathFromTo.Count <= 1)
         {

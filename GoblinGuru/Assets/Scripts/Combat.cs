@@ -3,7 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Combat : MonoBehaviour {
+    public delegate void newState();
+    public static event newState OnNewRound;
 
+    private static Combat instance = null;
+    public static Combat Instance { get { return instance; } }
+
+    public int CombatTurn
+    {
+        get
+        {
+            return combatTurn;
+        }
+    }
+
+    public CombatRange Range
+    {
+        get
+        {
+            return range;
+        }
+    }
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
     public CombatUI CombatUI;
     public CombatViewModel CombatViewModelPrefab;
     public Card CombatViewCardPrefab;
@@ -20,6 +52,7 @@ public class Combat : MonoBehaviour {
     int combatTurn;
 
     int consumableCount = 0;
+    CombatRange range = CombatRange.melee;
 
     public void Init()//CombatEnemy targetObject)
     {
@@ -32,9 +65,26 @@ public class Combat : MonoBehaviour {
         targetModel = Instantiate(CombatViewModelPrefab, CombatUI.GroundMelee[1].transform);
         targetModel.Init(targetInstance.HeadColor, targetInstance.TorsoColor, targetInstance.LegsColor, targetInstance.FeetColor);
 
-        player.target = target;
+        player.target = targetInstance;
 
         getPlayerCards();
+    }
+
+    public void SetRange(CombatRange r)
+    {
+        range = r;
+        if(range == CombatRange.melee)
+        {
+            CombatUI.SetRangeMelee(playerModel, targetModel);
+        }
+        else if (range == CombatRange.ranged)
+        {
+            CombatUI.SetRangeRanged(playerModel, targetModel);
+        }
+        else if (range == CombatRange.distant)
+        {
+            CombatUI.SetRangeDistant(playerModel, targetModel);
+        }
     }
 
     private void getPlayerCards()
@@ -65,15 +115,37 @@ public class Combat : MonoBehaviour {
             combatTurn++;
         }
 
-        CombatUI.combatRoundText.text = combatTurn.ToString();
-        CombatUI.UpdateUI(player.statistics, target.Stats);
+        CombatUI.combatRoundText.text = CombatTurn.ToString();
+        CombatUI.UpdateUI(player.statistics, targetInstance.Stats);
+        if (CheckCombatEnd())
+        {
+            CombatUI.CombatEnd(player.statistics, targetInstance.Stats);
+        }
+        CombatUI.SetTargetTurn();
+        targetInstance.DoCombatAction();
+        SetPlayerCardsActive(true);
+        isPlayerTurn = true;
+    }
+
+    private bool CheckCombatEnd()
+    {
+        return player.statistics.HP <= 0 || targetInstance.Stats.HP <= 0;
+    }
+
+    public void EndCombat()
+    {
+
     }
 
     private void SetPlayerCardsActive(bool set)
     {
         for (int i = 0; i < cardList.Count; i++)
         {
-            cardList[i].cardClicker.enabled = set;
+            if(cardList[i] != null)
+            {
+                cardList[i].cardClicker.enabled = set;
+            }
+            
         }
     }
 
@@ -83,11 +155,6 @@ public class Combat : MonoBehaviour {
         Init();
     }
 
-    public bool RollStrength(CharStats player, CharStats target)
-    {
-        //todo roll random d20 + stat against target?
-        return false;
-    }
 }
 
 
