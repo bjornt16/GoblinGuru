@@ -13,6 +13,8 @@ public class GameStateManager : MonoBehaviour {
 
     public PlayerUnit player;
 
+    public GameObject dingUI;
+
     private void Start()
     {
         gameState = GameState.Encounter;
@@ -43,9 +45,16 @@ public class GameStateManager : MonoBehaviour {
 
     public void startMovement()
     {
-        gameState = GameState.Movement;
         player.statistics.currXp += 1;
+        int level = player.statistics.level;
         player.checkForDing();
+        if (level != player.statistics.level)
+        {
+            dingUI.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("ding");
+        }
+
+        gameState = GameState.Movement;
     }
 
     public void startEncounter()
