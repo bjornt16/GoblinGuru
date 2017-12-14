@@ -23,6 +23,8 @@ public class PlayerUnit : MonoBehaviour {
 
     public PlayerUnitUI ui;
 
+    public GameObject dingUI;
+
     private PathTrail pathTrail;
 
     public List<Card> cardList;
@@ -126,6 +128,38 @@ public class PlayerUnit : MonoBehaviour {
             statistics.currXp = xpOverFlow;
             checkForDing();
         }
+        UpdateUI();
+    }
+
+    public void plusStr()
+    {
+        FindObjectOfType<AudioManager>().Play("buttonClick");
+        statistics.strength += 1;
+        dingUI.SetActive(false);
+        UpdateUI();
+    }
+
+    public void plusDex()
+    {
+        FindObjectOfType<AudioManager>().Play("buttonClick");
+        statistics.dexterity += 1;
+        dingUI.SetActive(false);
+        UpdateUI();
+    }
+
+    public void plusWits()
+    {
+        FindObjectOfType<AudioManager>().Play("buttonClick");
+        statistics.wits += 1;
+        dingUI.SetActive(false);
+        UpdateUI();
+    }
+
+    public void plusCha()
+    {
+        FindObjectOfType<AudioManager>().Play("buttonClick");
+        statistics.charisma += 1;
+        dingUI.SetActive(false);
         UpdateUI();
     }
 

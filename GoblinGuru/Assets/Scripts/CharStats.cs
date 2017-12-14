@@ -103,7 +103,10 @@ public class CharStats {
                 return d20 > tD20;
         }
     }
+    
 }
+
+
 
 public enum CharacterStats
 {
