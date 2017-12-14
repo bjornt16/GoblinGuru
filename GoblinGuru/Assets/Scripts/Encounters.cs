@@ -9,6 +9,8 @@ public class Encounters : MonoBehaviour {
     private static Encounters instance = null;
     public static Encounters Instance { get { return instance; } }
 
+    public PlayerUnit player;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -37,6 +39,7 @@ public class Encounters : MonoBehaviour {
 
     Encounter curr;
     State currOriginalState;
+    
 
 
     public Encounters()
@@ -164,7 +167,6 @@ public class Encounters : MonoBehaviour {
             }
             GameStateManager.Instance.startMovement();
         }
-
     }
 
     // Use this for initialization
@@ -193,8 +195,6 @@ public class Encounters : MonoBehaviour {
         e.states[2].AddChoice(c2);
         AddEncounter(e);
         */
-
-
 
 
         encList = buildEncList("StoryEncounters");

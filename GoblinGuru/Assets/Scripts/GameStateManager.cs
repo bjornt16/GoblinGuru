@@ -44,6 +44,8 @@ public class GameStateManager : MonoBehaviour {
     public void startMovement()
     {
         gameState = GameState.Movement;
+        player.statistics.currXp += 1;
+        player.checkForDing();
     }
 
     public void startEncounter()

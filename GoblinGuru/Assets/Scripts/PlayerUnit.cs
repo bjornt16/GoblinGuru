@@ -116,6 +116,19 @@ public class PlayerUnit : MonoBehaviour {
         GameTurnManager.OnNewTurn += ResetTurn;
     }
 
+    public void checkForDing()
+    {
+        if(statistics.currXp >= statistics.xpCap)
+        {
+            int xpOverFlow = statistics.currXp - statistics.xpCap;
+            statistics.level += 1;
+            statistics.UpdateXpCap();
+            statistics.currXp = xpOverFlow;
+            checkForDing();
+        }
+        UpdateUI();
+    }
+
     public bool ValidateMove(GameTile dest)
     {
         return true;
@@ -143,12 +156,17 @@ public class PlayerUnit : MonoBehaviour {
     void UpdateUI()
     {
         ui.movesText.text = CurrentMovePoints.ToString();
-        ui.healthText.text = health + " / " + maxHealth;
-        ui.healthSlider.maxValue = maxHealth;
-        ui.healthSlider.value = health;
-        ui.staminaText.text = stamina + " / " + maxStamina;
-        ui.staminaSlider.maxValue = maxStamina;
-        ui.staminaSlider.value = stamina;
+        
+        ui.healthText.text = statistics.HP + " / " + statistics.maxHP;
+        ui.healthSlider.maxValue = statistics.maxHP;
+        ui.healthSlider.value = statistics.HP;
+        ui.staminaText.text = statistics.stamina + " / " + statistics.maxStamina;
+        ui.staminaSlider.maxValue = statistics.maxStamina;
+        ui.staminaSlider.value = statistics.stamina;
+        ui.levelText.text = statistics.level.ToString();
+        ui.experienceText.text = statistics.currXp + " / " + statistics.xpCap;
+        ui.xpSlider.maxValue = statistics.xpCap;
+        ui.xpSlider.value = statistics.currXp;
     }
 
     void Shake()

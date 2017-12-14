@@ -56,6 +56,11 @@ public class CharStats {
         }
     }
 
+    public void UpdateXpCap()
+    {
+        xpCap = level * 3;
+    }
+
     System.Random rnd = new System.Random(123);
 
     public bool Roll(CharacterStats roll, int dc)
