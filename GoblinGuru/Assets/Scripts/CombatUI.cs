@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CombatUI : MonoBehaviour {
 
@@ -16,6 +17,7 @@ public class CombatUI : MonoBehaviour {
 
     public UnityEngine.UI.Slider targetHealth;
     public UnityEngine.UI.Slider targetStamina;
+    public TextMeshProUGUI combatRoundText;
 
     public void UpdateUI(CharStats player, CharStats target)
     {

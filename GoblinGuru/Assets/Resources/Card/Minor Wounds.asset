@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47326842235d0f4baf28e2b7b30a4b5, type: 3}
   m_Name: Minor Wounds
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: Attack
   image: {fileID: 0}
   description: 
-  charges: 0
+  charges: 10
   UsableIn: 
   UsableRange: 
-  type: 0
-  effect: {fileID: 0}
+  type: 3
+  effect: {fileID: 11400000, guid: bebd5712e09a1b049a42bbeef288d379, type: 2}

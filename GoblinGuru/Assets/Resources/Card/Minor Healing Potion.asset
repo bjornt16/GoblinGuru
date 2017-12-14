@@ -11,8 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47326842235d0f4baf28e2b7b30a4b5, type: 3}
   m_Name: Minor Healing Potion
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: Minor Healing Potion
   image: {fileID: 0}
   description: 
-  charges: 0
-  effect: {fileID: 0}
+  charges: 1
+  UsableIn: 00000000
+  UsableRange: 000000000100000002000000
+  type: 0
+  effect: {fileID: 11400000, guid: bb53484aaf4ccf949b56860f3ffe6a57, type: 2}

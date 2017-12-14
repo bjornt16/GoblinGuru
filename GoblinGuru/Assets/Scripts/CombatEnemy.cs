@@ -14,4 +14,9 @@ public class CombatEnemy : ScriptableObject {
 
     public CharStats Stats;
 
+    public void DoCombatAction()
+    {
+        Debug.Log("Enemy Does Nothing");
+    }
+
 }

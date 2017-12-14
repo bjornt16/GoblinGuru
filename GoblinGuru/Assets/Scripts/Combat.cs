@@ -60,9 +60,21 @@ public class Combat : MonoBehaviour {
         {
             consumableCount = 0;
             Debug.Log("Next Turn");
+            isPlayerTurn = !isPlayerTurn;
+            SetPlayerCardsActive(false);
+            combatTurn++;
         }
 
+        CombatUI.combatRoundText.text = combatTurn.ToString();
         CombatUI.UpdateUI(player.statistics, target.Stats);
+    }
+
+    private void SetPlayerCardsActive(bool set)
+    {
+        for (int i = 0; i < cardList.Count; i++)
+        {
+            cardList[i].cardClicker.enabled = set;
+        }
     }
 
 

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Anti-Heal Effect
   m_EditorClassIdentifier: 
   cardObject: {fileID: 0}
-  name: New Card Effect
-  healMin: 5
-  healMax: 10
+  name: Anti-Heal Effect
+  healMin: -5
+  healMax: -10

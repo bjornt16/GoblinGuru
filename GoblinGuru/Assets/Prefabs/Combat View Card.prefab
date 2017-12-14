@@ -65,6 +65,7 @@ MonoBehaviour:
   UsableRange: 
   type: 0
   effect: {fileID: 11400000, guid: bb53484aaf4ccf949b56860f3ffe6a57, type: 2}
+  cardClicker: {fileID: 114748006939726982}
 --- !u!114 &114610119380226200
 MonoBehaviour:
   m_ObjectHideFlags: 1

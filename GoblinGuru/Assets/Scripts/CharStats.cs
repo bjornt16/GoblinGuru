@@ -39,7 +39,6 @@ public class CharStats {
         wits = 10;
         charisma = 10;
         speed = 10;
-        speed = 11;
         damage = 10;
     }
 

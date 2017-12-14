@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a9633a81dc5f24382b6cf3574e8dbf, type: 3}
   m_Name: Thug
   m_EditorClassIdentifier: 
-  Name: 
-  HeadColor: {r: 0, g: 0, b: 0, a: 0}
-  TorsoColor: {r: 0, g: 0, b: 0, a: 0}
-  LegsColor: {r: 0, g: 0, b: 0, a: 0}
-  FeetColor: {r: 0, g: 0, b: 0, a: 0}
+  Name: Thug
+  HeadColor: {r: 1, g: 0.8235294, b: 0.82718056, a: 1}
+  TorsoColor: {r: 0.13723898, g: 0.35294116, b: 0.012975769, a: 1}
+  LegsColor: {r: 0.29411763, g: 0.106192574, b: 0.0216263, a: 1}
+  FeetColor: {r: 0, g: 0, b: 0, a: 1}
   Stats:
     maxHP: 20
     HP: 20

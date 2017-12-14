@@ -164,6 +164,11 @@ public class PlayerUnit : MonoBehaviour {
         //health -= 5;
         //stamina -= 10;
         UpdateUI();
+        if(pathTrail != null)
+        {
+            pathTrail.CalculateTurns(this);
+            pathTrail.ShowPath();
+        }
     }
 
     public void Instantiate(GameTile gameTile)
@@ -278,7 +283,6 @@ public class PlayerUnit : MonoBehaviour {
         tile = destination;
         destination = null;
         moving = false;
-        FogOfWar.Instance.ClearFog(tile, 3);
     }
 
     IEnumerator ShakeOverSeconds(float seconds)
@@ -334,6 +338,7 @@ public class PlayerUnit : MonoBehaviour {
         {
             if (!last)
             {
+                FogOfWar.Instance.ClearFog(pathTrail.PathFromTo[i].Tile, 3);
                 a = c;
                 b = pathTrail.PathFromTo[i - 1].Tile.Position;
                 c = (b + pathTrail.PathFromTo[i].Tile.Position) * 0.5f;

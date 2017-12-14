@@ -62,13 +62,10 @@ public class PathTrail
         int cost = 0;
         PathTile pathbreak = getNextPathBreak();
         int length = getBreakIndex(pathbreak);
-        for (int i = 0; i < length; i++)
+        for (int i = 1; i <= length; i++)
         {
             cost += PathFromTo[i].MoveCost;
-        }
-        if(length > 1)
-        {
-            cost -= pathbreak.MoveCost;
+            Debug.Log(PathFromTo[i].Tile.coordinates + " " + PathFromTo[i].MoveCost);
         }
 
         return cost;
@@ -101,7 +98,7 @@ public class PathTrail
         {
             PathFromTo[i].Tile.Highlight(true, Color.white, PathFromTo[i].Turn.ToString());
         }
-        PathTo.Tile.Highlight(true, Color.red, PathTo.Turn.ToString());
+        PathTo.Tile.Highlight(true, Color.red);
         Visible = true;
 
     }

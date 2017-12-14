@@ -16,6 +16,8 @@ public class Card : MonoBehaviour {
     public CardEffect effect;
     private CardEffect effectInstance;
 
+    public UnityEngine.UI.Button cardClicker;
+
     public void CloneValueFrom(Card cloneFrom)
     {
         cardName = cloneFrom.cardName;
