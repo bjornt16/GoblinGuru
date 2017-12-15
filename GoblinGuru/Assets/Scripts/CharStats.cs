@@ -19,6 +19,7 @@ public class CharStats {
     public int wits;
     public int charisma;
     public int speed;
+    public int armorBonus;
 
     public int damage;
 
@@ -33,13 +34,67 @@ public class CharStats {
 
         level = 1;
         currXp = 0;
-        xpCap = level * 3;
-        dexterity = 10;
-        strength = 10;
-        wits = 10;
-        charisma = 10;
-        speed = 10;
-        damage = 10;
+        xpCap = level * 4;
+        dexterity = 5;
+        strength = 5;
+        wits = 5;
+        charisma = 5;
+        speed = 6;
+        damage = 0;
+        armorBonus = 0;
+    }
+
+    public int GetArmor()
+    {
+        return 10 + dexterity + armorBonus;
+    }
+
+    public int GetDexModifier()
+    {
+        return (dexterity - 5) / 2;
+    }
+
+    public int GetStrModifier()
+    {
+        return (strength - 5) / 2;
+    }
+
+    public int GetWitsModifier()
+    {
+        return (wits - 5) / 2;
+    }
+
+    public int GetChaModifier()
+    {
+        return (charisma - 5) / 2;
+    }
+
+    public int DexRoll()
+    {
+        int randomNum = (int)Random.RandomRange(1f, 21f);
+
+        return randomNum + GetDexModifier();
+    }
+
+    public int StrRoll()
+    {
+        int randomNum = (int)Random.RandomRange(1f, 21f);
+
+        return randomNum + GetStrModifier();
+    }
+
+    public int WitsRoll()
+    {
+        int randomNum = (int)Random.RandomRange(1f, 21f);
+
+        return randomNum + GetWitsModifier();
+    }
+
+    public int ChaRoll()
+    {
+        int randomNum = (int)Random.RandomRange(1f, 21f);
+
+        return randomNum + GetChaModifier();
     }
 
     public void ModifyHealth(int damage)
