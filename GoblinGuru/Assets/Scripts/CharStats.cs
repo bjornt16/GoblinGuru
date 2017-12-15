@@ -20,7 +20,6 @@ public class CharStats {
     public int charisma;
     public int speed;
     public int armorBonus;
-
     public int damage;
 
 
@@ -40,8 +39,8 @@ public class CharStats {
         wits = 5;
         charisma = 5;
         speed = 6;
-        damage = 0;
         armorBonus = 0;
+        damage = 0;
     }
 
     public int GetArmor()
@@ -113,7 +112,7 @@ public class CharStats {
 
     public void UpdateXpCap()
     {
-        xpCap = level * 3;
+        xpCap = level * 4;
     }
 
     System.Random rnd = new System.Random(123);
