@@ -22,6 +22,7 @@ public class CombatEnemy : ScriptableObject {
         {
             player = GameStateManager.Instance.player;
         }
+
         Debug.Log("Enemy Does Nothing");
     }
 

@@ -26,6 +26,8 @@ public class CombatUI : MonoBehaviour {
     public TextMeshProUGUI playerTurnText;
     public TextMeshProUGUI targetTurnText;
 
+    public GameObject combatOverPanel;
+
     public void UpdateUI(CharStats player, CharStats target)
     {
         playerHealth.maxValue = player.maxHP;

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47326842235d0f4baf28e2b7b30a4b5, type: 3}
+  m_Name: Head 2
+  m_EditorClassIdentifier: 
+  cardName: Nice Hat
+  image: {fileID: 0}
+  description: Swell looking hat
+  charges: 100
+  UsableIn: 00000000
+  UsableRange: 
+  type: 1
+  effect: {fileID: 11400000, guid: dd83016320ec00144a1349e9e17d16b4, type: 2}
+  Equipped: 0
+  Slot: 1

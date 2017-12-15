@@ -31,6 +31,7 @@ public class Encounters : MonoBehaviour {
     List<OptionButton> buttons;
 
     int encIndex = 0;
+    public int CombatChoiceNumber;
 
     Enc currentEnc;
     Enc currentRandEnc;
@@ -114,10 +115,24 @@ public class Encounters : MonoBehaviour {
 
     }
 
+    public void CombatOver()
+    {
+        foreach (OptionButton button in buttons)
+        {
+            button.Destroy();
+        }
+
+        Initialize();
+    }
+
     public void OnClickTask(int number)
     {
+        if(currentEnc.choices[number].type == EncChoiceType.combat)
+        {
+            CombatChoiceNumber = number;
+        }
 
-        if(currentEnc.choices[number].cText == "Try Again?")
+        if (currentEnc.choices[number].cText == "Try Again?")
         {
             currentEnc = encList[2];
             FindObjectOfType<AudioManager>().Play("buttonClick");
@@ -139,6 +154,8 @@ public class Encounters : MonoBehaviour {
             {
                 button.Destroy();
             }
+
+
             Initialize();
         }
 

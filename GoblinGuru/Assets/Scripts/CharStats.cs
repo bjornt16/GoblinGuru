@@ -66,20 +66,21 @@ public class CharStats {
     public bool Roll(CharacterStats roll, int dc)
     {
         int d20 = rnd.Next(1, 21);
+        Debug.Log("d20 roll " + d20 + " dc is " + dc);
         switch (roll)
         {
             case CharacterStats.Dexterity:
-                return (d20 + dexterity) > dc;
+                return (d20 + dexterity) >= dc;
             case CharacterStats.Strength:
-                return (d20 + dexterity) > dc;
+                return (d20 + dexterity) >= dc;
             case CharacterStats.Wits:
-                return (d20 + dexterity) > dc;
+                return (d20 + dexterity) >= dc;
             case CharacterStats.Charisma:
-                return (d20 + dexterity) > dc;
+                return (d20 + dexterity) >= dc;
             case CharacterStats.Speed:
-                return (d20 + dexterity) > dc;
+                return (d20 + dexterity) >= dc;
             default:
-                return d20 > dc;
+                return d20 >= dc;
         }
     }
 
@@ -90,17 +91,17 @@ public class CharStats {
         switch (roll)
         {
             case CharacterStats.Dexterity:
-                return (d20 + dexterity) > (tD20 + targetStats.dexterity);
+                return (d20 + dexterity) >= (tD20 + targetStats.dexterity);
             case CharacterStats.Strength:
-                return (d20 + strength) > (tD20 + targetStats.strength);
+                return (d20 + strength) >= (tD20 + targetStats.strength);
             case CharacterStats.Wits:
-                return (d20 + wits) > (tD20 + targetStats.wits);
+                return (d20 + wits) >= (tD20 + targetStats.wits);
             case CharacterStats.Charisma:
-                return (d20 + charisma) > (tD20 + targetStats.charisma);
+                return (d20 + charisma) >= (tD20 + targetStats.charisma);
             case CharacterStats.Speed:
-                return (d20 + speed) > (tD20 + targetStats.speed);
+                return (d20 + speed) >= (tD20 + targetStats.speed);
             default:
-                return d20 > tD20;
+                return d20 >= tD20;
         }
     }
     

@@ -24,6 +24,28 @@ public class Card : MonoBehaviour {
     public TextMeshProUGUI cardStaminaCostText;
     public TextMeshProUGUI cardStat;
 
+    public GameObject blockImage;
+    public GameObject EquippedBorder;
+
+    private bool equipped = false;
+    public CardEquipmentSlot Slot = CardEquipmentSlot.None;
+
+    public bool Equipped
+    {
+        get
+        {
+            return equipped;
+        }
+
+        set
+        {
+            equipped = value;
+            if(EquippedBorder != null) {
+                EquippedBorder.SetActive(equipped);
+            }
+    }
+    }
+
     public void CloneValueFrom(Card cloneFrom)
     {
         cardName = cloneFrom.cardName;
@@ -35,6 +57,9 @@ public class Card : MonoBehaviour {
         UsableIn = cloneFrom.UsableIn;
         UsableRange = cloneFrom.UsableRange;
         type = cloneFrom.type;
+
+        Equipped = cloneFrom.Equipped;
+        Slot = cloneFrom.Slot;
 
         SetUI();
     }
@@ -50,6 +75,9 @@ public class Card : MonoBehaviour {
         UsableIn = cloneFrom.UsableIn;
         UsableRange = cloneFrom.UsableRange;
         type = cloneFrom.type;
+
+        Equipped = cloneFrom.Equipped;
+        Slot = cloneFrom.Slot;
     }
 
     private void SetUI()
@@ -100,5 +128,10 @@ public enum CardUsable
 
 public enum CardType
 {
-    Consumable, Equipment, Spell, Attack, Special
+    Consumable, Equipment, Spell, Attack, Special, Movement
+}
+
+public enum CardEquipmentSlot
+{
+    None, Head, Torso, Legs, Feet
 }

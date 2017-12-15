@@ -93,7 +93,7 @@ public class MouseInputManager : MonoBehaviour
                 SelectedUnit.PathTrail.ShowPath();
             }
         }
-        else if (!isPathfinding && SelectedUnit.PathTrail != null && !SelectedUnit.PathTrail.ContainsTile(currentTile)) //else unselecting unit.
+        else if (!isPathfinding && !SelectedUnit.Moving && SelectedUnit.PathTrail != null && !SelectedUnit.PathTrail.ContainsTile(currentTile)) //else unselecting unit.
         {
 
             SelectedUnit.PathTrail.HidePath();

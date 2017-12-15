@@ -18,6 +18,8 @@ MonoBehaviour:
   - {fileID: 114006504580663464}
   - {fileID: 114914556987674162}
   - {fileID: 114807805122936774}
+  - {fileID: 114809811418830130}
+  - {fileID: 114082386012489956}
 --- !u!114 &114006504580663464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,7 +32,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -584, y: 264}
+  position: {x: -200, y: 456}
   ports:
     keys:
     - encOutput
@@ -51,6 +53,37 @@ MonoBehaviour:
     to stay ahead of the bear long enough to get into a tree. The bear wanders around
     at the base of the tree for a bit before leaving.\r\n"
   choices: []
+--- !u!114 &114082386012489956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1224, y: 360}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114082386012489956}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_9
+        node: {fileID: 114343300622370668}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+  text: You Lost!
+  choices: []
 --- !u!114 &114343300622370668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +96,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -632, y: -328}
+  position: {x: -632, y: -408}
   ports:
     keys:
     - encOutput
@@ -73,6 +106,10 @@ MonoBehaviour:
     - instanceInput_3
     - instanceInput_4
     - instanceInput_5
+    - instanceInput_6
+    - instanceInput_7
+    - instanceInput_8
+    - instanceInput_9
     values:
     - _fieldName: encOutput
       _node: {fileID: 114343300622370668}
@@ -129,6 +166,38 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
+    - _fieldName: instanceInput_6
+      _node: {fileID: 114343300622370668}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_7
+      _node: {fileID: 114343300622370668}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_8
+      _node: {fileID: 114343300622370668}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114809811418830130}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_9
+      _node: {fileID: 114343300622370668}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114082386012489956}
+      _direction: 0
+      _dynamic: 1
   encOutput:
     text: 
     choices: []
@@ -139,18 +208,47 @@ MonoBehaviour:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: "Don\u2019t move."
-    rollType: basic
-    chance: 100
+    rollType: 1
+    dc: 0
+    type: 1
+    MustHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
   - winPort: instanceInput_2
     lossPort: instanceInput_3
     cText: " \u201CHelp me Arizta!\u201D"
-    rollType: basic
-    chance: 100
+    rollType: 1
+    dc: 0
+    type: 1
+    MustHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
   - winPort: instanceInput_4
     lossPort: instanceInput_5
     cText: Run!
-    rollType: basic
-    chance: 100
+    rollType: 1
+    dc: 0
+    type: 1
+    MustHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+  - winPort: instanceInput_8
+    lossPort: instanceInput_9
+    cText: Combat Test
+    rollType: 5
+    dc: 20
+    type: 2
+    MustHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 11400000, guid: ea39828b200af5148b08a573e0b66628, type: 2}
 --- !u!114 &114512643148715440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,13 +326,25 @@ MonoBehaviour:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: Bury Arizta.
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
   - winPort: instanceInput_2
     lossPort: instanceInput_3
     cText: 'Keep moving. '
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
 --- !u!114 &114606569166132820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +357,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -56, y: -264}
+  position: {x: -40, y: -328}
   ports:
     keys:
     - encOutput
@@ -299,6 +409,37 @@ MonoBehaviour:
   text: "There is nothing you can do now, you resolve to not make her sacrifice be
     in vain. You continue, you need to succeed or else her death would have been for
     nothing.\r\n"
+  choices: []
+--- !u!114 &114809811418830130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -760, y: 520}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114809811418830130}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_8
+        node: {fileID: 114343300622370668}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+  text: You Won!
   choices: []
 --- !u!114 &114914556987674162
 MonoBehaviour:

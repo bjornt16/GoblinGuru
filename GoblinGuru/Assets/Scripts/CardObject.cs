@@ -16,4 +16,7 @@ public class CardObject : ScriptableObject {
 
     public CardEffect effect;
 
+    public bool Equipped = false;
+    public CardEquipmentSlot Slot = CardEquipmentSlot.None;
+
 }

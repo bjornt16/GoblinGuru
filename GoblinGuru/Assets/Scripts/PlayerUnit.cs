@@ -496,11 +496,11 @@ public class PlayerUnit : MonoBehaviour {
         {
             pathTrail.ClearUsedTiles(this);
             PathTrail.CalculateTurns(this);
-        }
 
-        if(pathTrail.PathFromTo.Count <= 1)
-        {
-            pathTrail = null;
+            if (pathTrail.PathFromTo.Count <= 1)
+            {
+                pathTrail = null;
+            }
         }
     }
 

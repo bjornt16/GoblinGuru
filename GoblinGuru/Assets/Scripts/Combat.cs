@@ -54,12 +54,14 @@ public class Combat : MonoBehaviour {
     int consumableCount = 0;
     CombatRange range = CombatRange.melee;
 
-    public void Init()//CombatEnemy targetObject)
+    public void Init(CombatEnemy targetObject)
     {
-        if(targetInstance == null)
-        {
-            targetInstance = Instantiate(target);
-        }
+        target = targetObject;
+        targetInstance = Instantiate(target);
+
+        CombatUI.combatOverPanel.SetActive(false);
+        CombatUI.CardPanel.gameObject.SetActive(true);
+        CombatUI.gameObject.SetActive(true);
 
         playerModel = Instantiate(CombatViewModelPrefab, CombatUI.GroundMelee[0].transform);
         targetModel = Instantiate(CombatViewModelPrefab, CombatUI.GroundMelee[1].transform);
@@ -67,13 +69,23 @@ public class Combat : MonoBehaviour {
 
         player.target = targetInstance;
 
+        range = CombatRange.melee;
+        consumableCount = 0;
+        combatTurn = 0;
+
+        CombatUI.combatRoundText.text = CombatTurn.ToString();
+        CombatUI.combatStatusText.text = "";
+
+        CombatUI.UpdateUI(player.statistics, target.Stats);
+
         getPlayerCards();
     }
 
     public void SetRange(CombatRange r)
     {
         range = r;
-        if(range == CombatRange.melee)
+        CardsByRange(r);
+        if (range == CombatRange.melee)
         {
             CombatUI.SetRangeMelee(playerModel, targetModel);
         }
@@ -87,9 +99,43 @@ public class Combat : MonoBehaviour {
         }
     }
 
+    private void CardsByRange(CombatRange range)
+    {
+        bool isRange;
+        for (int i = 0; i < cardList.Count; i++)
+        {
+            isRange = false;
+            for (int k = 0; k < cardList[i].UsableRange.Length; k++)
+            {
+                if(cardList[i].UsableRange[k] == range)
+                {
+                    isRange = true;
+                    cardList[i].gameObject.SetActive(true);
+                    break;
+                }
+            }
+            if (!isRange)
+            {
+                cardList[i].gameObject.SetActive(false);
+            }
+        }
+    }
+
+    private void ClearCardList()
+    {
+        if(cardList != null)
+        {
+            for (int i = 0; i < player.cardList.Count; i++)
+            {
+                cardList[i].Destroy();
+            }
+        }
+        cardList = new List<Card>();
+    }
+
     private void getPlayerCards()
     {
-        cardList = new List<Card>();
+        ClearCardList();
         for (int i = 0; i < player.cardList.Count; i++)
         {
             cardList.Add(Instantiate(CombatViewCardPrefab, CombatUI.CardParent.transform));
@@ -112,18 +158,36 @@ public class Combat : MonoBehaviour {
             Debug.Log("Next Turn");
             isPlayerTurn = !isPlayerTurn;
             SetPlayerCardsActive(false);
-            combatTurn++;
         }
-
-        CombatUI.combatRoundText.text = CombatTurn.ToString();
         CombatUI.UpdateUI(player.statistics, targetInstance.Stats);
+        CombatUI.SetTargetTurn();
         if (CheckCombatEnd())
         {
             CombatUI.CombatEnd(player.statistics, targetInstance.Stats);
+            CombatUI.combatRoundText.text = "Combat Over!";
+            CombatUI.CardPanel.gameObject.SetActive(false);
+            CombatUI.combatOverPanel.SetActive(true);
         }
-        CombatUI.SetTargetTurn();
+        else
+        {
+            StartCoroutine(SimulateTargetRound());
+        }
+    }
+
+    IEnumerator SimulateTargetRound()
+    {
+        float elapsedTime = 0;
+        while (elapsedTime < 2)
+        {
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        combatTurn++;
+        CombatUI.combatRoundText.text = CombatTurn.ToString();
         targetInstance.DoCombatAction();
         SetPlayerCardsActive(true);
+        CombatUI.SetPlayerTurn();
+        CombatUI.combatStatusText.text = "";
         isPlayerTurn = true;
     }
 
@@ -134,7 +198,8 @@ public class Combat : MonoBehaviour {
 
     public void EndCombat()
     {
-
+        CombatUI.gameObject.SetActive(false);
+        Encounters.Instance.CombatOver();
     }
 
     private void SetPlayerCardsActive(bool set)
@@ -144,6 +209,14 @@ public class Combat : MonoBehaviour {
             if(cardList[i] != null)
             {
                 cardList[i].cardClicker.enabled = set;
+                if (set)
+                {
+                    cardList[i].blockImage.SetActive(false);
+                }
+                else
+                {
+                    cardList[i].blockImage.SetActive(true);
+                }
             }
             
         }
@@ -152,7 +225,7 @@ public class Combat : MonoBehaviour {
 
     private void Start()
     {
-        Init();
+        //Init(target);
     }
 
 }

@@ -8,7 +8,7 @@ public class EncounterNode : Node
 {
     [Output] public Enc encOutput;
 
-    [TextArea] public string text;
+    [TextArea (10,100)] public string text;
     public List<EncChoice> choices = new List<EncChoice>();
 
     // GetValue should be overridden to return a value for any specified output port
