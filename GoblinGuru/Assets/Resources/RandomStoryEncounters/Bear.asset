@@ -244,8 +244,8 @@ MonoBehaviour:
     rollType: 5
     dc: 20
     type: 2
-    MustHaveItem: 0
-    itemName: 
+    MustHaveItem: 1
+    itemName: Nice Hat
     MustHaveItemType: 0
     itemType: 0
     combatTarget: {fileID: 11400000, guid: ea39828b200af5148b08a573e0b66628, type: 2}

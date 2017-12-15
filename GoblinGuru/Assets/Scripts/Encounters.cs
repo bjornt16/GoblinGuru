@@ -62,6 +62,10 @@ public class Encounters : MonoBehaviour {
 
     public void Initialize()
     {
+        if(player == null)
+        {
+            player = GameStateManager.Instance.player;
+        }
         buttons = new List<OptionButton>();
 
         ui.stateText.text = currentEnc.text;
@@ -80,14 +84,19 @@ public class Encounters : MonoBehaviour {
             for (int i = 0; i < currentEnc.choices.Count; i++)
             {
                 Debug.Log("i " + i);
-                OptionButton tempButton = Instantiate(ui.buttonPrefab, ui.options.transform);
-                tempButton.Initialize(i, currentEnc.choices[i].cText);
-                buttons.Add(tempButton);
-                tempButton.option.onClick.AddListener(() => OnClickTask(tempButton.parameter));
-                /*UnityEngine.UI.Text tempText = tempButton.gameObject.transform.GetComponentInChildren<UnityEngine.UI.Text>();
-                tempText.text = encounters[0].currentState.choices[i].cText;
-                Debug.Log("i is: " + i);
-                tempButton.onClick.AddListener(() => OnClickTask(counter));*/
+                if((currentEnc.choices[i].MustHaveItem && player.HasCard(currentEnc.choices[i].itemName)) || !currentEnc.choices[i].MustHaveItem)
+                {
+
+
+                    OptionButton tempButton = Instantiate(ui.buttonPrefab, ui.options.transform);
+                    tempButton.Initialize(i, currentEnc.choices[i].cText);
+                    buttons.Add(tempButton);
+                    tempButton.option.onClick.AddListener(() => OnClickTask(tempButton.parameter));
+                    /*UnityEngine.UI.Text tempText = tempButton.gameObject.transform.GetComponentInChildren<UnityEngine.UI.Text>();
+                    tempText.text = encounters[0].currentState.choices[i].cText;
+                    Debug.Log("i is: " + i);
+                    tempButton.onClick.AddListener(() => OnClickTask(counter));*/
+                }
             }
         }
 

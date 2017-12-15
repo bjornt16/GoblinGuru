@@ -178,6 +178,18 @@ public class PlayerUnit : MonoBehaviour {
         GameTurnManager.OnNewTurn += ResetTurn;
     }
 
+    public bool HasCard(string name)
+    {
+        for (int i = 0; i < cardList.Count; i++)
+        {
+            if(cardList[i].cardName == name)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void checkForDing()
     {
         if(statistics.currXp >= statistics.xpCap)
