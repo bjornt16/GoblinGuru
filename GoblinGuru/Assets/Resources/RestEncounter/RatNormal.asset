@@ -9,18 +9,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: SnakeGood
+  m_Name: RatNormal
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114104304477632538}
   - {fileID: 114333339478047304}
   - {fileID: 114943215710011052}
   - {fileID: 114132061640664400}
-  - {fileID: 114946027850113614}
   - {fileID: 114777773595141866}
-  - {fileID: 114009529049440068}
-  - {fileID: 114608332386887090}
---- !u!114 &114009529049440068
+  - {fileID: 114618492320023164}
+  - {fileID: 114403425746374102}
+  - {fileID: 114866504919731826}
+  - {fileID: 114033780637303424}
+  - {fileID: 114096983546702228}
+  - {fileID: 114869996284225260}
+  - {fileID: 114845015025206296}
+--- !u!114 &114033780637303424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -32,22 +36,130 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -2872, y: 856}
+  position: {x: -3128, y: -248}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114033780637303424}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_1
+        node: {fileID: 114403425746374102}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114033780637303424}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114096983546702228}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114033780637303424}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114869996284225260}
+      _direction: 0
+      _dynamic: 1
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  text: The rat isn't scathed at all by your confidence and jumps to attack you
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Enter combat
+    rollType: 0
+    dc: 10
+    type: 2
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+--- !u!114 &114096983546702228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -4040, y: -616}
   ports:
     keys:
     - encOutput
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114009529049440068}
+      _node: {fileID: 114096983546702228}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: instanceInput_2
-        node: {fileID: 114132061640664400}
-      - fieldName: instanceInput_1
-        node: {fileID: 114132061640664400}
-      - fieldName: instanceInput_1
-        node: {fileID: 114946027850113614}
+      - fieldName: instanceInput_0
+        node: {fileID: 114033780637303424}
+      - fieldName: instanceInput_0
+        node: {fileID: 114845015025206296}
       _direction: 1
       _dynamic: 0
   encOutput:
@@ -95,7 +207,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You manage to escape
+  text: You manage to kill the rat
   choices: []
 --- !u!114 &114104304477632538
 MonoBehaviour:
@@ -243,34 +355,28 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114608332386887090}
+        node: {fileID: 114618492320023164}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_1
       _node: {fileID: 114132061640664400}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114009529049440068}
+      connections: []
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_3
       _node: {fileID: 114132061640664400}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114946027850113614}
+      connections: []
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_2
       _node: {fileID: 114132061640664400}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114009529049440068}
+      connections: []
       _direction: 0
       _dynamic: 1
   encOutput:
@@ -318,21 +424,20 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You see a large python and quickly realize that it has curling itself around
-    your leg.
+  text: You see a giant rat sniffing around the campsite
   choices:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
-    cText: Try to get the snake off you
-    rollType: 0
-    dc: 10
-    type: 2
+    cText: 'Grab your gear and prepare to fight '
+    rollType: 4
+    dc: 12
+    type: 0
     MustHaveItem: 0
     MustNotHaveItem: 0
     itemName: 
     MustHaveItemType: 0
     itemType: 0
-    combatTarget: {fileID: 11400000, guid: 0f9d61034e3f48648a3f610d01b908de, type: 2}
+    combatTarget: {fileID: 11400000, guid: 99c9c2e668006614b859f6767339d8af, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0
@@ -340,7 +445,7 @@ MonoBehaviour:
     variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
-    cText: Run away and hope it lets go
+    cText: Run away
     rollType: 1
     dc: 13
     type: 1
@@ -422,7 +527,7 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
-  rollSleep: 4
+  rollSleep: 5
   hasVariable: 0
   variableKey: 
   variableValue: 0
@@ -430,7 +535,7 @@ MonoBehaviour:
   encounters: []
   text: You wake up after having had a great night's sleep.
   choices: []
---- !u!114 &114608332386887090
+--- !u!114 &114403425746374102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -442,22 +547,40 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -2648, y: 328}
+  position: {x: -2392, y: -504}
   ports:
     keys:
     - encOutput
+    - instanceInput_0
+    - instanceInput_1
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114608332386887090}
+      _node: {fileID: 114403425746374102}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: instanceInput_0
-        node: {fileID: 114132061640664400}
-      - fieldName: instanceInput_0
-        node: {fileID: 114946027850113614}
+        node: {fileID: 114618492320023164}
       _direction: 1
       _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114403425746374102}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114866504919731826}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114403425746374102}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114033780637303424}
+      _direction: 0
+      _dynamic: 1
   encOutput:
     text: 
     choices: []
@@ -503,8 +626,171 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You manage to losen yourself from the snake and kill it
-  choices: []
+  text: You decisively approach the rat and attempt to intimidate it.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 4
+    dc: 13
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+--- !u!114 &114618492320023164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1752, y: 264}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    - instanceInput_2
+    - instanceInput_3
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114618492320023164}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114132061640664400}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114618492320023164}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114403425746374102}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114618492320023164}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114618492320023164}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114869996284225260}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114618492320023164}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114845015025206296}
+      _direction: 0
+      _dynamic: 1
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  text: The rat notices you grabbing your equipment and makes a noise as if it were
+    trying to scare you.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Intimidate the rat
+    rollType: 4
+    dc: 12
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: Run
+    rollType: 1
+    dc: 12
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
 --- !u!114 &114777773595141866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +899,267 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+--- !u!114 &114845015025206296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -3032, y: 952}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114845015025206296}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_3
+        node: {fileID: 114618492320023164}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114845015025206296}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114096983546702228}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114845015025206296}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114869996284225260}
+      _direction: 0
+      _dynamic: 1
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  text: You start running away but as you do the rat notices you and goes running
+    after the most fresh of foods available at the camp site, you.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: 
+    rollType: 0
+    dc: 10
+    type: 2
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+--- !u!114 &114866504919731826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -3112, y: -728}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114866504919731826}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114403425746374102}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  text: You send the rat running for the hills with your aura of confidence.
+  choices: []
+--- !u!114 &114869996284225260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -4232, y: 152}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114869996284225260}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_1
+        node: {fileID: 114033780637303424}
+      - fieldName: instanceInput_2
+        node: {fileID: 114618492320023164}
+      - fieldName: instanceInput_1
+        node: {fileID: 114845015025206296}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  text: You manage to flee from the rat.
+  choices: []
 --- !u!114 &114943215710011052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,116 +1301,6 @@ MonoBehaviour:
     MustHaveItemType: 0
     itemType: 0
     combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
---- !u!114 &114946027850113614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -1656, y: 200}
-  ports:
-    keys:
-    - encOutput
-    - instanceInput_0
-    - instanceInput_1
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114946027850113614}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_3
-        node: {fileID: 114132061640664400}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: instanceInput_0
-      _node: {fileID: 114946027850113614}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114608332386887090}
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_1
-      _node: {fileID: 114946027850113614}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114009529049440068}
-      _direction: 0
-      _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  text: You try to get the beast off
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Enter combat
-    rollType: 0
-    dc: 10
-    type: 2
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 11400000, guid: 0f9d61034e3f48648a3f610d01b908de, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0
