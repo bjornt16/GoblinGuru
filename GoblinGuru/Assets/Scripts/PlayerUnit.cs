@@ -40,6 +40,10 @@ public class PlayerUnit : MonoBehaviour {
     int maxHealth;
     int health;
 
+    int gold;
+
+    public Dictionary<string, bool> EncounterVariable;
+
     public CharStats statistics;
 
     float shakeIntensity = 0.06f;

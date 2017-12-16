@@ -113,3 +113,8 @@ public enum CharacterStats
 {
     D20, Dexterity, Strength, Wits, Charisma, Speed
 }
+
+public enum CharacterStatsCheck
+{
+    Hp, Dexterity, Strength, Wits, Charisma, Speed, Stamina
+}

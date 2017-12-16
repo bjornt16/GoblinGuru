@@ -46,5 +46,10 @@ public struct TerrainType
 }
 
 public enum TileTerrain{
-    DeepSea, ShallowSea, Lake, River, Sand, Grass, Grass2, Mountain, Mountain2, Snow, Snow2
+    DeepSea, ShallowSea, Lake, River, Sand, Grass, Grass2, Mountain, Mountain2, Snow, Snow2, Land, Sea
+}
+
+public enum TileFeatures
+{
+    None, Forest, Cave, swamp, Town, Village, Camp, Harbor, Bridge
 }

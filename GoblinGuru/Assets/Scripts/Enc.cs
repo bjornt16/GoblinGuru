@@ -9,10 +9,38 @@ public class Enc {
 
     public List<EncChoice> choices = new List<EncChoice>();
 
-    public Enc(string t, List<EncChoice> c)
+    public bool requiredVariable;
+    public string requiredVariableKey;
+    public bool requiredVariableValue;
+
+    public TileTerrain terrainType;
+
+    public TileFeatures featureType;
+
+    public bool hasCost;
+    public bool hasReward;
+
+    public int hpCost;
+    public int staminaCost;
+    public int goldCost;
+    public string itemCost;
+
+    public CardObject itemReward;
+
+    public int hpReward;
+    public int staminaReward;
+    public int goldReward;
+
+    public bool hasVariable;
+    public string variableKey;
+    public bool variableValue;
+
+    public Enc(string t, List<EncChoice> c, TileTerrain tt, TileFeatures tf)
     {
         text = t;
         choices = c;
+        terrainType = tt;
+        featureType = tf;
     }
 
 

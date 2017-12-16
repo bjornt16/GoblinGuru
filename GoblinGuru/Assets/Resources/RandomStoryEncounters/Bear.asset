@@ -16,10 +16,10 @@ MonoBehaviour:
   - {fileID: 114606569166132820}
   - {fileID: 114512643148715440}
   - {fileID: 114006504580663464}
-  - {fileID: 114914556987674162}
-  - {fileID: 114807805122936774}
   - {fileID: 114809811418830130}
   - {fileID: 114082386012489956}
+  - {fileID: 114914556987674162}
+  - {fileID: 114807805122936774}
 --- !u!114 &114006504580663464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,6 +49,14 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredQuest: 0
+    requiredQuestName: 
+    terrainType: 0
+    featureType: 0
+  terrainType: 0
+  featureType: 0
+  requiredQuest: 0
+  requiredQuestName: 
   text: "You\u2019re not staying here a moment longer, deciding to leg it you manage
     to stay ahead of the bear long enough to get into a tree. The bear wanders around
     at the base of the tree for a bit before leaving.\r\n"
@@ -82,6 +90,14 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredQuest: 0
+    requiredQuestName: 
+    terrainType: 0
+    featureType: 0
+  terrainType: 0
+  featureType: 0
+  requiredQuest: 0
+  requiredQuestName: 
   text: You Lost!
   choices: []
 --- !u!114 &114343300622370668
@@ -201,6 +217,14 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredQuest: 0
+    requiredQuestName: 
+    terrainType: 0
+    featureType: 0
+  terrainType: 0
+  featureType: 0
+  requiredQuest: 0
+  requiredQuestName: 
   text: "As you are wandering the world, you suddenly hear a rustling in the grass
     nearby. Emerging from the bushes is a large ursine face covered in a shaggy brown
     coat. There is a brief silence as the two of you spot each other.\r"
@@ -212,6 +236,7 @@ MonoBehaviour:
     dc: 0
     type: 1
     MustHaveItem: 0
+    MustNotHaveItem: 0
     itemName: 
     MustHaveItemType: 0
     itemType: 0
@@ -223,6 +248,7 @@ MonoBehaviour:
     dc: 0
     type: 1
     MustHaveItem: 0
+    MustNotHaveItem: 0
     itemName: 
     MustHaveItemType: 0
     itemType: 0
@@ -234,6 +260,7 @@ MonoBehaviour:
     dc: 0
     type: 1
     MustHaveItem: 0
+    MustNotHaveItem: 0
     itemName: 
     MustHaveItemType: 0
     itemType: 0
@@ -243,8 +270,9 @@ MonoBehaviour:
     cText: Combat Test
     rollType: 5
     dc: 20
-    type: 2
+    type: 0
     MustHaveItem: 1
+    MustNotHaveItem: 0
     itemName: Nice Hat
     MustHaveItemType: 0
     itemType: 0
@@ -314,6 +342,14 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredQuest: 0
+    requiredQuestName: 
+    terrainType: 0
+    featureType: 0
+  terrainType: 0
+  featureType: 0
+  requiredQuest: 0
+  requiredQuestName: 
   text: "Your courage leaves you as the huge and hungry beast approaches you.\r\n\r\n\u201CH-help
     me Arizta!\u201D you cry out and run.\r\n\r\nShe heard you, and soon she dashes
     past you to deck the bear in the nose. You hear the sound of combat and a terrible
@@ -330,6 +366,7 @@ MonoBehaviour:
     dc: 0
     type: 0
     MustHaveItem: 0
+    MustNotHaveItem: 0
     itemName: 
     MustHaveItemType: 0
     itemType: 0
@@ -341,6 +378,7 @@ MonoBehaviour:
     dc: 0
     type: 0
     MustHaveItem: 0
+    MustNotHaveItem: 0
     itemName: 
     MustHaveItemType: 0
     itemType: 0
@@ -374,6 +412,14 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredQuest: 0
+    requiredQuestName: 
+    terrainType: 0
+    featureType: 0
+  terrainType: 0
+  featureType: 0
+  requiredQuest: 0
+  requiredQuestName: 
   text: "The bear comes painfully close and regards you for a while, before turning
     around and leaving. When it\u2019s no longer in sight you exhale a sigh of relief.\r\n"
   choices: []
@@ -406,6 +452,14 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredQuest: 0
+    requiredQuestName: 
+    terrainType: 0
+    featureType: 0
+  terrainType: 0
+  featureType: 0
+  requiredQuest: 0
+  requiredQuestName: 
   text: "There is nothing you can do now, you resolve to not make her sacrifice be
     in vain. You continue, you need to succeed or else her death would have been for
     nothing.\r\n"
@@ -439,6 +493,14 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredQuest: 0
+    requiredQuestName: 
+    terrainType: 0
+    featureType: 0
+  terrainType: 0
+  featureType: 0
+  requiredQuest: 0
+  requiredQuestName: 
   text: You Won!
   choices: []
 --- !u!114 &114914556987674162
@@ -470,6 +532,14 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredQuest: 0
+    requiredQuestName: 
+    terrainType: 0
+    featureType: 0
+  terrainType: 0
+  featureType: 0
+  requiredQuest: 0
+  requiredQuestName: 
   text: "You cry over her body, she\u2019d been ripped away from life by some stupid
     animal. You felt even worse because it was your fault for calling on her like
     that, the least you could do to make up for it was to bury her.\r\n\r\nIt was
