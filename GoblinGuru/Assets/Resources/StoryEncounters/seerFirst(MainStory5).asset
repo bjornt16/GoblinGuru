@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: sageFirst(MainStory5)
+  m_Name: seerFirst(MainStory5)
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114619803809803870}
@@ -22,7 +22,6 @@ MonoBehaviour:
   - {fileID: 114625657301034852}
   - {fileID: 114462921277407068}
   - {fileID: 114702710374084910}
-  - {fileID: 0}
 --- !u!114 &114461072714329018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,7 +823,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1336, y: 1368}
+  position: {x: 1752, y: 1400}
   ports:
     keys:
     - encOutput
@@ -878,11 +877,14 @@ MonoBehaviour:
   staminaReward: 0
   goldReward: 0
   rollSleep: 0
-  hasVariable: 1
+  hasVariable: 0
   variableKey: spiritsKnown
   variableValue: 1
-  opensEncounter: 0
-  encounters: []
+  opensEncounter: 1
+  encounters:
+  - forestSpiritFirst
+  - mountainSpiritFirst
+  - riverSpiritFirst
   text: "He snorts, \u201CYes I suppose it is, but you still shouldn\u2019t be so
     impudent.\u201D\r\n\r\nYou fear you may have lost the chance, but he sighs.\r\n\r\n\u201CWell
     since a crisis is brewing I will speak quickly. You are a Shaman which means you
@@ -1192,11 +1194,14 @@ MonoBehaviour:
   staminaReward: 0
   goldReward: 0
   rollSleep: 0
-  hasVariable: 1
+  hasVariable: 0
   variableKey: spiritsKnown
   variableValue: 1
-  opensEncounter: 0
-  encounters: []
+  opensEncounter: 1
+  encounters:
+  - forestSpiritFirst
+  - mountainSpiritFirst
+  - riverSpiritFirst
   text: "\u201CI see you\u2019re leaving now, before you go I just want to tell you
     my name. It is Jongil.\u201D\r\n\r\nYou make a mental note of that name.\r\n\r\n\u201CThank
     you for that information, I have many things to think about. I will leave now.\u201D\r\n\r\nHe
