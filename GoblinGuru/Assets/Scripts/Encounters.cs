@@ -84,7 +84,8 @@ public class Encounters : MonoBehaviour {
             for (int i = 0; i < currentEnc.choices.Count; i++)
             {
                 Debug.Log("i " + i);
-                if((currentEnc.choices[i].MustHaveItem && player.HasCard(currentEnc.choices[i].itemName)) || !currentEnc.choices[i].MustHaveItem)
+                if((currentEnc.choices[i].MustHaveItem && player.HasCard(currentEnc.choices[i].itemName)) || !currentEnc.choices[i].MustHaveItem ||
+                    (currentEnc.choices[i].MustNotHaveItem && !player.HasCard(currentEnc.choices[i].itemName)))
                 {
 
 
@@ -247,6 +248,7 @@ public class Encounters : MonoBehaviour {
         Enc tempEnc = null;
         for (int n = 0; n < node.Length; n++)
         {
+            Debug.Log("name " + node[n].name);
             tempEnc = (Enc)node[n].nodes[0].GetOutputPort("encOutput").GetOutputValue();
             recursiveBuildEnc(tempEnc, node, n, 0);
             list.Add(tempEnc);

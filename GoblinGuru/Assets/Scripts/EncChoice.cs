@@ -18,12 +18,20 @@ public class EncChoice
     public Enc loss;
 
     public bool MustHaveItem;
+    public bool MustNotHaveItem;
     public string itemName;
 
     public bool MustHaveItemType;
     public CardType itemType = CardType.Consumable;
 
     public CombatEnemy combatTarget;
+
+    public CharacterStatsCheck stat;
+    public int statAmount;
+
+    public bool mustHaveVariable;
+    public string variableKey;
+    public bool variableValue;
 
     PlayerUnit player;
 
@@ -34,8 +42,6 @@ public class EncChoice
         cText = newCText;
         rollType = newRollType;
         dc = newDC;
-
-        player = GameStateManager.Instance.player;
     }
 
     public Enc AttemptChoice()
@@ -80,5 +86,5 @@ public class EncChoice
 
 public enum EncChoiceType
 {
-    none, roll, combat
+    none, roll, combat, statCheck
 }

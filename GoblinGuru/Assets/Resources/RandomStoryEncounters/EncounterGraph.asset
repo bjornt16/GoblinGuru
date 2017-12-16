@@ -9,14 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: MainStory4
+  m_Name: EncounterGraph
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 114855229520047024}
-  - {fileID: 114035620404045312}
-  - {fileID: 114880454062558462}
-  - {fileID: 114744241184858228}
---- !u!114 &114035620404045312
+  - {fileID: 114490327474619930}
+  - {fileID: 114671391875410294}
+  - {fileID: 114199654966683012}
+--- !u!114 &114199654966683012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -28,18 +27,16 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -72, y: -296}
+  position: {x: -216, y: -24}
   ports:
     keys:
     - encOutput
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114035620404045312}
+      _node: {fileID: 114199654966683012}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_0
-        node: {fileID: 114855229520047024}
+      connections: []
       _direction: 1
       _dynamic: 0
   encOutput:
@@ -81,14 +78,9 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  text: "She hugs you and you return the favour, it makes you feel better but still
-    you can\u2019t shake your sense of unease over the monster going around.\r\n\r\n\u201CDon\u2019t
-    worry too much about it right now. We can get more information and alert people
-    to what\u2019s happening in good time.\u201D\r\n\r\nYou nod and she continues.\r\n\r\n\u201CI\u2019ve
-    heard that a seer lives in a cave not far from the swamp. It\u2019s as good a
-    place to start as any.\u201D\r\n"
+  text: 
   choices: []
---- !u!114 &114744241184858228
+--- !u!114 &114490327474619930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -100,77 +92,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: 168}
-  ports:
-    keys:
-    - encOutput
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114744241184858228}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_4
-        node: {fileID: 114855229520047024}
-      _direction: 1
-      _dynamic: 0
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  text: "\u201CWow, you\u2019re really getting involved? You saw what that thing can
-    do!\u201D\r\n\r\nYou steel your expression and nod grimly.\r\n\r\n\u201CSince
-    you\u2019re so determined I won\u2019t stop you. If you\u2019re really determined
-    to do it, we can head out now.\u201D\r\n"
-  choices: []
---- !u!114 &114855229520047024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -616, y: -344}
+  position: {x: -712, y: -312}
   ports:
     keys:
     - encOutput
@@ -180,57 +102,67 @@ MonoBehaviour:
     - instanceInput_3
     - instanceInput_4
     - instanceInput_5
+    - instanceInput_6
+    - instanceInput_7
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114855229520047024}
+      _node: {fileID: 114490327474619930}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
       _direction: 1
       _dynamic: 0
     - _fieldName: instanceInput_0
-      _node: {fileID: 114855229520047024}
+      _node: {fileID: 114490327474619930}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114035620404045312}
+      connections: []
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_1
-      _node: {fileID: 114855229520047024}
+      _node: {fileID: 114490327474619930}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_2
-      _node: {fileID: 114855229520047024}
+      _node: {fileID: 114490327474619930}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114880454062558462}
+      connections: []
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_3
-      _node: {fileID: 114855229520047024}
+      _node: {fileID: 114490327474619930}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_4
-      _node: {fileID: 114855229520047024}
+      _node: {fileID: 114490327474619930}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114744241184858228}
+      connections: []
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_5
-      _node: {fileID: 114855229520047024}
+      _node: {fileID: 114490327474619930}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_6
+      _node: {fileID: 114490327474619930}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_7
+      _node: {fileID: 114490327474619930}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
@@ -258,8 +190,8 @@ MonoBehaviour:
     variableKey: 
     variableValue: 0
   terrainType: 11
-  featureType: 0
-  requiredVariable: 1
+  featureType: 1
+  requiredVariable: 0
   requiredVariableKey: 
   requiredVariableValue: 0
   hasCost: 0
@@ -275,32 +207,14 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  text: "Your thoughts are interrupted by Arizta prodding you.\r\n\r\n\u201CHey, you\u2019ve
-    been staring at the devastation for a while now, are you alright?\u201D\r\n"
+  text: 
   choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: "\u201CHow could I be? That thing just murdered an entire place.\u201D "
-    rollType: 0
-    dc: 0
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
-    cText: "\u201CYeah, I just needed time to think about this.\u201D "
+    cText: 
     rollType: 0
-    dc: 0
-    type: 0
+    dc: 10
+    type: 3
     MustHaveItem: 0
     MustNotHaveItem: 0
     itemName: 
@@ -312,25 +226,7 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
-  - winPort: instanceInput_4
-    lossPort: instanceInput_5
-    cText: "\u201CI\u2019m a Shaman, and I have to stop this monster. I don\u2019t
-      know how I can hope to do it, but I have to.\u201D"
-    rollType: 0
-    dc: 0
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
---- !u!114 &114880454062558462
+--- !u!114 &114671391875410294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -342,20 +238,34 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 312, y: -104}
+  position: {x: -216, y: -360}
   ports:
     keys:
     - encOutput
+    - instanceInput_0
+    - instanceInput_1
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114880454062558462}
+      _node: {fileID: 114671391875410294}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_2
-        node: {fileID: 114855229520047024}
+      connections: []
       _direction: 1
       _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114671391875410294}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114671391875410294}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
   encOutput:
     text: 
     choices: []
@@ -395,8 +305,5 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  text: "She simply nods and the two of you take further time digesting what just
-    happened. Then she perks up a bit.\r\n\r\n\u201CHey, I just remembered that a
-    seer lives in a cave not too far from here. If there\u2019s anyone who can explain
-    this to us, it should be him.\u201D\r\n"
+  text: 
   choices: []
