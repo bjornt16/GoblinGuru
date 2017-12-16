@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: MainStory4
+  m_Name: openingSwamp3(MainStory4)
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114855229520047024}
@@ -60,9 +60,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -78,9 +81,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "She hugs you and you return the favour, it makes you feel better but still
     you can\u2019t shake your sense of unease over the monster going around.\r\n\r\n\u201CDon\u2019t
     worry too much about it right now. We can get more information and alert people
@@ -132,9 +138,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -150,9 +159,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "\u201CWow, you\u2019re really getting involved? You saw what that thing can
     do!\u201D\r\n\r\nYou steel your expression and nod grimly.\r\n\r\n\u201CSince
     you\u2019re so determined I won\u2019t stop you. If you\u2019re really determined
@@ -254,9 +266,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 1
@@ -272,9 +287,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "Your thoughts are interrupted by Arizta prodding you.\r\n\r\n\u201CHey, you\u2019ve
     been staring at the devastation for a while now, are you alright?\u201D\r\n"
   choices:
@@ -374,9 +392,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -392,9 +413,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "She simply nods and the two of you take further time digesting what just
     happened. Then she perks up a bit.\r\n\r\n\u201CHey, I just remembered that a
     seer lives in a cave not too far from here. If there\u2019s anyone who can explain

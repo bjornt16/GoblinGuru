@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a9633a81dc5f24382b6cf3574e8dbf, type: 3}
+  m_Name: Spider
+  m_EditorClassIdentifier: 
+  Name: Spider
+  HeadColor: {r: 1, g: 0, b: 0, a: 0}
+  TorsoColor: {r: 0, g: 0, b: 0, a: 0}
+  LegsColor: {r: 0, g: 0, b: 0, a: 0}
+  FeetColor: {r: 0.9705882, g: 0.02854674, b: 0.02854674, a: 0}
+  Stats:
+    maxHP: 25
+    HP: 20
+    maxStamina: 10
+    stamina: 10
+    level: 1
+    currXp: 0
+    xpCap: 4
+    dexterity: 8
+    strength: 4
+    wits: 1
+    charisma: 1
+    speed: 7
+    armorBonus: 1
+    damage: 8
