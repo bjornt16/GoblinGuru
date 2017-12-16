@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: MainStory1
+  m_Name: openingText(MainStory1)
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114747630161285518}
@@ -104,25 +104,97 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "\u201CThank goodness we escaped, that was just too close! What were you thinking,
     stealing in the marketplace like that?\u201D\r"
   choices:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: " \u201CCouldn\u2019t do anything else, I was starving.\u201D "
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
     cText: "\u201CI would have gotten away with it hadn\u2019t you bumped into me
       like that.\u201D"
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   - winPort: instanceInput_4
     lossPort: instanceInput_5
     cText: "\u201CSorry for dragging you into this, I panicked on the spot.\u201D "
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
 --- !u!114 &114188213645304682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +224,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "Arizta happily takes some of the food and makes little smacking noises as
     she consumes the vegetables and patties inside. You yourself consume the rest,
     the buns you consume have delicious pieces of pork and cinnamon inside that just
@@ -188,6 +296,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "You shake your head \u201CNo, it\u2019s me that\u2019s starving while you\u2019re
     fine right now.\u201D\r\n\r\nYou gorge yourself like a pig, devouring the food
     until you feel stuffed. You sigh in pure contentment, this is the first time you\u2019ve
@@ -223,6 +367,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "\u201CHonestly, what a pain. Well come then let\u2019s head back and wait
     for this thing to blow over.\u201D"
   choices: []
@@ -255,6 +435,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: 
   choices: []
 --- !u!114 &114747630161285518
@@ -302,6 +518,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "Yours is a poor life, going from place to place trying to get food and shelter.
     From a young age you\u2019ve looked different to most of the others you meet:
     smaller, uglier, stupider and poorer. One day you were just too hungry, and no
@@ -317,8 +569,20 @@ MonoBehaviour:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: continue
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 10
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
 --- !u!114 &114762580455697846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +648,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "She smiles, \u201CYes I know, just ain\u2019t easy being poor like this.\u201D\r\n\r\nShe
     prods the bundle of food you are carrying with you, \u201CSo, want to share it
     now?\u201D\r\n"
@@ -391,13 +691,37 @@ MonoBehaviour:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: 'Share food. '
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
     cText: Don't
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
 --- !u!114 &114876002411013464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +751,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "\u201CDon\u2019t be too sorry, it\u2019s life that is so unfair. We\u2019d
     never even have to scrounge for food if we were treated fairly like the others.\u201D\r\n\r\nShe
     nods sagely.\r\n\r\n\u201CIn any case, let\u2019s leave this putrid morass before
@@ -497,6 +857,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "She frowns and places her hands on her hips.\r\n\r\n\u201CHey, what was that
     for? I didn\u2019t know you were stealing.\u201D\r\n\r\nShe sighs.\r\n\r\n\u201CIn
     any case, it\u2019s too late to return right now. We have to move to someplace
@@ -506,10 +902,34 @@ MonoBehaviour:
     lossPort: instanceInput_1
     cText: "\u201CNonsense, we can move back, we just have to wait for things to blow
       over.\u201D"
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
     cText: " I suppose you\u2019re right, I\u2019m sorry.\u201D "
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
