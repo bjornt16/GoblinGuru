@@ -332,7 +332,7 @@ MonoBehaviour:
     itemName: 
     MustHaveItemType: 0
     itemType: 0
-    combatTarget: {fileID: 11400000, guid: 99c9c2e668006614b859f6767339d8af, type: 2}
+    combatTarget: {fileID: 11400000, guid: 0f9d61034e3f48648a3f610d01b908de, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0
@@ -600,8 +600,8 @@ MonoBehaviour:
     lossPort: instanceInput_1
     cText: Continue
     rollType: 0
-    dc: 10
-    type: 0
+    dc: 14
+    type: 1
     MustHaveItem: 0
     MustNotHaveItem: 0
     itemName: 
@@ -863,7 +863,7 @@ MonoBehaviour:
     itemName: 
     MustHaveItemType: 0
     itemType: 0
-    combatTarget: {fileID: 11400000, guid: 99c9c2e668006614b859f6767339d8af, type: 2}
+    combatTarget: {fileID: 11400000, guid: 0f9d61034e3f48648a3f610d01b908de, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0

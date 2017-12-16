@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a9633a81dc5f24382b6cf3574e8dbf, type: 3}
+  m_Name: Rat
+  m_EditorClassIdentifier: 
+  Name: 
+  HeadColor: {r: 0, g: 0, b: 0, a: 0}
+  TorsoColor: {r: 0, g: 0, b: 0, a: 0}
+  LegsColor: {r: 0, g: 0, b: 0, a: 0}
+  FeetColor: {r: 0, g: 0, b: 0, a: 0}
+  Stats:
+    maxHP: 25
+    HP: 25
+    maxStamina: 15
+    stamina: 15
+    level: 1
+    currXp: 0
+    xpCap: 4
+    dexterity: 7
+    strength: 7
+    wits: 1
+    charisma: 1
+    speed: 9
+    armorBonus: 0
+    minDamage: 1
+    maxDamage: 8
+    bonusDamage: 0
