@@ -172,3 +172,8 @@ public enum CharacterStatsCheck
 {
     Hp, Dexterity, Strength, Wits, Charisma, Speed, Stamina
 }
+
+public enum SleepType
+{
+    none, terrible, bad, normal, good, great
+}

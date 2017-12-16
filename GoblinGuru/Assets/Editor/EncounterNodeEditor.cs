@@ -16,12 +16,12 @@ public class EncounterNodeEditor : NodeEditor
 
         GUILayout.EndHorizontal();
 
-        if(target == target.graph.nodes[0])
+        if (target == target.graph.nodes[0])
         {
             GUIStyle style = new GUIStyle();
             style.richText = true;
             GUILayout.Label("<size=20><color=yellow>Encounter <b>Start</b></color></size>", style);
-            encounter.requiredVariable = EditorGUILayout.Toggle(new GUIContent("Must Have Done Encounter"), encounter.requiredVariable);
+            encounter.requiredVariable = EditorGUILayout.Toggle(new GUIContent("Must Have Variable"), encounter.requiredVariable);
             if (encounter.requiredVariable)
             {
                 NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("requiredVariableKey"));
@@ -50,6 +50,7 @@ public class EncounterNodeEditor : NodeEditor
                 NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("staminaReward"));
                 NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("goldReward"));
                 NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("itemReward"));
+                encounter.rollSleep = (SleepType)EditorGUILayout.EnumPopup(new GUIContent("Sleep Type"), encounter.rollSleep);
             }
             encounter.hasVariable = EditorGUILayout.Toggle(new GUIContent("Set Variable"), encounter.hasVariable);
             if (encounter.hasVariable)
@@ -81,7 +82,7 @@ public class EncounterNodeEditor : NodeEditor
             if (encounter.choices[i].mustHaveVariable)
             {
                 encounter.choices[i].variableKey = EditorGUILayout.TextField(new GUIContent("Key"), encounter.choices[i].variableKey);
-                encounter.choices[i].variableValue= EditorGUILayout.Toggle(new GUIContent("Value"), encounter.choices[i].variableValue);
+                encounter.choices[i].variableValue = EditorGUILayout.Toggle(new GUIContent("Value"), encounter.choices[i].variableValue);
             }
 
             if (!encounter.choices[i].MustHaveItemType)
@@ -110,13 +111,13 @@ public class EncounterNodeEditor : NodeEditor
             if (encounter.choices[i].type == EncChoiceType.roll)
             {
                 encounter.choices[i].rollType = (CharacterStats)EditorGUILayout.EnumPopup(new GUIContent("Roll Type"), encounter.choices[i].rollType);
-                encounter.choices[i].dc = EditorGUILayout.IntField(new GUIContent("DC"), encounter.choices[i].dc); 
+                encounter.choices[i].dc = EditorGUILayout.IntField(new GUIContent("DC"), encounter.choices[i].dc);
             }
             else if (encounter.choices[i].type == EncChoiceType.combat)
             {
                 encounter.choices[i].combatTarget = (CombatEnemy)EditorGUILayout.ObjectField("Combat Target", encounter.choices[i].combatTarget, typeof(CombatEnemy), true);
             }
-            else if(encounter.choices[i].type == EncChoiceType.statCheck)
+            else if (encounter.choices[i].type == EncChoiceType.statCheck)
             {
                 encounter.choices[i].stat = (CharacterStatsCheck)EditorGUILayout.EnumPopup(new GUIContent("Stat Type"), encounter.choices[i].stat);
                 encounter.choices[i].statAmount = EditorGUILayout.IntField(new GUIContent("Amount"), encounter.choices[i].statAmount);
@@ -140,10 +141,26 @@ public class EncounterNodeEditor : NodeEditor
         }
         GUILayout.EndHorizontal();
 
-        if (GUILayout.Button("Check Win", GUILayout.Width(30)))
+        encounter.opensEncounter = EditorGUILayout.Toggle(new GUIContent("Opens other Encounter"), encounter.opensEncounter);
+        if (encounter.opensEncounter)
         {
-            Debug.Log(encounter.choices[0].win.text);
+            for (int l = 0; l < encounter.encounters.Count; l++)
+            {
+                if (GUILayout.Button("-", GUILayout.Width(30)))
+                {
+                    encounter.encounters.RemoveAt(l);
+                    l--;
+                }
+                encounter.encounters[l] = EditorGUILayout.TextField(new GUIContent("Encounter Name"), encounter.encounters[l]);
+
+            }
+            if (GUILayout.Button("+", GUILayout.Width(30)))
+            {
+                encounter.encounters.Add("");
+            }
         }
+
+
     }
     public override int GetWidth()
     {
