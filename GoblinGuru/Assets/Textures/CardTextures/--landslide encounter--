@@ -1,0 +1,19 @@
+--landslide encounter--
+1 You suddenly notice that a landslide is starting to roll down the side of a mountain near you.
+options:
+a - Find a large rock to hide behind | goto: 2
+b - Run as fast as you can | win 3, loss 4
+
+2 You quickly look for a rock you think will be able to stand the landslides sheer strength.
+a - continue | goto: 5
+
+3 You run as fast as your legs can carry you and are narrowly able to escape the landslides reach. (end(loose stamina))
+
+4 You run as fast as your legs can carry you and when you think you've just managed to escape the landslide a few small rocks come tumbling down at you. (end(loose health and stamina))
+
+5 You feel the envoirment all around you shake and hear the sound or rocks smashing agains your shelter.
+(wits) win: 6 loss: 7
+
+6 You duck for what seems like an eternity until the chaos finally stops and you realize you are unscathed(end(no drawbacks))
+
+7 You duck for what seems like an eternity until the rock your shelter starts sliding down the hill.(loose health)
