@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: GreatSnake
+  m_Name: SnakeBad
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114104304477632538}
@@ -422,7 +422,7 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
-  rollSleep: 5
+  rollSleep: 2
   hasVariable: 0
   variableKey: 
   variableValue: 0

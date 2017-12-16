@@ -20,8 +20,9 @@ public class CharStats {
     public int charisma;
     public int speed;
     public int armorBonus;
-    public int damage;
-
+    public int minDamage;
+    public int maxDamage;
+    public int bonusDamage;
 
     // Use this for initialization
     public CharStats()
@@ -40,7 +41,9 @@ public class CharStats {
         charisma = 5;
         speed = 6;
         armorBonus = 0;
-        damage = 0;
+        minDamage = 1;
+        maxDamage = 8;
+        bonusDamage = 0;
     }
 
     public int GetArmor()

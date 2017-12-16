@@ -12,7 +12,7 @@ public class CardEffectAttackTarget : CardEffect
     public override void Use()
     {
         System.Random rnd = new System.Random();
-        int dmg = 0 - player.statistics.damage;
+        int dmg = 0 - (UnityEngine.Random.Range(player.statistics.minDamage, player.statistics.maxDamage) + player.statistics.bonusDamage);
         if(player.target != null)
         {
             player.target.Stats.ModifyHealth(dmg);
