@@ -77,9 +77,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -95,9 +98,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: Game Over
   choices:
   - winPort: instanceInput_0
@@ -179,9 +185,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -197,9 +206,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "Deciding that this had to end now, you vault over the rock and rush towards
     the warlock. Ignoring the cry of alarm from your friend, you charge towards the
     warlock. The warlock turns towards and your courage deserts you immediately as
@@ -303,9 +315,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -321,9 +336,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "The sludge recoils from the incredible presence in the air. Without thinking
     you and your friend run and hide behind the nearest rock. Soon enough a shrouded
     figure enters your field of vision, it feels deeply wrong and is somehow managing
@@ -410,9 +428,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -428,9 +449,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "It didn\u2019t take a genius to know that you shouldn\u2019t let it reach
     you, so the two of you run as fast as your legs can carry you. It feels like your
     lungs would burst at any moment as time passes. In the end you two make it out,
@@ -500,9 +524,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -518,9 +545,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "You huddle behind the rock with your friend and close your eyes. You shake
     and shiver as an unnatural wail echoes throughout the area, the whole place shaking
     as it\u2019s corrupted. Then with a loud crack, the shaking subsides and the gut-churning
