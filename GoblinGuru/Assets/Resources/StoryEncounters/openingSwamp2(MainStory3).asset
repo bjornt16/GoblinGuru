@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: MainStory3
+  m_Name: openingSwamp2(MainStory3)
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114319232066171724}
@@ -62,13 +62,61 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: Game Over
   choices:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: Try Again?
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
 --- !u!114 &114307956561845988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +129,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -424, y: -312}
+  position: {x: -424, y: -344}
   ports:
     keys:
     - encOutput
@@ -116,6 +164,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "Deciding that this had to end now, you vault over the rock and rush towards
     the warlock. Ignoring the cry of alarm from your friend, you charge towards the
     warlock. The warlock turns towards and your courage deserts you immediately as
@@ -127,8 +211,20 @@ MonoBehaviour:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: Game Over!
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
 --- !u!114 &114319232066171724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +288,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "The sludge recoils from the incredible presence in the air. Without thinking
     you and your friend run and hide behind the nearest rock. Soon enough a shrouded
     figure enters your field of vision, it feels deeply wrong and is somehow managing
@@ -203,13 +335,37 @@ MonoBehaviour:
     lossPort: instanceInput_1
     cText: 'If the warlock is not stopped, everything will go wrong, confront the
       warlock. '
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
     cText: 'The warlock is far beyond you, remain hidden. '
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
 --- !u!114 &114373877340738308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +378,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 152, y: 8}
+  position: {x: 136, y: 168}
   ports:
     keys:
     - encOutput
@@ -239,6 +395,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "It didn\u2019t take a genius to know that you shouldn\u2019t let it reach
     you, so the two of you run as fast as your legs can carry you. It feels like your
     lungs would burst at any moment as time passes. In the end you two make it out,
@@ -293,6 +485,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "You huddle behind the rock with your friend and close your eyes. You shake
     and shiver as an unnatural wail echoes throughout the area, the whole place shaking
     as it\u2019s corrupted. Then with a loud crack, the shaking subsides and the gut-churning
@@ -303,5 +531,17 @@ MonoBehaviour:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: continue
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0

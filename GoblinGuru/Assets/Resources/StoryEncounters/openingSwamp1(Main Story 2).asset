@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: MainStory2
+  m_Name: openingSwamp1(Main Story 2)
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114237036783320876}
@@ -49,6 +49,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "It pauses, it seems exasperated somehow.\r\n\r\n\u201CI don\u2019t even know
     how you don\u2019t know this, but as a Shaman you can communicate with us spirits.
     How far has history been distorted for you not to know this?\u201D\r\n\r\nA grave
@@ -101,6 +137,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "\u201CWhat, how can you tell?\u201D\r\n\r\nShe looks at you disbelievingly,
     almost like you\u2019d exclaimed the sky was purple.\r\n\r\n\u201CI can feel the
     muck shifting, I don\u2019t know how I can explain it.\u201D\r\n\r\nYou were about
@@ -110,8 +182,20 @@ MonoBehaviour:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: continue
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
 --- !u!114 &114226728604380580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +279,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "You turn to see the muck forming into a towering column! Your friend steps
     back shaking, but you hardly notice as the muck speaks to you, it\u2019s urgent.\r\n\r\n\u201CI
     sensed your arrival, it has been too long but time grows short. Even as we speak
@@ -203,18 +323,54 @@ MonoBehaviour:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: "\u201CExcuse me, could you explain better?\u201D"
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
     cText: 'Do nothing '
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   - winPort: instanceInput_4
     lossPort: instanceInput_5
     cText: "\u201CWow, what are you!?\u201D "
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
 --- !u!114 &114237036783320876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +416,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "Having had enough of this smelly morass, you two make your way back by tracing
     your steps back. At first everything was going well, but then things became strange
     as the muck felt more and more\u2026 Alive.\r\n\r\nArizta seemed blissfully unaware
@@ -269,8 +461,20 @@ MonoBehaviour:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: continue
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
 --- !u!114 &114522743730404248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +540,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "The column ripples and pauses temporarily, before two shiny jet eyes emerge,
     staring at you.\r\n\r\n\u201CYou do now know, you are a shaman and your arrival
     here is at the latest possible moment.\u201D\r\n\r\nThat term sounded familiar
@@ -344,13 +584,37 @@ MonoBehaviour:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
     cText: 'That makes you a spirit then, why must you speak with me so urgently? '
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
     cText: "I\u2019m sorry I don\u2019t know much, what\u2019s a Shaman?"
-    rollType: basic
-    chance: 100
+    rollType: 0
+    dc: 0
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
 --- !u!114 &114627174981933526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +644,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "The pillar of muck continues speaking.\r\n\r\n\u201CTime is very short, so
     you must remember what I say. A warlock is here and he plans on killing me and
     others like me. To prevent a total catastrophe, you will need help and this can
@@ -416,6 +716,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: "It pauses.\r\n\r\n\u201CA spirit, I am a spirit, have goblins really fallen
     so far as to not remember us? You ignorant child, The future of spirits is in
     your hands. The warlock comes, and seeks to kill us, you must find the others
@@ -451,6 +787,42 @@ MonoBehaviour:
   encOutput:
     text: 
     choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
   text: " \u201CA warlock comes, he will kill me and all the other spirits. You must
     visit the other spirits: Forest, Mountain, River and work together to deal with
     him.\u201D\r\n\r\nA grave power enters the area, the muck quivers and you back
