@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: sageFirst(MainStory5)
+  m_Name: seerFirst(MainStory5)
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114619803809803870}
@@ -31,7 +31,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 8, y: 408}
@@ -66,9 +66,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -84,9 +87,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "You figure you can pinpoint the location of the seer by listening in to the
     bells so you follow them. Everything seems to be going swell, until you notice
     that they\u2019ve been leading you in circles for a while now. From there you
@@ -106,7 +112,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 1320, y: 1800}
@@ -199,9 +205,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -217,9 +226,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "\u201CBecause you are one, as a shaman, you\u2019re exactly what the spirits
     need right now. If all goes well, then other people may take up the art as well
     and you can rest.\u201D\r\n\r\nYou blink and look yourself over, it still feels
@@ -288,7 +300,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -8, y: 808}
@@ -361,9 +373,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -379,9 +394,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "You head over and examine the nearest glowing patch, it takes a bit climbing
     but soon you see it up close. The glowing patches appear to be glowing moss rooted
     in the rock. They are mostly glowing in an ethereal teal, the light is only bright
@@ -431,7 +449,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 1304, y: -488}
@@ -522,9 +540,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -540,9 +561,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "The seer nods.\r\n\r\n\u201CYes, I felt that. You must watch out for him
     child, warlocks are extremely driven and meddle with forces out of this world.\u201D\r\n\r\nYou
     nod.\r\n\r\n\u201CIn the void outside the world there reside void spirits, These
@@ -616,7 +640,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -495, y: -85}
@@ -705,9 +729,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 2
   requiredVariable: 0
@@ -723,9 +750,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "As you two enter the cave, you hear the faint jingling of bells, distorted
     by echoes. The strange rock formation and glowing patches on the wall, create
     a strange and eerie feeling where sound and light are distorted.\r"
@@ -790,10 +820,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1336, y: 1368}
+  position: {x: 1752, y: 1400}
   ports:
     keys:
     - encOutput
@@ -825,9 +855,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -843,9 +876,15 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
-  variableKey: 
-  variableValue: 0
+  variableKey: spiritsKnown
+  variableValue: 1
+  opensEncounter: 1
+  encounters:
+  - forestSpiritFirst
+  - mountainSpiritFirst
+  - riverSpiritFirst
   text: "He snorts, \u201CYes I suppose it is, but you still shouldn\u2019t be so
     impudent.\u201D\r\n\r\nYou fear you may have lost the chance, but he sighs.\r\n\r\n\u201CWell
     since a crisis is brewing I will speak quickly. You are a Shaman which means you
@@ -866,7 +905,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: -88}
@@ -977,9 +1016,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -995,9 +1037,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "Your ears perk up as you listen to the distorted chimes, if there is anything
     a goblin was good at it was using his big ears. You follow the chimes, noticing
     small shifts that might escape others notice to pinpoint the chiming.\r\n\r\nArizta
@@ -1088,7 +1133,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 1320, y: 2648}
@@ -1127,9 +1172,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1145,9 +1193,15 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
-  hasVariable: 1
+  rollSleep: 0
+  hasVariable: 0
   variableKey: spiritsKnown
   variableValue: 1
+  opensEncounter: 1
+  encounters:
+  - forestSpiritFirst
+  - mountainSpiritFirst
+  - riverSpiritFirst
   text: "\u201CI see you\u2019re leaving now, before you go I just want to tell you
     my name. It is Jongil.\u201D\r\n\r\nYou make a mental note of that name.\r\n\r\n\u201CThank
     you for that information, I have many things to think about. I will leave now.\u201D\r\n\r\nHe
@@ -1166,7 +1220,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: 1608}
@@ -1267,9 +1321,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1285,9 +1342,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "You methodically search for him, after a while you finally find the path
     leading to him via process of elimination. You reach a wide open chamber illuminated
     by a pillar of light in the middle. Sitting there in a meditative stance is man
@@ -1375,7 +1435,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 1301.4679, y: 375.00732}
@@ -1470,9 +1530,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1488,9 +1551,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: "The seer hums and looks at you more intently, you wriggle under the gaze
     from his milky white eyes.\r\n\r\n\u201CIt was a spirit child, a world spirit
     to be more precise. The spirit talked to you because you are a Shaman, I can see
