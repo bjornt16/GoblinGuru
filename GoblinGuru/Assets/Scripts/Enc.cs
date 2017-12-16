@@ -30,10 +30,14 @@ public class Enc {
     public int hpReward;
     public int staminaReward;
     public int goldReward;
+    public SleepType rollSleep;
 
     public bool hasVariable;
     public string variableKey;
     public bool variableValue;
+
+    public bool opensEncounter;
+    public List<string> encounters;
 
     public Enc(string t, List<EncChoice> c, TileTerrain tt, TileFeatures tf)
     {

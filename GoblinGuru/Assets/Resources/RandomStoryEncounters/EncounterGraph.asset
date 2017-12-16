@@ -57,9 +57,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -75,9 +78,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: 
   choices: []
 --- !u!114 &114490327474619930
@@ -186,9 +192,12 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 1
   requiredVariable: 0
@@ -204,9 +213,12 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: 
   choices:
   - winPort: instanceInput_2
@@ -284,16 +296,19 @@ MonoBehaviour:
     hpReward: 0
     staminaReward: 0
     goldReward: 0
+    rollSleep: 0
     hasVariable: 0
     variableKey: 
     variableValue: 0
+    opensEncounter: 0
+    encounters: []
   terrainType: 11
   featureType: 0
   requiredVariable: 0
   requiredVariableKey: 
   requiredVariableValue: 0
   hasCost: 0
-  hasReward: 0
+  hasReward: 1
   hpCost: 0
   staminaCost: 0
   goldCost: 0
@@ -302,8 +317,11 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
+  rollSleep: 0
   hasVariable: 0
   variableKey: 
   variableValue: 0
+  opensEncounter: 0
+  encounters: []
   text: 
   choices: []

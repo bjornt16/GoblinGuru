@@ -28,10 +28,14 @@ public class EncounterNode : Node
     public int hpReward;
     public int staminaReward;
     public int goldReward;
+    public SleepType rollSleep;
 
     public bool hasVariable;
     public string variableKey;
     public bool variableValue;
+
+    public bool opensEncounter;
+    public List<string> encounters;
 
     [TextArea (10,100)] public string text;
 
