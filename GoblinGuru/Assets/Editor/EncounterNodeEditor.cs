@@ -2,6 +2,8 @@
 using UnityEngine;
 using XNode;
 using XNodeEditor;
+using System.Collections;
+using System.Collections.Generic;
 
 [CustomNodeEditor(typeof(EncounterNode))]
 public class EncounterNodeEditor : NodeEditor
@@ -144,6 +146,10 @@ public class EncounterNodeEditor : NodeEditor
         encounter.opensEncounter = EditorGUILayout.Toggle(new GUIContent("Opens other Encounter"), encounter.opensEncounter);
         if (encounter.opensEncounter)
         {
+            if(encounter.encounters == null)
+            {
+                encounter.encounters = new List<string>();
+            }
             for (int l = 0; l < encounter.encounters.Count; l++)
             {
                 if (GUILayout.Button("-", GUILayout.Width(30)))

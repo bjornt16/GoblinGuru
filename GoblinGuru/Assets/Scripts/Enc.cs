@@ -45,6 +45,8 @@ public class Enc {
         choices = c;
         terrainType = tt;
         featureType = tf;
+
+        encounters = new List<string>();
     }
 
 
