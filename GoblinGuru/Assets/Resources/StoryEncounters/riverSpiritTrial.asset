@@ -32,7 +32,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -56, y: 2232}
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 632, y: -456}
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -56, y: 600}
@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 1448, y: 1512}
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -596, y: -118}
@@ -809,7 +809,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -88, y: -440}
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 1304, y: -424}
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 632, y: 600}
@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 1960, y: 1528}
@@ -1515,7 +1515,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 1304, y: 424}
@@ -1697,7 +1697,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -56, y: 1608}

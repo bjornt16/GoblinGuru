@@ -31,7 +31,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 1032, y: 456}
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -584, y: -200}
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 88, y: -264}
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 584, y: 1384}
@@ -468,8 +468,9 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  opensEncounter: 0
-  encounters: []
+  opensEncounter: 1
+  encounters:
+  - riverSpiritTrial
   text: "The spirit shakes her head.\r\n\r\n\u201CDo you not think that you need to
     prove your skill? It will be quite simple, there are puzzles in the cave over
     there.\u201D\r\n\r\nShe points to a cave opening in the hills nearby.\r\n"
@@ -483,7 +484,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 584, y: 584}
@@ -563,7 +564,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 1368, y: -40}
@@ -637,7 +638,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 104, y: 504}
@@ -820,7 +821,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 568, y: 984}
@@ -898,7 +899,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 824, y: -200}
@@ -1018,7 +1019,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 840, y: -584}
