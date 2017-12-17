@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4769193433053806}
   m_Layer: 0
-  m_Name: ForestPrefab
+  m_Name: ForestSnowPrefab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8ee3009446e670b45b51c56e2344258a, type: 2}
-  - {fileID: 2100000, guid: 2a0f8a4f037b6a740922bfa6a2ae6b86, type: 2}
+  - {fileID: 2100000, guid: 52dccfebbed9bfb4e87e5e145b7b2b30, type: 2}
   - {fileID: 2100000, guid: aed9bf19df2933f42ae3cd0c89f50e02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -183,7 +183,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8ee3009446e670b45b51c56e2344258a, type: 2}
-  - {fileID: 2100000, guid: 2a0f8a4f037b6a740922bfa6a2ae6b86, type: 2}
+  - {fileID: 2100000, guid: 52dccfebbed9bfb4e87e5e145b7b2b30, type: 2}
   - {fileID: 2100000, guid: aed9bf19df2933f42ae3cd0c89f50e02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -219,7 +219,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8ee3009446e670b45b51c56e2344258a, type: 2}
-  - {fileID: 2100000, guid: 2a0f8a4f037b6a740922bfa6a2ae6b86, type: 2}
+  - {fileID: 2100000, guid: 52dccfebbed9bfb4e87e5e145b7b2b30, type: 2}
   - {fileID: 2100000, guid: aed9bf19df2933f42ae3cd0c89f50e02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
