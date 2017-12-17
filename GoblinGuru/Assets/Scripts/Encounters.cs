@@ -62,11 +62,45 @@ public class Encounters : MonoBehaviour {
         {
             player = GameStateManager.Instance.player;
         }
+
+        if (currentEnc.hasCost)
+        {
+            player.statistics.ModifyHealth(-currentEnc.hpCost);
+            player.statistics.ModifyStamina(-currentEnc.staminaCost);
+            player.Gold -= currentEnc.goldCost;
+
+            //todo cost item
+        }
+        if (currentEnc.hasReward)
+        {
+            player.statistics.ModifyHealth(currentEnc.hpReward);
+            player.statistics.ModifyStamina(currentEnc.staminaReward);
+            player.Gold += currentEnc.goldReward;
+
+            Debug.Log(currentEnc.rollSleep);
+            if (currentEnc.rollSleep != SleepType.none)
+            {
+                player.statistics.DoSleep(currentEnc.rollSleep);
+            }
+            //todo reward item
+        }
+
+        if(currentEnc.hasCost || currentEnc.hasReward)
+        {
+            player.UpdateUI();
+        }
+
+        if (currentEnc.hasVariable)
+        {
+            player.EncounterVariable[currentEnc.variableKey] = currentEnc.variableValue;
+            Debug.Log(player.EncounterVariable);
+        }
+
         buttons = new List<OptionButton>();
 
         ui.stateText.text = currentEnc.text;
 
-        if(currentEnc.choices.Count == 0)
+        if(currentEnc.choices.Count == 0 )
         {
             OptionButton tempButton = Instantiate(ui.buttonPrefab, ui.options.transform);
             tempButton.Initialize(0, "Continue");
@@ -79,8 +113,11 @@ public class Encounters : MonoBehaviour {
         {
             for (int i = 0; i < currentEnc.choices.Count; i++)
             {
-                if((currentEnc.choices[i].MustHaveItem && player.HasCard(currentEnc.choices[i].itemName)) || !currentEnc.choices[i].MustHaveItem ||
-                    (currentEnc.choices[i].MustNotHaveItem && !player.HasCard(currentEnc.choices[i].itemName)))
+                if(((currentEnc.choices[i].MustHaveItem && player.HasCard(currentEnc.choices[i].itemName)) ||
+                    (currentEnc.choices[i].MustNotHaveItem && !player.HasCard(currentEnc.choices[i].itemName))) || (currentEnc.choices[i].mustHaveVariable &&
+                        (player.EncounterVariable.ContainsKey(currentEnc.choices[i].variableKey) &&
+                        player.EncounterVariable[currentEnc.choices[i].variableKey] == currentEnc.choices[i].variableValue)) ||
+                         (!currentEnc.choices[i].MustHaveItem && !currentEnc.choices[i].mustHaveVariable))
                 {
 
 

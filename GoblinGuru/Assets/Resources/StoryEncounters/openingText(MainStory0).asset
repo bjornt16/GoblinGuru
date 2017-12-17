@@ -37,7 +37,19 @@ MonoBehaviour:
       connections: []
       _direction: 1
       _dynamic: 0
+  text: "Yours is a poor life, going from place to place trying to get food and shelter.
+    From a young age you\u2019ve looked different to most of the others you meet:
+    smaller, uglier, stupider and poorer. One day you were just too hungry, and no
+    one would let your starving self have food so you stole it.\r\n\r\nFor a moment
+    it seemed to work without a hitch, until you bumped into one of your only true
+    friends named Arizta. It was nice to see her, a fellow goblin like yourself but
+    it was at just the wrong moment.\r\n\r\nThe food fell out, and as you scrambled
+    to put it back in guards were summoned. You panicked, dragging Arizta with you,
+    the nearest safe place to lose them for sure would be the swamp.\r\n\r\nYou set
+    off, pursuit hot on your heels.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -61,6 +73,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -82,14 +95,4 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: "Yours is a poor life, going from place to place trying to get food and shelter.
-    From a young age you\u2019ve looked different to most of the others you meet:
-    smaller, uglier, stupider and poorer. One day you were just too hungry, and no
-    one would let your starving self have food so you stole it.\r\n\r\nFor a moment
-    it seemed to work without a hitch, until you bumped into one of your only true
-    friends named Arizta. It was nice to see her, a fellow goblin like yourself but
-    it was at just the wrong moment.\r\n\r\nThe food fell out, and as you scrambled
-    to put it back in guards were summoned. You panicked, dragging Arizta with you,
-    the nearest safe place to lose them for sure would be the swamp.\r\n\r\nYou set
-    off, pursuit hot on your heels.\r\n"
-  choices: []
+  triggerOnComplete: 

@@ -179,6 +179,23 @@ public class PlayerUnit : MonoBehaviour {
         }
     }
 
+    public int Gold
+    {
+        get
+        {
+            return gold;
+        }
+
+        set
+        {
+            gold = value;
+            if(gold < 0)
+            {
+                gold = 0;
+            }
+        }
+    }
+
     private void OnEnable()
     {
         GameTurnManager.OnNewTurn += ResetTurn;
@@ -265,7 +282,7 @@ public class PlayerUnit : MonoBehaviour {
         return false;
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         Debug.Log(ui.movesText);
         ui.movesText.text = CurrentMovePoints.ToString();
@@ -316,6 +333,8 @@ public class PlayerUnit : MonoBehaviour {
         stamina = statistics.stamina;
 
         currentMovePoints = statistics.speed;
+
+        EncounterVariable = new Dictionary<string, bool>();
 
         UpdateUI();
     }
@@ -444,7 +463,7 @@ public class PlayerUnit : MonoBehaviour {
     {
         Vector3 a, b, c = pathTrail.PathFromTo[0].Tile.Position;
         transform.localPosition = c;
-        //yield return LookAt(pathTrail.PathFromTo[1].Tile.Position);
+        yield return LookAt(pathTrail.PathFromTo[1].Tile.Position);
 
         float t = Time.deltaTime * travelSpeed;
         bool last = false;
@@ -497,7 +516,7 @@ public class PlayerUnit : MonoBehaviour {
                 d.y = 0f;
                 if (d != Vector3.zero)
                 {
-                //   transform.localRotation = Quaternion.LookRotation(d);
+                    transform.localRotation = Quaternion.LookRotation(d);
                 }
                 yield return null;
             }
