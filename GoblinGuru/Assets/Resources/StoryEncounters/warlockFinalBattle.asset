@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 584, y: 376}
+  position: {x: 600, y: 376}
   ports:
     keys:
     - encOutput
@@ -480,7 +480,24 @@ MonoBehaviour:
         node: {fileID: 114071237119033766}
       _direction: 1
       _dynamic: 0
-  text: 
+  text: 'Her fighting prowess was incredible, combined with her unearthly powers meant
+    you struggled to win. As the fight went on you struggled to harm her and just
+    grew more and more demoralized.
+
+
+    She was badly hurt but you were near death, the final clash saw her demise but
+    yours as well. Being as weakened as you were, you failed to escape as the whole
+    place imploded on itself, until you were crushed into it.
+
+
+    All that was left was a strange black marble thrumming with power, just begging
+    for future mischief.
+
+
+    Which you would never see, because you were dead.
+
+
+    THE END.'
   choices: []
   encOutput:
     name: 
