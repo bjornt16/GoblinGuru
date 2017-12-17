@@ -8,7 +8,7 @@ using System.Collections.Generic;
 [CustomNodeEditor(typeof(EncounterNode))]
 public class EncounterNodeEditor : NodeEditor
 {
-    
+
     public override void OnBodyGUI()
     {
         EncounterNode encounter = target as EncounterNode;
@@ -153,6 +153,10 @@ public class EncounterNodeEditor : NodeEditor
             {
                 encounter.encounters = new List<string>();
             }
+            if (encounter.triggerOnComplete == null || encounter.triggerOnComplete.Count == 0)
+            {
+                encounter.triggerOnComplete = new List<bool>(encounter.encounters.Count);
+            }
             for (int l = 0; l < encounter.encounters.Count; l++)
             {
                 if (GUILayout.Button("-", GUILayout.Width(30)))
@@ -160,17 +164,42 @@ public class EncounterNodeEditor : NodeEditor
                     encounter.encounters.RemoveAt(l);
                     l--;
                 }
-                encounter.encounters[l] = EditorGUILayout.TextField(new GUIContent("Encounter Name"), encounter.encounters[l]);
+                else
+                {
+                    encounter.encounters[l] = EditorGUILayout.TextField(new GUIContent("Encounter Name"), encounter.encounters[l]);
+                    encounter.triggerOnComplete[l] = EditorGUILayout.Toggle(new GUIContent("Trigger Right Away"), encounter.triggerOnComplete[l]);
+                    if (encounter.triggerOnComplete[l])
+                    {
+                        resetBool(encounter.triggerOnComplete, l);
+                    }
+                }
+
 
             }
             if (GUILayout.Button("+", GUILayout.Width(30)))
             {
                 encounter.encounters.Add("");
+                encounter.triggerOnComplete.Add(false);
+                Debug.Log(encounter.encounters.Count);
             }
         }
-
-
     }
+
+    public void resetBool(List<bool> list, int newTrue)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            if(i == newTrue)
+            {
+                list[i] = true;
+            }
+            else
+            {
+                list[i] = false;
+            }
+        }
+    }
+
     public override int GetWidth()
     {
         return 400;
