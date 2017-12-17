@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c47326842235d0f4baf28e2b7b30a4b5, type: 3}
-  m_Name: Baneblade
+  m_Name: Sundust
   m_EditorClassIdentifier: 
-  cardName: Baneblade
+  cardName: 
   image: {fileID: 0}
-  description: Magic sword
-  charges: -1
-  UsableIn: 02000000
-  UsableRange: 00000000
-  type: 3
-  effect: {fileID: 11400000, guid: 5f1a4277725f1b049b837d387fa07c5d, type: 2}
+  description: 
+  charges: 0
+  UsableIn: 
+  UsableRange: 
+  type: 0
+  effect: {fileID: 0}
   Equipped: 0
   Slot: 0

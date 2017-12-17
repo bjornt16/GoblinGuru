@@ -1022,7 +1022,7 @@ MonoBehaviour:
   staminaCost: 5
   goldCost: 0
   itemCost: 
-  itemReward: {fileID: 0}
+  itemReward: {fileID: 11400000, guid: bc60ab4d2afbcb74c9dcff4b8e3bd41d, type: 2}
   hpReward: 0
   staminaReward: 0
   goldReward: 0
