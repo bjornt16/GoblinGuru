@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114473577995679910}
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: c583951e3595ff74a9dfc3bd9e3571b1, type: 3}
 --- !u!114 &114473577995679910
 MonoBehaviour:
   m_ObjectHideFlags: 0

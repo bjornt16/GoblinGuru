@@ -21,6 +21,7 @@ MonoBehaviour:
   - {fileID: 114118312019189390}
   - {fileID: 114012059386998198}
   - {fileID: 114767543895455946}
+  image: {fileID: 21300000, guid: 7afae00c9a6adda44b132bc1683fe8c8, type: 3}
 --- !u!114 &114012059386998198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +113,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -223,6 +225,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -336,6 +339,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -422,6 +426,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -535,6 +540,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -611,6 +617,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -725,6 +732,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -838,6 +846,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -949,6 +958,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0

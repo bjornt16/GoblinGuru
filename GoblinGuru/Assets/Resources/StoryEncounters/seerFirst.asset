@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: seerFirst(MainStory5)
+  m_Name: seerFirst
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114619803809803870}
@@ -22,6 +22,7 @@ MonoBehaviour:
   - {fileID: 114625657301034852}
   - {fileID: 114462921277407068}
   - {fileID: 114702710374084910}
+  image: {fileID: 0}
 --- !u!114 &114461072714329018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +85,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -277,6 +279,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -429,6 +432,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -625,6 +629,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -808,6 +813,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 2
   requiredVariable: 0
@@ -895,6 +901,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1130,6 +1137,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1217,6 +1225,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1447,6 +1456,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1647,6 +1657,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0

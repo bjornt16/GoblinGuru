@@ -77,11 +77,9 @@ public class Encounters : MonoBehaviour {
         {
             player = GameStateManager.Instance.player;
         }
-
-        if(currentEnc.image != null)
-        {
-            ui.EncounterImg.sprite = currentEnc.image;
-        }
+        
+        ui.EncounterImg.sprite = currentEnc.image;
+        
 
         if (currentEnc.hasCost)
         {

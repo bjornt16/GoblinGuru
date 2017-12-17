@@ -20,6 +20,7 @@ MonoBehaviour:
   - {fileID: 114777773595141866}
   - {fileID: 114009529049440068}
   - {fileID: 114608332386887090}
+  image: {fileID: 21300000, guid: 7afae00c9a6adda44b132bc1683fe8c8, type: 3}
 --- !u!114 &114009529049440068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,7 +51,10 @@ MonoBehaviour:
         node: {fileID: 114946027850113614}
       _direction: 1
       _dynamic: 0
+  text: You manage to escape
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -74,6 +78,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -95,8 +101,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You manage to escape
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114104304477632538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +146,27 @@ MonoBehaviour:
         node: {fileID: 114943215710011052}
       _direction: 0
       _dynamic: 1
+  text: You make camp for the night and try to get a good nights sleep.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 0
+    dc: 3
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -165,6 +190,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -186,25 +213,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You make camp for the night and try to get a good nights sleep.
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 0
-    dc: 3
-    type: 1
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114132061640664400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,51 +282,6 @@ MonoBehaviour:
         node: {fileID: 114009529049440068}
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: You see a large python and quickly realize that it has curling itself around
     your leg.
   choices:
@@ -355,6 +319,55 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114333339478047304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +396,10 @@ MonoBehaviour:
         node: {fileID: 114943215710011052}
       _direction: 1
       _dynamic: 0
+  text: You wake up after having had a great night's sleep.
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -407,6 +423,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -428,8 +446,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You wake up after having had a great night's sleep.
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114608332386887090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,7 +475,10 @@ MonoBehaviour:
         node: {fileID: 114946027850113614}
       _direction: 1
       _dynamic: 0
+  text: You manage to losen yourself from the snake and kill it
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -482,6 +502,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -503,8 +525,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You manage to losen yourself from the snake and kill it
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114777773595141866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,7 +570,27 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
+  text: You try to go back to sleep but when you turn to your side...
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -573,6 +614,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -594,25 +637,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You try to go back to sleep but when you turn to your side...
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 0
-    dc: 10
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114943215710011052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,51 +702,6 @@ MonoBehaviour:
         node: {fileID: 114333339478047304}
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: You wake up in the middle of the night and hear a strange noise moving close
     to you.
   choices:
@@ -759,6 +739,55 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114946027850113614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,7 +834,27 @@ MonoBehaviour:
         node: {fileID: 114009529049440068}
       _direction: 0
       _dynamic: 1
+  text: You try to get the beast off
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Enter combat
+    rollType: 0
+    dc: 10
+    type: 2
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 11400000, guid: 0f9d61034e3f48648a3f610d01b908de, type: 2}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -829,6 +878,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -850,22 +901,4 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You try to get the beast off
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Enter combat
-    rollType: 0
-    dc: 10
-    type: 2
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 11400000, guid: 0f9d61034e3f48648a3f610d01b908de, type: 2}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
