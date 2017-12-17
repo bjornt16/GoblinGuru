@@ -110,15 +110,19 @@ public class Card : MonoBehaviour {
 
     public void OnUse()
     {
-        if(effectInstance == null)
+        if(effect != null)
         {
-            effectInstance = Instantiate(effect);
+            if (effectInstance == null)
+            {
+                effectInstance = Instantiate(effect);
+            }
+            if (effectInstance.cardObject == null)
+            {
+                effectInstance.Init(this);
+            }
+            effectInstance.Use();
         }
-        if(effectInstance.cardObject == null)
-        {
-            effectInstance.Init(this);
-        }
-        effectInstance.Use();
+
     }
 
     public void Destroy()

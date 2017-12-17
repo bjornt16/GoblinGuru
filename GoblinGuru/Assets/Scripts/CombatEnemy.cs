@@ -16,6 +16,8 @@ public class CombatEnemy : ScriptableObject {
 
     private PlayerUnit player;
 
+    private Combat combat;
+
     public void DoCombatAction()
     {
         if (Stats.isPlayer)
@@ -26,8 +28,20 @@ public class CombatEnemy : ScriptableObject {
         {
             player = GameStateManager.Instance.player;
         }
+        if(combat == null)
+        {
+            combat = Combat.Instance;
+        }
 
-        Debug.Log("Enemy Does Nothing");
+
+        int dmg = 0 - (UnityEngine.Random.Range(Stats.minDamage, Stats.maxDamage) + Stats.bonusDamage);
+        if (player.target != null)
+        {
+            player.statistics.ModifyHealth(dmg);
+            Debug.Log("target damages player for " + dmg + " damage");
+            combat.CombatUI.CombatStatusHit();
+        }
+
     }
 
 }

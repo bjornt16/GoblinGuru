@@ -14,6 +14,7 @@ public class CardsUI : MonoBehaviour {
     public void ToggleCardPanel()
     {
         cardPanel.SetActive(!cardPanel.activeInHierarchy);
+        InstantiatePlayerCards();
     }
 
     private void Start()
@@ -23,6 +24,14 @@ public class CardsUI : MonoBehaviour {
 
     private void InstantiatePlayerCards()
     {
+        if(cardList != null)
+        {
+            for (int i = 0; i < cardList.Count; i++)
+            {
+               cardList[i].Destroy();
+            }
+        }
+
         Card tempCard;
         cardList = new List<Card>();
         for (int i = 0; i < player.cardList.Count; i++)

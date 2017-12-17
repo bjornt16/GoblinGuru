@@ -189,6 +189,8 @@ public class Combat : MonoBehaviour {
         CombatUI.SetPlayerTurn();
         CombatUI.combatStatusText.text = "";
         isPlayerTurn = true;
+
+        CombatUI.UpdateUI(player.statistics, targetInstance.Stats);
     }
 
     private bool CheckCombatEnd()
@@ -222,6 +224,10 @@ public class Combat : MonoBehaviour {
         }
     }
 
+    public void flee()
+    {
+        EndCombat();
+    }
 
     private void Start()
     {

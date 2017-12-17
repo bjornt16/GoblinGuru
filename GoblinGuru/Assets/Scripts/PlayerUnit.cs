@@ -556,4 +556,11 @@ public class PlayerUnit : MonoBehaviour {
         //cardObjectList.Clear();
     }
 
+    public void AddCardObject(CardObject card)
+    {
+        Card tempCard = new Card();
+        tempCard.CloneValueFrom(card);
+        cardList.Add(tempCard);
+    }
+
 }
