@@ -9,19 +9,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: forestSpiritFirst
+  m_Name: BearCurious
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 114806702451116528}
-  - {fileID: 114003632362591362}
-  - {fileID: 114622352370909400}
-  - {fileID: 114347147348333450}
-  - {fileID: 114623070179567596}
-  - {fileID: 114154819274288702}
-  - {fileID: 114705214769551632}
-  - {fileID: 114645568687301972}
-  - {fileID: 114264172394945888}
---- !u!114 &114003632362591362
+  - {fileID: 114208425321295918}
+  - {fileID: 114246064442399362}
+  - {fileID: 114565976451133144}
+  - {fileID: 114993043970949116}
+  - {fileID: 114616687833322706}
+  - {fileID: 114619540700485368}
+  - {fileID: 114667991140508608}
+  - {fileID: 114590899775649830}
+  - {fileID: 114419848278208076}
+  - {fileID: 114290533307638922}
+  - {fileID: 114286607713219034}
+--- !u!114 &114208425321295918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -33,7 +35,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -124, y: -263}
+  position: {x: 344, y: -376}
   ports:
     keys:
     - encOutput
@@ -43,85 +45,88 @@ MonoBehaviour:
     - instanceInput_3
     - instanceInput_4
     - instanceInput_5
+    - instanceInput_6
+    - instanceInput_7
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114003632362591362}
+      _node: {fileID: 114208425321295918}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_0
-        node: {fileID: 114622352370909400}
-      - fieldName: instanceInput_2
-        node: {fileID: 114622352370909400}
-      - fieldName: instanceInput_0
-        node: {fileID: 114806702451116528}
+      connections: []
       _direction: 1
       _dynamic: 0
     - _fieldName: instanceInput_0
-      _node: {fileID: 114003632362591362}
+      _node: {fileID: 114208425321295918}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114623070179567596}
+        node: {fileID: 114246064442399362}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_1
-      _node: {fileID: 114003632362591362}
+      _node: {fileID: 114208425321295918}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_2
-      _node: {fileID: 114003632362591362}
+      _node: {fileID: 114208425321295918}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114154819274288702}
+        node: {fileID: 114590899775649830}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_3
-      _node: {fileID: 114003632362591362}
+      _node: {fileID: 114208425321295918}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_4
-      _node: {fileID: 114003632362591362}
+      _node: {fileID: 114208425321295918}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114705214769551632}
+        node: {fileID: 114565976451133144}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_5
-      _node: {fileID: 114003632362591362}
+      _node: {fileID: 114208425321295918}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114993043970949116}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_6
+      _node: {fileID: 114208425321295918}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114616687833322706}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_7
+      _node: {fileID: 114208425321295918}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 1
-  text: "The spirit whistles a sweet tune and the area starts shifting. You feel the
-    grace and lack of hostility so you don\u2019t feel alarmed in the slightest as
-    a huge bed of moss forms under your feet.\r\n\r\nThe pool shifts and displays
-    an Ogre.\r\n\r\nThen, the spirit speaks in whistling musical notes.\r\n\r\n\u201CIt
-    has been such a long time, generations of mortals in fact since I\u2019ve met
-    one.\u201D\r\n\r\nYou nod.\r\n\r\n\u201CI am inexperienced, but I hope to amend
-    that to face the coming threat.\u201D\r\n\r\nThe spirit giggles.\r\n\r\n\u201CCute,
-    but your inexperience is palpable. I cannot bond with you right now unless I am
-    at my best, and for that I need your help.\u201D\r\n\r\nYou glance at the pool.\r\n\r\n\u201CThis
-    Ogre what\u2019s bothering you?\u201D\r\n\r\nThe spirit lets out notes like birdsong
-    filtered through a flute and the image shifts, you see the ogre and some thugs
-    plundering the woods with abandon.\r"
+  text: You encounter a bear curiously strolling towards you
   choices:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
-    cText: "\u201CI will stop them, just tell me where they are and I\u2019ll go.\u201D"
-    rollType: 0
+    cText: Try to hide
+    rollType: 1
     dc: 10
     type: 0
     MustHaveItem: 0
@@ -137,9 +142,9 @@ MonoBehaviour:
     variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
-    cText: "\u201CI don\u2019t think I\u2019m ready to face an Ogre, sorry.\u201D"
-    rollType: 0
-    dc: 10
+    cText: Try to calm the bear down as it approaches
+    rollType: 3
+    dc: 12
     type: 0
     MustHaveItem: 0
     MustNotHaveItem: 0
@@ -154,10 +159,26 @@ MonoBehaviour:
     variableValue: 0
   - winPort: instanceInput_4
     lossPort: instanceInput_5
-    cText: "\u201CWhy don\u2019t you just stop them with your mystic power over the
-      area?\u201D"
+    cText: Run away
+    rollType: 5
+    dc: 15
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_6
+    lossPort: instanceInput_7
+    cText: Stand your ground
     rollType: 0
-    dc: 10
+    dc: 11
     type: 0
     MustHaveItem: 0
     MustNotHaveItem: 0
@@ -218,7 +239,7 @@ MonoBehaviour:
   opensEncounter: 0
   encounters: []
   triggerOnComplete: 
---- !u!114 &114154819274288702
+--- !u!114 &114246064442399362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -230,942 +251,83 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 712, y: 664}
+  position: {x: -920, y: -1176}
   ports:
     keys:
     - encOutput
-    - instanceInput_0
-    - instanceInput_1
-    - instanceInput_2
-    - instanceInput_3
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114154819274288702}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_2
-        node: {fileID: 114003632362591362}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: instanceInput_0
-      _node: {fileID: 114154819274288702}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114623070179567596}
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_1
-      _node: {fileID: 114154819274288702}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_2
-      _node: {fileID: 114154819274288702}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114645568687301972}
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_3
-      _node: {fileID: 114154819274288702}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-  text: "The spirit pouts.\r\n\r\n\u201CIf you can\u2019t beat a simple Ogre, you
-    will never defeat the warlock.\u201D\r\n\r\nIt\u2019s true, but that doesn\u2019t
-    mean you don\u2019t feel weak relative to an Ogres bulging muscles.\r"
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: "\u201CYou\u2019re right, I have to do this, lead the way.\u201D"
-    rollType: 0
-    dc: 10
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
-  - winPort: instanceInput_2
-    lossPort: instanceInput_3
-    cText: "\u201CNo, I can\u2019t do it\u201D"
-    rollType: 0
-    dc: 10
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
-  encOutput:
-    name: 
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-    triggerOnComplete: 
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  triggerOnComplete: 
---- !u!114 &114264172394945888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1993.7365, y: 968.7554}
-  ports:
-    keys:
-    - encOutput
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114264172394945888}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_0
-        node: {fileID: 114645568687301972}
-      _direction: 1
-      _dynamic: 0
-  text: Determined to set things right, you set off to find that accursed Ogre and
-    his goons.
-  choices: []
-  encOutput:
-    name: 
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-    triggerOnComplete: 
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 1
-  encounters:
-  - forestSpiritTrial
-  triggerOnComplete: 
---- !u!114 &114347147348333450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -200, y: 1496}
-  ports:
-    keys:
-    - encOutput
-    - instanceInput_0
-    - instanceInput_1
-    - instanceInput_2
-    - instanceInput_3
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114347147348333450}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_4
-        node: {fileID: 114806702451116528}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: instanceInput_0
-      _node: {fileID: 114347147348333450}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_1
-      _node: {fileID: 114347147348333450}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_2
-      _node: {fileID: 114347147348333450}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_3
-      _node: {fileID: 114347147348333450}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-  text: "The spirit hums and regards you.\r\n\r\n\u201CSo I presume you are aware
-    of the void energies being slung around recently.\u201D\r\n\r\nYou nod.\r\n\r\n\u201CGood,
-    right now I can not bond with since you are too inexperienced for anything but
-    ideal conditions.\u201D\r\n\r\nThat wasn\u2019t good, you need to know more.\r\n\r\n\u201CHow
-    do we get ideal conditions then?\u201D\r\n\r\nThe spirit whistles.\r\n\r\n\u201CWell,
-    there\u2019s been some nasty fellows ripping up my sacred herbs for their own
-    selfish ends and it weakens me. I can guide you to their location, they need to
-    be dealt with.\u201D\r"
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: "\u201CGot it, lead the way.\u201D"
-    rollType: 0
-    dc: 10
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
-  - winPort: instanceInput_2
-    lossPort: instanceInput_3
-    cText: "\u201CI\u2019m a weak and lowly goblin, I\u2019m not so sure that I can
-      take them, why can\u2019t you take them on?\u201D"
-    rollType: 0
-    dc: 10
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
-  encOutput:
-    name: 
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-    triggerOnComplete: 
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  triggerOnComplete: 
---- !u!114 &114622352370909400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -184, y: 760}
-  ports:
-    keys:
-    - encOutput
-    - instanceInput_0
-    - instanceInput_1
-    - instanceInput_2
-    - instanceInput_3
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114622352370909400}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_2
-        node: {fileID: 114806702451116528}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: instanceInput_0
-      _node: {fileID: 114622352370909400}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114003632362591362}
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_1
-      _node: {fileID: 114622352370909400}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_2
-      _node: {fileID: 114622352370909400}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114003632362591362}
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_3
-      _node: {fileID: 114622352370909400}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-  text: "The spirit giggles.\r\n\r\n\u201CThank you, but surely there is a better
-    reason than awe for you to see me Shaman.\u201D\r"
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: 
-    rollType: 0
-    dc: 10
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
-  - winPort: instanceInput_2
-    lossPort: instanceInput_3
-    cText: 
-    rollType: 0
-    dc: 10
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
-  encOutput:
-    name: 
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-    triggerOnComplete: 
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  triggerOnComplete: 
---- !u!114 &114623070179567596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 721, y: 79}
-  ports:
-    keys:
-    - encOutput
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114623070179567596}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_0
-        node: {fileID: 114154819274288702}
-      - fieldName: instanceInput_0
-        node: {fileID: 114003632362591362}
-      _direction: 1
-      _dynamic: 0
-  text: "The spirit nods and points you in the right direction, you head off. As you
-    go you find yourself guided by cues in the forest, little twists and turns that
-    keep you going in the direction that feels right.\r\n\r\nThe feeling of tension
-    starts to mount as you feel the spirit warn you of danger to come.\r"
-  choices: []
-  encOutput:
-    name: 
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-    triggerOnComplete: 
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 1
-  encounters:
-  - forestSpiritTrial
-  triggerOnComplete: 
---- !u!114 &114645568687301972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1346.7365, y: 760.7554}
-  ports:
-    keys:
-    - encOutput
-    - instanceInput_0
-    - instanceInput_1
-    - instanceInput_2
-    - instanceInput_3
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114645568687301972}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_2
-        node: {fileID: 114154819274288702}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: instanceInput_0
-      _node: {fileID: 114645568687301972}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114264172394945888}
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_1
-      _node: {fileID: 114645568687301972}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_2
-      _node: {fileID: 114645568687301972}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_3
-      _node: {fileID: 114645568687301972}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-  text: "The spirit swells in size, and doesn\u2019t seem so pleasant anymore.\r\n\r\n\u201CI
-    see, then you are not worthy.\u201D\r\n\r\nWith this damning proclamation, you
-    find yourself seized by vines. A scream is torn from your lips as you are moved
-    from the clearing with alarming speed. You are held down by them as the clearing
-    becomes covered in a dome of vines and wood. You are released, and find that the
-    dome is impenetrable to your efforts, like a wall of living steel.\r\n\r\nNow
-    what!?\r"
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: You have to redeem yourself, go find that Ogre!
-    rollType: 0
-    dc: 10
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
-  - winPort: instanceInput_2
-    lossPort: instanceInput_3
-    cText: Well, you will have to make due without all the spirits then.
-    rollType: 0
-    dc: 10
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
-  encOutput:
-    name: 
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-    triggerOnComplete: 
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  triggerOnComplete: 
---- !u!114 &114705214769551632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 712, y: 1336}
-  ports:
-    keys:
-    - encOutput
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114705214769551632}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_4
-        node: {fileID: 114003632362591362}
-      _direction: 1
-      _dynamic: 0
-  text: "The spirit hums.\r\n\r\n\u201CI thought you might ask that question, it is
-    simple but they have terrible charms on them that emit void energy. The fools
-    think of them as protective but they don\u2019t even realize how it makes them
-    more and more dependant on the warlock every day.\u201D\r\n\r\nYou shiver a bit
-    at the thought of it but then nod.\r\n\r\nAfter that you head off, the spirit
-    guiding you onward until you feel danger in the air.\r\n"
-  choices: []
-  encOutput:
-    name: 
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-    triggerOnComplete: 
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 1
-  encounters:
-  - forestSpiritTrial
-  triggerOnComplete: 
---- !u!114 &114806702451116528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -744, y: -280}
-  ports:
-    keys:
-    - encOutput
-    - instanceInput_0
-    - instanceInput_1
     - instanceInput_2
     - instanceInput_3
     - instanceInput_4
     - instanceInput_5
+    - instanceInput_6
+    - instanceInput_7
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114806702451116528}
+      _node: {fileID: 114246064442399362}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114208425321295918}
       _direction: 1
       _dynamic: 0
-    - _fieldName: instanceInput_0
-      _node: {fileID: 114806702451116528}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114003632362591362}
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_1
-      _node: {fileID: 114806702451116528}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
     - _fieldName: instanceInput_2
-      _node: {fileID: 114806702451116528}
+      _node: {fileID: 114246064442399362}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114622352370909400}
+        node: {fileID: 114590899775649830}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_3
-      _node: {fileID: 114806702451116528}
+      _node: {fileID: 114246064442399362}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_4
-      _node: {fileID: 114806702451116528}
+      _node: {fileID: 114246064442399362}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114347147348333450}
+        node: {fileID: 114565976451133144}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_5
-      _node: {fileID: 114806702451116528}
+      _node: {fileID: 114246064442399362}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114619540700485368}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_6
+      _node: {fileID: 114246064442399362}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114616687833322706}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_7
+      _node: {fileID: 114246064442399362}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 1
-  text: "There is a pleasant whistle in the air as you feel the rustling of leaves
-    and crawling of grass and vines around you. You\u2019re close to a spirit, you
-    can feel it. You follow the whistle and crawling, moving to the source until you
-    find the center.\r\n\r\nIt\u2019s a magnificent clearing, containing a radiant
-    pool in the middle, with plants groaning and dipping their roots in and out of
-    the perfect water. The whole scene is illuminated by the suns rays, which just
-    seem even more golden when filtered through the leaves above.\r\n\r\nYou see roots
-    from all over snake together into the pool and weave themselves together into
-    a humanoid figure. This is the Forest Spirit.\r\n"
+  text: The bear seems to have already caught wind of you and runs after you
   choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: "\u201CGreat spirit, I am a Shaman and have come to work with you against
-      a warlock threat.\u201D"
-    rollType: 0
-    dc: 10
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
-    cText: "\u201CWow!\u201D"
-    rollType: 0
-    dc: 10
+    cText: Try to calm the bear down as it approaches
+    rollType: 3
+    dc: 12
     type: 0
     MustHaveItem: 0
     MustNotHaveItem: 0
@@ -1180,7 +342,214 @@ MonoBehaviour:
     variableValue: 0
   - winPort: instanceInput_4
     lossPort: instanceInput_5
-    cText: "\u201CPhew, you\u2019re still intact.\u201D"
+    cText: Run away
+    rollType: 5
+    dc: 16
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_6
+    lossPort: instanceInput_7
+    cText: Stand your ground
+    rollType: 3
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114286607713219034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -2472, y: 2552}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114286607713219034}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114290533307638922}
+      _direction: 1
+      _dynamic: 0
+  text: After a while the bear has had enough and you part ways
+  choices: []
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114290533307638922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1752, y: 2312}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_2
+    - instanceInput_3
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114290533307638922}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114667991140508608}
+      - fieldName: instanceInput_0
+        node: {fileID: 114590899775649830}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114290533307638922}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114286607713219034}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114290533307638922}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  text: The bear seems to very much enjoy your time together and for a few minutes
+    you can both relax
+  choices:
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: Continue
     rollType: 0
     dc: 10
     type: 0
@@ -1224,8 +593,931 @@ MonoBehaviour:
   terrainType: 11
   featureType: 0
   requiredVariable: 0
-  requiredVariableKey: spiritsKnown
-  requiredVariableValue: 1
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114419848278208076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -2264, y: 648}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114419848278208076}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114616687833322706}
+      - fieldName: instanceInput_2
+        node: {fileID: 114667991140508608}
+      - fieldName: instanceInput_2
+        node: {fileID: 114590899775649830}
+      - fieldName: instanceInput_0
+        node: {fileID: 114993043970949116}
+      - fieldName: instanceInput_0
+        node: {fileID: 114619540700485368}
+      _direction: 1
+      _dynamic: 0
+  text: You kill the bear
+  choices: []
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114565976451133144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1992, y: 1656}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114565976451133144}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_4
+        node: {fileID: 114208425321295918}
+      - fieldName: instanceInput_4
+        node: {fileID: 114246064442399362}
+      - fieldName: instanceInput_3
+        node: {fileID: 114667991140508608}
+      - fieldName: instanceInput_1
+        node: {fileID: 114616687833322706}
+      - fieldName: instanceInput_3
+        node: {fileID: 114590899775649830}
+      - fieldName: instanceInput_1
+        node: {fileID: 114993043970949116}
+      - fieldName: instanceInput_1
+        node: {fileID: 114619540700485368}
+      _direction: 1
+      _dynamic: 0
+  text: You manage to flee
+  choices: []
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114590899775649830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -840, y: 1704}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    - instanceInput_2
+    - instanceInput_3
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114590899775649830}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114208425321295918}
+      - fieldName: instanceInput_2
+        node: {fileID: 114246064442399362}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114590899775649830}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114290533307638922}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114590899775649830}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114590899775649830}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114419848278208076}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114590899775649830}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114565976451133144}
+      _direction: 0
+      _dynamic: 1
+  text: The bear approaches and smells you before laying on its back expecting a belly
+    rub
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Rub the bears belly
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: Now is a perfect time to strike the beast
+    rollType: 0
+    dc: 10
+    type: 2
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 11400000, guid: 7c9542bff061ff54eaa67cdbdfe1ff93, type: 2}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114616687833322706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -56, y: 1128}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_1
+    - instanceInput_0
+    - instanceInput_2
+    - instanceInput_3
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114616687833322706}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_6
+        node: {fileID: 114208425321295918}
+      - fieldName: instanceInput_6
+        node: {fileID: 114246064442399362}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114616687833322706}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114565976451133144}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114616687833322706}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114419848278208076}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114616687833322706}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114667991140508608}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114616687833322706}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  text: The bear closes in on you but doesn't seem aggressive towards you
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Attack the bear
+    rollType: 0
+    dc: 10
+    type: 2
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 11400000, guid: 7c9542bff061ff54eaa67cdbdfe1ff93, type: 2}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: Reach forward with your hand and attempt to pet the bear
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114619540700485368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -920, y: -200}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    - instanceInput_2
+    - instanceInput_3
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114619540700485368}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_5
+        node: {fileID: 114246064442399362}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114619540700485368}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114419848278208076}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114619540700485368}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114565976451133144}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114619540700485368}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114667991140508608}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114619540700485368}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  text: The bear chases after you and manages to catch up to you but still doesn't
+    seem aggressive towards you
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Attack the bear
+    rollType: 0
+    dc: 10
+    type: 2
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 11400000, guid: 7c9542bff061ff54eaa67cdbdfe1ff93, type: 2}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: Reach forward with your hand and attempt to pet the bear
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114667991140508608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -840, y: 2408}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    - instanceInput_2
+    - instanceInput_3
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114667991140508608}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114616687833322706}
+      - fieldName: instanceInput_2
+        node: {fileID: 114993043970949116}
+      - fieldName: instanceInput_2
+        node: {fileID: 114619540700485368}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114667991140508608}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114290533307638922}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114667991140508608}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114667991140508608}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114419848278208076}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114667991140508608}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114565976451133144}
+      _direction: 0
+      _dynamic: 1
+  text: The bear lays down on its back and seems to be expecting a belly rub
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Rub the bears belly
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: Now is a perfect time to strike the beast
+    rollType: 0
+    dc: 10
+    type: 2
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 11400000, guid: 7c9542bff061ff54eaa67cdbdfe1ff93, type: 2}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114993043970949116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -920, y: 488}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    - instanceInput_2
+    - instanceInput_3
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114993043970949116}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_5
+        node: {fileID: 114208425321295918}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114993043970949116}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114419848278208076}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114993043970949116}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114565976451133144}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114993043970949116}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114667991140508608}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114993043970949116}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  text: The bear chases after you and manages to catch up to you but doesn't seem
+    aggressive towards you
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Attack the bear
+    rollType: 0
+    dc: 10
+    type: 2
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 11400000, guid: 7c9542bff061ff54eaa67cdbdfe1ff93, type: 2}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: Reach forward with your hand and attempt to pet the bear
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
   hasCost: 0
   hasReward: 0
   hpCost: 0

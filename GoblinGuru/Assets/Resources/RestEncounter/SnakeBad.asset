@@ -601,7 +601,7 @@ MonoBehaviour:
     cText: Continue
     rollType: 0
     dc: 14
-    type: 1
+    type: 0
     MustHaveItem: 0
     MustNotHaveItem: 0
     itemName: 
