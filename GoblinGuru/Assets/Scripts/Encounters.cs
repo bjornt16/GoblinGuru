@@ -50,6 +50,8 @@ public class Encounters : MonoBehaviour {
 
     }
 
+    public Map map;
+
     public void pickRandom()
     {
         int randomNum = 0;
@@ -243,9 +245,11 @@ public class Encounters : MonoBehaviour {
             else if(temp != null)
             {
                 //todo spawn stuff
-                player.Tile.tileUp.tileUp.Encounter = temp;
-                player.Tile.tileUp.tileUp.EncQuestionMark = Instantiate(questionMarkPrefab);
-                player.Tile.tileUp.tileUp.EncQuestionMark.transform.position = player.Tile.tileUp.tileUp.transform.position;
+                GameTile spawn = GetNearestTile(temp.terrainType, temp.featureType, 3);
+
+                spawn.Encounter = temp;
+                spawn.EncQuestionMark = Instantiate(questionMarkPrefab);
+                spawn.EncQuestionMark.transform.position = spawn.transform.position;
             }
         }
 
@@ -439,6 +443,11 @@ public class Encounters : MonoBehaviour {
             }
         }
         return null;
+    }
+
+    public GameTile GetNearestTile(TileTerrain terrain, TileFeatures feature, int distance)
+    {
+        return map.GetNearestTile(terrain, feature, distance);
     }
 
 }
