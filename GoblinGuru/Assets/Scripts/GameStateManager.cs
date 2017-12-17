@@ -63,7 +63,7 @@ public class GameStateManager : MonoBehaviour {
     //takes input base on if encounter or rest button is pressed
     public void startEncounter(string name)
     {
-        FindObjectOfType<AudioManager>().Play("buttonClick");
+        FindObjectOfType<AudioManager>().Play("enterEnc");
         GameTurnManager.Instance.NextTurn();
         gameState = GameState.Encounter;
         e.pickRandom();
@@ -71,7 +71,7 @@ public class GameStateManager : MonoBehaviour {
 
     public void startRestEncounter(string name)
     {
-        FindObjectOfType<AudioManager>().Play("buttonClick");
+        FindObjectOfType<AudioManager>().Play("enterEnc");
         GameTurnManager.Instance.NextTurn();
         gameState = GameState.Encounter;
         e.pickRandomRest();

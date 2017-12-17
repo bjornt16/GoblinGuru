@@ -17,8 +17,8 @@ MonoBehaviour:
   LegsColor: {r: 0.29411763, g: 0.106192574, b: 0.0216263, a: 1}
   FeetColor: {r: 0, g: 0, b: 0, a: 1}
   Stats:
-    maxHP: 22
-    HP: 22
+    maxHP: 15
+    HP: 15
     maxStamina: 20
     stamina: 20
     level: 1
@@ -33,3 +33,4 @@ MonoBehaviour:
     minDamage: 1
     maxDamage: 8
     bonusDamage: 0
+    isPlayer: 0
