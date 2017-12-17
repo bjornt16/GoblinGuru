@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Pickaxe
   m_EditorClassIdentifier: 
   cardName: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 7d461d8abb5fa1640a10a8cb0924dc44, type: 3}
   description: 
   charges: 0
   UsableIn: 

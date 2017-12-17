@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Name: Move Forward
   m_EditorClassIdentifier: 
   cardName: Move Forward
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 1660711dd0c907a4293b2716a3cd814e, type: 3}
   description: Move forward by 1.
   charges: 0
   UsableIn: 01000000
   UsableRange: 0100000002000000
   type: 4
   effect: {fileID: 11400000, guid: 69550291e1bf1b440abe0653650e7a6b, type: 2}
+  Equipped: 0
+  Slot: 0

@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Name: Heal Spell
   m_EditorClassIdentifier: 
   cardName: Heal Spell
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 4c346e6549182184f88b4d4ab830eaf3, type: 3}
   description: 
   charges: 10
   UsableIn: 000000000100000002000000
   UsableRange: 000000000100000002000000
   type: 2
   effect: {fileID: 11400000, guid: bb53484aaf4ccf949b56860f3ffe6a57, type: 2}
+  Equipped: 0
+  Slot: 0
