@@ -7,6 +7,7 @@ public class Card : MonoBehaviour {
 
     public string cardName;
     public UnityEngine.UI.RawImage image;
+    
     public string description;
     public int charges;
 
@@ -88,7 +89,7 @@ public class Card : MonoBehaviour {
             cardDescriptionText.text = description;
             cardStaminaCostText.text = "0";
             cardStat.text = "0";
-        }
+}
     }
 
     // Use this for initialization
