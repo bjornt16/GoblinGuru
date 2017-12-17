@@ -5,7 +5,7 @@ using TMPro;
 
 public class EncounterUI : MonoBehaviour {
 
-    public UnityEngine.UI.Text stateText;
+    public TextMeshProUGUI stateText;
     public UnityEngine.UI.Image EncounterImg;
     public RectTransform options;
 
