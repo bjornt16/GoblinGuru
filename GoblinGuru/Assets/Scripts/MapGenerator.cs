@@ -98,12 +98,15 @@ public class MapGenerator : MonoBehaviour {
         else if (drawmode == DrawMode.Mesh){
             map.Initialize(noiseMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail, terrainMap);
             map.BuildMesh();
-            map.GenerateGameTiles();
+            GameTile[] tiles = map.GenerateGameTiles();
             map.ApplyTexture(TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
-            player.Instantiate(map.GenerateGameTiles()[((mapChunkSize-1) * (mapChunkSize-1)) / 2]);
+            
             fogofwar.Initialize(map.Vertices, map.Triangles, map.Uvs, noiseMap.GetLength(0), noiseMap.GetLength(1));
-            fogofwar.ClearFog(map.GameTiles[((mapChunkSize - 1) * (mapChunkSize - 1)) / 2], 3);
             TerrainFeaturePlacer.Instance.PlaceFeatures();
+
+
+            player.Instantiate(map.GetNearestTile(tiles[((mapChunkSize - 1) * (mapChunkSize - 1)) / 2], TileTerrain.Land, TileFeatures.Village, 30));
+            fogofwar.ClearFog(player.Tile, 3);
         }
         else if (drawmode == DrawMode.FallOffMap)
         {

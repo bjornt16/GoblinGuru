@@ -77,8 +77,11 @@ public class Encounters : MonoBehaviour {
         {
             player = GameStateManager.Instance.player;
         }
-        
-        ui.EncounterImg.sprite = currentEnc.image;
+
+        if(currentEnc != null)
+        {
+            ui.EncounterImg.sprite = currentEnc.image;
+        }
         
 
         if (currentEnc.hasCost)
@@ -318,10 +321,10 @@ public class Encounters : MonoBehaviour {
         currentRandEnc = randEncList[0];
     }
 
-    System.Random rnd = new System.Random(123);
+
     private Enc GetRandomStoryEncounter()
     {
-        int randIndex = rnd.Next(0, randEncList.Count);
+        int randIndex = (int)UnityEngine.Random.Range(0, randEncList.Count);
         return randEncList[randIndex];
     }
 
@@ -445,7 +448,7 @@ public class Encounters : MonoBehaviour {
 
     public GameTile GetNearestTile(TileTerrain terrain, TileFeatures feature, int distance)
     {
-        return map.GetNearestTile(terrain, feature, distance);
+        return map.GetNearestTile(player.Tile, terrain, feature, distance);
     }
 
 }

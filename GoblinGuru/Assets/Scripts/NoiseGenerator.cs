@@ -7,7 +7,7 @@ public static class NoiseGenerator {
 	public static float[,] GenerateNoise(int width, int height, int seed, float scale, int octaves, float persistance, float lacunarity, Vector2 offset){
         float[,] noise = new float[width, height];
 
-        System.Random rng = new System.Random(seed);
+        System.Random rng = new System.Random((int)Time.deltaTime);
         Vector2[] octaveOffset = new Vector2[octaves];
         for (int i = 0; i < octaves; i++){
             float offsetX = rng.Next(-100000, 100000) + offset.x;

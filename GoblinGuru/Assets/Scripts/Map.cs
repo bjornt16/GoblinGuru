@@ -272,7 +272,7 @@ public class Map : MonoBehaviour
         GetComponent<MeshRenderer>().sharedMaterial.mainTexture = texture;
     }
 
-    public GameTile GetNearestTile(TileTerrain terrain, TileFeatures feature, int distance)
+    public GameTile GetNearestTile(GameTile tile, TileTerrain terrain, TileFeatures feature, int distance)
     {
         List<GameTile> allowed = new List<GameTile>();
         if (terrain == TileTerrain.Land)
@@ -309,13 +309,13 @@ public class Map : MonoBehaviour
         }
 
 
-        allowed = allowed.OrderBy(o => o.DistanceTo(GameStateManager.Instance.player.Tile)).ToList();
+        allowed = allowed.OrderBy(o => o.DistanceTo(tile)).ToList();
 
         while (true)
         {
             for (int i = 0; i < allowed.Count; i++)
             {
-                if (GameStateManager.Instance.player.Tile.DistanceTo(allowed[i]) > distance && allowed[i].tileFeatures == feature)
+                if (tile.DistanceTo(allowed[i]) > distance && allowed[i].tileFeatures == feature)
                 {
                     return allowed[i];
                 }

@@ -132,11 +132,9 @@ public class CharStats {
         xpCap = level * 4;
     }
 
-    System.Random rnd = new System.Random(123);
-
     public bool Roll(CharacterStats roll, int dc)
     {
-        int d20 = rnd.Next(1, 21);
+        int d20 = (int)Random.RandomRange(1f, 21f);
         Debug.Log("d20 roll " + d20 + " dc is " + dc);
         switch (roll)
         {
@@ -157,8 +155,8 @@ public class CharStats {
 
     public bool Roll(CharacterStats roll, CharStats targetStats)
     {
-        int d20 = rnd.Next(1, 21);
-        int tD20 = rnd.Next(1, 21);
+        int d20 = (int)Random.RandomRange(1f, 21f);
+        int tD20 = (int)Random.RandomRange(1f, 21f);
         switch (roll)
         {
             case CharacterStats.Dexterity:

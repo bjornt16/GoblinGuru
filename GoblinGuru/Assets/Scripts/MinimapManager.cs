@@ -83,10 +83,10 @@ public class MinimapManager : MonoBehaviour
         float speed = 1;
 
         float elapsedTime = 0;
-        while (elapsedTime < 1)
+        while (elapsedTime < .5)
         {
-            camera.transform.localEulerAngles = Vector3.Lerp(fromEul, toEul, (elapsedTime / 1));
-            camera.transform.localPosition = Vector3.Lerp(fromPos, toPos, (elapsedTime / 1));
+            camera.transform.localEulerAngles = Vector3.Lerp(fromEul, toEul, (elapsedTime / .5f));
+            camera.transform.localPosition = Vector3.Lerp(fromPos, toPos, (elapsedTime / .5f));
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
