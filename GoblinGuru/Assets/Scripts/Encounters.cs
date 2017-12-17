@@ -27,7 +27,6 @@ public class Encounters : MonoBehaviour {
 
     List<Enc> randEncList;
     List<Enc> encList;
-    List<Encounter> encounters;
     List<OptionButton> buttons;
 
     int encIndex = 0;
@@ -36,21 +35,17 @@ public class Encounters : MonoBehaviour {
     Enc currentEnc;
     Enc currentRandEnc;
 
-    List<Encounter> randomEncounters;
-
-    Encounter curr;
-    State currOriginalState;
-    
-
+    public string firstMainStoryEncounterName;
+    public List<Enc> openMainStory;
 
     public Encounters()
     {
-        randomEncounters = new List<Encounter>();
+
     }
     
     public void AddEncounter(Encounter enc)
     {
-        randomEncounters.Add(enc);
+
     }
 
     public void pickRandom()
@@ -83,7 +78,6 @@ public class Encounters : MonoBehaviour {
         {
             for (int i = 0; i < currentEnc.choices.Count; i++)
             {
-                Debug.Log("i " + i);
                 if((currentEnc.choices[i].MustHaveItem && player.HasCard(currentEnc.choices[i].itemName)) || !currentEnc.choices[i].MustHaveItem ||
                     (currentEnc.choices[i].MustNotHaveItem && !player.HasCard(currentEnc.choices[i].itemName)))
                 {
@@ -176,24 +170,35 @@ public class Encounters : MonoBehaviour {
         FindObjectOfType<AudioManager>().Play("buttonClick");
         //todo functionality
         encIndex++;
-        if (encIndex < 4)
+        List<string> openList = currentEnc.encounters;
+        bool startRightAway = false;
+        for (int i = 0; i < openList.Count; i++)
         {
-            currentEnc = encList[encIndex];
-            foreach (OptionButton button in buttons)
+            Debug.Log("yerp");
+            openMainStory.Add(GetEncounterByName(encList, openList[i]));
+            if (currentEnc.triggerOnComplete != null && i < currentEnc.triggerOnComplete.Count && currentEnc.triggerOnComplete[i])
             {
-                button.Destroy();
+                currentEnc = GetEncounterByName(encList, openList[i]);
+                startRightAway = true;
             }
+        }
+
+        foreach (OptionButton button in buttons)
+        {
+            button.Destroy();
+        }
+
+        if (startRightAway)
+        {
             Initialize();
         }
         else
         {
+
             ui.gameObject.SetActive(false);
-            foreach (OptionButton button in buttons)
-            {
-                button.Destroy();
-            }
             GameStateManager.Instance.startMovement();
         }
+        
     }
 
     // Use this for initialization
@@ -224,15 +229,9 @@ public class Encounters : MonoBehaviour {
         */
 
 
-        encList = buildEncList("StoryEncounters");
-        if(encList.Count > 0)
-        {
-            encIndex = 0;
-            currentEnc = encList[0];
-        }
-        randEncList = buildEncList("RandomStoryEncounters");
-        currentRandEnc = randEncList[0];
-       
+        LoadAllEncounters();
+
+
         Initialize();
 
         //Initialize();
@@ -245,7 +244,7 @@ public class Encounters : MonoBehaviour {
         if (encList.Count > 0)
         {
             encIndex = 0;
-            currentEnc = encList[0];
+            currentEnc = GetEncounterByName(encList, firstMainStoryEncounterName);
         }
         randEncList = buildEncList("RandomStoryEncounters");
         currentRandEnc = randEncList[0];
@@ -272,12 +271,12 @@ public class Encounters : MonoBehaviour {
             if(node[n].nodes.Count != 0)
             {
                 tempEnc = (Enc)node[n].nodes[0].GetOutputPort("encOutput").GetOutputValue();
+                tempEnc.name = node[n].name;
                 recursiveBuildEnc(tempEnc, node, n, 0, tempEncList);
                 list.Add(tempEnc);
             }
         }
 
-        Debug.Log(list);
         return list;
     }
 
@@ -329,8 +328,6 @@ public class Encounters : MonoBehaviour {
             Enc duplicateWin = CheckForDuplicate(tempEncList, currEnc.choices[i].win);
             Enc duplicateLoss = CheckForDuplicate(tempEncList, currEnc.choices[i].loss);
 
-            Debug.Log("dup: " + duplicateWin);
-
             if (currEnc.choices[i].win != null && duplicateWin == null)
             {
                 tempEncList.Add(currEnc.choices[i].win);
@@ -353,6 +350,18 @@ public class Encounters : MonoBehaviour {
                 currEnc.choices[i].loss = duplicateLoss;
             }
         }
+    }
+
+    private Enc GetEncounterByName(List<Enc> list, string name)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            if(list[i].name == name)
+            {
+                return list[i];
+            }
+        }
+        return null;
     }
 
 }

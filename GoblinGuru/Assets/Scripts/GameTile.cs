@@ -16,11 +16,14 @@ public class GameTile : MonoBehaviour {
     public int tileVerticeTo;
 
     public TileTerrain tileTerrain;
+    public TileFeatures tileFeatures;
 
     public GameTileLabel labelPrefab;
     public GameTileLabel label;
 
     PathTile pathTile;
+
+    public Enc Encounter;
 
     public Vector3 Position
     {
@@ -124,6 +127,13 @@ public class GameTile : MonoBehaviour {
             default:
                 return null;
         }
+    }
+
+    public void ReAlign()
+    {
+        Vector3 old = gameObject.transform.position;
+        old.y += 10;
+        SetPositionRaycast(old, Vector3.down);
     }
 
     public int DistanceTo(Vector2 distTo)

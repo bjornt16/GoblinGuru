@@ -55,6 +55,8 @@ public class PlayerUnit : MonoBehaviour {
 
     public CombatEnemy target;
 
+    public TileUI tileUI;
+
     private void Awake()
     {
         ConvertCardObjects();
@@ -468,6 +470,7 @@ public class PlayerUnit : MonoBehaviour {
             if (!last)
             {
                 FogOfWar.Instance.ClearFog(pathTrail.PathFromTo[i].Tile, 3);
+                tileUI.UpdateUI(pathTrail.PathFromTo[i].Tile);
                 a = c;
                 b = pathTrail.PathFromTo[i - 1].Tile.Position;
                 c = (b + pathTrail.PathFromTo[i].Tile.Position) * 0.5f;

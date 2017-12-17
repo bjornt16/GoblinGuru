@@ -32,6 +32,15 @@ public class Map : MonoBehaviour
 
     TileTerrain[] tileTerrain;
 
+    public List<GameTile> regionDeepSea;
+    public List<GameTile> regionSea;
+    public List<GameTile> regionRiver;
+    public List<GameTile> regionSand;
+    public List<GameTile> regionGrass;
+    public List<GameTile> regionMountain;
+    public List<GameTile> regionSnow;
+    public List<GameTile> regionLand;
+
     public Vector3[] Vertices
     {
         get
@@ -104,9 +113,52 @@ public class Map : MonoBehaviour
         }
     }
 
+    private void SortTile(GameTile tile)
+    {
+        if(tile.tileTerrain == TileTerrain.DeepSea)
+        {
+            regionDeepSea.Add(tile);
+            regionSea.Add(tile);
+        }
+        else if(tile.tileTerrain == TileTerrain.ShallowSea)
+        {
+            regionSea.Add(tile);
+        }
+        else if (tile.tileTerrain == TileTerrain.Sand)
+        {
+            regionSand.Add(tile);
+            regionLand.Add(tile);
+        }
+        else if (tile.tileTerrain == TileTerrain.Grass || tile.tileTerrain == TileTerrain.Grass2)
+        {
+            regionGrass.Add(tile);
+            regionLand.Add(tile);
+        }
+        else if (tile.tileTerrain == TileTerrain.Mountain || tile.tileTerrain == TileTerrain.Mountain2)
+        {
+            regionMountain.Add(tile);
+            regionLand.Add(tile);
+        }
+        else if (tile.tileTerrain == TileTerrain.Snow || tile.tileTerrain == TileTerrain.Snow2)
+        {
+            regionSnow.Add(tile);
+            regionLand.Add(tile);
+        }
+
+    }
+
     public GameTile[] GenerateGameTiles()
     {
         ClearGameTiles();
+
+        regionDeepSea = new List<GameTile>((mapMeshWidth - 1) * (mapMeshHeight - 1));
+        regionSea = new List<GameTile>((mapMeshWidth - 1) * (mapMeshHeight - 1));
+        regionRiver = new List<GameTile>((mapMeshWidth - 1) * (mapMeshHeight - 1));
+        regionSand = new List<GameTile>((mapMeshWidth - 1) * (mapMeshHeight - 1));
+        regionGrass = new List<GameTile>((mapMeshWidth - 1) * (mapMeshHeight - 1));
+        regionMountain = new List<GameTile>((mapMeshWidth - 1) * (mapMeshHeight - 1));
+        regionSnow = new List<GameTile>((mapMeshWidth - 1) * (mapMeshHeight - 1));
+        regionLand = new List<GameTile>((mapMeshWidth - 1) * (mapMeshHeight - 1));
 
         if (Application.isPlaying)
         {
@@ -119,6 +171,8 @@ public class Map : MonoBehaviour
                     tile.Initialize(gameTileParent.transform, x, y, tileTerrain[(x * (mapMeshWidth-1)) + y]);
                     tile.SetNeighbours(null, (y != 0) ? GameTiles[x * mapMeshWidth + y - 1] : null,
                         (x != 0) ? GameTiles[(x - 1) * mapMeshWidth + y] : null, null);
+
+                    SortTile(tile);
                 }
             }
         }
@@ -142,6 +196,15 @@ public class Map : MonoBehaviour
                 }
             }
         }
+
+        regionDeepSea.Clear();
+        regionSea.Clear();
+        regionRiver.Clear();
+        regionSand.Clear();
+        regionGrass.Clear();
+        regionMountain.Clear();
+        regionSnow.Clear();
+        regionLand.Clear();
 
         labels = new GameTileLabel[mapMeshWidth * mapMeshHeight];
         gameTiles = new GameTile[mapMeshWidth* mapMeshHeight];

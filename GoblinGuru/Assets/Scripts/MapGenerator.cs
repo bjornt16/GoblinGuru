@@ -98,6 +98,10 @@ public class MapGenerator : MonoBehaviour {
             player.Instantiate(map.GenerateGameTiles()[((mapChunkSize-1) * (mapChunkSize-1)) / 2]);
             fogofwar.Initialize(map.Vertices, map.Triangles, map.Uvs, noiseMap.GetLength(0), noiseMap.GetLength(1));
             fogofwar.ClearFog(map.GameTiles[((mapChunkSize - 1) * (mapChunkSize - 1)) / 2], 3);
+
+            List<TileTerrain> typ = new List<TileTerrain>();
+            typ.Add(TileTerrain.Grass);
+            TerrainFeaturePlacer.Instance.PlaceFeature(TerrainFeaturePlacer.Instance.forestPrefab, 2, typ);
         }
         else if (drawmode == DrawMode.FallOffMap)
         {

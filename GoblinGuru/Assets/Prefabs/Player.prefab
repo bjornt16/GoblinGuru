@@ -210,6 +210,7 @@ MonoBehaviour:
   canCrossSS: 0
   canCrossDS: 0
   target: {fileID: 0}
+  tileUI: {fileID: 0}
 --- !u!124 &124312966081653080
 Behaviour:
   m_ObjectHideFlags: 1

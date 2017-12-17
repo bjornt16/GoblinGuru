@@ -6,6 +6,9 @@ using XNode;
 [System.Serializable]
 public class EncounterNode : Node
 {
+    [TextArea(10, 100)] public string text;
+
+    public List<EncChoice> choices = new List<EncChoice>();
     [Output] public Enc encOutput;
 
     public TileTerrain terrainType = TileTerrain.Land;
@@ -37,9 +40,7 @@ public class EncounterNode : Node
     public bool opensEncounter;
     public List<string> encounters;
 
-    [TextArea (10,100)] public string text;
-
-    public List<EncChoice> choices = new List<EncChoice>();
+    public List<bool> triggerOnComplete;
 
     // GetValue should be overridden to return a value for any specified output port
     public override object GetValue(NodePort port)
@@ -53,7 +54,32 @@ public class EncounterNode : Node
             else
                 return text;
         if (port.fieldName == "encOutput")
-            return new Enc(text, choices, terrainType, featureType);
+        {
+            Enc temp = new Enc(text, choices, terrainType, featureType);
+            temp.requiredVariable = requiredVariable;
+            temp.requiredVariableKey = requiredVariableKey;
+            temp.rollSleep = rollSleep;
+            temp.hasReward = hasReward;
+            temp.hasCost = hasCost;
+
+            temp.hpCost = hpCost;
+            temp.staminaCost = staminaCost;
+            temp.goldCost = goldCost;
+            temp.itemCost = itemCost;
+
+            temp.hpReward = hpReward;
+            temp.staminaReward = staminaReward;
+            temp.goldReward = goldReward;
+            temp.itemReward = itemReward;
+
+            temp.hasVariable = hasVariable;
+            temp.variableKey = variableKey;
+            temp.variableValue = variableValue;
+            temp.opensEncounter = opensEncounter;
+            temp.encounters = encounters;
+            temp.triggerOnComplete = triggerOnComplete;
+            return temp;
+        }
 
         return false;
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Enc {
 
+    public string name;
     public string text;
 
     public List<EncChoice> choices = new List<EncChoice>();
@@ -38,6 +39,7 @@ public class Enc {
 
     public bool opensEncounter;
     public List<string> encounters;
+    public List<bool> triggerOnComplete;
 
     public Enc(string t, List<EncChoice> c, TileTerrain tt, TileFeatures tf)
     {
