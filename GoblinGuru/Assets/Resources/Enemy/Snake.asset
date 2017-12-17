@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: Snake
   m_EditorClassIdentifier: 
   Name: Snake
-  HeadColor: {r: 0, g: 0, b: 0, a: 0}
-  TorsoColor: {r: 0, g: 0, b: 0, a: 0}
-  LegsColor: {r: 0, g: 0, b: 0, a: 0}
-  FeetColor: {r: 0, g: 0, b: 0, a: 0}
+  HeadColor: {r: 0, g: 0, b: 0, a: 1}
+  TorsoColor: {r: 0, g: 0, b: 0, a: 1}
+  LegsColor: {r: 0, g: 0, b: 0, a: 1}
+  FeetColor: {r: 0, g: 0, b: 0, a: 1}
   Stats:
     maxHP: 15
     HP: 15
@@ -30,4 +30,6 @@ MonoBehaviour:
     charisma: 1
     speed: 4
     armorBonus: 0
-    damage: 8
+    minDamage: 1
+    maxDamage: 8
+    bonusDamage: 0

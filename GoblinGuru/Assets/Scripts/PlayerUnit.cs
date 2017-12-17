@@ -260,7 +260,10 @@ public class PlayerUnit : MonoBehaviour {
 
     public bool ValidateMove(GameTile dest)
     {
-        return true;
+        if(dest == null)
+        {
+            return false;
+        }
         TileTerrain type = dest.tileTerrain;
         if (type == TileTerrain.ShallowSea && canCrossSS)
         {
@@ -302,7 +305,6 @@ public class PlayerUnit : MonoBehaviour {
     void Shake()
     {
         moving = true;
-        transform.DetachChildren();
         StartCoroutine(ShakeOverSeconds(.25f));
     }
 
@@ -374,7 +376,7 @@ public class PlayerUnit : MonoBehaviour {
 
     public void Move()
     {
-        if (pathTrail != null && moving == false && CurrentMovePoints > 0 && ValidateMove(destination))
+        if (pathTrail != null && moving == false && CurrentMovePoints > 0 && ValidateMove(pathTrail.PathTo.Tile))
         {
             currentMovePoints -= pathTrail.GetMovementCost();
             UpdateUI();
@@ -453,7 +455,6 @@ public class PlayerUnit : MonoBehaviour {
         
         transform.position = position;
         moving = false;
-        Camera.main.transform.parent = transform;
         tempShakeIntensity = shakeIntensity;
     }
 

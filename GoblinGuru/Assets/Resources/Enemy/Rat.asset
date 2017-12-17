@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: Rat
   m_EditorClassIdentifier: 
   Name: 
-  HeadColor: {r: 0, g: 0, b: 0, a: 0}
-  TorsoColor: {r: 0, g: 0, b: 0, a: 0}
-  LegsColor: {r: 0, g: 0, b: 0, a: 0}
-  FeetColor: {r: 0, g: 0, b: 0, a: 0}
+  HeadColor: {r: 0, g: 0, b: 0, a: 1}
+  TorsoColor: {r: 0, g: 0, b: 0, a: 1}
+  LegsColor: {r: 0, g: 0, b: 0, a: 1}
+  FeetColor: {r: 0, g: 0, b: 0, a: 1}
   Stats:
     maxHP: 25
     HP: 25

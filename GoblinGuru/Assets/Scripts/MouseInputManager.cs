@@ -107,7 +107,7 @@ public class MouseInputManager : MonoBehaviour
     void DoAction() //rightClick
     {
         UpdateCurrentTile();
-        if (currentTile == null) //didnt click on a hex tile, return
+        if (currentTile == null || !SelectedUnit.ValidateMove(currentTile)) //didnt click on a hex tile, return
         {
             return;
         }
@@ -137,7 +137,11 @@ public class MouseInputManager : MonoBehaviour
     {
         if ((UpdateCurrentTile() || forcePreview))// && SelectedUnit.IsValidDestination(currentCell))
         {
-            Pathfinder.PreviewPath(SelectedUnit, SelectedUnit.Tile, currentTile);
+            if (SelectedUnit.ValidateMove(currentTile))
+            {
+                Pathfinder.PreviewPath(SelectedUnit, SelectedUnit.Tile, currentTile);
+            }
+            
         }
     }
 
