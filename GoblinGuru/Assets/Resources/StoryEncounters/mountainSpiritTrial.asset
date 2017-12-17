@@ -957,7 +957,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1603.886, y: 1857.9844}
+  position: {x: 1592, y: 1832}
   ports:
     keys:
     - encOutput
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   requiredVariableKey: 
   requiredVariableValue: 0
   hasCost: 1
-  hasReward: 0
+  hasReward: 1
   hpCost: 0
   staminaCost: 5
   goldCost: 0

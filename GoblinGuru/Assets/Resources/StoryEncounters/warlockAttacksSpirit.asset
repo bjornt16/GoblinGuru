@@ -308,7 +308,7 @@ MonoBehaviour:
     itemName: 
     MustHaveItemType: 0
     itemType: 0
-    combatTarget: {fileID: 0}
+    combatTarget: {fileID: 11400000, guid: 00ac9b13d66f8c34cbf6926629d37222, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0
@@ -705,7 +705,7 @@ MonoBehaviour:
     itemName: 
     MustHaveItemType: 0
     itemType: 0
-    combatTarget: {fileID: 0}
+    combatTarget: {fileID: 11400000, guid: 00ac9b13d66f8c34cbf6926629d37222, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0

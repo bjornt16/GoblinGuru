@@ -829,7 +829,7 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - forestSpiritTrial
-  triggerOnComplete: 00
+  triggerOnComplete: 01
 --- !u!114 &114645568687301972
 MonoBehaviour:
   m_ObjectHideFlags: 0

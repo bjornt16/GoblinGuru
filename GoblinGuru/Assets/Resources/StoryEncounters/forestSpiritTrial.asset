@@ -36,7 +36,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -24, y: 1016}
+  position: {x: -24, y: 1064}
   ports:
     keys:
     - encOutput
@@ -1278,9 +1278,10 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  triggerOnComplete: 
+  opensEncounter: 1
+  encounters:
+  - forestSpiritTrialComplete
+  triggerOnComplete: 01
 --- !u!114 &114988410454853898
 MonoBehaviour:
   m_ObjectHideFlags: 0

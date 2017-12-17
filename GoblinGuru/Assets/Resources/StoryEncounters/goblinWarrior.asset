@@ -287,7 +287,7 @@ MonoBehaviour:
   requiredVariableKey: 
   requiredVariableValue: 0
   hasCost: 0
-  hasReward: 0
+  hasReward: 1
   hpCost: 0
   staminaCost: 0
   goldCost: 0

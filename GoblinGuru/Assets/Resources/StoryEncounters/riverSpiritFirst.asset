@@ -103,7 +103,8 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - riverSpiritTrial
-  triggerOnComplete: 01
+  - goblinWarrior
+  triggerOnComplete: 0100
 --- !u!114 &114120797070745136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +421,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 584, y: 1384}
+  position: {x: 584, y: 1560}
   ports:
     keys:
     - encOutput
@@ -486,7 +487,8 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - riverSpiritTrial
-  triggerOnComplete: 01
+  - goblinWarrior
+  triggerOnComplete: 0100
 --- !u!114 &114274486915307840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,7 +571,8 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - riverSpiritTrial
-  triggerOnComplete: 01
+  - goblinWarrior
+  triggerOnComplete: 0100
 --- !u!114 &114515965822614998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,7 +848,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 568, y: 984}
+  position: {x: 584, y: 1064}
   ports:
     keys:
     - encOutput
@@ -913,7 +916,8 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - riverSpiritTrial
-  triggerOnComplete: 01
+  - goblinWarrior
+  triggerOnComplete: 0100
 --- !u!114 &114708314995537296
 MonoBehaviour:
   m_ObjectHideFlags: 0

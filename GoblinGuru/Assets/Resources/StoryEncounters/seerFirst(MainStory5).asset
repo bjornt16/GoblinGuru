@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1301.4679, y: 375.00732}
+  position: {x: 1304, y: 408}
   ports:
     keys:
     - encOutput
