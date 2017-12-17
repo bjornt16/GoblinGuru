@@ -265,6 +265,7 @@ public class PlayerUnit : MonoBehaviour {
 
     void UpdateUI()
     {
+        Debug.Log(ui.movesText);
         ui.movesText.text = CurrentMovePoints.ToString();
         
         ui.healthText.text = statistics.HP + " / " + statistics.maxHP;

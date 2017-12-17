@@ -230,10 +230,9 @@ public class Encounters : MonoBehaviour {
             encIndex = 0;
             currentEnc = encList[0];
         }
-        /*
         randEncList = buildEncList("RandomStoryEncounters");
         currentRandEnc = randEncList[0];
-        */
+       
         Initialize();
 
         //Initialize();
@@ -251,9 +250,12 @@ public class Encounters : MonoBehaviour {
         for (int n = 0; n < node.Length; n++)
         {
             Debug.Log("name " + node[n].name);
-            tempEnc = (Enc)node[n].nodes[0].GetOutputPort("encOutput").GetOutputValue();
-            recursiveBuildEnc(tempEnc, node, n, 0, tempEncList);
-            list.Add(tempEnc);
+            if(node[n].nodes.Count != 0)
+            {
+                tempEnc = (Enc)node[n].nodes[0].GetOutputPort("encOutput").GetOutputValue();
+                recursiveBuildEnc(tempEnc, node, n, 0, tempEncList);
+                list.Add(tempEnc);
+            }
         }
 
         Debug.Log(list);

@@ -182,6 +182,7 @@ MonoBehaviour:
   maxMovePoints: 10
   currentMovePoints: 0
   ui: {fileID: 0}
+  dingUI: {fileID: 0}
   cardList: []
   cardObjectList:
   - {fileID: 11400000, guid: 0b9e2f7e4d7b9004a82a06f46ea8b5ba, type: 2}
@@ -201,7 +202,10 @@ MonoBehaviour:
     wits: 10
     charisma: 10
     speed: 11
-    damage: 10
+    armorBonus: 0
+    minDamage: 1
+    maxDamage: 8
+    bonusDamage: 0
   canCrossRiver: 0
   canCrossSS: 0
   canCrossDS: 0

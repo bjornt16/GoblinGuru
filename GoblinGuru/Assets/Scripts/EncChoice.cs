@@ -8,7 +8,8 @@ public class EncChoice
 {
     public string winPort;
     public string lossPort;
-    [TextArea] public string cText;
+
+    public string cText;
     public CharacterStats rollType = CharacterStats.D20;
     public int dc = 10;
     public EncChoiceType type;

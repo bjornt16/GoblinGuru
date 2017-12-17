@@ -7,6 +7,10 @@ public class MinimapManager : MonoBehaviour
 
     public Transform player;
 
+    public Camera camera;
+
+    private bool rotating;
+
     void LateUpdate()
     {
         Vector3 newPos = player.position;
@@ -31,4 +35,103 @@ public class MinimapManager : MonoBehaviour
         }
     }
 
+    public void RotateRight()
+    {
+        if (!rotating)
+        {
+            rotating = true;
+            Vector3 tempRotation = camera.transform.localEulerAngles;
+            Vector3 oldRotation = tempRotation;
+            tempRotation.y += 90f;
+
+            Vector3 tempPosition = camera.transform.localPosition;
+            Vector3 oldPosition = tempPosition;
+            Debug.Log(tempRotation);
+            if (tempPosition.x == 0 && tempPosition.z == -6.66f)
+            {
+                Debug.Log("rotate");
+                tempPosition.x = -6.66f;
+                tempPosition.z = 0;
+            }
+            else if (tempPosition.x == -6.66f && tempPosition.z == 0)
+            {
+                tempPosition.x = 0;
+                tempPosition.z = 6.66f;
+            }
+            else if (tempPosition.x == 0 && tempPosition.z == 6.66f)
+            {
+                tempPosition.x = 6.66f;
+                tempPosition.z = 0;
+            }
+            else if (tempPosition.x == 6.66f && tempPosition.z == 0)
+            {
+                tempPosition.x = 0;
+                tempPosition.z = -6.66f;
+            }
+
+            camera.transform.localEulerAngles = tempRotation;
+            camera.transform.localPosition = tempPosition;
+            StartCoroutine(AnimateRotation(oldRotation, oldPosition, tempRotation, tempPosition));
+        }
+    }
+
+    public void RotateLeft()
+    {
+        if (!rotating)
+        {
+            rotating = true;
+            Vector3 tempRotation = camera.transform.localEulerAngles;
+            Vector3 oldRotation = tempRotation;
+            tempRotation.y += -90f;
+
+            Vector3 tempPosition = camera.transform.localPosition;
+            Vector3 oldPosition = tempPosition;
+            Debug.Log(tempRotation);
+            if (tempPosition.x == 0 && tempPosition.z == -6.66f)
+            {
+                tempPosition.x = 6.66f;
+                tempPosition.z = 0;
+            }
+            else if (tempPosition.x == -6.66f && tempPosition.z == 0)
+            {
+                tempPosition.x = 0;
+                tempPosition.z = -6.66f;
+            }
+            else if (tempPosition.x == 0 && tempPosition.z == 6.66f)
+            {
+                tempPosition.x = -6.66f;
+                tempPosition.z = 0;
+            }
+            else if (tempPosition.x == 6.66f && tempPosition.z == 0)
+            {
+                tempPosition.x = 0;
+                tempPosition.z = 6.66f;
+            }
+
+            camera.transform.localEulerAngles = tempRotation;
+            camera.transform.localPosition = tempPosition;
+            StartCoroutine(AnimateRotation(oldRotation, oldPosition, tempRotation, tempPosition ));
+        }
+
+
+    }
+
+    IEnumerator AnimateRotation(Vector3 fromEul, Vector3 fromPos, Vector3 toEul, Vector3 toPos)
+    {
+
+        float speed = 1;
+
+        float elapsedTime = 0;
+        while (elapsedTime < 1)
+        {
+            camera.transform.localEulerAngles = Vector3.Lerp(fromEul, toEul, (elapsedTime / 1));
+            camera.transform.localPosition = Vector3.Lerp(fromPos, toPos, (elapsedTime / 1));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        camera.transform.localEulerAngles = toEul;
+        camera.transform.localPosition = toPos;
+
+        rotating = false;
+    }
 }

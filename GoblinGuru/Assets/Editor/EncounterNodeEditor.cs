@@ -8,6 +8,7 @@ using System.Collections.Generic;
 [CustomNodeEditor(typeof(EncounterNode))]
 public class EncounterNodeEditor : NodeEditor
 {
+    
     public override void OnBodyGUI()
     {
         EncounterNode encounter = target as EncounterNode;
@@ -77,7 +78,9 @@ public class EncounterNodeEditor : NodeEditor
             GUIStyle style = new GUIStyle();
             style.richText = true;
             GUILayout.Label("<size=10><color=yellow>Encounter <b>Choice</b></color></size>", style);
-            encounter.choices[i].cText = EditorGUILayout.TextArea(encounter.choices[i].cText);
+
+            EditorStyles.textField.wordWrap = true;
+            encounter.choices[i].cText = EditorGUILayout.TextArea(encounter.choices[i].cText, GUILayout.ExpandHeight(true), GUILayout.Height(30) );
 
 
             encounter.choices[i].mustHaveVariable = EditorGUILayout.Toggle(new GUIContent("Must Have Variable"), encounter.choices[i].mustHaveVariable);
