@@ -15,6 +15,7 @@ MonoBehaviour:
   - {fileID: 114490327474619930}
   - {fileID: 114671391875410294}
   - {fileID: 114199654966683012}
+  image: {fileID: 0}
 --- !u!114 &114199654966683012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +68,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -222,6 +224,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 1
   requiredVariable: 0
@@ -312,6 +315,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
