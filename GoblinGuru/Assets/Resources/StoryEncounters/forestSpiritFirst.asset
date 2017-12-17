@@ -478,7 +478,9 @@ MonoBehaviour:
       _node: {fileID: 114347147348333450}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114623070179567596}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_1
@@ -492,7 +494,9 @@ MonoBehaviour:
       _node: {fileID: 114347147348333450}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114705214769551632}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_3
@@ -768,6 +772,8 @@ MonoBehaviour:
         node: {fileID: 114154819274288702}
       - fieldName: instanceInput_0
         node: {fileID: 114003632362591362}
+      - fieldName: instanceInput_0
+        node: {fileID: 114347147348333450}
       _direction: 1
       _dynamic: 0
   text: "The spirit nods and points you in the right direction, you head off. As you
@@ -998,6 +1004,8 @@ MonoBehaviour:
       connections:
       - fieldName: instanceInput_4
         node: {fileID: 114003632362591362}
+      - fieldName: instanceInput_2
+        node: {fileID: 114347147348333450}
       _direction: 1
       _dynamic: 0
   text: "The spirit hums.\r\n\r\n\u201CI thought you might ask that question, it is

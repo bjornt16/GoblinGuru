@@ -195,7 +195,7 @@ MonoBehaviour:
   requiredVariableValue: 0
   hasCost: 1
   hasReward: 0
-  hpCost: 20
+  hpCost: 80
   staminaCost: 0
   goldCost: 0
   itemCost: 

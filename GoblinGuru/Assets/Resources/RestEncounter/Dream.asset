@@ -67,7 +67,27 @@ MonoBehaviour:
         node: {fileID: 114767543895455946}
       _direction: 0
       _dynamic: 1
+  text: You hear a voice inside your head telling you to get on,
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 0
+    dc: 15
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -91,6 +111,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -112,25 +133,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You hear a voice inside your head telling you to get on,
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 0
-    dc: 15
-    type: 1
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114104304477632538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +178,27 @@ MonoBehaviour:
         node: {fileID: 114160225774925676}
       _direction: 0
       _dynamic: 1
+  text: You make camp for the night and try to get a good nights sleep.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 0
+    dc: 15
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -199,6 +222,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -220,25 +244,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You make camp for the night and try to get a good nights sleep.
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 0
-    dc: 15
-    type: 1
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114118312019189390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +291,27 @@ MonoBehaviour:
         node: {fileID: 114012059386998198}
       _direction: 0
       _dynamic: 1
+  text: The horse walks right up to you and sniffs the top of your head.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 0
+    dc: 15
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -309,6 +335,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -330,25 +357,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: The horse walks right up to you and sniffs the top of your head.
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 0
-    dc: 15
-    type: 1
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114119164422083792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,7 +394,10 @@ MonoBehaviour:
         node: {fileID: 114767543895455946}
       _direction: 1
       _dynamic: 0
+  text: You wake up from a dream,
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -409,6 +421,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -430,8 +443,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You wake up from a dream,
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114160225774925676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,7 +490,27 @@ MonoBehaviour:
         node: {fileID: 114755897849124642}
       _direction: 0
       _dynamic: 1
+  text: You see a white horse running in a distant field.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 0
+    dc: 15
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -502,6 +534,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -523,25 +556,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You see a white horse running in a distant field.
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 0
-    dc: 15
-    type: 1
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114333339478047304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,7 +583,10 @@ MonoBehaviour:
         node: {fileID: 114104304477632538}
       _direction: 1
       _dynamic: 0
+  text: You wake up after a a great night's sleep
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -592,6 +610,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -613,8 +632,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You wake up after a a great night's sleep
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114395400829695324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,7 +679,28 @@ MonoBehaviour:
         node: {fileID: 114118312019189390}
       _direction: 0
       _dynamic: 1
+  text: As the horse draws nearer you notice that the creature has a large and majestic
+    horn on the top of it's head.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 0
+    dc: 15
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -685,6 +724,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -706,26 +746,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: As the horse draws nearer you notice that the creature has a large and majestic
-    horn on the top of it's head.
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 0
-    dc: 15
-    type: 1
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114755897849124642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,7 +793,27 @@ MonoBehaviour:
         node: {fileID: 114395400829695324}
       _direction: 0
       _dynamic: 1
+  text: You see the horse approaching you at speeds you thought weren't possible.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 0
+    dc: 15
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -796,6 +837,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -817,25 +859,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You see the horse approaching you at speeds you thought weren't possible.
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 0
-    dc: 15
-    type: 1
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114767543895455946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,7 +904,27 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
+  text: You get on horseback and ride into the sunset
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 0
+    dc: 15
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -904,6 +948,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -925,22 +970,4 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You get on horseback and ride into the sunset
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 0
-    dc: 15
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
