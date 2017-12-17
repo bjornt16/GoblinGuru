@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b650f37aa1e7fec42b9bd8846f9dad94
-timeCreated: 1513211539
+guid: ec6159c4dbaa29149b0c2e8f0f6327f9
+timeCreated: 1513450663
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -17,27 +17,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: cf9d50a9688d6f044a552951162d4f03, type: 2}
+    second: {fileID: 2100000, guid: 8ee3009446e670b45b51c56e2344258a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material_001
-    second: {fileID: 2100000, guid: 5768306ee93d4d8428b6e7146c4ab5bc, type: 2}
+    second: {fileID: 2100000, guid: b994aad6d5884ee4484d9485fc39b906, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material_002
-    second: {fileID: 2100000, guid: 1e638281ceb077d4590fcda06517caa5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_003
-    second: {fileID: 2100000, guid: 4768e8d8cb6625f4d9f81121b5ee4f29, type: 2}
+    second: {fileID: 2100000, guid: 9d6f5e1fe0415254d8e70e55c23c4774, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -62,7 +57,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.2
+    globalScale: 0.075
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

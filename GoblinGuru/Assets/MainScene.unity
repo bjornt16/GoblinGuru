@@ -7145,7 +7145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 820134265}
-  camera: {fileID: 0}
+  camera: {fileID: 1797486000}
 --- !u!1 &1186433438
 GameObject:
   m_ObjectHideFlags: 0
@@ -7680,36 +7680,11 @@ Prefab:
       propertyPath: ui
       value: 
       objectReference: {fileID: 182703452}
-    - target: {fileID: 20133405823367356, guid: 9a6615add7459e64aacf8ab2658711a6,
-        type: 2}
-      propertyPath: m_TargetDisplay
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114847469245359732, guid: 9a6615add7459e64aacf8ab2658711a6,
         type: 2}
       propertyPath: dingUI
       value: 
       objectReference: {fileID: 1744119072}
-    - target: {fileID: 4521947893893362, guid: 9a6615add7459e64aacf8ab2658711a6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.34167823
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521947893893362, guid: 9a6615add7459e64aacf8ab2658711a6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.6190767
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521947893893362, guid: 9a6615add7459e64aacf8ab2658711a6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0.34167823
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521947893893362, guid: 9a6615add7459e64aacf8ab2658711a6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.6190767
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521947893893362, guid: 9a6615add7459e64aacf8ab2658711a6, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a6615add7459e64aacf8ab2658711a6, type: 2}
   m_IsPrefabParent: 0
@@ -11712,6 +11687,11 @@ RectTransform:
   m_AnchoredPosition: {x: 13.3, y: 3.5}
   m_SizeDelta: {x: 20.27, y: 14.22}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!20 &1797486000 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20133405823367356, guid: 9a6615add7459e64aacf8ab2658711a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1317524035}
 --- !u!1 &1815171530
 GameObject:
   m_ObjectHideFlags: 0
@@ -13461,6 +13441,7 @@ MonoBehaviour:
   player: {fileID: 1994930425}
   gameTurnUi: {fileID: 1183621611}
   mapUI: {fileID: 1508965480}
+  mmm: {fileID: 1185814438}
 --- !u!1 &1970640579
 GameObject:
   m_ObjectHideFlags: 0

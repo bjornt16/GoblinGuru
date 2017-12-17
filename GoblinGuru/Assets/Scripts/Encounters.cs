@@ -56,7 +56,7 @@ public class Encounters : MonoBehaviour {
     public void pickRandom()
     {
         int randomNum = 0;
-        currentEnc = randEncList[0];
+        currentEnc = GetRandomStoryEncounter();
         Initialize();
     }
 
@@ -237,6 +237,25 @@ public class Encounters : MonoBehaviour {
 
         //Initialize();
         //e.PlayEncounter();
+    }
+
+    private void LoadAllEncounters()
+    {
+        encList = buildEncList("StoryEncounters");
+        if (encList.Count > 0)
+        {
+            encIndex = 0;
+            currentEnc = encList[0];
+        }
+        randEncList = buildEncList("RandomStoryEncounters");
+        currentRandEnc = randEncList[0];
+    }
+
+    System.Random rnd = new System.Random(123);
+    private Enc GetRandomStoryEncounter()
+    {
+        int randIndex = rnd.Next(0, randEncList.Count);
+        return randEncList[randIndex];
     }
 
 
