@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -2472, y: 2552}
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1752, y: 2312}
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -2264, y: 648}
@@ -793,7 +793,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -840, y: 1704}
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -56, y: 1128}
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -920, y: -200}
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -840, y: 2408}

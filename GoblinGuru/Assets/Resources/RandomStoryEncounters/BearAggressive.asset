@@ -25,7 +25,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1784, y: 776}
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -155, y: -55}
@@ -251,10 +251,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1016, y: -232}
+  position: {x: -760, y: 760}
   ports:
     keys:
     - encOutput
@@ -295,13 +295,13 @@ MonoBehaviour:
     cText: Enter combat
     rollType: 0
     dc: 10
-    type: 0
+    type: 2
     MustHaveItem: 0
     MustNotHaveItem: 0
     itemName: 
     MustHaveItemType: 0
     itemType: 0
-    combatTarget: {fileID: 0}
+    combatTarget: {fileID: 11400000, guid: 7c9542bff061ff54eaa67cdbdfe1ff93, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: Encounter Node
+  m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1784, y: 408}

@@ -881,7 +881,7 @@ MonoBehaviour:
     itemName: 
     MustHaveItemType: 0
     itemType: 0
-    combatTarget: {fileID: 11400000, guid: 7c9542bff061ff54eaa67cdbdfe1ff93, type: 2}
+    combatTarget: {fileID: 11400000, guid: 7c550aec02dc85e46bd73ac26baa3cdc, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0
@@ -1014,7 +1014,7 @@ MonoBehaviour:
     itemName: 
     MustHaveItemType: 0
     itemType: 0
-    combatTarget: {fileID: 11400000, guid: 7c9542bff061ff54eaa67cdbdfe1ff93, type: 2}
+    combatTarget: {fileID: 11400000, guid: 7c550aec02dc85e46bd73ac26baa3cdc, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0
@@ -1163,7 +1163,7 @@ MonoBehaviour:
     itemName: 
     MustHaveItemType: 0
     itemType: 0
-    combatTarget: {fileID: 11400000, guid: 7c9542bff061ff54eaa67cdbdfe1ff93, type: 2}
+    combatTarget: {fileID: 11400000, guid: 7c550aec02dc85e46bd73ac26baa3cdc, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0
@@ -1332,7 +1332,7 @@ MonoBehaviour:
     itemName: 
     MustHaveItemType: 0
     itemType: 0
-    combatTarget: {fileID: 11400000, guid: 7c9542bff061ff54eaa67cdbdfe1ff93, type: 2}
+    combatTarget: {fileID: 11400000, guid: 7c550aec02dc85e46bd73ac26baa3cdc, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0
@@ -1464,7 +1464,7 @@ MonoBehaviour:
     itemName: 
     MustHaveItemType: 0
     itemType: 0
-    combatTarget: {fileID: 11400000, guid: 7c9542bff061ff54eaa67cdbdfe1ff93, type: 2}
+    combatTarget: {fileID: 11400000, guid: 7c550aec02dc85e46bd73ac26baa3cdc, type: 2}
     stat: 0
     statAmount: 0
     mustHaveVariable: 0
