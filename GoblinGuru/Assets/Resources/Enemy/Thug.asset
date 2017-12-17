@@ -17,16 +17,19 @@ MonoBehaviour:
   LegsColor: {r: 0.29411763, g: 0.106192574, b: 0.0216263, a: 1}
   FeetColor: {r: 0, g: 0, b: 0, a: 1}
   Stats:
-    maxHP: 20
-    HP: 20
+    maxHP: 22
+    HP: 22
     maxStamina: 20
     stamina: 20
     level: 1
     currXp: 0
     xpCap: 3
-    dexterity: 10
-    strength: 10
-    wits: 10
-    charisma: 10
-    speed: 11
-    damage: 10
+    dexterity: 8
+    strength: 7
+    wits: 6
+    charisma: 7
+    speed: 6
+    armorBonus: 1
+    minDamage: 1
+    maxDamage: 8
+    bonusDamage: 0
