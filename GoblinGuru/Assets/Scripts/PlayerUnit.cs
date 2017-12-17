@@ -323,7 +323,7 @@ public class PlayerUnit : MonoBehaviour {
 
     public void Instantiate(GameTile gameTile)
     {
-        statistics = new CharStats();
+        statistics = new CharStats(this);
         tile = gameTile;
         position = tile.Position;
         transform.position = position;

@@ -18,6 +18,10 @@ public class CombatEnemy : ScriptableObject {
 
     public void DoCombatAction()
     {
+        if (Stats.isPlayer)
+        {
+            Stats.isPlayer = false;
+        }
         if(player == null)
         {
             player = GameStateManager.Instance.player;
