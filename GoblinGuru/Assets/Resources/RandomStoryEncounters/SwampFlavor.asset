@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
+  m_Name: SwampFlavor
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 114677255102450168}
+--- !u!114 &114677255102450168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -475, y: -69}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114677255102450168}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+  text: 'The swamp you see before you obviously isn''t the same as the one that died.
+    It''s slightly less mucky and you hear more life bustling around in it.
+
+
+    Even stinky places like this have their charm it seems.'
+  choices: []
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 3
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 

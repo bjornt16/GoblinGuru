@@ -57,7 +57,9 @@ MonoBehaviour:
       _node: {fileID: 114382933382477794}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114858072844260482}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_1
@@ -71,7 +73,9 @@ MonoBehaviour:
       _node: {fileID: 114382933382477794}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114521129365752762}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_3
@@ -85,7 +89,9 @@ MonoBehaviour:
       _node: {fileID: 114382933382477794}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114885220031053690}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_5
@@ -111,7 +117,9 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  text: 
+  text: You feel the dread in your bones, the foul presence that scared you back at
+    the swamp has reared its ugly head again. It is moving, stalking the spirits like
+    a predator.
   choices:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
@@ -256,7 +264,9 @@ MonoBehaviour:
       _node: {fileID: 114521129365752762}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114382933382477794}
       _direction: 1
       _dynamic: 0
     - _fieldName: instanceInput_0
@@ -453,7 +463,9 @@ MonoBehaviour:
       _node: {fileID: 114858072844260482}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114382933382477794}
       _direction: 1
       _dynamic: 0
     - _fieldName: instanceInput_0
@@ -649,7 +661,9 @@ MonoBehaviour:
       _node: {fileID: 114885220031053690}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: instanceInput_4
+        node: {fileID: 114382933382477794}
       _direction: 1
       _dynamic: 0
     - _fieldName: instanceInput_0
