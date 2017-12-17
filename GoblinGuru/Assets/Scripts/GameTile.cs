@@ -59,6 +59,12 @@ public class GameTile : MonoBehaviour {
         coordinates = new Vector2(x, y);
         tileTerrain = tT;
         SetPositionRaycast(transform.position, Vector3.down);
+        Encounter = null;
+        if(EncQuestionMark != null)
+        {
+            DestroyObject(EncQuestionMark);
+            EncQuestionMark = null;
+        }
         if(parent != null)
         {
             transform.parent = parent;

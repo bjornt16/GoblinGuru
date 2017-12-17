@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,8 @@ public class GameStateManager : MonoBehaviour {
     public PlayerUnit player;
 
     public GameObject dingUI;
+
+    public GameObject gameOverUI;
 
     private void Start()
     {
@@ -71,9 +74,20 @@ public class GameStateManager : MonoBehaviour {
         gameState = GameState.Combat;
     }
 
+    public void startGameOver()
+    {
+        gameState = GameState.GameOver;
+        gameOverUI.SetActive(true);
+    }
+
+    public void reloadScene()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
 }
 
 
 public enum GameState{
-    Movement, Encounter, Combat
+    Movement, Encounter, Combat, GameOver
 }

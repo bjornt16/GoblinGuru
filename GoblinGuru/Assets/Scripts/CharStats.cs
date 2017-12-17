@@ -24,9 +24,34 @@ public class CharStats {
     public int maxDamage;
     public int bonusDamage;
 
+    public bool isPlayer;
+
     // Use this for initialization
-    public CharStats()
+    public CharStats(CombatEnemy enemy)
     {
+        isPlayer = false;
+        maxHP = 20;
+        HP = maxHP;
+        maxStamina = 20;
+        stamina = maxStamina;
+
+        level = 1;
+        currXp = 0;
+        xpCap = level * 4;
+        dexterity = 5;
+        strength = 5;
+        wits = 5;
+        charisma = 5;
+        speed = 6;
+        armorBonus = 0;
+        minDamage = 1;
+        maxDamage = 8;
+        bonusDamage = 0;
+    }
+
+    public CharStats(PlayerUnit player)
+    {
+        isPlayer = true;
         maxHP = 20;
         HP = maxHP;
         maxStamina = 20;
@@ -106,6 +131,9 @@ public class CharStats {
         {
             HP = 0;
             //todo trigger death
+            if (isPlayer){
+                GameStateManager.Instance.startGameOver();
+            }
 
         }
         else if(HP > maxHP)
