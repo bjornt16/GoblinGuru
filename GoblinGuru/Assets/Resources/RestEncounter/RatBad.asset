@@ -527,7 +527,7 @@ MonoBehaviour:
   hpReward: 0
   staminaReward: 0
   goldReward: 0
-  rollSleep: 5
+  rollSleep: 2
   hasVariable: 0
   variableKey: 
   variableValue: 0

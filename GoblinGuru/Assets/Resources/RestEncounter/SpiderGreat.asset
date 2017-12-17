@@ -599,7 +599,7 @@ MonoBehaviour:
     lossPort: instanceInput_1
     cText: Continue
     rollType: 0
-    dc: 10
+    dc: 14
     type: 0
     MustHaveItem: 0
     MustNotHaveItem: 0
