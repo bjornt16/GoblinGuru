@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Name: Minor Healing Potion
   m_EditorClassIdentifier: 
   cardName: Minor Healing Potion
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 8df18735289e4bd428abc13d84dff98c, type: 3}
   description: 
   charges: 1
   UsableIn: 00000000
   UsableRange: 000000000100000002000000
   type: 0
   effect: {fileID: 11400000, guid: bb53484aaf4ccf949b56860f3ffe6a57, type: 2}
+  Equipped: 0
+  Slot: 0

@@ -308,6 +308,7 @@ MonoBehaviour:
   type: 0
   effect: {fileID: 11400000, guid: bb53484aaf4ccf949b56860f3ffe6a57, type: 2}
   cardClicker: {fileID: 114748006939726982}
+  cardImage: {fileID: 114086587426162600}
   cardNameText: {fileID: 114695399527008340}
   cardDescriptionText: {fileID: 114349671641694280}
   cardStaminaCostText: {fileID: 114707086839473334}
