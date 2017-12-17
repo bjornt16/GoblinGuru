@@ -38,6 +38,8 @@ public class Encounters : MonoBehaviour {
     public string firstMainStoryEncounterName;
     public List<Enc> openMainStory;
 
+    public GameObject questionMarkPrefab;
+
     public Encounters()
     {
 
@@ -51,7 +53,17 @@ public class Encounters : MonoBehaviour {
     public void pickRandom()
     {
         int randomNum = 0;
-        currentEnc = GetRandomStoryEncounter();
+        if(player.Tile.Encounter != null)
+        {
+            currentEnc = player.Tile.Encounter;
+            player.Tile.Encounter = null;
+            DestroyObject(player.Tile.EncQuestionMark);
+            player.Tile.EncQuestionMark = null;
+        }
+        else
+        {
+            currentEnc = GetRandomStoryEncounter();
+        }
         Debug.Log(currentEnc.name);
         Initialize();
     }
@@ -212,12 +224,22 @@ public class Encounters : MonoBehaviour {
         bool startRightAway = false;
         for (int i = 0; i < openList.Count; i++)
         {
-            Debug.Log("yerp");
-            openMainStory.Add(GetEncounterByName(encList, openList[i]));
+            Enc temp = GetEncounterByName(encList, openList[i]);
+            if(temp != null && CheckForDuplicate(openMainStory, temp) == null)
+            {
+                openMainStory.Add(GetEncounterByName(encList, openList[i]));
+            }
             if (currentEnc.triggerOnComplete != null && i < currentEnc.triggerOnComplete.Count && currentEnc.triggerOnComplete[i])
             {
                 currentEnc = GetEncounterByName(encList, openList[i]);
                 startRightAway = true;
+            }
+            else
+            {
+                //todo spawn stuff
+                player.Tile.tileUp.tileUp.Encounter = temp;
+                player.Tile.tileUp.tileUp.EncQuestionMark = Instantiate(questionMarkPrefab);
+                player.Tile.tileUp.tileUp.EncQuestionMark.transform.position = player.Tile.tileUp.tileUp.transform.position;
             }
         }
 
