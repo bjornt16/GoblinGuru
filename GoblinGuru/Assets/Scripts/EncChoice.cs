@@ -52,9 +52,9 @@ public class EncChoice
             player = GameStateManager.Instance.player;
         }
 
-        if(type == EncChoiceType.combat)
+        if (type == EncChoiceType.combat)
         {
-            if(combatTarget == null)
+            if (combatTarget == null)
             {
                 Debug.Log("Wtf?!?!");
             }
@@ -62,14 +62,14 @@ public class EncChoice
             Combat.Instance.Init(combatTarget);
             return win;
         }
-        else if(type == EncChoiceType.none)
+        else if (type == EncChoiceType.none)
         {
             return win;
         }
-        else
+        else if (type == EncChoiceType.roll)
         {
             bool attempt = player.statistics.Roll(rollType, dc);
-            Debug.Log(attempt);
+
             if (attempt)
             {
                 Debug.Log("Choice Win");
@@ -81,8 +81,25 @@ public class EncChoice
                 return loss;
             }
         }
+        else if (type == EncChoiceType.statCheck)
+        {
+            bool attempt = player.statistics.StatCheck(stat, statAmount);
+
+            if (attempt)
+            {
+                Debug.Log("Choice Win");
+                return win;
+            }
+            else
+            {
+                Debug.Log("Choice Loss");
+                return loss;
+            }
+        }
+        else return win;
 
     }
+
 }
 
 public enum EncChoiceType

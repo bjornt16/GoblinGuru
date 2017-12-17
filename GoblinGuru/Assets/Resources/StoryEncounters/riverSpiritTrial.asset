@@ -69,7 +69,28 @@ MonoBehaviour:
         node: {fileID: 114071189627085356}
       _direction: 0
       _dynamic: 1
+  text: You look around the room and try pressing every bit of stone you can reach
+    with no real success. You end up going through the obvious door.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 0
+    dc: 10
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -93,6 +114,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -114,26 +136,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You look around the room and try pressing every bit of stone you can reach
-    with no real success. You end up going through the obvious door.
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 0
-    dc: 10
-    type: 1
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114041080949546052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,51 +239,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "The way ahead reveals itself, with no fanfare you find yourself entering
     the second room.\r\n\r\nIn this room there is a statue depicting a dead man with
     slash marks on his shoulders and two small holes in the side of his neck. There
@@ -356,6 +314,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114071189627085356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,51 +458,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "You go through the only obvious door into the next room, where there is a
     riddle written onto a pillar, and four illustrated tiles around it.\r\n\r\nIt
     reads\r \n\n\"I am big and loud, but also gentle and strong.\""
@@ -569,6 +530,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114136862619823960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,7 +610,12 @@ MonoBehaviour:
         node: {fileID: 114400350646709798}
       _direction: 1
       _dynamic: 0
+  text: With a satisfying click, a wall section slides open. You follow through into
+    a tunnel that leads to the exit. Exiting from the trial, you feel that the spirit
+    approves.
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -625,6 +639,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -647,10 +662,7 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - riverSpiritTrialComplete
-  text: With a satisfying click, a wall section slides open. You follow through into
-    a tunnel that leads to the exit. Exiting from the trial, you feel that the spirit
-    approves.
-  choices: []
+  triggerOnComplete: 01
 --- !u!114 &114148732755203744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,51 +727,6 @@ MonoBehaviour:
         node: {fileID: 114007965439831682}
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 7
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "Entering the opening, you find yourself in a clearly artificial room with
     writing carved onto the stone walls.\r\n\r\nIt reads\r\n\r\n\u201CTo succeed you
     need to answer a riddle and solve a mystery, go through to the first room to do
@@ -800,6 +767,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 7
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114294052670824668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,51 +911,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "You go through the only obvious door into the next room, where there is a
     riddle written onto a pillar, and four illustrated tiles around it.\r\n\r\nIt
     reads\r\n\n\"I am a creature of the shadows, yet men fear me not.\""
@@ -1013,6 +983,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114400350646709798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,51 +1111,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "You decide to observe the room more closely, starting with the coffin. As
     you observe it closely, you notice that the lid is slightly ajar. Opening it reveals
     a vampire statue in there, in any case it wasn\u2019t properly locked as it should
@@ -1196,6 +1169,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114603813540466678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1298,51 +1319,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "In this room there is a statue depicting a dead man with slash marks on his
     shoulders and two small holes in the side of his neck. There is also a table of
     various tools and a coffin.\r\n\r\nA quick cursory looks reveals writing on the
@@ -1416,6 +1392,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114737149727178116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1456,7 +1480,13 @@ MonoBehaviour:
         node: {fileID: 114400350646709798}
       _direction: 1
       _dynamic: 0
+  text: The panels slide in and flip into revealing only normal sides, you have failed.
+    A way out opens, taking it leads you to the hill again but the path to the river
+    source is barred. You can feel a palpable aura of disappointment coming from there,
+    you will have to defeat the warlock without her.
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -1480,6 +1510,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1499,13 +1530,10 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  text: The panels slide in and flip into revealing only normal sides, you have failed.
-    A way out opens, taking it leads you to the hill again but the path to the river
-    source is barred. You can feel a palpable aura of disappointment coming from there,
-    you will have to defeat the warlock without her.
-  choices: []
+  opensEncounter: 1
+  encounters:
+  - goblinWarrior
+  triggerOnComplete: 00
 --- !u!114 &114745400966306694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1586,51 +1614,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "You decide to observe the room more closely, starting with the coffin. As
     you observe it closely, you don\u2019t see anything wrong, it\u2019s firmly locked
     and you can\u2019t open it.\r\n\r\nThen you look at the table with tools on it,
@@ -1688,6 +1671,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114878684389617366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1734,51 +1765,6 @@ MonoBehaviour:
         node: {fileID: 114603813540466678}
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 1
-  hasReward: 0
-  hpCost: 1
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "You look around the room and try pressing every bit of stone you can reach
     with no real success. As you scan the room thoroughly you notice the slight oddity
     that the writing on the wall has sharp edges.\r\n\r\nYou run your finger along
@@ -1802,3 +1788,51 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 1
+  hasReward: 0
+  hpCost: 1
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 

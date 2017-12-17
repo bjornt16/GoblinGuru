@@ -11,4 +11,314 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
   m_Name: mountainSpiritTrialCcomplete
   m_EditorClassIdentifier: 
-  nodes: []
+  nodes:
+  - {fileID: 114930861992698992}
+  - {fileID: 114384848789586398}
+  - {fileID: 114917786710735092}
+--- !u!114 &114384848789586398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 81, y: 57}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114384848789586398}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114930861992698992}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114384848789586398}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114917786710735092}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114384848789586398}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  text: WIth the power of the mountain you can bulk up into a huge rocky figure. You
+    can also sometimes move rocks to your advantage.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue.
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 1
+    variableKey: noSpiritBonded
+    variableValue: 1
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 1
+  variableKey: mountainSpiritBonded
+  variableValue: 1
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114917786710735092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 712, y: 88}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114917786710735092}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114384848789586398}
+      _direction: 1
+      _dynamic: 0
+  text: You have bonded with your first spirit, congratulations!
+  choices: []
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 1
+  variableKey: noSpiritBonded
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114930861992698992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -546, y: -77}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114930861992698992}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114930861992698992}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114384848789586398}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114930861992698992}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  text: "As you enter the cave a second time, the spirit bolsters your every step.
+    It actually manifests a corporeal body for the first time, that of a beefy stone
+    humanoid twice your size.\r\n\r\n\u201CI expected you to fail, but you proved
+    me wrong!\u201D\r\n\r\nHe wasn\u2019t upset with you for getting around the limits
+    of your own strength, interesting.\r\n\r\n\u201CStrength is nothing if not applied
+    smartly. I\u2019m glad you saw that, the bluster earlier wasn\u2019t entirely
+    true.\u201D\r\n\r\nYou nod.\r\n\r\n\u201CWell now it\u2019s time, I Uddarain of
+    the mountain will stick with you till the end!\u201D\r\n\r\nUddarain extends an
+    earthen chain out, which you accept. It becomes an ethereal construct of red and
+    orange that weaves itself into a suit of mail armor around your soul.\r\n\r\nIt\u2019s
+    power is thick and heavy, well suited for crushing obstacles in your path.\r\n"
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue.
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 7
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 

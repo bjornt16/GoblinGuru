@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: openingSwamp2(MainStory2)
+  m_Name: warlockFinalBattle2
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 114319232066171724}
-  - {fileID: 114307956561845988}
-  - {fileID: 114059757718121628}
-  - {fileID: 114912705839574784}
-  - {fileID: 114373877340738308}
---- !u!114 &114059757718121628
+  - {fileID: 114966414478365068}
+  - {fileID: 114965379136510836}
+  - {fileID: 114071237119033766}
+  - {fileID: 114069047979570706}
+  - {fileID: 114614007125534418}
+--- !u!114 &114069047979570706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -26,24 +26,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
+  m_Name: Encounter Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 152, y: -328}
+  position: {x: 600, y: -136}
   ports:
     keys:
     - encOutput
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114059757718121628}
+      _node: {fileID: 114069047979570706}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: instanceInput_0
-        node: {fileID: 114307956561845988}
+        node: {fileID: 114071237119033766}
       _direction: 1
       _dynamic: 0
-  text: Game Over.
+  text: 'After finally vanquishing '
   choices: []
   encOutput:
     name: 
@@ -93,7 +93,7 @@ MonoBehaviour:
   opensEncounter: 0
   encounters: []
   triggerOnComplete: 
---- !u!114 &114307956561845988
+--- !u!114 &114071237119033766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -102,10 +102,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
+  m_Name: Encounter Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -424, y: -344}
+  position: {x: -72, y: 8}
   ports:
     keys:
     - encOutput
@@ -113,44 +113,44 @@ MonoBehaviour:
     - instanceInput_1
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114307956561845988}
+      _node: {fileID: 114071237119033766}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: instanceInput_0
-        node: {fileID: 114319232066171724}
+        node: {fileID: 114966414478365068}
       _direction: 1
       _dynamic: 0
     - _fieldName: instanceInput_0
-      _node: {fileID: 114307956561845988}
+      _node: {fileID: 114071237119033766}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114059757718121628}
+        node: {fileID: 114069047979570706}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_1
-      _node: {fileID: 114307956561845988}
+      _node: {fileID: 114071237119033766}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114614007125534418}
       _direction: 0
       _dynamic: 1
-  text: "Deciding that this had to end now, you vault over the rock and rush towards
-    the warlock. Ignoring the cry of alarm from your friend, you charge towards the
-    warlock. The warlock turns towards and your courage deserts you immediately as
-    his great shining orbs look right into your soul.\r\n\r\nFaster than you can scrabble
-    out of the way, a bolt of pale light races out from the figure, striking you in
-    the chest. You feel numbness and a creeping cold spread throughout your body for
-    a few moments before you black out.\r\n\r\nYou never wake up.\r\n"
+  text: "You grit your teeth and enter through the unreal bubble, your integrity is
+    tested but you push on through without much direct harm. On the other side you
+    see a devastated environment.\r\n\r\nYou continue moving until you find Lurka,
+    hard at work bending the unreal energies. She turns to face you, no words are
+    exchanged because none are needed.\r\n"
   choices:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
-    cText: Game Over!
+    cText: Fight!
     rollType: 0
-    dc: 0
-    type: 0
+    dc: 10
+    type: 2
     MustHaveItem: 0
     MustNotHaveItem: 0
     itemName: 
@@ -193,9 +193,9 @@ MonoBehaviour:
   requiredVariable: 0
   requiredVariableKey: 
   requiredVariableValue: 0
-  hasCost: 1
+  hasCost: 0
   hasReward: 0
-  hpCost: 20
+  hpCost: 0
   staminaCost: 0
   goldCost: 0
   itemCost: 
@@ -210,7 +210,159 @@ MonoBehaviour:
   opensEncounter: 0
   encounters: []
   triggerOnComplete: 
---- !u!114 &114319232066171724
+--- !u!114 &114614007125534418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 600, y: 312}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114614007125534418}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_1
+        node: {fileID: 114071237119033766}
+      _direction: 1
+      _dynamic: 0
+  text: 
+  choices: []
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114965379136510836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: Encounter Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1192, y: 456}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114965379136510836}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114966414478365068}
+      _direction: 1
+      _dynamic: 0
+  text: You turn back, because you do not feel ready yet.
+  choices: []
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
+--- !u!114 &114966414478365068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -222,7 +374,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -968, y: -328}
+  position: {x: -634, y: -178}
   ports:
     keys:
     - encOutput
@@ -232,57 +384,54 @@ MonoBehaviour:
     - instanceInput_3
     values:
     - _fieldName: encOutput
-      _node: {fileID: 114319232066171724}
+      _node: {fileID: 114966414478365068}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
       _direction: 1
       _dynamic: 0
     - _fieldName: instanceInput_0
-      _node: {fileID: 114319232066171724}
+      _node: {fileID: 114966414478365068}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114307956561845988}
+        node: {fileID: 114071237119033766}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_1
-      _node: {fileID: 114319232066171724}
+      _node: {fileID: 114966414478365068}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_2
-      _node: {fileID: 114319232066171724}
+      _node: {fileID: 114966414478365068}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: encOutput
-        node: {fileID: 114912705839574784}
+        node: {fileID: 114965379136510836}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_3
-      _node: {fileID: 114319232066171724}
+      _node: {fileID: 114966414478365068}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
       _direction: 0
       _dynamic: 1
-  text: "The sludge recoils from the incredible presence in the air. Without thinking
-    you and your friend run and hide behind the nearest rock. Soon enough a shrouded
-    figure enters your field of vision, it feels deeply wrong and is somehow managing
-    to glow black.\r\n\r\nYour heartbeat thunders in your ears as you try not to even
-    breathe too loudly, there is an unearthly wail from the sludge itself as the Warlock
-    approaches.\r\n"
+  text: As you approach the site, you feel it more and more. This is where Lurka does
+    her foul deeds, the bidding of void spirits. The place is surrounded by an unreal
+    bubble, you sense that if you enter then the final battle shall commence and there
+    is no turning back.
   choices:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
-    cText: 'If the warlock is not stopped, everything will go wrong, confront the
-      warlock. '
+    cText: Enter.
     rollType: 0
-    dc: 0
+    dc: 10
     type: 0
     MustHaveItem: 0
     MustNotHaveItem: 0
@@ -297,206 +446,9 @@ MonoBehaviour:
     variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
-    cText: 'The warlock is far beyond you, remain hidden. '
+    cText: "You\u2019re not ready yet."
     rollType: 0
-    dc: 0
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
-  encOutput:
-    name: 
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-    triggerOnComplete: 
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  triggerOnComplete: 
---- !u!114 &114373877340738308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 136, y: 168}
-  ports:
-    keys:
-    - encOutput
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114373877340738308}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_0
-        node: {fileID: 114912705839574784}
-      _direction: 1
-      _dynamic: 0
-  text: "It didn\u2019t take a genius to know that you shouldn\u2019t let it reach
-    you, so the two of you run as fast as your legs can carry you. It feels like your
-    lungs would burst at any moment as time passes. In the end you two make it out,
-    though not all the creatures of the swamp were so lucky.\r\n\r\nLooking back the
-    wave stops around the edges of the swamp, and only withered husks of reeds and
-    rotting wood remains. The swamp is dead, murdered by this figure.\r\n"
-  choices: []
-  encOutput:
-    name: 
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-    triggerOnComplete: 
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  triggerOnComplete: 
---- !u!114 &114912705839574784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
-  m_Name: EncounterNode
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -424, y: 248}
-  ports:
-    keys:
-    - encOutput
-    - instanceInput_0
-    - instanceInput_1
-    values:
-    - _fieldName: encOutput
-      _node: {fileID: 114912705839574784}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: instanceInput_2
-        node: {fileID: 114319232066171724}
-      _direction: 1
-      _dynamic: 0
-    - _fieldName: instanceInput_0
-      _node: {fileID: 114912705839574784}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: encOutput
-        node: {fileID: 114373877340738308}
-      _direction: 0
-      _dynamic: 1
-    - _fieldName: instanceInput_1
-      _node: {fileID: 114912705839574784}
-      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _dynamic: 1
-  text: "You huddle behind the rock with your friend and close your eyes. You shake
-    and shiver as an unnatural wail echoes throughout the area, the whole place shaking
-    as it\u2019s corrupted. Then with a loud crack, the shaking subsides and the gut-churning
-    presence of the warlock departs.\r\n\r\nThe muck is dead, you can feel it in your
-    bones. The two of you emerge from hiding to see that the swamp is being drained
-    of colour in a slow creeping wave that withers the reeds as it passes.\r\n"
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: continue
-    rollType: 0
-    dc: 0
+    dc: 10
     type: 0
     MustHaveItem: 0
     MustNotHaveItem: 0

@@ -66,7 +66,30 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
+  text: "Before you can put your plan into motion, one of the goblin workers calls,
+    you turn to see one looking at you and calling the ogre.\r\n\r\nThe ogre readies
+    an ogre-sized bullwhip and sees you, after brief surprise he recognizes that you\u2019re
+    not a worker and comes for you.\r"
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: 
+    rollType: 0
+    dc: 10
+    type: 2
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -90,6 +113,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -111,28 +135,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: "Before you can put your plan into motion, one of the goblin workers calls,
-    you turn to see one looking at you and calling the ogre.\r\n\r\nThe ogre readies
-    an ogre-sized bullwhip and sees you, after brief surprise he recognizes that you\u2019re
-    not a worker and comes for you.\r"
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: 
-    rollType: 0
-    dc: 10
-    type: 2
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114089799576842058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,51 +218,6 @@ MonoBehaviour:
         node: {fileID: 114082110452727828}
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "You hear them working as you approach, you hide and creep closer until you
     see it clearly. Several goblins are carefully picking golden herbs under the watchful
     eyes of an ogre. You feel revolted by the necklace the ogre wears, which sheds
@@ -316,6 +274,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114413093427063088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,7 +350,16 @@ MonoBehaviour:
         node: {fileID: 114683278823527006}
       _direction: 1
       _dynamic: 0
+  text: "You wait until nightfall and then sneak in, it was surprisingly easy since
+    the door was unlocked. You move carefully around in the darkness and find the
+    bedrooms after a short snoop around.\r\n\r\nMaking sure not to touch anyone, you
+    move around and look for the necklace in the dark. You eventually home in on the
+    disgusting void energies and carefully take the necklace from the sleeping ogre.\r\n\r\nYou
+    carefully get out, go back into the forest and break it with a rock. This way
+    they can\u2019t come back, it\u2019s time for you to head back to the glade.\r"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -368,6 +383,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -390,14 +406,7 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - forestSpiritTrialComplete
-  text: "You wait until nightfall and then sneak in, it was surprisingly easy since
-    the door was unlocked. You move carefully around in the darkness and find the
-    bedrooms after a short snoop around.\r\n\r\nMaking sure not to touch anyone, you
-    move around and look for the necklace in the dark. You eventually home in on the
-    disgusting void energies and carefully take the necklace from the sleeping ogre.\r\n\r\nYou
-    carefully get out, go back into the forest and break it with a rock. This way
-    they can\u2019t come back, it\u2019s time for you to head back to the glade.\r"
-  choices: []
+  triggerOnComplete: 00
 --- !u!114 &114468462342096332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,7 +433,16 @@ MonoBehaviour:
         node: {fileID: 114683278823527006}
       _direction: 1
       _dynamic: 0
+  text: "You wait until nightfall and then sneak in, it was surprisingly easy since
+    the door was unlocked. You move carefully around in the darkness and find the
+    bedrooms after a short snoop around.\r\n\r\nMaking sure not to touch anyone, you
+    move around and look for the necklace in the dark. You eventually home in on the
+    disgusting void energies and carefully take the necklace from the sleeping ogre.\r\n\r\nYou
+    carefully get out, go back into the forest and break it with a rock. This way
+    they can\u2019t come back, it\u2019s time for you to head back to the glade.\r"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -448,6 +466,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -470,14 +489,7 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - forestSpiritTrialComplete
-  text: "You wait until nightfall and then sneak in, it was surprisingly easy since
-    the door was unlocked. You move carefully around in the darkness and find the
-    bedrooms after a short snoop around.\r\n\r\nMaking sure not to touch anyone, you
-    move around and look for the necklace in the dark. You eventually home in on the
-    disgusting void energies and carefully take the necklace from the sleeping ogre.\r\n\r\nYou
-    carefully get out, go back into the forest and break it with a rock. This way
-    they can\u2019t come back, it\u2019s time for you to head back to the glade.\r"
-  choices: []
+  triggerOnComplete: 01
 --- !u!114 &114568811633642362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,7 +516,19 @@ MonoBehaviour:
         node: {fileID: 114683278823527006}
       _direction: 1
       _dynamic: 0
+  text: "You heft the mighty axe, too big to be wieldy in a fight but big enough for
+    your current goal. You sneak in to the sleeping ogre, making sure you get this
+    right you raise it high and throw your entire weight into a cut on the neck.\r\n\r\nAfter
+    a brief feeling of resistance, the ogres tough hide parts and the axe sinks into
+    flesh. The ogre violently wakes up and flails, it sees you but you avoid it as
+    it tries to get up only for it to finally fall onto the floor, dying.\r\n\r\nThe
+    racket woke the goblins up, who after seeing the ogres corpse let you pass without
+    incident. You take the amulet it wore and use the axe to smash it, removing the
+    accursed void energies from reality.\r\n\r\nYou head back to the forest, it was
+    time to report your success.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -528,6 +552,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -550,17 +575,7 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - forestSpiritTrialComplete
-  text: "You heft the mighty axe, too big to be wieldy in a fight but big enough for
-    your current goal. You sneak in to the sleeping ogre, making sure you get this
-    right you raise it high and throw your entire weight into a cut on the neck.\r\n\r\nAfter
-    a brief feeling of resistance, the ogres tough hide parts and the axe sinks into
-    flesh. The ogre violently wakes up and flails, it sees you but you avoid it as
-    it tries to get up only for it to finally fall onto the floor, dying.\r\n\r\nThe
-    racket woke the goblins up, who after seeing the ogres corpse let you pass without
-    incident. You take the amulet it wore and use the axe to smash it, removing the
-    accursed void energies from reality.\r\n\r\nYou head back to the forest, it was
-    time to report your success.\r\n"
-  choices: []
+  triggerOnComplete: 01
 --- !u!114 &114683278823527006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,51 +674,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "You wait until nightfall and then sneak in, it was surprisingly easy since
     the door was unlocked. You move carefully around in the darkness and snoop around,
     everyone being fast asleep made this easy.\r\n\r\nYour most important findings
@@ -780,6 +750,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114886369631838310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,7 +824,13 @@ MonoBehaviour:
         node: {fileID: 114089799576842058}
       _direction: 1
       _dynamic: 0
+  text: "You bide your time, eventually the ogre calls for a break and sits down.
+    Sensing that this was your chance you snuck around and when no goblin was looking,
+    struck the back of its head.\r\n\r\nIt staggers to its feet, bellowing in pain
+    and turns around to face you.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -830,6 +854,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -851,11 +876,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: "You bide your time, eventually the ogre calls for a break and sits down.
-    Sensing that this was your chance you snuck around and when no goblin was looking,
-    struck the back of its head.\r\n\r\nIt staggers to its feet, bellowing in pain
-    and turns around to face you.\r\n"
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114970662466023356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -918,51 +939,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "You decide to stay hidden and listen in on what they have to say about things.
     It was pretty easy to hide, the goblins were intensely focused and the ogre seemed
     lazy and carefree.\r\n\r\nYou learn that they\u2019re harvesting the herbs to
@@ -1005,6 +981,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114977311253807020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,7 +1055,19 @@ MonoBehaviour:
         node: {fileID: 114089799576842058}
       _direction: 1
       _dynamic: 0
+  text: "You bide your time, eventually the ogre calls for a break and sits down.
+    Sensing that this was your chance you snuck around and when no goblin was looking,
+    carefully removed the necklace from it.\r\n\r\nYou snuck away, when you were out
+    of sight you pick up a rock and bash the abominable thing until it finally breaks.
+    There is a cry in the distance as the ogre realises that the protection is gone,
+    followed by a lot of rustling and screaming.\r\n\r\nYour curiosity gets the better
+    of you and you go back and find that the goblins are nowhere to be seen and the
+    ogres feet are sticking out of ground. Roots encircle the remaining legs and finish
+    pulling it into the ground for good.\r\n\r\nYou should probably head back to the
+    glade.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -1055,6 +1091,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1076,17 +1113,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: "You bide your time, eventually the ogre calls for a break and sits down.
-    Sensing that this was your chance you snuck around and when no goblin was looking,
-    carefully removed the necklace from it.\r\n\r\nYou snuck away, when you were out
-    of sight you pick up a rock and bash the abominable thing until it finally breaks.
-    There is a cry in the distance as the ogre realises that the protection is gone,
-    followed by a lot of rustling and screaming.\r\n\r\nYour curiosity gets the better
-    of you and you go back and find that the goblins are nowhere to be seen and the
-    ogres feet are sticking out of ground. Roots encircle the remaining legs and finish
-    pulling it into the ground for good.\r\n\r\nYou should probably head back to the
-    glade.\r\n"
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114988410454853898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1113,7 +1140,19 @@ MonoBehaviour:
         node: {fileID: 114683278823527006}
       _direction: 1
       _dynamic: 0
+  text: "You heft the mighty axe, too big to be wieldy in a fight but big enough for
+    your current goal. You sneak in to the sleeping ogre, making sure you get this
+    right you raise it high and throw your entire weight into a cut on the neck.\r\n\r\nAfter
+    a brief feeling of resistance, the ogres tough hide parts and the axe sinks into
+    flesh. The ogre violently wakes up and flails, it sees you but you avoid it as
+    it tries to get up only for it to finally fall onto the floor, dying.\r\n\r\nThe
+    racket woke the goblins up, who after seeing the ogres corpse let you pass without
+    incident. You take the amulet it wore and use the axe to smash it, removing the
+    accursed void energies from reality.\r\n\r\nYou head back to the forest, it was
+    time to report your success.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -1137,6 +1176,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1159,14 +1199,4 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - forestSpiritTrialComplete
-  text: "You heft the mighty axe, too big to be wieldy in a fight but big enough for
-    your current goal. You sneak in to the sleeping ogre, making sure you get this
-    right you raise it high and throw your entire weight into a cut on the neck.\r\n\r\nAfter
-    a brief feeling of resistance, the ogres tough hide parts and the axe sinks into
-    flesh. The ogre violently wakes up and flails, it sees you but you avoid it as
-    it tries to get up only for it to finally fall onto the floor, dying.\r\n\r\nThe
-    racket woke the goblins up, who after seeing the ogres corpse let you pass without
-    incident. You take the amulet it wore and use the axe to smash it, removing the
-    accursed void energies from reality.\r\n\r\nYou head back to the forest, it was
-    time to report your success.\r\n"
-  choices: []
+  triggerOnComplete: 01

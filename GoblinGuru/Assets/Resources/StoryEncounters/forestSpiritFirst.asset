@@ -443,7 +443,11 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - forestSpiritTrial
+<<<<<<< HEAD
   triggerOnComplete: 
+=======
+  triggerOnComplete: 01
+>>>>>>> 670f2a432c9ab5cff9f5495f12f0d45135802dd6
 --- !u!114 &114347147348333450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,7 +665,11 @@ MonoBehaviour:
   choices:
   - winPort: instanceInput_0
     lossPort: instanceInput_1
+<<<<<<< HEAD
     cText: 
+=======
+    cText: "\u201CYes, there is a warlock and it\u2019s a big threat!\u201D"
+>>>>>>> 670f2a432c9ab5cff9f5495f12f0d45135802dd6
     rollType: 0
     dc: 10
     type: 0
@@ -678,7 +686,12 @@ MonoBehaviour:
     variableValue: 0
   - winPort: instanceInput_2
     lossPort: instanceInput_3
+<<<<<<< HEAD
     cText: 
+=======
+    cText: "\u201CEven if I did, just hearing you would be worth it. But yes, there\u2019s
+      a threat coming and I need your help.\u201D"
+>>>>>>> 670f2a432c9ab5cff9f5495f12f0d45135802dd6
     rollType: 0
     dc: 10
     type: 0
@@ -822,7 +835,11 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - forestSpiritTrial
+<<<<<<< HEAD
   triggerOnComplete: 
+=======
+  triggerOnComplete: 00
+>>>>>>> 670f2a432c9ab5cff9f5495f12f0d45135802dd6
 --- !u!114 &114645568687301972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,7 +1071,11 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - forestSpiritTrial
+<<<<<<< HEAD
   triggerOnComplete: 
+=======
+  triggerOnComplete: 01
+>>>>>>> 670f2a432c9ab5cff9f5495f12f0d45135802dd6
 --- !u!114 &114806702451116528
 MonoBehaviour:
   m_ObjectHideFlags: 0
