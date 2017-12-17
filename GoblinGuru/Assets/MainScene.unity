@@ -10267,7 +10267,7 @@ MonoBehaviour:
   villagePrefab: {fileID: 1073232751510830, guid: 9871b402b2583534aa3bb2ac3926b400,
     type: 2}
   cavePrefab: {fileID: 1405247023762854, guid: a8b7edfcc2acd6a47acda6db769edc13, type: 2}
-  bridgePrefab: {fileID: 1433814589691342, guid: f24430671946a8d449a574e03fd32c4b,
+  bridgePrefab: {fileID: 1175468641263968, guid: c88e53b8487078a43ae3105f6c6215f4,
     type: 2}
   castlePrefab: {fileID: 1327834103277118, guid: 21dd2ca7012150a408d4e8fea00040a6,
     type: 2}

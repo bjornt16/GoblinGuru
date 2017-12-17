@@ -32,11 +32,17 @@ public class TerrainFeaturePlacer : MonoBehaviour {
 
     public GameObject featuresBucket;
 
+    System.Random rnd = new System.Random();
+
     public void PlaceFeature(GameObject feature, TileFeatures featureType, int distanceFromSameFeature, List<TileTerrain> allowedTerrain)
     {
         List<GameTile> placed = new List<GameTile>();
         List<GameTile> allowedTiles = new List<GameTile>();
 
+        if (allowedTerrain.Contains(TileTerrain.River))
+        {
+            allowedTiles.AddRange(map.regionRiver);
+        }
         if (allowedTerrain.Contains(TileTerrain.DeepSea))
         {
             allowedTiles.AddRange(map.regionDeepSea);
@@ -67,11 +73,47 @@ public class TerrainFeaturePlacer : MonoBehaviour {
         {
             if (EvaluateFeaturePosition(allowedTiles[i].transform.position, placed, distanceFromSameFeature) && allowedTiles[i].tileFeatures == TileFeatures.None)
             {
-                GameObject temp = Instantiate(feature);
-                temp.transform.localPosition = allowedTiles[i].transform.position;
-                temp.transform.parent = featuresBucket.transform;
-                placed.Add(allowedTiles[i]);
-                allowedTiles[i].tileFeatures = featureType;
+                if(featureType == TileFeatures.Bridge)
+                {
+                    if(allowedTiles[i].tileDown.tileTerrain != TileTerrain.River && allowedTiles[i].tileUp.tileTerrain != TileTerrain.River &&
+                        allowedTiles[i].tileDown.tileTerrain != TileTerrain.ShallowSea && allowedTiles[i].tileUp.tileTerrain != TileTerrain.ShallowSea)
+                    {
+                        GameObject temp = Instantiate(feature);
+                        temp.transform.localPosition = allowedTiles[i].transform.position;
+                        Vector3 tempRot = temp.transform.localEulerAngles;
+                        tempRot.y = 90;
+                        temp.transform.localEulerAngles = tempRot;
+                        temp.transform.parent = featuresBucket.transform;
+                        placed.Add(allowedTiles[i]);
+                        allowedTiles[i].tileFeatures = featureType;
+                    }
+                    else if(allowedTiles[i].tileLeft.tileTerrain != TileTerrain.River && allowedTiles[i].tileRight.tileTerrain != TileTerrain.River &&
+                        allowedTiles[i].tileDown.tileTerrain != TileTerrain.ShallowSea && allowedTiles[i].tileUp.tileTerrain != TileTerrain.ShallowSea)
+                    {
+                        GameObject temp = Instantiate(feature);
+                        temp.transform.localPosition = allowedTiles[i].transform.position;
+                        temp.transform.parent = featuresBucket.transform;
+                        placed.Add(allowedTiles[i]);
+                        allowedTiles[i].tileFeatures = featureType;
+                    }
+                }
+                else
+                {
+                    GameObject temp = Instantiate(feature);
+                    temp.transform.localPosition = allowedTiles[i].transform.position;
+                    temp.transform.parent = featuresBucket.transform;
+                    placed.Add(allowedTiles[i]);
+                    allowedTiles[i].tileFeatures = featureType;
+
+                    if(featureType == TileFeatures.Castle || featureType == TileFeatures.Cave || featureType == TileFeatures.Town ||
+                        featureType == TileFeatures.Village || featureType == TileFeatures.swamp)
+                    {
+                        Vector3 tempRot = temp.transform.localEulerAngles;
+                        tempRot.y = rnd.Next(0, 4) * 90;
+                        temp.transform.localEulerAngles = tempRot;
+                    }
+                }
+
             }
         }
 
@@ -106,5 +148,29 @@ public class TerrainFeaturePlacer : MonoBehaviour {
         List<TileTerrain> snowTree = new List<TileTerrain>();
         snowTree.Add(TileTerrain.Snow);
         PlaceFeature(forestSnowPrefab, TileFeatures.Forest, 4, snowTree);
+
+        List<TileTerrain> bridge = new List<TileTerrain>();
+        bridge.Add(TileTerrain.River);
+        PlaceFeature(bridgePrefab, TileFeatures.Bridge, 15, bridge);
+
+        List<TileTerrain> castle = new List<TileTerrain>();
+        castle.Add(TileTerrain.Mountain);
+        castle.Add(TileTerrain.Snow);
+        PlaceFeature(castlePrefab, TileFeatures.Castle, 25, castle);
+
+        List<TileTerrain> city = new List<TileTerrain>();
+        city.Add(TileTerrain.Mountain);
+        city.Add(TileTerrain.Grass);
+        PlaceFeature(cityPrefab, TileFeatures.Town, 25, city);
+
+        List<TileTerrain> village = new List<TileTerrain>();
+        village.Add(TileTerrain.Sand);
+        village.Add(TileTerrain.Grass);
+        PlaceFeature(villagePrefab, TileFeatures.Village, 25, village);
+
+        List<TileTerrain> cave = new List<TileTerrain>();
+        cave.Add(TileTerrain.Snow);
+        cave.Add(TileTerrain.Mountain);
+        PlaceFeature(cavePrefab, TileFeatures.Cave, 20, cave);
     }
 }

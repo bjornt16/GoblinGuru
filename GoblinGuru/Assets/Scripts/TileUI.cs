@@ -40,8 +40,8 @@ public class TileUI : MonoBehaviour {
 
     IEnumerator AnimateFadeIn()
     {
-        if (!animating)
-        {
+        StopCoroutine(AnimateFadeIn());
+
             animating = true;
             Color oldImage = image.color;
             oldImage.a = 150/255f;
@@ -58,7 +58,7 @@ public class TileUI : MonoBehaviour {
                 yield return new WaitForEndOfFrame();
             }
             StartCoroutine(Hold());
-        }
+        
     }
 
     IEnumerator Hold()
@@ -89,7 +89,7 @@ public class TileUI : MonoBehaviour {
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        animating = false;
+
         
     }
 }

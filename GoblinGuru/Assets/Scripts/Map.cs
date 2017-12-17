@@ -115,7 +115,11 @@ public class Map : MonoBehaviour
 
     private void SortTile(GameTile tile)
     {
-        if(tile.tileTerrain == TileTerrain.DeepSea)
+        if (tile.tileTerrain == TileTerrain.River)
+        {
+            regionRiver.Add(tile);
+        }
+        else if (tile.tileTerrain == TileTerrain.DeepSea)
         {
             regionDeepSea.Add(tile);
             regionSea.Add(tile);

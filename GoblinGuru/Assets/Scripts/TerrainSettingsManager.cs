@@ -51,5 +51,5 @@ public enum TileTerrain{
 
 public enum TileFeatures
 {
-    None, Forest, Cave, swamp, Town, Village, Camp, Harbor, Bridge
+    None, Forest, Cave, swamp, Town, Village, Camp, Harbor, Bridge, Castle
 }
