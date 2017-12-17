@@ -62,6 +62,7 @@ public class Encounters : MonoBehaviour {
         }
         else
         {
+            Debug.Log("getRandom");
             currentEnc = GetRandomStoryEncounter();
         }
         Debug.Log(currentEnc.name);
