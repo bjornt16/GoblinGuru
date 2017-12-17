@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Sundust
   m_EditorClassIdentifier: 
   cardName: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 8df18735289e4bd428abc13d84dff98c, type: 3}
   description: 
   charges: 0
   UsableIn: 

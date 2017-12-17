@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Name: Melee Attack
   m_EditorClassIdentifier: 
   cardName: Sword Attack
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: db50ae95e5e073547852d3959a431cd7, type: 3}
   description: Sword Attack
   charges: 0
   UsableIn: 02000000
   UsableRange: 00000000
   type: 3
   effect: {fileID: 11400000, guid: 7970f7e1b1aa257479abd9a6d8ee6127, type: 2}
+  Equipped: 0
+  Slot: 0

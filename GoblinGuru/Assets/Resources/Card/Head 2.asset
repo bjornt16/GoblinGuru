@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Head 2
   m_EditorClassIdentifier: 
   cardName: Nice Hat
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 62a96cfe4a7401743a7acd8c1f3dfc4b, type: 3}
   description: Swell looking hat
   charges: 100
   UsableIn: 00000000
