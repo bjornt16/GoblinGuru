@@ -234,7 +234,7 @@ public class Encounters : MonoBehaviour {
                 currentEnc = GetEncounterByName(encList, openList[i]);
                 startRightAway = true;
             }
-            else
+            else if(temp != null)
             {
                 //todo spawn stuff
                 player.Tile.tileUp.tileUp.Encounter = temp;

@@ -45,6 +45,11 @@ public class MapGenerator : MonoBehaviour {
 
     public void GenerateMap(){
 
+        if (!Application.isPlaying)
+        {
+            return;
+        }
+
         float[,] noiseMap = NoiseGenerator.GenerateNoise(mapChunkSize, mapChunkSize, seed,  noiseScale, octaves, persistance, lacunarity, offset);
         Color[] colorMap = new Color[mapChunkSize * mapChunkSize];
         TileTerrain[] terrainMap = new TileTerrain[(mapChunkSize-1) * (mapChunkSize - 1)];
@@ -98,10 +103,7 @@ public class MapGenerator : MonoBehaviour {
             player.Instantiate(map.GenerateGameTiles()[((mapChunkSize-1) * (mapChunkSize-1)) / 2]);
             fogofwar.Initialize(map.Vertices, map.Triangles, map.Uvs, noiseMap.GetLength(0), noiseMap.GetLength(1));
             fogofwar.ClearFog(map.GameTiles[((mapChunkSize - 1) * (mapChunkSize - 1)) / 2], 3);
-
-            List<TileTerrain> typ = new List<TileTerrain>();
-            typ.Add(TileTerrain.Grass);
-            TerrainFeaturePlacer.Instance.PlaceFeature(TerrainFeaturePlacer.Instance.forestPrefab, 2, typ);
+            TerrainFeaturePlacer.Instance.PlaceFeatures();
         }
         else if (drawmode == DrawMode.FallOffMap)
         {
