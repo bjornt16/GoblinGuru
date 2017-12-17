@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c47326842235d0f4baf28e2b7b30a4b5, type: 3}
-  m_Name: Baneblade
+  m_Name: Flee Combat
   m_EditorClassIdentifier: 
-  cardName: Baneblade
-  image: {fileID: 21300000, guid: db50ae95e5e073547852d3959a431cd7, type: 3}
-  description: Magic sword
+  cardName: Flee Combat
+  image: {fileID: 0}
+  description: Flee Combat
   charges: -1
   UsableIn: 02000000
-  UsableRange: 0000000001000000
-  type: 3
-  effect: {fileID: 11400000, guid: 7970f7e1b1aa257479abd9a6d8ee6127, type: 2}
+  UsableRange: 02000000
+  type: 5
+  effect: {fileID: 11400000, guid: c116f12df9d9e004293ceca1bc7b62fd, type: 2}
   Equipped: 0
   Slot: 0

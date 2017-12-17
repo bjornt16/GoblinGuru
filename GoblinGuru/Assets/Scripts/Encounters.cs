@@ -141,6 +141,11 @@ public class Encounters : MonoBehaviour {
             {
                 player.statistics.DoSleep(currentEnc.rollSleep);
             }
+
+            if(currentEnc.itemReward != null)
+            {
+                player.AddCardObject(currentEnc.itemReward);
+            }
             //todo reward item
         }
 

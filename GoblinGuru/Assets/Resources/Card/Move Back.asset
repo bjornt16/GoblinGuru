@@ -19,3 +19,5 @@ MonoBehaviour:
   UsableRange: 0000000001000000
   type: 4
   effect: {fileID: 11400000, guid: e2dd8763cea359043b901cad5c97ce5c, type: 2}
+  Equipped: 0
+  Slot: 0
