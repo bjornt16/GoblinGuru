@@ -90,7 +90,10 @@ public class Card : MonoBehaviour {
             cardDescriptionText.text = description;
             cardStaminaCostText.text = "0";
             cardStat.text = "0";
-            cardImage.sprite = image;
+            if(image != null)
+            {
+                cardImage.sprite = image;
+            }
             
         }
     }
