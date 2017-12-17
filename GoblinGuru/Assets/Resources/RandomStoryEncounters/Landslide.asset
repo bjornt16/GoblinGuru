@@ -19,6 +19,7 @@ MonoBehaviour:
   - {fileID: 114235999295309052}
   - {fileID: 114049183211027434}
   - {fileID: 114043415888968082}
+  image: {fileID: 21300000, guid: b6b446f5441431a4c8c346f5afc9c890, type: 3}
 --- !u!114 &114034140220706962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +66,28 @@ MonoBehaviour:
         node: {fileID: 114049183211027434}
       _direction: 0
       _dynamic: 1
+  text: You quickly look for a rock you think will be able to stand the landslides
+    sheer strength.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 3
+    dc: 15
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -89,6 +111,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -110,26 +134,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You quickly look for a rock you think will be able to stand the landslides
-    sheer strength.
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 3
-    dc: 15
-    type: 1
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114043415888968082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +161,11 @@ MonoBehaviour:
         node: {fileID: 114049183211027434}
       _direction: 1
       _dynamic: 0
+  text: Finally the seemingly endless barrage of falling rocks stops and you are able
+    to walk away with a few bad bruises
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -180,6 +189,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -201,9 +212,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: Finally the seemingly endless barrage of falling rocks stops and you are able
-    to walk away with a few bad bruises
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114049183211027434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +257,29 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
+  text: You duck for what seems like an eternity until your shelter starts breaking
+    apart from the sheer power of the landslide until only so much is left of the
+    rock that you start to get hit by the occasional rock.
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Continue
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -272,6 +303,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -293,27 +326,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You duck for what seems like an eternity until your shelter starts breaking
-    apart from the sheer power of the landslide until only so much is left of the
-    rock that you start to get hit by the occasional rock.
-  choices:
-  - winPort: instanceInput_0
-    lossPort: instanceInput_1
-    cText: Continue
-    rollType: 0
-    dc: 10
-    type: 0
-    MustHaveItem: 0
-    MustNotHaveItem: 0
-    itemName: 
-    MustHaveItemType: 0
-    itemType: 0
-    combatTarget: {fileID: 0}
-    stat: 0
-    statAmount: 0
-    mustHaveVariable: 0
-    variableKey: 
-    variableValue: 0
+  triggerOnComplete: 
 --- !u!114 &114186809645533864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +353,11 @@ MonoBehaviour:
         node: {fileID: 114646645146126926}
       _direction: 1
       _dynamic: 0
+  text: You run as fast as your legs can carry you and are narrowly able to escape
+    the landslides reach.
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -364,6 +381,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -385,9 +404,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You run as fast as your legs can carry you and are narrowly able to escape
-    the landslides reach.
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114235999295309052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,7 +431,11 @@ MonoBehaviour:
         node: {fileID: 114034140220706962}
       _direction: 1
       _dynamic: 0
+  text: You duck for what seems like an eternity until the chaos finally stops and
+    you realize you are unscathed.
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -438,6 +459,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -459,9 +482,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You duck for what seems like an eternity until the chaos finally stops and
-    you realize you are unscathed.
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114337502177591290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,7 +509,11 @@ MonoBehaviour:
         node: {fileID: 114646645146126926}
       _direction: 1
       _dynamic: 0
+  text: You run as fast as your legs can carry you and when you think you've just
+    managed to escape the landslide a few small rocks come tumbling down at you.
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -512,6 +537,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -533,9 +560,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: You run as fast as your legs can carry you and when you think you've just
-    managed to escape the landslide a few small rocks come tumbling down at you.
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114646645146126926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,51 +623,6 @@ MonoBehaviour:
         node: {fileID: 114337502177591290}
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 7
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: You suddenly notice that a landslide is starting to roll down the side of
     a mountain near you.
   choices:
@@ -680,3 +660,52 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
+  terrainType: 7
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 

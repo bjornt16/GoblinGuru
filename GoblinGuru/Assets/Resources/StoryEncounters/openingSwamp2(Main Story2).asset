@@ -20,6 +20,7 @@ MonoBehaviour:
   - {fileID: 114986125816828524}
   - {fileID: 114206249017891374}
   - {fileID: 114211004395982054}
+  image: {fileID: 21300000, guid: de54779cc7b85c248830c168c43c0011, type: 3}
 --- !u!114 &114206249017891374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,7 +47,13 @@ MonoBehaviour:
         node: {fileID: 114522743730404248}
       _direction: 1
       _dynamic: 0
+  text: "It pauses, it seems exasperated somehow.\r\n\r\n\u201CI don\u2019t even know
+    how you don\u2019t know this, but as a Shaman you can communicate with us spirits.
+    How far has history been distorted for you not to know this?\u201D\r\n\r\nA grave
+    power enters the area, the muck quivers and you back away from its sheer presence."
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -70,6 +77,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -91,11 +100,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: "It pauses, it seems exasperated somehow.\r\n\r\n\u201CI don\u2019t even know
-    how you don\u2019t know this, but as a Shaman you can communicate with us spirits.
-    How far has history been distorted for you not to know this?\u201D\r\n\r\nA grave
-    power enters the area, the muck quivers and you back away from its sheer presence."
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114211004395982054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,51 +145,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "\u201CWhat, how can you tell?\u201D\r\n\r\nShe looks at you disbelievingly,
     almost like you\u2019d exclaimed the sky was purple.\r\n\r\n\u201CI can feel the
     muck shifting, I don\u2019t know how I can explain it.\u201D\r\n\r\nYou were about
@@ -208,6 +168,55 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114226728604380580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,51 +297,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "You turn to see the muck forming into a towering column! Your friend steps
     back shaking, but you hardly notice as the muck speaks to you, it\u2019s urgent.\r\n\r\n\u201CI
     sensed your arrival, it has been too long but time grows short. Even as we speak
@@ -389,6 +353,55 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114237036783320876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,51 +444,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "Having had enough of this smelly morass, you two make your way back by tracing
     your steps back. At first everything was going well, but then things became strange
     as the muck felt more and more\u2026 Alive.\r\n\r\nArizta seemed blissfully unaware
@@ -499,6 +467,55 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114522743730404248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,51 +578,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "The column ripples and pauses temporarily, before two shiny jet eyes emerge,
     staring at you.\r\n\r\n\u201CYou do now know, you are a shaman and your arrival
     here is at the latest possible moment.\u201D\r\n\r\nThat term sounded familiar
@@ -645,6 +617,55 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114627174981933526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,7 +692,15 @@ MonoBehaviour:
         node: {fileID: 114226728604380580}
       _direction: 1
       _dynamic: 0
+  text: "The pillar of muck continues speaking.\r\n\r\n\u201CTime is very short, so
+    you must remember what I say. A warlock is here and he plans on killing me and
+    others like me. To prevent a total catastrophe, you will need help and this can
+    only come from the others like me. One in the mountains, one in a river and one
+    in a forest.\u201D\r\n\r\nThe muck explained itself very rapidly, but then in
+    its shifting you feel a grave power entering the area.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -695,6 +724,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -716,13 +747,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: "The pillar of muck continues speaking.\r\n\r\n\u201CTime is very short, so
-    you must remember what I say. A warlock is here and he plans on killing me and
-    others like me. To prevent a total catastrophe, you will need help and this can
-    only come from the others like me. One in the mountains, one in a river and one
-    in a forest.\u201D\r\n\r\nThe muck explained itself very rapidly, but then in
-    its shifting you feel a grave power entering the area.\r\n"
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114853014752946310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,7 +774,14 @@ MonoBehaviour:
         node: {fileID: 114226728604380580}
       _direction: 1
       _dynamic: 0
+  text: "It pauses.\r\n\r\n\u201CA spirit, I am a spirit, have goblins really fallen
+    so far as to not remember us? You ignorant child, The future of spirits is in
+    your hands. The warlock comes, and seeks to kill us, you must find the others
+    and with them avert this disaster.\u201D\r\n\r\nA grave power enters the area,
+    the muck quivers and you back away from its sheer presence.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -773,6 +805,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -794,12 +828,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: "It pauses.\r\n\r\n\u201CA spirit, I am a spirit, have goblins really fallen
-    so far as to not remember us? You ignorant child, The future of spirits is in
-    your hands. The warlock comes, and seeks to kill us, you must find the others
-    and with them avert this disaster.\u201D\r\n\r\nA grave power enters the area,
-    the muck quivers and you back away from its sheer presence.\r\n"
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114986125816828524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,7 +855,13 @@ MonoBehaviour:
         node: {fileID: 114522743730404248}
       _direction: 1
       _dynamic: 0
+  text: " \u201CA warlock comes, he will kill me and all the other spirits. You must
+    visit the other spirits: Forest, Mountain, River and work together to deal with
+    him.\u201D\r\n\r\nA grave power enters the area, the muck quivers and you back
+    away from its sheer presence.\r\n\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -850,6 +885,8 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -871,8 +908,4 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: " \u201CA warlock comes, he will kill me and all the other spirits. You must
-    visit the other spirits: Forest, Mountain, River and work together to deal with
-    him.\u201D\r\n\r\nA grave power enters the area, the muck quivers and you back
-    away from its sheer presence.\r\n\n"
-  choices: []
+  triggerOnComplete: 

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114617223879692544}
+  image: {fileID: 21300000, guid: c583951e3595ff74a9dfc3bd9e3571b1, type: 3}
 --- !u!114 &114617223879692544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +70,7 @@ MonoBehaviour:
     opensEncounter: 0
     encounters: []
     triggerOnComplete: 
+    image: {fileID: 0}
   terrainType: 9
   featureType: 0
   requiredVariable: 0
