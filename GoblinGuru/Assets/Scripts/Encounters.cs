@@ -27,6 +27,7 @@ public class Encounters : MonoBehaviour {
 
     List<Enc> randEncList;
     List<Enc> encList;
+    List<Enc> restEncList;
     List<OptionButton> buttons;
 
     int encIndex = 0;
@@ -39,16 +40,6 @@ public class Encounters : MonoBehaviour {
     public List<Enc> openMainStory;
 
     public GameObject questionMarkPrefab;
-
-    public Encounters()
-    {
-
-    }
-    
-    public void AddEncounter(Encounter enc)
-    {
-
-    }
 
     public Map map;
 
@@ -67,6 +58,16 @@ public class Encounters : MonoBehaviour {
             currentEnc = GetRandomStoryEncounter();
         }
         Debug.Log(currentEnc.name + " " + player.Tile);
+        Initialize();
+    }
+
+    public void pickRandomRest()
+    {
+
+        Debug.Log("getRandom Rest");
+        
+        currentEnc = restEncList[UnityEngine.Random.Range(0, restEncList.Count)];
+
         Initialize();
     }
 
@@ -290,7 +291,7 @@ public class Encounters : MonoBehaviour {
             currentEnc = GetEncounterByName(encList, firstMainStoryEncounterName);
         }
         randEncList = buildEncList("RandomStoryEncounters");
-        currentRandEnc = randEncList[0];
+        restEncList = buildEncList("RestEncounter");
     }
 
 

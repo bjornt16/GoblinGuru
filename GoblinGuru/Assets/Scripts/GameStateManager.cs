@@ -69,6 +69,14 @@ public class GameStateManager : MonoBehaviour {
         e.pickRandom();
     }
 
+    public void startRestEncounter(string name)
+    {
+        FindObjectOfType<AudioManager>().Play("buttonClick");
+        GameTurnManager.Instance.NextTurn();
+        gameState = GameState.Encounter;
+        e.pickRandomRest();
+    }
+
     public void startCombat()
     {
         gameState = GameState.Combat;
