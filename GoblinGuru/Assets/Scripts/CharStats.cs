@@ -113,6 +113,20 @@ public class CharStats {
         }
     }
 
+    public void ModifyStamina(int damage)
+    {
+        stamina += damage;
+        if (stamina <= 0)
+        {
+            stamina = 0;
+            //todo trigger death??
+        }
+        else if (stamina > maxStamina)
+        {
+            stamina = maxStamina;
+        }
+    }
+
     public void UpdateXpCap()
     {
         xpCap = level * 4;
@@ -161,7 +175,63 @@ public class CharStats {
                 return d20 >= tD20;
         }
     }
-    
+
+
+    public bool StatCheck(CharacterStatsCheck stat, int statAmount)
+    {
+
+        switch (stat)
+        {
+            case CharacterStatsCheck.Hp:
+                return HP >= statAmount;
+            case CharacterStatsCheck.Stamina:
+                return stamina >= statAmount;
+            case CharacterStatsCheck.Dexterity:
+                return dexterity >= statAmount;
+            case CharacterStatsCheck.Strength:
+                return strength >= statAmount;
+            case CharacterStatsCheck.Wits:
+                return wits >= statAmount;
+            case CharacterStatsCheck.Charisma:
+                return charisma >= statAmount;
+            case CharacterStatsCheck.Speed:
+                return speed >= statAmount;
+            default:
+                return false;
+        }
+    }
+
+    public void DoSleep(SleepType sleep)
+    {
+        Debug.Log("sleep " + sleep);
+        switch (sleep)
+        {
+            case SleepType.none:
+                return;
+            case SleepType.terrible:
+                HP = Mathf.Clamp(HP + (int)(maxHP*0.1), HP, maxHP);
+                stamina = Mathf.Clamp(stamina - 2, 1, maxStamina);
+                return;
+            case SleepType.bad:
+                HP = Mathf.Clamp(HP + (int)(maxHP * 0.2), HP, maxHP);
+                stamina = Mathf.Clamp(stamina, stamina, maxStamina);
+                return;
+            case SleepType.normal:
+                HP = Mathf.Clamp(HP + (int)(maxHP * 0.3), HP, maxHP);
+                stamina = Mathf.Clamp(stamina + (int)(maxStamina * 0.5), 1, maxStamina);
+                return;
+            case SleepType.good:
+                HP = Mathf.Clamp(HP + (int)(maxHP * 0.4), HP, maxHP);
+                stamina = Mathf.Clamp(stamina + (int)(maxStamina * 0.75), 1, maxStamina);
+                return;
+            case SleepType.great:
+                HP = Mathf.Clamp(HP + (int)(maxHP * 0.5), HP, maxHP);
+                stamina = Mathf.Clamp(stamina + (int)(maxStamina * 1), 1, maxStamina);
+                return;
+            default:
+                return;
+        }
+    }
 }
 
 

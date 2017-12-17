@@ -7,7 +7,7 @@ public class MinimapManager : MonoBehaviour
 
     public Transform player;
 
-    public Camera camera;
+    public GameObject camera;
 
     private bool rotating;
 
@@ -47,27 +47,7 @@ public class MinimapManager : MonoBehaviour
             Vector3 tempPosition = camera.transform.localPosition;
             Vector3 oldPosition = tempPosition;
             Debug.Log(tempRotation);
-            if (tempPosition.x == 0 && tempPosition.z == -6.66f)
-            {
-                Debug.Log("rotate");
-                tempPosition.x = -6.66f;
-                tempPosition.z = 0;
-            }
-            else if (tempPosition.x == -6.66f && tempPosition.z == 0)
-            {
-                tempPosition.x = 0;
-                tempPosition.z = 6.66f;
-            }
-            else if (tempPosition.x == 0 && tempPosition.z == 6.66f)
-            {
-                tempPosition.x = 6.66f;
-                tempPosition.z = 0;
-            }
-            else if (tempPosition.x == 6.66f && tempPosition.z == 0)
-            {
-                tempPosition.x = 0;
-                tempPosition.z = -6.66f;
-            }
+
 
             camera.transform.localEulerAngles = tempRotation;
             camera.transform.localPosition = tempPosition;
@@ -87,26 +67,7 @@ public class MinimapManager : MonoBehaviour
             Vector3 tempPosition = camera.transform.localPosition;
             Vector3 oldPosition = tempPosition;
             Debug.Log(tempRotation);
-            if (tempPosition.x == 0 && tempPosition.z == -6.66f)
-            {
-                tempPosition.x = 6.66f;
-                tempPosition.z = 0;
-            }
-            else if (tempPosition.x == -6.66f && tempPosition.z == 0)
-            {
-                tempPosition.x = 0;
-                tempPosition.z = -6.66f;
-            }
-            else if (tempPosition.x == 0 && tempPosition.z == 6.66f)
-            {
-                tempPosition.x = -6.66f;
-                tempPosition.z = 0;
-            }
-            else if (tempPosition.x == 6.66f && tempPosition.z == 0)
-            {
-                tempPosition.x = 0;
-                tempPosition.z = 6.66f;
-            }
+
 
             camera.transform.localEulerAngles = tempRotation;
             camera.transform.localPosition = tempPosition;
