@@ -296,7 +296,7 @@ MonoBehaviour:
   featureType: 0
   requiredVariable: 1
   requiredVariableKey: riverSpiritBonded
-  requiredVariableValue: 0
+  requiredVariableValue: 1
   hasCost: 0
   hasReward: 0
   hpCost: 0
