@@ -56,7 +56,7 @@ public class Encounters : MonoBehaviour {
     public void pickRandom()
     {
         int randomNum = 0;
-        currentEnc = randEncList[0];
+        currentEnc = GetRandomStoryEncounter();
         Initialize();
     }
 
@@ -230,35 +230,94 @@ public class Encounters : MonoBehaviour {
             encIndex = 0;
             currentEnc = encList[0];
         }
-
         randEncList = buildEncList("RandomStoryEncounters");
         currentRandEnc = randEncList[0];
-
+       
         Initialize();
 
         //Initialize();
         //e.PlayEncounter();
     }
 
+    private void LoadAllEncounters()
+    {
+        encList = buildEncList("StoryEncounters");
+        if (encList.Count > 0)
+        {
+            encIndex = 0;
+            currentEnc = encList[0];
+        }
+        randEncList = buildEncList("RandomStoryEncounters");
+        currentRandEnc = randEncList[0];
+    }
+
+    System.Random rnd = new System.Random(123);
+    private Enc GetRandomStoryEncounter()
+    {
+        int randIndex = rnd.Next(0, randEncList.Count);
+        return randEncList[randIndex];
+    }
+
 
     private List<Enc> buildEncList(string folder)
     {
         List<Enc> list = new List<Enc>();
+        List<Enc> tempEncList = new List<Enc>();
         EncounterNodeGraph[] node = Resources.LoadAll<EncounterNodeGraph>(folder);
         Enc tempEnc = null;
+
         for (int n = 0; n < node.Length; n++)
         {
             Debug.Log("name " + node[n].name);
-            tempEnc = (Enc)node[n].nodes[0].GetOutputPort("encOutput").GetOutputValue();
-            recursiveBuildEnc(tempEnc, node, n, 0);
-            list.Add(tempEnc);
+            if(node[n].nodes.Count != 0)
+            {
+                tempEnc = (Enc)node[n].nodes[0].GetOutputPort("encOutput").GetOutputValue();
+                recursiveBuildEnc(tempEnc, node, n, 0, tempEncList);
+                list.Add(tempEnc);
+            }
         }
 
         Debug.Log(list);
         return list;
     }
 
-    private void recursiveBuildEnc(Enc currEnc, EncounterNodeGraph[] node, int nodeFileIndex, int nodeIndex)
+    private Enc CheckForDuplicate(List<Enc> list, Enc enc)
+    {
+        bool same = false;
+        if(enc != null)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                same = list[i].text == enc.text;
+                if (!same)
+                {
+                    continue;
+                }
+                same = list[i].choices.Count == enc.choices.Count;
+                if (same)
+                {
+                    for (int l = 0; l < list[i].choices.Count; l++)
+                    {
+                        same = list[i].choices[l].cText == enc.choices[l].cText;
+                        if (!same)
+                        {
+                            break;
+                        }
+
+                    }
+                }
+
+                if (same)
+                {
+                    return list[i];
+                }
+
+            }
+        }
+        return null;
+    }
+
+    private void recursiveBuildEnc(Enc currEnc, EncounterNodeGraph[] node, int nodeFileIndex, int nodeIndex, List<Enc> tempEncList)
     {
         int winNode = nodeIndex;
         int lossNode = nodeIndex;
@@ -267,16 +326,31 @@ public class Encounters : MonoBehaviour {
             currEnc.choices[i].win = (Enc)node[nodeFileIndex].nodes[nodeIndex].GetInputPort(currEnc.choices[i].winPort).GetInputValue();
             currEnc.choices[i].loss = (Enc)node[nodeFileIndex].nodes[nodeIndex].GetInputPort(currEnc.choices[i].lossPort).GetInputValue();
 
-            if (currEnc.choices[i].win != null)
+            Enc duplicateWin = CheckForDuplicate(tempEncList, currEnc.choices[i].win);
+            Enc duplicateLoss = CheckForDuplicate(tempEncList, currEnc.choices[i].loss);
+
+            Debug.Log("dup: " + duplicateWin);
+
+            if (currEnc.choices[i].win != null && duplicateWin == null)
             {
+                tempEncList.Add(currEnc.choices[i].win);
                 winNode = Array.IndexOf(node[nodeFileIndex].nodes.ToArray(), node[nodeFileIndex].nodes[nodeIndex].GetInputPort(currEnc.choices[i].winPort).GetConnection(0).node);
-                recursiveBuildEnc(currEnc.choices[i].win, node, nodeFileIndex, winNode);
+                recursiveBuildEnc(currEnc.choices[i].win, node, nodeFileIndex, winNode, tempEncList);
+            }
+            else
+            {
+                currEnc.choices[i].win = duplicateWin;
             }
 
-            if (currEnc.choices[i].loss != null)
+            if (currEnc.choices[i].loss != null && duplicateLoss == null)
             {
+                tempEncList.Add(currEnc.choices[i].loss);
                 lossNode = Array.IndexOf(node[nodeFileIndex].nodes.ToArray(), node[nodeFileIndex].nodes[nodeIndex].GetInputPort(currEnc.choices[i].lossPort).GetConnection(0).node);
-                recursiveBuildEnc(currEnc.choices[i].loss, node, nodeFileIndex, lossNode);
+                recursiveBuildEnc(currEnc.choices[i].loss, node, nodeFileIndex, lossNode, tempEncList);
+            }
+            else
+            {
+                currEnc.choices[i].loss = duplicateLoss;
             }
         }
     }

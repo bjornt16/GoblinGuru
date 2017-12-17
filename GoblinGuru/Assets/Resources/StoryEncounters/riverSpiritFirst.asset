@@ -11,4 +11,1079 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
   m_Name: riverSpiritFirst
   m_EditorClassIdentifier: 
-  nodes: []
+  nodes:
+  - {fileID: 114120797070745136}
+  - {fileID: 114157830116849906}
+  - {fileID: 114527219695247822}
+  - {fileID: 114956195270394312}
+  - {fileID: 114708314995537296}
+  - {fileID: 114071413612422392}
+  - {fileID: 114515965822614998}
+  - {fileID: 114274486915307840}
+  - {fileID: 114546747360243682}
+  - {fileID: 114172428407381566}
+--- !u!114 &114071413612422392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1032, y: 456}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114071413612422392}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_3
+        node: {fileID: 114157830116849906}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 1
+  encounters:
+  - riverSpiritTrial
+  text: "The face emerges from the water and emerges into a full watery figure.\r\n\r\n\u201CPerhaps,
+    You have managed to survive despite your small stature and the danger of the world.\u201D\r\n\r\nYou
+    nod.\r\n\r\nThe spirit shakes her head.\r\n\r\n\u201CNo, that could just be luck.
+    To really make sure I will have you solve some analytical puzzles to prove it.\u201D\r\n\r\nWell,
+    that would eat some into your time, but you see her point. You nod and follow
+    her pointing to a nearby opening in the hills.\r\n\r\nYou set off to get there.\r\n"
+  choices: []
+--- !u!114 &114120797070745136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -584, y: -200}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    - instanceInput_2
+    - instanceInput_3
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114120797070745136}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114120797070745136}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114157830116849906}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114120797070745136}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114120797070745136}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114527219695247822}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114120797070745136}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 3
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  text: "After a long and hard trek you\u2019ve finally reached the source of the
+    Thalia river. The water emanating from the source is practically thrumming with
+    spiritual energies flowing into intricate patterns.\r\n\r\nThe breathtaking complexity
+    builds into a simple face emerging on the water. The face regards you, studying
+    you in depth with a single glance.\r\n\r\nThen she speaks with an unmistakable
+    powerful and feminine voice.\r\n\r\n\u201CI have been expecting you.\u201D\r\n"
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: "\u201CHow did you know I was coming?\u201D"
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: "\u201CGood, I need your help to defeat a warlock.\u201D"
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+--- !u!114 &114157830116849906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 88, y: -264}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    - instanceInput_2
+    - instanceInput_3
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114157830116849906}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114120797070745136}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114157830116849906}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114956195270394312}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114157830116849906}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114157830116849906}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114708314995537296}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114157830116849906}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114071413612422392}
+      _direction: 0
+      _dynamic: 1
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  text: "The face remains impassive as it explains in a matter of fact manner.\r\n\r\n\u201CI
+    am observant and run through a major town where people are constantly speaking.
+    I can make assessments based on the patterns of their behaviour, and the current
+    pattern suggests a grave danger to the spirits.\u201D\r\n\r\nYou nod, and speak.\r\n\r\n\u201CYes,
+    there is a warlock on the loose who recently slew a swamp spirit. I saw it with
+    my own eyes.\u201D\r\n\r\nThere is a shift in the background patterns as the spirit
+    contemplates.\r\n\r\n\u201CI can help you, but to make the best use of my gift
+    you will need a knack for observation.\u201D\r"
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: "\u201CThis means a trial, correct?\u201D"
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: "\u201CIf I weren\u2019t observant, I wouldn\u2019t have made it this far.\u201D"
+    rollType: 3
+    dc: 20
+    type: 1
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+--- !u!114 &114172428407381566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 584, y: 1384}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114172428407381566}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_4
+        node: {fileID: 114527219695247822}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 1
+  encounters:
+  - riverSpiritTrial
+  text: "The spirit shakes her head.\r\n\r\n\u201CDo you not think that you need to
+    prove your skill? It will be quite simple, there are puzzles in the cave over
+    there.\u201D\r\n\r\nShe points to a cave opening in the hills nearby.\r\n"
+  choices: []
+--- !u!114 &114274486915307840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 584, y: 584}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114274486915307840}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114527219695247822}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 1
+  encounters:
+  - riverSpiritTrial
+  text: "\u201CYes, when used at the best moments you will be able to escape from
+    the seemingly inescapable with that power. You could also move water with it on
+    occasion, but that is not the main strength of it.\u201D\r\n\r\nYou nod, about
+    what one might expect.\r\n\r\n\u201CThen I suppose I will have to complete some
+    trial to prove that i am able to use this gift?\u201D\r\n\r\nThe spirit nods,
+    and you suddenly feel where you need to go. You follow this feeling to a cave
+    in a nearby hill.\r\n"
+  choices: []
+--- !u!114 &114515965822614998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1368, y: -40}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114515965822614998}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114708314995537296}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 1
+  variableKey: riverSpiritBonded
+  variableValue: 1
+  opensEncounter: 0
+  encounters: []
+  text: With the power of Thalisa you can analyze things better which opens up new
+    options. This gift also opens up the option of crossing water on the world map.
+  choices: []
+--- !u!114 &114527219695247822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 104, y: 504}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    - instanceInput_2
+    - instanceInput_3
+    - instanceInput_4
+    - instanceInput_5
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114527219695247822}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114120797070745136}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114527219695247822}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114274486915307840}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114527219695247822}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_2
+      _node: {fileID: 114527219695247822}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114546747360243682}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_3
+      _node: {fileID: 114527219695247822}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_4
+      _node: {fileID: 114527219695247822}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114172428407381566}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_5
+      _node: {fileID: 114527219695247822}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  text: "There is a shift in the background patterns as the spirit contemplates.\r\n\r\n\u201CThat
+    makes sense with what I know, I am willing to help. I must tell you before that
+    though that if you aren\u2019t observant and analytical you will not be able to
+    make the most of my gift.\u201D\r"
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: "\u201CIt\u2019s a form of enhanced analysis isn\u2019t it? At least that
+      is the main component of it.\u201D"
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_2
+    lossPort: instanceInput_3
+    cText: "\u201CThis means you will test me on my analytical skills yes?\u201D"
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+  - winPort: instanceInput_4
+    lossPort: instanceInput_5
+    cText: "\u201CBest use or not, I do not have time for learning a whole skill because
+      the warlock will not wait.\u201D"
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+--- !u!114 &114546747360243682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 568, y: 984}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114546747360243682}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114527219695247822}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 1
+  encounters:
+  - riverSpiritTrial
+  text: "She nods.\r\n\r\n\u201CYes, exactly. There is an opening in the hill nearby,
+    in there I have means to test your analytical skills.\u201D\r\n\r\nThe spirit
+    forms a tendril of water and points, in the distance where the tendril points,
+    you spot the opening in the distance. You set off and arrive there soon, it is
+    time for you to earn the ability.\r\n"
+  choices: []
+--- !u!114 &114708314995537296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 824, y: -200}
+  ports:
+    keys:
+    - encOutput
+    - instanceInput_0
+    - instanceInput_1
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114708314995537296}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114157830116849906}
+      _direction: 1
+      _dynamic: 0
+    - _fieldName: instanceInput_0
+      _node: {fileID: 114708314995537296}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114515965822614998}
+      _direction: 0
+      _dynamic: 1
+    - _fieldName: instanceInput_1
+      _node: {fileID: 114708314995537296}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _dynamic: 1
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 1
+  encounters:
+  - goblinWarrior
+  text: "The face emerges from the water and emerges into a full watery figure.\r\n\r\n\u201CPerhaps,
+    You have managed to survive despite your small stature and the danger of the world.\u201D\r\n\r\nYou
+    nod and decide to elaborate.\r\n\r\n\u201CWhen you live a life of being poor and
+    disliked, you quickly learn to take advantage of opportunities. I would never
+    have survived if I hadn\u2019t managed to scrounge, beg, read others and make
+    friends. In every case, I had to think and apply what I knew about the situation.\u201D\r\n\r\nThe
+    spirit nods and you see the faint outline of a smile form on her face.\r\n\r\n\u201CGood,
+    then we can begin right away. I Thalisa of the river swear to see this through
+    to the end.\u201D\r\n\r\nA blue and violet spraw of droplets soaks you, you do
+    not cry out as you detect their movement. They seep in and are absorbed into you,
+    forming a humid covering around your core.\r\n\r\nWith both parties being satisfied,
+    you set off again to continue on your quest.\r\n"
+  choices:
+  - winPort: instanceInput_0
+    lossPort: instanceInput_1
+    cText: Get Reward
+    rollType: 0
+    dc: 10
+    type: 0
+    MustHaveItem: 0
+    MustNotHaveItem: 0
+    itemName: 
+    MustHaveItemType: 0
+    itemType: 0
+    combatTarget: {fileID: 0}
+    stat: 0
+    statAmount: 0
+    mustHaveVariable: 0
+    variableKey: 
+    variableValue: 0
+--- !u!114 &114956195270394312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a1fea393d9b24581b5d9fad3b8685, type: 3}
+  m_Name: EncounterNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 840, y: -584}
+  ports:
+    keys:
+    - encOutput
+    values:
+    - _fieldName: encOutput
+      _node: {fileID: 114956195270394312}
+      _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: instanceInput_0
+        node: {fileID: 114157830116849906}
+      _direction: 1
+      _dynamic: 0
+  encOutput:
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 1
+  encounters:
+  - riverSpiritTrial
+  text: "The face nods.\r\n\r\n\u201CIt is not overly elaborate or physically demanding,
+    I just expect you to be able to solve some tasks based on analysis.\u201D\r\nYou
+    nod and feel where you need to go. You head out and soon spot the opening in a
+    hill nearby. This is where the trial begins.\r"
+  choices: []
