@@ -28,6 +28,7 @@ public class Encounters : MonoBehaviour {
     List<Enc> randEncList;
     List<Enc> encList;
     List<Enc> restEncList;
+
     List<OptionButton> buttons;
 
     int encIndex = 0;
@@ -55,7 +56,9 @@ public class Encounters : MonoBehaviour {
         else
         {
             Debug.Log("getRandom");
-            currentEnc = GetRandomStoryEncounter();
+            List<Enc> list = GetEncounterByTerrainAndFeature(randEncList, player.Tile.tileTerrain, player.Tile.tileFeatures);
+
+            currentEnc = list[UnityEngine.Random.Range(0, list.Count)];
         }
         Debug.Log(currentEnc.name + " " + player.Tile);
         Initialize();
@@ -65,8 +68,20 @@ public class Encounters : MonoBehaviour {
     {
 
         Debug.Log("getRandom Rest");
-        
-        currentEnc = restEncList[UnityEngine.Random.Range(0, restEncList.Count)];
+
+        List<Enc> list = GetEncounterByTerrainAndFeature(restEncList, player.Tile.tileTerrain, player.Tile.tileFeatures);
+        if(list.Count == 0)
+        {
+            list = GetEncounterByTerrainAndFeature(restEncList, TileTerrain.Land, player.Tile.tileFeatures);
+        }
+        if (list.Count == 0)
+        {
+            list = GetEncounterByTerrainAndFeature(restEncList, TileTerrain.Land, TileFeatures.None);
+        }
+
+        int index = UnityEngine.Random.Range(0, list.Count);
+        Debug.Log(index +" "+ list.Count);
+        currentEnc = list[UnityEngine.Random.Range(0, list.Count)];
 
         Initialize();
     }
@@ -125,8 +140,7 @@ public class Encounters : MonoBehaviour {
         {
             OptionButton tempButton = Instantiate(ui.buttonPrefab, ui.options.transform);
             tempButton.Initialize(0, "Continue");
-            //UnityEngine.UI.Button tempButton = Instantiate(ui.buttonPrefab, ui.options.transform).GetComponent<UnityEngine.UI.Button>();
-            //UnityEngine.UI.Text tempText = tempButton.gameObject.transform.GetComponentInChildren<UnityEngine.UI.Text>();
+
             buttons.Add(tempButton);
             tempButton.option.onClick.AddListener(() => CloseDialogue());
         }
@@ -146,10 +160,7 @@ public class Encounters : MonoBehaviour {
                     tempButton.Initialize(i, currentEnc.choices[i].cText);
                     buttons.Add(tempButton);
                     tempButton.option.onClick.AddListener(() => OnClickTask(tempButton.parameter));
-                    /*UnityEngine.UI.Text tempText = tempButton.gameObject.transform.GetComponentInChildren<UnityEngine.UI.Text>();
-                    tempText.text = encounters[0].currentState.choices[i].cText;
-                    Debug.Log("i is: " + i);
-                    tempButton.onClick.AddListener(() => OnClickTask(counter));*/
+
                 }
             }
         }
@@ -295,19 +306,12 @@ public class Encounters : MonoBehaviour {
     }
 
 
-    private Enc GetRandomStoryEncounter()
-    {
-        int randIndex = (int)UnityEngine.Random.Range(0, randEncList.Count);
-        Debug.Log("randindex" + randIndex);
-        return randEncList[randIndex];
-    }
-
-
     private List<Enc> buildEncList(string folder)
     {
         List<Enc> list = new List<Enc>();
         List<Enc> tempEncList = new List<Enc>();
         EncounterNodeGraph[] node = Resources.LoadAll<EncounterNodeGraph>(folder);
+        Debug.Log(folder + " " + node.Length);
         Enc tempEnc = null;
 
         for (int n = 0; n < node.Length; n++)
@@ -419,6 +423,20 @@ public class Encounters : MonoBehaviour {
         }
         return null;
     }
+
+    private List<Enc> GetEncounterByTerrainAndFeature(List<Enc> list, TileTerrain terrain, TileFeatures feature)
+    {
+        List<Enc> newList = new List<Enc>(); 
+        for (int i = 0; i < list.Count; i++)
+        {
+            if (list[i].terrainType == terrain && list[i].featureType == feature)
+            {
+                newList.Add(list[i]);
+            }
+        }
+        return newList;
+    }
+
 
     public GameTile GetNearestTile(TileTerrain terrain, TileFeatures feature, int distance)
     {
