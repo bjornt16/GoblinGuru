@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: openingSwamp2(MainStory2)
+  m_Name: openingSwamp3
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114319232066171724}
@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 114059757718121628}
   - {fileID: 114912705839574784}
   - {fileID: 114373877340738308}
-  image: {fileID: 21300000, guid: de54779cc7b85c248830c168c43c0011, type: 3}
+  image: {fileID: 0}
 --- !u!114 &114059757718121628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  text: "The sludge recoils from the incredible presence in the air. Without thinking
+  text: "The sludge retreats from the incredible presence in the air. Without thinking
     you and your friend run and hide behind the nearest rock. Soon enough a shrouded
     figure enters your field of vision, it feels deeply wrong and is somehow managing
     to glow black.\r\n\r\nYour heartbeat thunders in your ears as you try not to even
@@ -343,7 +343,7 @@ MonoBehaviour:
     triggerOnComplete: 
     image: {fileID: 0}
   terrainType: 11
-  featureType: 0
+  featureType: 3
   requiredVariable: 0
   requiredVariableKey: 
   requiredVariableValue: 0
@@ -443,9 +443,10 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  triggerOnComplete: 
+  opensEncounter: 1
+  encounters:
+  - openingSwamp4
+  triggerOnComplete: 01
 --- !u!114 &114912705839574784
 MonoBehaviour:
   m_ObjectHideFlags: 0

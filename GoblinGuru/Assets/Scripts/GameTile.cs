@@ -142,5 +142,10 @@ public class GameTile : MonoBehaviour {
         return (int)Mathf.Abs((coordinates.x - distTo.x)) + (int)Mathf.Abs(coordinates.y - distTo.y);
     }
 
+    public int DistanceTo(GameTile tile)
+    {
+        return (int)Mathf.Abs((coordinates.x - tile.coordinates.x)) + (int)Mathf.Abs(coordinates.y - tile.coordinates.y);
+    }
+
 
 }

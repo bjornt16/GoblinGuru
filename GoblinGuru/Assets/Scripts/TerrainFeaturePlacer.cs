@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,8 +31,6 @@ public class TerrainFeaturePlacer : MonoBehaviour {
     public GameObject campPrefab;
 
     public GameObject featuresBucket;
-
-    System.Random rnd = new System.Random();
 
     public void PlaceFeature(GameObject feature, TileFeatures featureType, int distanceFromSameFeature, List<TileTerrain> allowedTerrain)
     {
@@ -110,7 +107,7 @@ public class TerrainFeaturePlacer : MonoBehaviour {
                         featureType == TileFeatures.Village || featureType == TileFeatures.swamp)
                     {
                         Vector3 tempRot = temp.transform.localEulerAngles;
-                        tempRot.y = rnd.Next(0, 4) * 90;
+                        tempRot.y = (int)Random.Range(1f, 4f) * 90;
                         temp.transform.localEulerAngles = tempRot;
                     }
                 }

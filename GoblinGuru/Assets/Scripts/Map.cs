@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(MeshCollider))]
 public class Map : MonoBehaviour
@@ -269,5 +270,57 @@ public class Map : MonoBehaviour
     public void ApplyTexture(Texture2D texture)
     {
         GetComponent<MeshRenderer>().sharedMaterial.mainTexture = texture;
+    }
+
+    public GameTile GetNearestTile(GameTile tile, TileTerrain terrain, TileFeatures feature, int distance)
+    {
+        List<GameTile> allowed = new List<GameTile>();
+        if (terrain == TileTerrain.Land)
+        {
+            allowed.AddRange(regionLand);
+        }
+        else if (terrain == TileTerrain.River)
+        {
+            allowed.AddRange(regionRiver);
+        }
+        else if (terrain == TileTerrain.DeepSea)
+        {
+            allowed.AddRange(regionDeepSea);
+        }
+        else if (terrain == TileTerrain.ShallowSea)
+        {
+            allowed.AddRange(regionSea);
+        }
+        else if (terrain == TileTerrain.Sand)
+        {
+            allowed.AddRange(regionSand);
+        }
+        else if (terrain == TileTerrain.Grass || terrain == TileTerrain.Grass2)
+        {
+            allowed.AddRange(regionGrass);
+        }
+        else if (terrain == TileTerrain.Mountain || terrain == TileTerrain.Mountain2)
+        {
+            allowed.AddRange(regionMountain);
+        }
+        else if (terrain == TileTerrain.Snow || terrain == TileTerrain.Snow2)
+        {
+            allowed.AddRange(regionSnow);
+        }
+
+
+        allowed = allowed.OrderBy(o => o.DistanceTo(tile)).ToList();
+
+        while (true)
+        {
+            for (int i = 0; i < allowed.Count; i++)
+            {
+                if (tile.DistanceTo(allowed[i]) > distance && allowed[i].tileFeatures == feature)
+                {
+                    return allowed[i];
+                }
+            }
+            distance = Mathf.Clamp(distance-2, 1, distance);
+        }
     }
 }

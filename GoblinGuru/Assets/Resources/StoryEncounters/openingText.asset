@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6399826e2c44b447b32a3ed06646162, type: 3}
-  m_Name: openingText(MainStory0)
+  m_Name: openingText
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 114581311584517486}
-  image: {fileID: 21300000, guid: b6b446f5441431a4c8c346f5afc9c890, type: 3}
+  image: {fileID: 0}
 --- !u!114 &114581311584517486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,10 +44,10 @@ MonoBehaviour:
     one would let your starving self have food so you stole it.\r\n\r\nFor a moment
     it seemed to work without a hitch, until you bumped into one of your only true
     friends named Arizta. It was nice to see her, a fellow goblin like yourself but
-    it was at just the wrong moment.\r\n\r\nThe food fell out, and as you scrambled
-    to put it back in guards were summoned. You panicked, dragging Arizta with you,
-    the nearest safe place to lose them for sure would be the swamp.\r\n\r\nYou set
-    off, pursuit hot on your heels.\r\n"
+    it was at the wrong moment.\r\n\r\nThe food fell out, and as you scrambled to
+    put it back in guards were summoned. You panicked, dragging Arizta with you, the
+    nearest safe place to lose them for sure would be the swamp.\r\n\r\nYou set off,
+    pursuit hot on your heels.\r\n"
   choices: []
   encOutput:
     name: 
@@ -95,6 +95,7 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  triggerOnComplete: 
+  opensEncounter: 1
+  encounters:
+  - openingSwamp1
+  triggerOnComplete: 01

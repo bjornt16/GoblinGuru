@@ -15,7 +15,7 @@ MonoBehaviour:
   - {fileID: 114739352417562816}
   - {fileID: 114359752848256446}
   - {fileID: 114805363173952298}
-  image: {fileID: 21300000, guid: ec599e3cd6b27d84ea60bdc0bd10988c, type: 3}
+  image: {fileID: 0}
 --- !u!114 &114359752848256446
 MonoBehaviour:
   m_ObjectHideFlags: 0

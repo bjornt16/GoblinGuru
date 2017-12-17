@@ -50,6 +50,8 @@ public class Encounters : MonoBehaviour {
 
     }
 
+    public Map map;
+
     public void pickRandom()
     {
         int randomNum = 0;
@@ -75,8 +77,11 @@ public class Encounters : MonoBehaviour {
         {
             player = GameStateManager.Instance.player;
         }
-        
-        ui.EncounterImg.sprite = currentEnc.image;
+
+        if(currentEnc != null)
+        {
+            ui.EncounterImg.sprite = currentEnc.image;
+        }
         
 
         if (currentEnc.hasCost)
@@ -241,9 +246,11 @@ public class Encounters : MonoBehaviour {
             else if(temp != null)
             {
                 //todo spawn stuff
-                player.Tile.tileUp.tileUp.Encounter = temp;
-                player.Tile.tileUp.tileUp.EncQuestionMark = Instantiate(questionMarkPrefab);
-                player.Tile.tileUp.tileUp.EncQuestionMark.transform.position = player.Tile.tileUp.tileUp.transform.position;
+                GameTile spawn = GetNearestTile(temp.terrainType, temp.featureType, 3);
+
+                spawn.Encounter = temp;
+                spawn.EncQuestionMark = Instantiate(questionMarkPrefab);
+                spawn.EncQuestionMark.transform.position = spawn.transform.position;
             }
         }
 
@@ -314,10 +321,10 @@ public class Encounters : MonoBehaviour {
         currentRandEnc = randEncList[0];
     }
 
-    System.Random rnd = new System.Random(123);
+
     private Enc GetRandomStoryEncounter()
     {
-        int randIndex = rnd.Next(0, randEncList.Count);
+        int randIndex = (int)UnityEngine.Random.Range(0, randEncList.Count);
         return randEncList[randIndex];
     }
 
@@ -437,6 +444,11 @@ public class Encounters : MonoBehaviour {
             }
         }
         return null;
+    }
+
+    public GameTile GetNearestTile(TileTerrain terrain, TileFeatures feature, int distance)
+    {
+        return map.GetNearestTile(player.Tile, terrain, feature, distance);
     }
 
 }
