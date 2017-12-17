@@ -24,6 +24,7 @@ public class GameTile : MonoBehaviour {
     PathTile pathTile;
 
     public Enc Encounter;
+    public GameObject EncQuestionMark;
 
     public Vector3 Position
     {
