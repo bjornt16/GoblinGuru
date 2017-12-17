@@ -6,7 +6,7 @@ using UnityEngine;
 public class CardObject : ScriptableObject {
 
     public string cardName;
-    public UnityEngine.UI.RawImage image;
+    public UnityEngine.Sprite image;
     public string description;
     public int charges;
 

@@ -106,6 +106,7 @@ public class CharStats {
         {
             HP = 0;
             //todo trigger death
+
         }
         else if(HP > maxHP)
         {
