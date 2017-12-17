@@ -19,7 +19,6 @@ MonoBehaviour:
   - {fileID: 114620729135730840}
   - {fileID: 114800685389088994}
   - {fileID: 114251499225535964}
-  - {fileID: 0}
   - {fileID: 114286554727093884}
 --- !u!114 &114082655041903260
 MonoBehaviour:
@@ -220,7 +219,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 1
   encounters:
-  - warlockFinalBattle2
+  - warlockFinalBattle
   - warlockAttacksSpirit
   triggerOnComplete: 0000
 --- !u!114 &114286554727093884
@@ -235,7 +234,7 @@ MonoBehaviour:
   m_Name: EncounterNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1352, y: 2072}
+  position: {x: 1320, y: 1656}
   ports:
     keys:
     - encOutput
@@ -528,7 +527,7 @@ MonoBehaviour:
       soon.\u201D"
     rollType: 4
     dc: 20
-    type: 1
+    type: 0
     MustHaveItem: 0
     MustNotHaveItem: 0
     itemName: 

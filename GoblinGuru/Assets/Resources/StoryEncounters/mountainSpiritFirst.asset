@@ -684,9 +684,9 @@ MonoBehaviour:
   staminaReward: 0
   goldReward: 0
   rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
+  hasVariable: 1
+  variableKey: mountainSpiritBonded
+  variableValue: 1
   opensEncounter: 0
   encounters: []
   triggerOnComplete: 
@@ -796,7 +796,9 @@ MonoBehaviour:
       _node: {fileID: 114681575060347178}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: instanceInput_2
+        node: {fileID: 114880118846090152}
       _direction: 1
       _dynamic: 0
     - _fieldName: instanceInput_0
@@ -1089,7 +1091,9 @@ MonoBehaviour:
       _node: {fileID: 114880118846090152}
       _typeQualifiedName: Enc, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: encOutput
+        node: {fileID: 114681575060347178}
       _direction: 0
       _dynamic: 1
     - _fieldName: instanceInput_3
