@@ -212,7 +212,7 @@ MonoBehaviour:
   staminaCost: 0
   goldCost: 0
   itemCost: 
-  itemReward: {fileID: 0}
+  itemReward: {fileID: 11400000, guid: db4c1aa2c700e49459710d06afd4877a, type: 2}
   hpReward: 0
   staminaReward: 0
   goldReward: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
   staminaCost: 0
   goldCost: 0
   itemCost: 
-  itemReward: {fileID: 0}
+  itemReward: {fileID: 11400000, guid: db4c1aa2c700e49459710d06afd4877a, type: 2}
   hpReward: 0
   staminaReward: 0
   goldReward: 0
@@ -912,7 +912,7 @@ MonoBehaviour:
   staminaCost: 0
   goldCost: 0
   itemCost: 
-  itemReward: {fileID: 0}
+  itemReward: {fileID: 11400000, guid: db4c1aa2c700e49459710d06afd4877a, type: 2}
   hpReward: 0
   staminaReward: 0
   goldReward: 0
