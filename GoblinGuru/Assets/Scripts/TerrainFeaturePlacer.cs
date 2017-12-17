@@ -63,6 +63,7 @@ public class TerrainFeaturePlacer : MonoBehaviour {
                 temp.transform.localPosition = allowedTiles[i].transform.position;
                 temp.transform.parent = featuresBucket.transform;
                 placed.Add(allowedTiles[i]);
+                allowedTiles[i].tileFeatures = TileFeatures.Forest;
             }
         }
 

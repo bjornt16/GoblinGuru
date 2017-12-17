@@ -15,9 +15,23 @@ public class TileUI : MonoBehaviour {
     public void UpdateUI(GameTile tile)
     {
         string text = Enum.GetName(typeof(TileTerrain), tile.tileTerrain);
+
+        if (text == "Grass2")
+        {
+            text = "Grass";
+        }
+        if (text == "Mountain2")
+        {
+            text = "Mountain";
+        }
+        if (text == "Snow2")
+        {
+            text = "Snow";
+        }
+
         if(tile.tileFeatures != 0)
         {
-            text += "," + Enum.GetName(typeof(TileFeatures), tile.tileFeatures);
+            text += ", " + Enum.GetName(typeof(TileFeatures), tile.tileFeatures);
         }
 
         tileText.text = text;

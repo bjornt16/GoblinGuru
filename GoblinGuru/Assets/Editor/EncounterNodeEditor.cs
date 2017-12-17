@@ -155,17 +155,23 @@ public class EncounterNodeEditor : NodeEditor
             }
             if (encounter.triggerOnComplete == null || encounter.triggerOnComplete.Count == 0)
             {
-                encounter.triggerOnComplete = new List<bool>(encounter.encounters.Count);
+                encounter.triggerOnComplete = new List<bool>();
+            }
+            while(encounter.triggerOnComplete.Count < encounter.encounters.Count)
+            {
+                encounter.triggerOnComplete.Add(false);
             }
             for (int l = 0; l < encounter.encounters.Count; l++)
             {
                 if (GUILayout.Button("-", GUILayout.Width(30)))
                 {
                     encounter.encounters.RemoveAt(l);
+                    encounter.triggerOnComplete.RemoveAt(l);
                     l--;
                 }
                 else
                 {
+                    Debug.Log("test1" + encounter.triggerOnComplete.Count);
                     encounter.encounters[l] = EditorGUILayout.TextField(new GUIContent("Encounter Name"), encounter.encounters[l]);
                     encounter.triggerOnComplete[l] = EditorGUILayout.Toggle(new GUIContent("Trigger Right Away"), encounter.triggerOnComplete[l]);
                     if (encounter.triggerOnComplete[l])

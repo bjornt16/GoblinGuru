@@ -52,6 +52,7 @@ public class Encounters : MonoBehaviour {
     {
         int randomNum = 0;
         currentEnc = GetRandomStoryEncounter();
+        Debug.Log(currentEnc.name);
         Initialize();
     }
 
