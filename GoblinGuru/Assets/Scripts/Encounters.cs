@@ -57,8 +57,24 @@ public class Encounters : MonoBehaviour {
         {
             Debug.Log("getRandom");
             List<Enc> list = GetEncounterByTerrainAndFeature(randEncList, player.Tile.tileTerrain, player.Tile.tileFeatures);
+            if (list.Count == 0)
+            {
+                list = GetEncounterByTerrainAndFeature(randEncList, TileTerrain.Land, player.Tile.tileFeatures);
+            }
+            if (list.Count == 0)
+            {
+                list = GetEncounterByTerrainAndFeature(randEncList, TileTerrain.Land, TileFeatures.None);
+            }
+            if (list.Count != 0)
+            {
+                currentEnc = list[UnityEngine.Random.Range(0, list.Count)];
+            }
+            else
+            {
+                Enc temp = new Enc("Nothing eventful happens...", new List<EncChoice>(), player.Tile.tileTerrain, player.Tile.tileFeatures);
+                currentEnc = temp;
+            }
 
-            currentEnc = list[UnityEngine.Random.Range(0, list.Count)];
         }
         Debug.Log(currentEnc.name + " " + player.Tile);
         Initialize();
@@ -78,10 +94,17 @@ public class Encounters : MonoBehaviour {
         {
             list = GetEncounterByTerrainAndFeature(restEncList, TileTerrain.Land, TileFeatures.None);
         }
-
-        int index = UnityEngine.Random.Range(0, list.Count);
-        Debug.Log(index +" "+ list.Count);
-        currentEnc = list[UnityEngine.Random.Range(0, list.Count)];
+        if (list.Count != 0)
+        {
+            int index = UnityEngine.Random.Range(0, list.Count);
+            Debug.Log(index + " " + list.Count);
+            currentEnc = list[UnityEngine.Random.Range(0, list.Count)];
+        }
+        else
+        {
+            Enc temp = new Enc("Nothing eventful happens...", new List<EncChoice>(), player.Tile.tileTerrain, player.Tile.tileFeatures);
+            currentEnc = temp;
+        }
 
         Initialize();
     }
