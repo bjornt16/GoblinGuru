@@ -29,6 +29,7 @@ public class TerrainFeaturePlacer : MonoBehaviour {
     public GameObject bridgePrefab;
     public GameObject castlePrefab;
     public GameObject marshPrefab;
+    public GameObject campPrefab;
 
     public GameObject featuresBucket;
 
@@ -172,5 +173,10 @@ public class TerrainFeaturePlacer : MonoBehaviour {
         cave.Add(TileTerrain.Snow);
         cave.Add(TileTerrain.Mountain);
         PlaceFeature(cavePrefab, TileFeatures.Cave, 20, cave);
+
+        List<TileTerrain> camp = new List<TileTerrain>();
+        camp.Add(TileTerrain.Grass);
+        camp.Add(TileTerrain.Mountain);
+        PlaceFeature(campPrefab, TileFeatures.Camp, 20, camp);
     }
 }
