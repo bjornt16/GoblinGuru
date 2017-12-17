@@ -48,7 +48,18 @@ MonoBehaviour:
         node: {fileID: 114619803809803870}
       _direction: 1
       _dynamic: 0
+  text: "You figure you can pinpoint the location of the seer by listening in to the
+    bells so you follow them. Everything seems to be going swell, until you notice
+    that they\u2019ve been leading you in circles for a while now. From there you
+    are in some unfamiliar part of the cave, and don\u2019t know what to do.\r\n\r\nEventually
+    Arizta gets you to relax and retrace your steps back. After that was finally done
+    you ended up looking for him methodically until you finally found him.\r\n\r\nHe
+    was sitting meditatively in the center of a larger chamber illuminated by a pillar
+    of light, bells chimed and floated around him. He speaks in an even and measured
+    tone:\r\n\r\n\u201CWhat do you wish to ask of me, young ones?\u201D\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -72,6 +83,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -93,16 +105,7 @@ MonoBehaviour:
   variableValue: 0
   opensEncounter: 0
   encounters: []
-  text: "You figure you can pinpoint the location of the seer by listening in to the
-    bells so you follow them. Everything seems to be going swell, until you notice
-    that they\u2019ve been leading you in circles for a while now. From there you
-    are in some unfamiliar part of the cave, and don\u2019t know what to do.\r\n\r\nEventually
-    Arizta gets you to relax and retrace your steps back. After that was finally done
-    you ended up looking for him methodically until you finally found him.\r\n\r\nHe
-    was sitting meditatively in the center of a larger chamber illuminated by a pillar
-    of light, bells chimed and floated around him. He speaks in an even and measured
-    tone:\r\n\r\n\u201CWhat do you wish to ask of me, young ones?\u201D\r\n"
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114462921277407068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,51 +192,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "\u201CBecause you are one, as a shaman, you\u2019re exactly what the spirits
     need right now. If all goes well, then other people may take up the art as well
     and you can rest.\u201D\r\n\r\nYou blink and look yourself over, it still feels
@@ -293,6 +251,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114531793731725860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,51 +363,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "You head over and examine the nearest glowing patch, it takes a bit climbing
     but soon you see it up close. The glowing patches appear to be glowing moss rooted
     in the rock. They are mostly glowing in an ethereal teal, the light is only bright
@@ -442,6 +403,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114605437123196250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,51 +535,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "The seer nods.\r\n\r\n\u201CYes, I felt that. You must watch out for him
     child, warlocks are extremely driven and meddle with forces out of this world.\u201D\r\n\r\nYou
     nod.\r\n\r\n\u201CIn the void outside the world there reside void spirits, These
@@ -635,6 +599,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114619803809803870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,51 +727,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 2
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "As you two enter the cave, you hear the faint jingling of bells, distorted
     by echoes. The strange rock formation and glowing patches on the wall, create
     a strange and eerie feeling where sound and light are distorted.\r"
@@ -815,6 +782,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 2
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114625657301034852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,7 +858,19 @@ MonoBehaviour:
         node: {fileID: 114855969044866046}
       _direction: 1
       _dynamic: 0
+  text: "He snorts, \u201CYes I suppose it is, but you still shouldn\u2019t be so
+    impudent.\u201D\r\n\r\nYou fear you may have lost the chance, but he sighs.\r\n\r\n\u201CWell
+    since a crisis is brewing I will speak quickly. You are a Shaman which means you
+    can talk to spirits, you need to talk to the Forest spirit, Mountain Spirit and
+    River Spirit.\u201D\r\n\r\nYou nod.\r\n\r\n\u201CThey\u2019re in Goldwood forest,
+    Uddarra mountain and Thalia river respectively.\u201D\r\n\r\nYou got what you
+    needed, you get up to leave.\r\n\r\n\u201CLeaving right away? Well you don\u2019t
+    waste any time. Just try not to be too hasty young one. You should prepare for
+    your journey, and you can come back later after you have encountered a spirit
+    for further advice.\u201D"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -867,6 +894,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -891,17 +919,8 @@ MonoBehaviour:
   - forestSpiritFirst
   - mountainSpiritFirst
   - riverSpiritFirst
-  text: "He snorts, \u201CYes I suppose it is, but you still shouldn\u2019t be so
-    impudent.\u201D\r\n\r\nYou fear you may have lost the chance, but he sighs.\r\n\r\n\u201CWell
-    since a crisis is brewing I will speak quickly. You are a Shaman which means you
-    can talk to spirits, you need to talk to the Forest spirit, Mountain Spirit and
-    River Spirit.\u201D\r\n\r\nYou nod.\r\n\r\n\u201CThey\u2019re in Goldwood forest,
-    Uddarra mountain and Thalia river respectively.\u201D\r\n\r\nYou got what you
-    needed, you get up to leave.\r\n\r\n\u201CLeaving right away? Well you don\u2019t
-    waste any time. Just try not to be too hasty young one. You should prepare for
-    your journey, and you can come back later after you have encountered a spirit
-    for further advice.\u201D"
-  choices: []
+  - seerSecond
+  triggerOnComplete: 00000000
 --- !u!114 &114682715217372110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,51 +1023,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "Your ears perk up as you listen to the distorted chimes, if there is anything
     a goblin was good at it was using his big ears. You follow the chimes, noticing
     small shifts that might escape others notice to pinpoint the chiming.\r\n\r\nArizta
@@ -1130,6 +1104,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114702710374084910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1160,7 +1182,17 @@ MonoBehaviour:
         node: {fileID: 114605437123196250}
       _direction: 1
       _dynamic: 0
+  text: "\u201CI see you\u2019re leaving now, before you go I just want to tell you
+    my name. It is Jongil.\u201D\r\n\r\nYou make a mental note of that name.\r\n\r\n\u201CThank
+    you for that information, I have many things to think about. I will leave now.\u201D\r\n\r\nHe
+    nods.\r\n\r\n\u201CIndeed, you can come again after meeting spirits for more advice.\u201D\r\n\r\nYou
+    leave the caverns with Arizta in tow. There are many things that need doing, at
+    least if you intend to stop that warlock. You being a Shaman is also just such
+    a revelation, you don\u2019t know how to do it so you will have to bear the weight
+    of being the first in ages.\r\n\r\nIt is frightening, but also exciting.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -1184,6 +1216,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1208,15 +1241,8 @@ MonoBehaviour:
   - forestSpiritFirst
   - mountainSpiritFirst
   - riverSpiritFirst
-  text: "\u201CI see you\u2019re leaving now, before you go I just want to tell you
-    my name. It is Jongil.\u201D\r\n\r\nYou make a mental note of that name.\r\n\r\n\u201CThank
-    you for that information, I have many things to think about. I will leave now.\u201D\r\n\r\nHe
-    nods.\r\n\r\n\u201CIndeed, you can come again after meeting spirits for more advice.\u201D\r\n\r\nYou
-    leave the caverns with Arizta in tow. There are many things that need doing, at
-    least if you intend to stop that warlock. You being a Shaman is also just such
-    a revelation, you don\u2019t know how to do it so you will have to bear the weight
-    of being the first in ages.\r\n\r\nIt is frightening, but also exciting.\r\n"
-  choices: []
+  - seerSecond
+  triggerOnComplete: 00000000
 --- !u!114 &114855969044866046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,51 +1343,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 1
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 2
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "You methodically search for him, after a while you finally find the path
     leading to him via process of elimination. You reach a wide open chamber illuminated
     by a pillar of light in the middle. Sitting there in a meditative stance is man
@@ -1440,6 +1421,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 1
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 2
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114883516172553596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1528,51 +1557,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "The seer hums and looks at you more intently, you wriggle under the gaze
     from his milky white eyes.\r\n\r\n\u201CIt was a spirit child, a world spirit
     to be more precise. The spirit talked to you because you are a Shaman, I can see
@@ -1637,3 +1621,51 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 

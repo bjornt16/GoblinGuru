@@ -42,7 +42,15 @@ MonoBehaviour:
         node: {fileID: 114855229520047024}
       _direction: 1
       _dynamic: 0
+  text: "She hugs you and you return the favour, it makes you feel better but still
+    you can\u2019t shake your sense of unease over the monster going around.\r\n\r\n\u201CDon\u2019t
+    worry too much about it right now. We can get more information and alert people
+    to what\u2019s happening in good time.\u201D\r\n\r\nYou nod and she continues.\r\n\r\n\u201CI\u2019ve
+    heard that a seer lives in a cave not far from the swamp. It\u2019s as good a
+    place to start as any.\u201D\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -66,6 +74,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -85,15 +94,10 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  text: "She hugs you and you return the favour, it makes you feel better but still
-    you can\u2019t shake your sense of unease over the monster going around.\r\n\r\n\u201CDon\u2019t
-    worry too much about it right now. We can get more information and alert people
-    to what\u2019s happening in good time.\u201D\r\n\r\nYou nod and she continues.\r\n\r\n\u201CI\u2019ve
-    heard that a seer lives in a cave not far from the swamp. It\u2019s as good a
-    place to start as any.\u201D\r\n"
-  choices: []
+  opensEncounter: 1
+  encounters:
+  - seerFirst
+  triggerOnComplete: 00
 --- !u!114 &114744241184858228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +124,13 @@ MonoBehaviour:
         node: {fileID: 114855229520047024}
       _direction: 1
       _dynamic: 0
+  text: "\u201CWow, you\u2019re really getting involved? You saw what that thing can
+    do!\u201D\r\n\r\nYou steel your expression and nod grimly.\r\n\r\n\u201CSince
+    you\u2019re so determined I won\u2019t stop you. If you\u2019re really determined
+    to do it, we can head out now.\u201D\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -144,6 +154,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -163,13 +174,10 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  text: "\u201CWow, you\u2019re really getting involved? You saw what that thing can
-    do!\u201D\r\n\r\nYou steel your expression and nod grimly.\r\n\r\n\u201CSince
-    you\u2019re so determined I won\u2019t stop you. If you\u2019re really determined
-    to do it, we can head out now.\u201D\r\n"
-  choices: []
+  opensEncounter: 1
+  encounters:
+  - seerFirst
+  triggerOnComplete: 00
 --- !u!114 &114855229520047024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,51 +256,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 1
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "Your thoughts are interrupted by Arizta prodding you.\r\n\r\n\u201CHey, you\u2019ve
     been staring at the devastation for a while now, are you alright?\u201D\r\n"
   choices:
@@ -348,6 +311,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 1
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114880454062558462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +385,13 @@ MonoBehaviour:
         node: {fileID: 114855229520047024}
       _direction: 1
       _dynamic: 0
+  text: "She simply nods and the two of you take further time digesting what just
+    happened. Then she perks up a bit.\r\n\r\n\u201CHey, I just remembered that a
+    seer lives in a cave not too far from here. If there\u2019s anyone who can explain
+    this to us, it should be him.\u201D\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -398,6 +415,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -417,10 +435,7 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  text: "She simply nods and the two of you take further time digesting what just
-    happened. Then she perks up a bit.\r\n\r\n\u201CHey, I just remembered that a
-    seer lives in a cave not too far from here. If there\u2019s anyone who can explain
-    this to us, it should be him.\u201D\r\n"
-  choices: []
+  opensEncounter: 1
+  encounters:
+  - seerFirst
+  triggerOnComplete: 00

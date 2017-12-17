@@ -662,7 +662,7 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - riverSpiritTrialComplete
-  triggerOnComplete: 
+  triggerOnComplete: 01
 --- !u!114 &114148732755203744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1530,9 +1530,10 @@ MonoBehaviour:
   hasVariable: 0
   variableKey: 
   variableValue: 0
-  opensEncounter: 0
-  encounters: []
-  triggerOnComplete: 
+  opensEncounter: 1
+  encounters:
+  - goblinWarrior
+  triggerOnComplete: 00
 --- !u!114 &114745400966306694
 MonoBehaviour:
   m_ObjectHideFlags: 0

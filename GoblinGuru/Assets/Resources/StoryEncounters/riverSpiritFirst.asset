@@ -48,7 +48,15 @@ MonoBehaviour:
         node: {fileID: 114157830116849906}
       _direction: 1
       _dynamic: 0
+  text: "The face emerges from the water and emerges into a full watery figure.\r\n\r\n\u201CPerhaps,
+    You have managed to survive despite your small stature and the danger of the world.\u201D\r\n\r\nYou
+    nod.\r\n\r\nThe spirit shakes her head.\r\n\r\n\u201CNo, that could just be luck.
+    To really make sure I will have you solve some analytical puzzles to prove it.\u201D\r\n\r\nWell,
+    that would eat some into your time, but you see her point. You nod and follow
+    her pointing to a nearby opening in the hills.\r\n\r\nYou set off to get there.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -72,6 +80,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -94,13 +103,7 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - riverSpiritTrial
-  text: "The face emerges from the water and emerges into a full watery figure.\r\n\r\n\u201CPerhaps,
-    You have managed to survive despite your small stature and the danger of the world.\u201D\r\n\r\nYou
-    nod.\r\n\r\nThe spirit shakes her head.\r\n\r\n\u201CNo, that could just be luck.
-    To really make sure I will have you solve some analytical puzzles to prove it.\u201D\r\n\r\nWell,
-    that would eat some into your time, but you see her point. You nod and follow
-    her pointing to a nearby opening in the hills.\r\n\r\nYou set off to get there.\r\n"
-  choices: []
+  triggerOnComplete: 01
 --- !u!114 &114120797070745136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,51 +164,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 3
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "After a long and hard trek you\u2019ve finally reached the source of the
     Thalia river. The water emanating from the source is practically thrumming with
     spiritual energies flowing into intricate patterns.\r\n\r\nThe breathtaking complexity
@@ -247,6 +205,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 3
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114157830116849906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,51 +317,6 @@ MonoBehaviour:
         node: {fileID: 114071413612422392}
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "The face remains impassive as it explains in a matter of fact manner.\r\n\r\n\u201CI
     am observant and run through a major town where people are constantly speaking.
     I can make assessments based on the patterns of their behaviour, and the current
@@ -399,6 +360,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114172428407381566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,7 +434,12 @@ MonoBehaviour:
         node: {fileID: 114527219695247822}
       _direction: 1
       _dynamic: 0
+  text: "The spirit shakes her head.\r\n\r\n\u201CDo you not think that you need to
+    prove your skill? It will be quite simple, there are puzzles in the cave over
+    there.\u201D\r\n\r\nShe points to a cave opening in the hills nearby.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -449,6 +463,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -471,10 +486,7 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - riverSpiritTrial
-  text: "The spirit shakes her head.\r\n\r\n\u201CDo you not think that you need to
-    prove your skill? It will be quite simple, there are puzzles in the cave over
-    there.\u201D\r\n\r\nShe points to a cave opening in the hills nearby.\r\n"
-  choices: []
+  triggerOnComplete: 01
 --- !u!114 &114274486915307840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,7 +513,16 @@ MonoBehaviour:
         node: {fileID: 114527219695247822}
       _direction: 1
       _dynamic: 0
+  text: "\u201CYes, when used at the best moments you will be able to escape from
+    the seemingly inescapable with that power. You could also move water with it on
+    occasion, but that is not the main strength of it.\u201D\r\n\r\nYou nod, about
+    what one might expect.\r\n\r\n\u201CThen I suppose I will have to complete some
+    trial to prove that i am able to use this gift?\u201D\r\n\r\nThe spirit nods,
+    and you suddenly feel where you need to go. You follow this feeling to a cave
+    in a nearby hill.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -525,6 +546,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -547,14 +569,7 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - riverSpiritTrial
-  text: "\u201CYes, when used at the best moments you will be able to escape from
-    the seemingly inescapable with that power. You could also move water with it on
-    occasion, but that is not the main strength of it.\u201D\r\n\r\nYou nod, about
-    what one might expect.\r\n\r\n\u201CThen I suppose I will have to complete some
-    trial to prove that i am able to use this gift?\u201D\r\n\r\nThe spirit nods,
-    and you suddenly feel where you need to go. You follow this feeling to a cave
-    in a nearby hill.\r\n"
-  choices: []
+  triggerOnComplete: 01
 --- !u!114 &114515965822614998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +596,11 @@ MonoBehaviour:
         node: {fileID: 114708314995537296}
       _direction: 1
       _dynamic: 0
+  text: With the power of Thalisa you can analyze things better which opens up new
+    options. This gift also opens up the option of crossing water on the world map.
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -605,6 +624,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -626,9 +646,7 @@ MonoBehaviour:
   variableValue: 1
   opensEncounter: 0
   encounters: []
-  text: With the power of Thalisa you can analyze things better which opens up new
-    options. This gift also opens up the option of crossing water on the world map.
-  choices: []
+  triggerOnComplete: 
 --- !u!114 &114527219695247822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,51 +727,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 0
-  encounters: []
   text: "There is a shift in the background patterns as the spirit contemplates.\r\n\r\n\u201CThat
     makes sense with what I know, I am willing to help. I must tell you before that
     though that if you aren\u2019t observant and analytical you will not be able to
@@ -812,6 +785,54 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 0
+  encounters: []
+  triggerOnComplete: 
 --- !u!114 &114546747360243682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -838,7 +859,14 @@ MonoBehaviour:
         node: {fileID: 114527219695247822}
       _direction: 1
       _dynamic: 0
+  text: "She nods.\r\n\r\n\u201CYes, exactly. There is an opening in the hill nearby,
+    in there I have means to test your analytical skills.\u201D\r\n\r\nThe spirit
+    forms a tendril of water and points, in the distance where the tendril points,
+    you spot the opening in the distance. You set off and arrive there soon, it is
+    time for you to earn the ability.\r\n"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -862,6 +890,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -884,12 +913,7 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - riverSpiritTrial
-  text: "She nods.\r\n\r\n\u201CYes, exactly. There is an opening in the hill nearby,
-    in there I have means to test your analytical skills.\u201D\r\n\r\nThe spirit
-    forms a tendril of water and points, in the distance where the tendril points,
-    you spot the opening in the distance. You set off and arrive there soon, it is
-    time for you to earn the ability.\r\n"
-  choices: []
+  triggerOnComplete: 01
 --- !u!114 &114708314995537296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,52 +958,6 @@ MonoBehaviour:
       connections: []
       _direction: 0
       _dynamic: 1
-  encOutput:
-    text: 
-    choices: []
-    requiredVariable: 0
-    requiredVariableKey: 
-    requiredVariableValue: 0
-    terrainType: 0
-    featureType: 0
-    hasCost: 0
-    hasReward: 0
-    hpCost: 0
-    staminaCost: 0
-    goldCost: 0
-    itemCost: 
-    itemReward: {fileID: 0}
-    hpReward: 0
-    staminaReward: 0
-    goldReward: 0
-    rollSleep: 0
-    hasVariable: 0
-    variableKey: 
-    variableValue: 0
-    opensEncounter: 0
-    encounters: []
-  terrainType: 11
-  featureType: 0
-  requiredVariable: 0
-  requiredVariableKey: 
-  requiredVariableValue: 0
-  hasCost: 0
-  hasReward: 0
-  hpCost: 0
-  staminaCost: 0
-  goldCost: 0
-  itemCost: 
-  itemReward: {fileID: 0}
-  hpReward: 0
-  staminaReward: 0
-  goldReward: 0
-  rollSleep: 0
-  hasVariable: 0
-  variableKey: 
-  variableValue: 0
-  opensEncounter: 1
-  encounters:
-  - goblinWarrior
   text: "The face emerges from the water and emerges into a full watery figure.\r\n\r\n\u201CPerhaps,
     You have managed to survive despite your small stature and the danger of the world.\u201D\r\n\r\nYou
     nod and decide to elaborate.\r\n\r\n\u201CWhen you live a life of being poor and
@@ -1010,6 +988,55 @@ MonoBehaviour:
     mustHaveVariable: 0
     variableKey: 
     variableValue: 0
+  encOutput:
+    name: 
+    text: 
+    choices: []
+    requiredVariable: 0
+    requiredVariableKey: 
+    requiredVariableValue: 0
+    terrainType: 0
+    featureType: 0
+    hasCost: 0
+    hasReward: 0
+    hpCost: 0
+    staminaCost: 0
+    goldCost: 0
+    itemCost: 
+    itemReward: {fileID: 0}
+    hpReward: 0
+    staminaReward: 0
+    goldReward: 0
+    rollSleep: 0
+    hasVariable: 0
+    variableKey: 
+    variableValue: 0
+    opensEncounter: 0
+    encounters: []
+    triggerOnComplete: 
+  terrainType: 11
+  featureType: 0
+  requiredVariable: 0
+  requiredVariableKey: 
+  requiredVariableValue: 0
+  hasCost: 0
+  hasReward: 0
+  hpCost: 0
+  staminaCost: 0
+  goldCost: 0
+  itemCost: 
+  itemReward: {fileID: 0}
+  hpReward: 0
+  staminaReward: 0
+  goldReward: 0
+  rollSleep: 0
+  hasVariable: 0
+  variableKey: 
+  variableValue: 0
+  opensEncounter: 1
+  encounters:
+  - goblinWarrior
+  triggerOnComplete: 00
 --- !u!114 &114956195270394312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,7 +1063,13 @@ MonoBehaviour:
         node: {fileID: 114157830116849906}
       _direction: 1
       _dynamic: 0
+  text: "The face nods.\r\n\r\n\u201CIt is not overly elaborate or physically demanding,
+    I just expect you to be able to solve some tasks based on analysis.\u201D\r\nYou
+    nod and feel where you need to go. You head out and soon spot the opening in a
+    hill nearby. This is where the trial begins.\r"
+  choices: []
   encOutput:
+    name: 
     text: 
     choices: []
     requiredVariable: 0
@@ -1060,6 +1093,7 @@ MonoBehaviour:
     variableValue: 0
     opensEncounter: 0
     encounters: []
+    triggerOnComplete: 
   terrainType: 11
   featureType: 0
   requiredVariable: 0
@@ -1082,8 +1116,4 @@ MonoBehaviour:
   opensEncounter: 1
   encounters:
   - riverSpiritTrial
-  text: "The face nods.\r\n\r\n\u201CIt is not overly elaborate or physically demanding,
-    I just expect you to be able to solve some tasks based on analysis.\u201D\r\nYou
-    nod and feel where you need to go. You head out and soon spot the opening in a
-    hill nearby. This is where the trial begins.\r"
-  choices: []
+  triggerOnComplete: 00
