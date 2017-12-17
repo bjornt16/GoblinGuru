@@ -41,6 +41,8 @@ public class Enc {
     public List<string> encounters;
     public List<bool> triggerOnComplete;
 
+    public UnityEngine.Sprite image;
+
     public Enc(string t, List<EncChoice> c, TileTerrain tt, TileFeatures tf)
     {
         text = t;

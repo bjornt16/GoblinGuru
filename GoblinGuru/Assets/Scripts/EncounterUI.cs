@@ -5,7 +5,7 @@ using UnityEngine;
 public class EncounterUI : MonoBehaviour {
 
     public UnityEngine.UI.Text stateText;
-    public UnityEngine.UI.RawImage EncounterImg;
+    public UnityEngine.UI.Image EncounterImg;
     public RectTransform options;
 
     public OptionButton buttonPrefab;

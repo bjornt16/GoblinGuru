@@ -76,6 +76,11 @@ public class Encounters : MonoBehaviour {
             player = GameStateManager.Instance.player;
         }
 
+        if(currentEnc.image != null)
+        {
+            ui.EncounterImg.sprite = currentEnc.image;
+        }
+
         if (currentEnc.hasCost)
         {
             player.statistics.ModifyHealth(-currentEnc.hpCost);
@@ -332,9 +337,14 @@ public class Encounters : MonoBehaviour {
             if(node[n].nodes.Count != 0)
             {
                 tempEnc = (Enc)node[n].nodes[0].GetOutputPort("encOutput").GetOutputValue();
-                tempEnc.name = node[n].name;
-                recursiveBuildEnc(tempEnc, node, n, 0, tempEncList);
-                list.Add(tempEnc);
+                if(tempEnc != null)
+                {
+                    tempEnc.name = node[n].name;
+                    tempEnc.image = node[n].image;
+                    Debug.Log(tempEnc);
+                    recursiveBuildEnc(tempEnc, node, n, 0, tempEncList, tempEnc.image);
+                    list.Add(tempEnc);
+                }
             }
         }
 
@@ -377,8 +387,14 @@ public class Encounters : MonoBehaviour {
         return null;
     }
 
-    private void recursiveBuildEnc(Enc currEnc, EncounterNodeGraph[] node, int nodeFileIndex, int nodeIndex, List<Enc> tempEncList)
+    private void recursiveBuildEnc(Enc currEnc, EncounterNodeGraph[] node, int nodeFileIndex, int nodeIndex, List<Enc> tempEncList, UnityEngine.Sprite img)
     {
+        if(img != null)
+        {
+            Debug.Log(currentEnc + " ss " + img);
+            currEnc.image = img;
+        }
+
         int winNode = nodeIndex;
         int lossNode = nodeIndex;
         for (int i = 0; i < currEnc.choices.Count; i++)
@@ -393,7 +409,7 @@ public class Encounters : MonoBehaviour {
             {
                 tempEncList.Add(currEnc.choices[i].win);
                 winNode = Array.IndexOf(node[nodeFileIndex].nodes.ToArray(), node[nodeFileIndex].nodes[nodeIndex].GetInputPort(currEnc.choices[i].winPort).GetConnection(0).node);
-                recursiveBuildEnc(currEnc.choices[i].win, node, nodeFileIndex, winNode, tempEncList);
+                recursiveBuildEnc(currEnc.choices[i].win, node, nodeFileIndex, winNode, tempEncList, img);
             }
             else
             {
@@ -404,7 +420,7 @@ public class Encounters : MonoBehaviour {
             {
                 tempEncList.Add(currEnc.choices[i].loss);
                 lossNode = Array.IndexOf(node[nodeFileIndex].nodes.ToArray(), node[nodeFileIndex].nodes[nodeIndex].GetInputPort(currEnc.choices[i].lossPort).GetConnection(0).node);
-                recursiveBuildEnc(currEnc.choices[i].loss, node, nodeFileIndex, lossNode, tempEncList);
+                recursiveBuildEnc(currEnc.choices[i].loss, node, nodeFileIndex, lossNode, tempEncList, img);
             }
             else
             {
