@@ -13,11 +13,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Baneblade
   image: {fileID: 0}
-  description: 
-  charges: 0
+  description: Magic sword
+  charges: -1
   UsableIn: 02000000
-  UsableRange: 
+  UsableRange: 00000000
   type: 3
-  effect: {fileID: 11400000, guid: 7970f7e1b1aa257479abd9a6d8ee6127, type: 2}
+  effect: {fileID: 11400000, guid: 5f1a4277725f1b049b837d387fa07c5d, type: 2}
   Equipped: 0
   Slot: 0
